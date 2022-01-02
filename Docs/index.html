@@ -37,7 +37,7 @@
 <h2>By Zane Kaminski</h2>
 
 <p>
-Here I will describe the architecture we have chosen to implement the REU. We have divided the design into six main subsystems. These are:
+Here I will describe the architecture we have chosen to implement the REU. All of this but for the SDRAM chip and level-shifting buffers will be implemented in a small CPLD or FPGA. We have divided the design into six main subsystems. These are:
 </p>
 <ol>
 <li>SDRAM controller and its associated SDRAM</li>
@@ -379,7 +379,7 @@ The timing diagrams for the DMA sequencer are basically timing diagrams showing 
 <hr/>
 
 <h2>Layout Study</h2>
-<p>We have prepared a quick layout study confirming that we can fit a TQFP-100 CPLD/FPGA, SDRAM, voltage regulator, and level-shifting buffers in the PCB size for a "stumpy" size cartridge. I think we have to add USB self-update functionality though so that will make it a bit tighter than this current layout concept.</p>
+<p>We have prepared a quick layout study confirming that we can fit a TQFP-100 CPLD or FPGA, SDRAM, voltage regulator, and level-shifting buffers in the PCB size for a "stumpy" size cartridge. I think we have to add USB self-update functionality though so that will make it a bit tighter than this current layout concept.</p>
 
 <img src="LayoutStudy.png" style="width:600px;" />
 
