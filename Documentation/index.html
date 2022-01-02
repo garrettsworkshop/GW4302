@@ -1,0 +1,392 @@
+<html>
+<head>
+	<title>Garrett&apos;s Workshop - Maccelerator-SE Timing</title>
+	<style type="text/css">
+		ul {
+			margin-top: 0;
+		}
+		h1 {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+		h3 {
+			margin-bottom: 0;
+		}
+		h2, h4 {
+			margin-bottom: 3px;
+		}
+		h3 + h4 {
+			margin-top:6px;
+		}
+		p {
+			margin-top:0;
+		}
+		ul li {
+			padding-top: 3px;
+		}
+		ul li sup {
+			line-height: 0;
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/skins/default.js" type="text/javascript"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/wavedrom.min.js" type="text/javascript"></script>
+</head>
+
+<body onload="WaveDrom.ProcessAll()">
+<h1>Garrett&apos;s Workshop REU Clone Timing</h1>
+<h2>By Zane Kaminski</h2>
+
+<p>
+As promised, we at Garrett&apos;s Workshop have completed the architectural and timing design for an REU-compatible RAM cartridge. We&apos;ve endeavored to make the architecture really cheap and simple while achieving complete REU compatibility and 16 MB RAM capacity.
+</p>
+
+<p>
+Here I will describe the architecture we have chosen to implement the REU. We have divided the design into six main subsystems. These are:
+</p>
+<ol>
+<li>SDRAM controller and its associated SDRAM</li>
+<li>REU registers</li>
+<li>6502 bus glue</li>
+<li>Data path&colon; data comparator (used for verify operation) and data output mux (chooses between register and DMA data)</li>
+<li>Address output buffer</li>
+<li>DMA sequencer</li>
+</ol>
+
+<p>Here is a block diagram of our REU implementation:</p>
+<img src="REU.png" style="height: 100%;" />
+
+<p>We are going to go over each subsystem and describe its functionality.</p>
+
+<hr/>
+
+<h2>1. SDRAM Controller</h2>
+
+<p>First I will go over the SDRAM subsystem. The SDRAM controller is the simplest part of the system since its interface is so straightforward and there are not many REU-specific details in the SDRAM controller except for the timing of the access sequence. We wanted to get the complexity of SDRAM out of the rest of the system so that there we could focus on the actual geoRAM semantics. The SDRAM controller is clocked by the 8 MHz C64 dotclock and the the SDRAM itself is clocked by the inversion of the dotdlock. This clocking arrangement makes for plenty of hold time at the SDRAM and half a clock less access latency than if the controller and RAM were clocked from the same clock phase. The SDRAM runs from the dotclock inversion but the access sequence is synchronized with the PHI2 clock in that read, write, and refresh operations always happen at the same time relative to PHI2. Read/write commands and addresses are accepted by the controller at the first dotclock where PHI2 is low. This allows commands to come from a state machine clocked by the PHI2 falling edge and then immediately begin execution at the next dotclock edge. Write data is accepted at the PHI2 falling edge so as to make the write data port compatible with the 6502 bus. Addresses are directly fed to the SDRAM controller from the REU register block. SDRAM access is conducted during PHI2 low period and is completed just as PHI2 goes high again. During PHI2 high the SDRAM is refreshed.</p>
+
+<img src="SDRAM.png" style="width:500px;" />
+
+<h3>1A. SDRAM Controller&colon; Idle-Idle-Idle</h3>
+<p>The following timing diagram shows the behavior of the SDRAM controller after initialization and when no SDRAM requests are pending.</p>
+<script type="WaveDrom">
+{signal: [
+['Interface',
+{name: 'PHI2',				wave: '01...0...1...0...1...0.', period: 1, phase:0.15},
+{name: 'RD (read cmd.)',	wave: 'x....0x......0x......0x', period: 1, phase:0.65},
+{name: 'WR (write cmd.)',	wave: 'x....0x......0x......0x', period: 1, phase:0.65},
+{name: 'DOTCLK',			wave: 'p......................', period: 1},
+],
+['Internal',
+{name: 'State',				wave: '22222222222222222222222', period: 1, data:[3,4,5,6,7,0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7,0,1]},
+{name: 'Current operation',	wave: '2....2.......2.......2.', period: 1, data:['idle', 'idle', 'idle', 'idle']},
+],
+['SDRAM bus',
+{name: 'RAM clk',				wave: 'n......................', period: 1},
+{name: 'RAM cmd.',				wave: '22222222222222222222222', period: 1, data:[
+		  			  'NOP','PC', 'REF','NOP','NOP',
+	'NOP','NOP','NOP','NOP','PC', 'REF','NOP','NOP',
+	'NOP','NOP','NOP','NOP','PC', 'REF','NOP','NOP',
+	'NOP']},
+{name: 'CKE',				wave: '1..0.10.1..0.1.....0.1.', period: 1},
+],
+]}
+</script>
+
+<h3>1B. SDRAM Controller&colon; Idle-Read-Idle</h3>
+<p>The following timing diagram shows the behavior of the SDRAM controller during a read command, bookended by idle operations.</p>
+<script type="WaveDrom">
+{signal: [
+['Interface',
+{name: 'PHI2',				wave: '01...0...1...0...1...0.', period: 1, phase:0.15},
+{name: 'RD (read cmd.)',	wave: 'x....0x......1x......0x', period: 1, phase:0.65},
+{name: 'WR (write cmd.)',	wave: 'x....0x......0x......0x', period: 1, phase:0.65},
+{name: 'REUA (address)',	wave: 'x....x.......2.x.....x.', period: 1},
+{name: 'RDD (rd data)',	wave: 'xx.......x.......2.....', period: 1},
+{name: 'DOTCLK',			wave: 'p......................', period: 1},
+],
+['Internal',
+{name: 'State',				wave: '22222222222222222222222', period: 1, data:[3,4,5,6,7,0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7,0,1]},
+{name: 'Current operation',	wave: '2....2.......2.......2.', period: 1, data:['idle', 'idle', 'read', 'idle']},
+],
+['SDRAM bus',
+{name: 'RAM clk',				wave: 'n......................', period: 1},
+{name: 'RAM cmd.',				wave: '22222222222222222222222', period: 1, data:[
+		  			  'NOP','PC', 'REF','NOP','NOP',
+	'NOP','NOP','NOP','NOP','PC', 'REF','NOP','NOP',
+	'NOP','ACT','RD', 'NOP','PC', 'REF','NOP','NOP',
+	'NOP']},
+{name: 'CKE',				wave: '1..0.10.1..0.1.....0.1.', period: 1},
+{name: 'RD (RAM data)',		wave: 'z................2z....', period: 1, phase:0.5},
+],
+]}
+</script>
+
+
+<h3>1C. SDRAM Controller&colon; Idle-Write-Idle</h3>
+<p>The following timing diagram shows the behavior of the SDRAM controller during a write command, bookended by idle operations.</p>
+<script type="WaveDrom">
+{signal: [
+['Interface',
+{name: 'PHI2',				wave: '01...0...1...0...1...0.', period: 1, phase:0.15},
+{name: 'RD (read cmd.)',	wave: 'x....0x......0x......0x', period: 1, phase:0.65},
+{name: 'WR (write cmd.)',	wave: 'x....0x......1x......0x', period: 1, phase:0.65},
+{name: 'REUA (address)',	wave: 'x....x.......2.x.....x.', period: 1},
+{name: 'RDD (wr data)',	wave: 'x....xx......2x......xx', period: 1, phase:0.65},
+{name: 'DOTCLK',			wave: 'p......................', period: 1},
+],
+['Internal',
+{name: 'State',				wave: '22222222222222222222222', period: 1, data:[3,4,5,6,7,0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7,0,1]},
+{name: 'Current operation',	wave: '2....2.......2.......2.', period: 1, data:['idle', 'idle', 'write', 'idle']},
+{name: 'WRDreg',			wave: 'x............2.......x.', period: 1},
+],
+['SDRAM bus',
+{name: 'RAM clk',				wave: 'n......................', period: 1},
+{name: 'RAM cmd.',				wave: '22222222222222222222222', period: 1, data:[
+		  			  'NOP','PC', 'REF','NOP','NOP',
+	'NOP','NOP','NOP','NOP','PC', 'REF','NOP','NOP',
+	'NOP','ACT','WR', 'NOP','PC', 'REF','NOP','NOP',
+	'NOP']},
+{name: 'CKE',				wave: '1..0.10.1..0.1.....0.1.', period: 1},
+{name: 'RD (RAM data)',		wave: 'z..............2z......', period: 1},
+],
+]}
+</script>
+
+
+<h3>1D. SDRAM Controller&colon; PreInit-Init-Idle</h3>
+<p>SDRAM chips require a particular initialization sequence involving loading the mode register. This sequenes accomplishes that.</p>
+<script type="WaveDrom">
+{signal: [
+['Interface',
+{name: 'PHI2',				wave: '01...0...1...0...1...0.', period: 1, phase:0.15},
+{name: 'RD (read cmd.)',	wave: 'x....0x......0x......0x', period: 1, phase:0.65},
+{name: 'WR (write cmd.)',	wave: 'x....0x......0x......0x', period: 1, phase:0.65},
+{name: 'RESET',				wave: '1....0x................', period: 1, phase:0.65},
+{name: 'DOTCLK',			wave: 'p......................', period: 1},
+],
+['Internal',
+{name: 'State',				wave: '22222222222222222222222', period: 1, data:[3,4,5,6,7,0,1,2,3,4,5,6,7,0,1,2,3,4,5,6,7,0,1]},
+{name: 'InitStarted',		wave: '0....1.................', period: 1},
+{name: 'InitDone',			wave: '0............1.........', period: 1},
+],
+['SDRAM bus',
+{name: 'RAM clk',				wave: 'n......................', period: 1},
+{name: 'RAM cmd.',				wave: '22222222222222222222222', period: 1, data:[
+		  			  'NOP','NOP','NOP','NOP','NOP',
+	'NOP','NOP','NOP','NOP','PC', 'LDM','NOP','NOP',
+	'NOP','NOP','NOP','NOP','PC', 'REF','NOP','NOP',
+	'NOP']},
+{name: 'CKE',				wave: '1..................0.1.', period: 1},
+],
+]}
+</script>
+
+<hr/>
+
+<h2>2. REU Registers</h2>
+
+<p>
+The REU registers block encapsulates the register functionality of the REU while exposing the minimum interface to the rest of the system. The register block integrates the interrupt, autoload, address increment, and length decrement functionality. The block has a single read/write port to service accesses from the 6502. The registers are read asynchronously but written synchronously at the falling edge of PHI2. The register block also outputs the REU address REUA[23:0] to the SDRAM as well as the C64 address CA[15:0] back to the Commodore. The length register, however, is not output from the register block. Instead the Length1 signal indicates to the DMA Sequencer when the length register is equal to 1.
+</p>
+
+<p>
+Increment, decrement, and interrupt control is provided to the REU registers block by the DMA sequencer via the NextCA, NextREUA, XferEnd, and VerifyErr signals. When the NextREUA signal is high at the falling edge of PHI2, the REUA address is incremented. Similarly, when NextCA is high at the falling edge of PHI2, the CA address in the register block is incremented and the length register is decremented. The 6502 interface has priority over the NextREUA and NextCA signals such that if a 6502 bus write to the length, CA, or REUA registers occurs concurrently with NextREUA or NextCA, the byte written by the 6502 is written to the register. The XferEnd and VerifyErr signals are used to invoke the interrupt and autoload functionality. When XferEnd is high at the falling edge of PHI2, that indicates that the current byte is the last byte of a block DMA transfer. This causes the autoload and interrupt functionality to be invoked if these features are enabled in the relevant registers. Similarly the VerifyErr signal, when asserted concurrent with XferEnd at the falling edge of PHI2, causes the verify error bit to be set in the register block and an IRQ issued if the relevant interrupt mask register bit is enabled.
+</p>
+
+<img src="Registers.png" style="width:1000px;" />
+
+<p>
+I am gonna skip doing timing diagrams for the register unit because there is not much state sequencing in there. The verilog itself is the best way to capture the functionality of the registers.
+</p>
+
+<hr/>
+
+<h2>3, 4, 5. Data Path, Address Output Buffer, 6502 Bus Glue</h2>
+
+<p>
+Now let&apos;s get the small blocks out of the way before discussing the DMA sequencer. The function of the address output buffer block is just to output the CA address during DMA cycles. The data comparator is an asynchronous equality comparator which reports to the DMA sequencer whether the value read from SDRAM is the same as the value on the C64 data bus. The data bus output mux selects data from the register block or the SDRAM controller to be output to the C64 data bus based on whether DMA is occurring. On to the 6502 bus glue. Simple as it sounds, this piece is just asynchronous decode-type logic that selects the register block, controls the bus buffers, etc.
+</p>
+
+<img src="SmallBlocks.png" style="width:1000px;" />
+
+</hr>
+
+<h2>6. DMA Sequencer</h2>
+
+<p>
+Finally there&apos;s the DMA sequencer. This part is complicated. Basically, it idles until a transfer operation is begun by the C64. Then it sequences the particular type of transfer, reading and writing from C64 memory and SDRAM as required, until all data has been transferred and Length1 is active or until a verify error occurs. Easier said than done but we have generated timing diagrams that will assist us in writing the verilog for the DMA sequencer. 
+</p>
+
+<img src="DMASequencer.png" style="width:360px;" />
+
+<p>
+The timing diagrams for the DMA sequencer are basically timing diagrams showing the operation of the overall system since the DMA sequencer is basically in charge of everything during a DMA transfer. So I have five diagrams here showing each of the REU transfer types (including verify success and verify error) as well as one showing what happens when the bus is not available. When the bus is not available, the DMA sequencer just repeats the same operation again during the next PHI2 clock.
+</p>
+
+<h3>6A. REU-to-C64 transfer</h3>
+<script type="WaveDrom">
+{signal: [
+['REU registers',
+{name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,3,2,1,0,0]},
+{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'XferEnd',			wave: '0...............................x..10.....', period: 0.5},
+],
+
+['RAM control',
+{name: 'RAM op.',		wave: '2.2.2.2.2.2.2.2.2.2.2', period: 1, data:[
+	'nop','rd','rd','rd','rd','rd','rd','rd','rd','nop','nop']},
+{name: 'RD (rd data)',	wave: 'x..2.2.2.2.2.2.2.2...', period: 1},
+],
+
+['C64 bus',
+{name: 'PHI2',				wave: '010101010101010101010', period: 1, phase:0.15},
+{name: 'A (from 6502)',		wave: 'z2z................2z', period: 1},
+{name: 'A (from REU)',		wave: 'z.z2z2z2z2z2z2z2z2z..', period: 1},
+{name: '/DMA',				wave: '1.0...............1..', period: 1},
+]
+]}
+</script>
+
+
+<h3>6B. C64 to REU transfer</h3>
+<script type="WaveDrom">
+{signal: [
+['REU registers',
+{name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,3,2,1,0,0]},
+{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'XferEnd',			wave: '0...............................x..10.....', period: 0.5},
+],
+
+['RAM control',
+{name: 'RAM op.',		wave: '2.2.2.2.2.2.2.2.2.2.2', period: 1, data:[
+	'nop','nop','wr','wr','wr','wr','wr','wr','wr','wr','nop']},
+{name: 'RD (wr data)',	wave: 'x...2.2.2.2.2.2.2.2..', period: 1},
+],
+
+['C64 bus',
+{name: 'PHI2',				wave: '010101010101010101010', period: 1, phase:0.15},
+{name: 'A (from 6502)',		wave: 'z2z................2z', period: 1},
+{name: 'A (from REU)',		wave: 'z.z2z2z2z2z2z2z2z2z..', period: 1},
+{name: '/DMA',				wave: '1.0...............1..', period: 1},
+]
+]}
+</script>
+
+
+<h3>6C. Verify transfer -- same</h3>
+<script type="WaveDrom">
+{signal: [
+['REU registers',
+{name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,3,2,1,0,0]},
+{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'XferEnd',			wave: '0...x..0x..0x..0x..0x..0x..0x..0x..10.....', period: 0.5},
+],
+
+['RAM control',
+{name: 'RAM op.',		wave: '2.2.2.2.2.2.2.2.2.2.2', period: 1, data:[
+	'nop','rd','rd','rd','rd','rd','rd','rd','rd','nop','nop']},
+{name: 'RD (rd data)',	wave: 'x..2.2.2.2.2.2.2.2...', period: 1},
+],
+
+['C64 bus',
+{name: 'PHI2',				wave: '010101010101010101010', period: 1, phase:0.15},
+{name: 'A (from 6502)',		wave: 'z2z................2z', period: 1},
+{name: 'A (from REU)',		wave: 'z.z2z2z2z2z2z2z2z2z..', period: 1},
+{name: '/DMA',				wave: '1.0...............1..', period: 1},
+]
+]}
+</script>
+
+
+<h3>6D. Verify transfer -- different</h3>
+<script type="WaveDrom">
+{signal: [
+['REU registers',
+{name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[12,11,10,9,8,7,6,5,5,5]},
+{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
+{name: 'XferEnd',			wave: '0...x..0x..0x..0x..0x..0x..0x..0x..10.....', period: 0.5},
+],
+
+['RAM control',
+{name: 'RAM op.',		wave: '2.2.2.2.2.2.2.2.2.2.2', period: 1, data:[
+	'nop','rd','rd','rd','rd','rd','rd','rd','rd','nop','nop']},
+{name: 'RD (rd data)',	wave: 'x..2.2.2.2.2.2.2.2...', period: 1},
+],
+
+['C64 bus',
+{name: 'PHI2',				wave: '010101010101010101010', period: 1, phase:0.15},
+{name: 'A (from 6502)',		wave: 'z2z................2z', period: 1},
+{name: 'A (from REU)',		wave: 'z.z2z2z2z2z2z2z2z2z..', period: 1},
+{name: '/DMA',				wave: '1.0...............1..', period: 1},
+{name: '/IRQ',				wave: '1.................0..', period: 1, phase:0.3},
+]
+]}
+</script>
+
+
+<h3>6E. Swap transfer</h3>
+<script type="WaveDrom">
+{signal: [
+['REU registers',
+{name: 'Length',			wave: '2.....2...2...2...2..', period: 1, data:[4,3,2,1,0]},
+{name: 'NextREUA',			wave: '0...1.0.1.0.1.0.1.0..', period: 1},
+{name: 'NextCA',			wave: '0...1.0.1.0.1.0.1.0..', period: 1},
+{name: 'XferEnd',			wave: '0...............................x..10.....', period: 0.5},
+],
+
+['RAM control',
+{name: 'RAM op.',		wave: '2.2.2.2.2.2.2.2.2.2.2', period: 1, data:[
+	'nop','rd','wr','rd','wr','rd','wr','rd','wr','nop','nop']},
+{name: 'RD (rd data)',	wave: 'x..2...2...2...2.....', period: 1},
+{name: 'RD (wr data)',	wave: 'x...2...2...2...2....', period: 1},
+],
+
+['C64 bus',
+{name: 'PHI2',				wave: '010101010101010101010', period: 1, phase:0.15},
+{name: 'A (from 6502)',		wave: 'z2z................2z', period: 1},
+{name: 'A (from REU)',		wave: 'z.z2z2z2z2z2z2z2z2z..', period: 1},
+{name: '/DMA',				wave: '1.0...............1..', period: 1},
+]
+]}
+</script>
+
+
+<h3>6F. Bus not available during DMA transfer to REU</h3>
+<script type="WaveDrom">
+{signal: [
+['REU registers',
+{name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,4,3,2,1,0,0]},
+{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..0x..1x..1x..1x..0......', period: 0.5},
+{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..0x..1x..1x..1x..0......', period: 0.5},
+{name: 'XferEnd',			wave: '0...................................x..10.....', period: 0.5},
+],
+
+['RAM control',
+{name: 'RAM op.',		wave: '2.2.2.2.2.2.2.2.2.2.2.2', period: 1, data:[
+	'nop','nop','wr','wr','wr','wr','wr','wr','wr','wr','wr','nop']},
+{name: 'RD (wr data)',	wave: 'x...2.2.2.2.2.2.2.2.2..', period: 1},
+],
+
+['C64 bus',
+{name: 'PHI2',				wave: '01010101010101010101010', period: 1, phase:0.15},
+{name: 'A (from 6502)',		wave: 'z2z..................2z', period: 1},
+{name: 'A (from REU)',		wave: 'z.z2z2z2z2z2z2z2z2z2z..', period: 1},
+{name: '/DMA',				wave: '1.0.................1..', period: 1},
+{name: 'BA',				wave: '01010101010..1010101010', period: 1},
+]
+]}
+</script>
+
+<hr/>
+
+<h2>Layout Study</h2>
+<p>We have prepared a quick layout study confirming that we can fit a TQFP-100 CPLD/FPGA, SDRAM, voltage regulator, and level-shifting buffers in the PCB size for a "stumpy" size cartridge. I think we have to add USB self-update functionality though so that will make it a bit tighter than this current layout concept.</p>
+
+<img src="LayoutStudy.png" style="width:600px;" />
+
+</body>
+
+</html>
