@@ -18,6 +18,7 @@ module Reg(
 	
 	/* Register Outputs */
 	output IRQOut,
+	output ExecuteOut,
 	output FF00DecodeOut,
 	output [1:0] XferTypeOut,
 	output [23:0] REUAOut,
@@ -35,6 +36,7 @@ reg Execute;
 reg Autoload;
 reg nFF00Decode;
 reg [1:0] XferType;
+assign ExecuteOut = Execute;
 assign FF00DecodeOut = ~nFF00Decode;
 assign XferTypeOut = XferType;
 
@@ -126,6 +128,8 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h2) begin
 		CA[7:0] <= WRD[7:0];
 		CAWritten[7:0] <= WRD[7:0];
+	end else if (XferEnd) begin
+		CA[7:0] <= CAWritten[7:0];
 	end else if (NextCA) begin
 		CA[7:0] <= CA+1;
 	end
@@ -138,6 +142,8 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h3) begin
 		CA[15:8] <= WRD[7:0];
 		CAWritten[15:8] <= WRD[7:0];
+	end else if (XferEnd) begin
+		CA[15:8] <= CAWritten[15:8];
 	end else if (NextCA && CA[7:0]==8'hFF) begin
 		CA[15:8] <= CA+1;
 	end
@@ -151,6 +157,8 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h4) begin
 		REUA[7:0] = WRD[7:0];
 		REUAWritten[7:0] = WRD[7:0];
+	end else if (XferEnd) begin
+		REUA[7:0] <= REUAWritten[7:0];
 	end else if (NextREUA) begin
 		REUA[7:0] <= REUA[7:0]+1;
 	end
@@ -164,6 +172,8 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h5) begin
 		REUA[15:8] = WRD[7:0];
 		REUAWritten[15:8] = WRD[7:0];
+	end else if (XferEnd) begin
+		REUA[15:8] <= REUAWritten[15:8];
 	end else if (NextREUA && REUA[7:0]==8'hFF) begin
 		REUA[15:8] <= REUA[15:8]+1;
 	end
@@ -178,6 +188,8 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h6) begin
 		REUA[23:16] = WRD[7:0];
 		REUAWritten[23:16] = WRD[7:0];
+	end else if (XferEnd) begin
+		REUA[23:16] <= REUAWritten[23:16];
 	end else if (NextREUA && REUA[15:0]==16'hFFFF) begin
 		REUA[18:16] <= REUA[18:16]+1;
 	end
@@ -191,6 +203,8 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h7) begin
 		Length[7:0] <= WRD[7:0];
 		LengthWritten[7:0] <= WRD[7:0];
+	end else if (XferEnd) begin
+		Length[7:0] <= LengthWritten[7:0];
 	end else if (NextCA) begin
 		Length[15:0] <= Length[7:0]-1;
 	end
@@ -204,6 +218,8 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h8) begin
 		Length[15:8] <= WRD[7:0];
 		LengthWritten[15:8] <= WRD[7:0];
+	end else if (XferEnd) begin
+		Length[15:8] <= LengthWritten[15:8];
 	end else if (NextCA && Length[7:0]==8'hFF) begin
 		Length[15:8] <= Length[15:8]-1;
 	end
