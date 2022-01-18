@@ -183,19 +183,29 @@ always @(negedge PHI2) begin
 	end
 end
 
-/* Length register (0x7, 0x8) control */
+/* Length register lo (0x7) control */
 always @(negedge PHI2) begin
 	if (Reset) begin
-		Length[15:0] <= 16'hFFFF;
-		LengthWritten[7:0] <= 16'hFFFF;
+		Length[7:0] <= 8'hFF;
+		LengthWritten[7:0] <= 8'hFF;
 	end else if (RegWR && A[4:0]==5'h7) begin
 		Length[7:0] <= WRD[7:0];
 		LengthWritten[7:0] <= WRD[7:0];
+	end else if (NextCA) begin
+		Length[15:0] <= Length[7:0]-1;
+	end
+end
+
+/* Length register hi (0x8) control */
+always @(negedge PHI2) begin
+	if (Reset) begin
+		Length[15:8] <= 8'hFF;
+		LengthWritten[15:8] <= 8'hFF;
 	end else if (RegWR && A[4:0]==5'h8) begin
 		Length[15:8] <= WRD[7:0];
 		LengthWritten[15:8] <= WRD[7:0];
-	end else if (NextCA) begin
-		Length[15:0] <= Length[15:0]-1;
+	end else if (NextCA && Length[7:0]==8'hFF) begin
+		Length[15:8] <= Length[15:8]-1;
 	end
 end
 
