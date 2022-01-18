@@ -37,7 +37,7 @@ reg Autoload;
 reg nFF00Decode;
 reg [1:0] XferType;
 assign ExecuteOut = Execute;
-assign FF00DecodeOut = ~nFF00Decode;
+assign FF00DecodeOut = !nFF00Decode;
 assign XferTypeOut = XferType;
 
 /* REU Registers - 0x2, 0x3 Commodore Address */

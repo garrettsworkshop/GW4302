@@ -176,7 +176,7 @@ module RAM(
 				RA[12] <= 0;
 				RA[11:0] <= A[9:1];
 				DQMH <=  A[0];
-				DQML <= ~A[0];
+				DQML <= !A[0];
 			end 2: begin // NOP
 				DQMH <= 1;
 				DQML <= 1;
