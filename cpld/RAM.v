@@ -26,8 +26,8 @@ module RAM(
 	
 	/* RAM clock output */
 	reg CP1, CP2;
-	always @(posedge C8M) begin CP1 <= !CP1; end
-	always @(negedge C8M) begin CP2 <= !CP1; end
+	always @(posedge C8M) CP1 <= !CP1;
+	always @(negedge C8M) CP2 <= !CP1;
 	assign RCLK = CP1 ^ CP2;
 	
 	/* Reset synchronization */
@@ -40,8 +40,8 @@ module RAM(
 	/* PHI2 edge detect control */
 	reg [1:0] PHI2r = 0;
 	wire PHI2Fall =  PHI2r[1] && !PHI2r[0];
-	always @(negedge C8M) begin PHI2r[0] <= PHI2; end
-	always @(posedge C8M) begin PHI2r[1] <= PHI2r[0]; end
+	always @(negedge C8M) PHI2r[0] <= PHI2;
+	always @(posedge C8M) PHI2r[1] <= PHI2r[0];
 	
 	/* PLL locked bit */
 	reg PLLLock = 0;
