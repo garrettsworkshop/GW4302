@@ -237,6 +237,9 @@ always @(negedge PHI2) begin
 		VerifyErrMask <= WRD[5];
 	end
 end
+assign IRQOut = IntEnable && 
+	((EndOfBlock && EndOfBlockMask) || 
+	 (VerifyErr && VerifyErrMask));
 
 /* Address control register (0xA) control */
 always @(negedge PHI2) begin
