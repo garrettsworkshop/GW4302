@@ -1,0 +1,78 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue Jan 18 16:15:27 2022 *
+NOTE DESIGN NAME: REU *
+NOTE DEVICE NAME: LCMXO2-640HC-4TQFP100 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS D[4] : 35 : inout *
+NOTE PINS D[2] : 29 : inout *
+NOTE PINS D[5] : 98 : inout *
+NOTE PINS D[6] : 30 : inout *
+NOTE PINS D[3] : 99 : inout *
+NOTE PINS D[7] : 97 : inout *
+NOTE PINS D[1] : 32 : inout *
+NOTE PINS D[0] : 31 : inout *
+NOTE PINS A[15] : 65 : inout *
+NOTE PINS A[14] : 63 : inout *
+NOTE PINS A[13] : 69 : inout *
+NOTE PINS A[12] : 59 : inout *
+NOTE PINS A[11] : 77 : inout *
+NOTE PINS A[10] : 49 : inout *
+NOTE PINS A[9] : 64 : inout *
+NOTE PINS A[8] : 47 : inout *
+NOTE PINS A[7] : 62 : inout *
+NOTE PINS A[6] : 96 : inout *
+NOTE PINS A[5] : 85 : inout *
+NOTE PINS A[4] : 45 : inout *
+NOTE PINS A[3] : 81 : inout *
+NOTE PINS A[2] : 48 : inout *
+NOTE PINS A[1] : 40 : inout *
+NOTE PINS A[0] : 43 : inout *
+NOTE PINS RD[7] : 39 : inout *
+NOTE PINS RD[6] : 37 : inout *
+NOTE PINS RD[5] : 36 : inout *
+NOTE PINS RD[4] : 83 : inout *
+NOTE PINS RD[3] : 42 : inout *
+NOTE PINS RD[2] : 41 : inout *
+NOTE PINS RD[1] : 88 : inout *
+NOTE PINS RD[0] : 86 : inout *
+NOTE PINS nRESETOUT : 52 : out *
+NOTE PINS nWEDMA : 13 : out *
+NOTE PINS nDMA : 16 : out *
+NOTE PINS nAOE : 8 : out *
+NOTE PINS ADIR : 17 : out *
+NOTE PINS nRWOE : 28 : out *
+NOTE PINS nDOE : 15 : out *
+NOTE PINS DDIR : 27 : out *
+NOTE PINS nIRQ : 10 : out *
+NOTE PINS RCLK : 51 : out *
+NOTE PINS nCS : 67 : out *
+NOTE PINS nRAS : 68 : out *
+NOTE PINS nCAS : 70 : out *
+NOTE PINS nRWE : 75 : out *
+NOTE PINS CKE : 66 : out *
+NOTE PINS RBA[1] : 54 : out *
+NOTE PINS RBA[0] : 60 : out *
+NOTE PINS RA[12] : 53 : out *
+NOTE PINS RA[11] : 58 : out *
+NOTE PINS RA[10] : 57 : out *
+NOTE PINS RA[9] : 2 : out *
+NOTE PINS RA[8] : 1 : out *
+NOTE PINS RA[7] : 87 : out *
+NOTE PINS RA[6] : 3 : out *
+NOTE PINS RA[5] : 84 : out *
+NOTE PINS RA[4] : 82 : out *
+NOTE PINS RA[3] : 78 : out *
+NOTE PINS RA[2] : 76 : out *
+NOTE PINS RA[1] : 71 : out *
+NOTE PINS RA[0] : 74 : out *
+NOTE PINS DQMH : 9 : out *
+NOTE PINS DQML : 7 : out *
+NOTE PINS C8M : 34 : in *
+NOTE PINS PHI2 : 38 : in *
+NOTE PINS nRESET : 12 : in *
+NOTE PINS BA : 14 : in *
+NOTE PINS nWE : 18 : in *
+NOTE PINS nIO2 : 19 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

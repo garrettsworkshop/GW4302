@@ -1,0 +1,295 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Jan 18 16:15:06 2022
+
+
+Command Line:  synthesis -f REU_impl1_lattice.synproj -gui 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is TQFP100.
+The -d option is LCMXO2-640HC.
+Using package TQFP100.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-640HC
+
+### Package : TQFP100
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = REU.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/Users/zanek/Documents/GitHub/GW4302/cpld (searchpath added)
+-p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
+-p C:/Users/zanek/Documents/GitHub/GW4302/cpld/impl1 (searchpath added)
+-p C:/Users/zanek/Documents/GitHub/GW4302/cpld (searchpath added)
+Verilog design file = C:/Users/zanek/Documents/GitHub/GW4302/cpld/RAM.v
+Verilog design file = C:/Users/zanek/Documents/GitHub/GW4302/cpld/Reg.v
+Verilog design file = C:/Users/zanek/Documents/GitHub/GW4302/cpld/DMASeq.v
+Verilog design file = C:/Users/zanek/Documents/GitHub/GW4302/cpld/Glue.v
+Verilog design file = C:/Users/zanek/Documents/GitHub/GW4302/cpld/REU.v
+NGD file = REU_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/users/zanek/documents/github/gw4302/cpld/ram.v. VERI-1482
+Analyzing Verilog file c:/users/zanek/documents/github/gw4302/cpld/reg.v. VERI-1482
+Analyzing Verilog file c:/users/zanek/documents/github/gw4302/cpld/dmaseq.v. VERI-1482
+Analyzing Verilog file c:/users/zanek/documents/github/gw4302/cpld/glue.v. VERI-1482
+Analyzing Verilog file c:/users/zanek/documents/github/gw4302/cpld/reu.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Top module name (Verilog): REU
+INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
+INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(136): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(150): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(165): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(180): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(196): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(211): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(226): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/ram.v(1): compiling module RAM. VERI-1018
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/ram.v(59): expression size 32 truncated to fit in target size 3. VERI-1209
+INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
+INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/glue.v(1): compiling module Glue. VERI-1018
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Top-level module name = REU.
+WARNING - synthesis: I/O Port nIO1 's net has no driver and is unused.
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(104): Register \reureg/Size_567 is stuck at One. VDB-5014
+WARNING - synthesis: Bit 0 of Register \reureg/Version is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \reureg/Version is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \reureg/Version is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \reureg/Version is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ram/RA is stuck at Zero
+INFO - synthesis: Extracted state machine for register '\ram/S' with one-hot encoding
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 00000001
+
+ 001 -> 00000010
+
+ 010 -> 00000100
+
+ 011 -> 00001000
+
+ 100 -> 00010000
+
+ 101 -> 00100000
+
+ 110 -> 01000000
+
+ 111 -> 10000000
+
+
+
+
+WARNING - synthesis: I/O Port nIO1 's net has no driver and is unused.
+GSR will not be inferred because no asynchronous signal was found in the netlist.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in REU_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'nIO1' has no load.
+WARNING - synthesis: input pad net 'nIO1' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file REU_impl1.ngd.
+
+################### Begin Area Report (REU)######################
+Number of register bits => 192 of 877 (21 % )
+BB => 32
+CCU2D => 33
+FD1P3AX => 48
+FD1P3IX => 56
+FD1P3JX => 19
+FD1S3AX => 22
+FD1S3IX => 40
+FD1S3JX => 7
+GSR => 1
+IB => 6
+INV => 2
+L6MUX21 => 5
+LUT4 => 276
+OB => 32
+PFUMX => 18
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 2
+  Net : C8M_c, loads : 46
+  Net : PHI2_c, loads : 2
+Clock Enable Nets
+Number of Clock Enables: 25
+Top 10 highest fanout Clock Enables:
+  Net : ram/RDD_7__N_507, loads : 13
+  Net : ram/C8M_N_498_enable_4, loads : 12
+  Net : ram/C8M_c_enable_21, loads : 11
+  Net : reureg/PHI2_N_558_enable_12, loads : 8
+  Net : reureg/PHI2_N_558_enable_88, loads : 8
+  Net : reureg/PHI2_N_558_enable_53, loads : 8
+  Net : reureg/PHI2_N_558_enable_80, loads : 8
+  Net : reureg/PHI2_N_558_enable_60, loads : 8
+  Net : reureg/PHI2_N_558_enable_68, loads : 8
+  Net : reureg/PHI2_N_558_enable_54, loads : 8
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : PHI2_N_558, loads : 140
+  Net : dmaseq/n3235, loads : 102
+  Net : A_out_1, loads : 55
+  Net : A_out_0, loads : 44
+  Net : glue/PHI2_N_558_enable_18, loads : 33
+  Net : dmaseq/AOE, loads : 32
+  Net : glue/n3241, loads : 28
+  Net : dmaseq/n3215, loads : 23
+  Net : ram/RDOE_N_553, loads : 21
+  Net : glue/n3220, loads : 20
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets C8M_c]                   |  200.000 MHz|   86.595 MHz|     3 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets PHI2_c]                  |  200.000 MHz|   62.559 MHz|     9 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 62.250  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.781  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

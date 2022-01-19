@@ -1,0 +1,135 @@
+Loading design for application iotiming from file reu_impl1.ncd.
+Design name: REU
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     TQFP100
+Performance: 5
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file reu_impl1.ncd.
+Design name: REU
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     TQFP100
+Performance: 6
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 34.4.
+Loading design for application iotiming from file reu_impl1.ncd.
+Design name: REU
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     TQFP100
+Performance: M
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: REU
+// Package: TQFP100
+// ncd File: reu_impl1.ncd
+// Version: Diamond (64-bit) 3.12.0.240.2
+// Written on Tue Jan 18 15:37:34 2022
+// M: Minimum Performance Grade
+// iotiming REU_impl1.ncd REU_impl1.prf -gui
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6, 5, 4):
+
+// Input Setup and Hold Times
+
+Port   Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+A[0]   PHI2  F     6.401      4       0.270     6
+A[10]  PHI2  F     4.607      4      -0.691     M
+A[11]  PHI2  F     4.979      4      -0.787     M
+A[12]  PHI2  F     3.091      4      -0.382     M
+A[13]  PHI2  F     3.735      4      -0.548     M
+A[14]  PHI2  F     3.670      4      -0.541     M
+A[15]  PHI2  F     1.831      4      -0.057     M
+A[1]   PHI2  F     7.044      4      -0.020     M
+A[2]   PHI2  F     8.234      4      -0.186     M
+A[3]   PHI2  F     6.788      4      -0.269     M
+A[4]   PHI2  F     8.140      4      -0.297     M
+A[5]   PHI2  F     2.801      4      -0.272     M
+A[6]   PHI2  F     2.587      4      -0.233     M
+A[7]   PHI2  F     4.806      4      -0.730     M
+A[8]   PHI2  F     4.601      4      -0.698     M
+A[9]   PHI2  F     2.172      4      -0.134     M
+BA     PHI2  F     9.858      4      -0.370     M
+D[0]   PHI2  F     7.663      4       0.001     M
+D[1]   PHI2  F     7.437      4       0.286     4
+D[2]   PHI2  F     7.466      4       0.402     4
+D[3]   PHI2  F     8.252      4       0.695     4
+D[4]   PHI2  F     8.184      4       0.027     4
+D[5]   PHI2  F     7.757      4       0.104     4
+D[6]   PHI2  F     8.108      4       0.397     4
+D[7]   PHI2  F    11.418      4       0.724     4
+PHI2   C8M   F     1.640      4      -0.194     M
+RD[0]  C8M   R     0.774      4       0.305     4
+RD[1]  C8M   R     1.194      4       0.017     M
+RD[2]  C8M   R     0.869      4       0.196     4
+RD[3]  C8M   R     1.194      4       0.017     M
+RD[4]  C8M   R     1.569      4      -0.098     M
+RD[5]  C8M   R     1.172      4       0.013     M
+RD[6]  C8M   R     1.632      4      -0.083     M
+RD[7]  C8M   R     1.403      4      -0.035     M
+nIO2   PHI2  F     9.516      4      -0.110     M
+nRESET PHI2  F     0.866      4       0.213     6
+nRESET C8M   R     1.118      4       0.051     6
+
+
+// Clock to Output Delay
+
+Port   Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+ADIR   PHI2  F    10.880         4        3.139          M
+CKE    C8M   R     9.313         4        2.798          M
+DDIR   PHI2  F    10.080         4        2.928          M
+DDIR   C8M   R    11.815         4        3.415          M
+DQMH   C8M   R     9.178         4        2.768          M
+DQML   C8M   R     9.243         4        2.804          M
+RA[0]  C8M   R     9.293         4        2.788          M
+RA[10] C8M   R     9.178         4        2.768          M
+RA[11] C8M   R     9.178         4        2.768          M
+RA[1]  C8M   R     8.875         4        2.688          M
+RA[2]  C8M   R     9.272         4        2.799          M
+RA[3]  C8M   R     9.178         4        2.768          M
+RA[4]  C8M   R     8.875         4        2.688          M
+RA[5]  C8M   R     8.782         4        2.689          M
+RA[6]  C8M   R     8.469         4        2.606          M
+RA[7]  C8M   R     9.605         4        2.874          M
+RA[8]  C8M   R     9.677         4        2.908          M
+RA[9]  C8M   R     9.605         4        2.874          M
+RBA[0] C8M   R    10.043         4        2.984          M
+RBA[1] C8M   R     9.385         4        2.833          M
+RCLK   C8M   F    10.449         4        2.927          M
+RD[0]  PHI2  F     9.272         4        2.799          M
+RD[0]  C8M   R    10.608         4        2.708          M
+RD[1]  PHI2  F     9.312         4        2.811          M
+RD[1]  C8M   R    11.130         4        2.863          M
+RD[2]  PHI2  F     8.885         4        2.706          M
+RD[2]  C8M   R    11.967         4        3.085          M
+RD[3]  PHI2  F     8.771         4        2.684          M
+RD[3]  C8M   R    12.004         4        3.082          M
+RD[4]  PHI2  F     9.397         4        2.843          M
+RD[4]  C8M   R    11.997         4        3.079          M
+RD[5]  PHI2  F     9.198         4        2.789          M
+RD[5]  C8M   R    12.004         4        3.082          M
+RD[6]  PHI2  F     9.178         4        2.769          M
+RD[6]  C8M   R    11.020         4        2.824          M
+RD[7]  PHI2  F     9.178         4        2.769          M
+RD[7]  C8M   R    11.020         4        2.824          M
+nAOE   PHI2  F    11.196         4        3.237          M
+nCAS   C8M   R     8.447         4        2.605          M
+nCS    C8M   R     8.469         4        2.606          M
+nDMA   PHI2  F    10.880         4        3.139          M
+nDOE   PHI2  F    12.375         4        3.194          M
+nDOE   C8M   R    13.298         4        3.715          M
+nIRQ   PHI2  F    14.656         4        3.033          M
+nIRQ   C8M   R    18.734         4        4.562          M
+nRAS   C8M   R     8.896         4        2.711          M
+nWE    C8M   R    10.487         4        3.138          M
+WARNING: you must also run trce with hold speed: 4
+WARNING: you must also run trce with hold speed: 6
