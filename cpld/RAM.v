@@ -16,9 +16,9 @@ module RAM(
 	output reg nCS,
 	output reg nRAS,
 	output reg nCAS,
-	output reg nWE,
+	output reg nRWE,
 	output reg CKE,
-	output reg [1:0] BA,
+	output reg [1:0] RBA,
 	output reg [12:0] RA,
 	output reg DQMH,
 	output reg DQML,
@@ -26,8 +26,8 @@ module RAM(
 	
 	/* RAM clock output */
 	reg CP1, CP2;
-	always @(posedge C8M) CP1 <= !CP1;
-	always @(negedge C8M) CP2 <= !CP1;
+	always @(posedge C8M) begin CP1 <= !CP1; end
+	always @(negedge C8M) begin CP2 <= !CP1; end
 	assign RCLK = CP1 ^ CP2;
 	
 	/* Reset synchronization */
@@ -39,9 +39,9 @@ module RAM(
 	
 	/* PHI2 edge detect control */
 	reg [1:0] PHI2r = 0;
-	wire PHI2Fall =  PHI2r[1] && !PHI2r[0];
-	always @(negedge C8M) PHI2r[0] <= PHI2;
-	always @(posedge C8M) PHI2r[1] <= PHI2r[0];
+	wire PHI2Fall = PHI2r[1] && !PHI2r[0];
+	always @(negedge C8M) begin PHI2r[0] <= PHI2; end
+	always @(posedge C8M) begin PHI2r[1] <= PHI2r[0]; end
 	
 	/* PLL locked bit */
 	reg PLLLock = 0;
@@ -81,13 +81,13 @@ module RAM(
 					nCS <= 0;
 					nRAS <= 0;
 					nCAS <= 1;
-					nWE <= 1;
+					nRWE <= 1;
 					CKE <= 1;
 				end else begin // NOP CKD
 					nCS <= 1;
 					nRAS <= 1;
 					nCAS <= 1;
-					nWE <= 1;
+					nRWE <= 1;
 					CKE <= 0;
 				end
 			end 1: begin
@@ -95,71 +95,71 @@ module RAM(
 					nCS <= 0;
 					nRAS <= 1;
 					nCAS <= 0;
-					nWE <= 1;
+					nRWE <= 1;
 					CKE <= 1;
 				end else if (WRCMDr) begin // WR
 					nCS <= 0;
 					nRAS <= 1;
 					nCAS <= 0;
-					nWE <= 0;
+					nRWE <= 0;
 					CKE <= 1;
 				end else begin // NOP CKD
 					nCS <= 1;
 					nRAS <= 1;
 					nCAS <= 1;
-					nWE <= 1;
+					nRWE <= 1;
 					CKE <= 0;
 				end
 			end 2: begin // NOP CKE
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
-				nWE <= 1;
+				nRWE <= 1;
 				CKE <= 1;
 			end 3: begin // PC all
 				nCS <= 0;
 				nRAS <= 0;
 				nCAS <= 1;
-				nWE <= 0;
+				nRWE <= 0;
 				CKE <= 1;
 			end 4: begin
 				if (INITCMDr) begin // LDM
 					nCS <= 0;
 					nRAS <= 0;
 					nCAS <= 0;
-					nWE <= 0;
+					nRWE <= 0;
 					CKE <= 1;
 				end else begin // AREF
 					nCS <= 0;
 					nRAS <= 0;
 					nCAS <= 0;
-					nWE <= 1;
+					nRWE <= 1;
 					CKE <= 1;
 				end
 			end 5: begin // NOP CKD
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
-				nWE <= 1;
+				nRWE <= 1;
 				CKE <= 0;
 			end 6: begin // NOP CKD
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
-				nWE <= 1;
+				nRWE <= 1;
 				CKE <= 0;
 			end 7: begin // NOP CKE
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
-				nWE <= 1;
+				nRWE <= 1;
 				CKE <= 1;
 			end endcase
 		else begin // NOP CKE
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
-			nWE <= 1;
+			nRWE <= 1;
 			CKE <= 1;
 		end
 	end
@@ -167,12 +167,12 @@ module RAM(
 	always @(posedge C8M) begin
 		case (S[2:0])
 			0: begin // ACT/NOP
-				BA[1:0] <= A[23:22];
+				RBA[1:0] <= A[23:22];
 				RA[11:0] <= A[21:10];
 				DQMH <= 1;
 				DQML <= 1;
 			end 1: begin // RD/WR/NOP
-				// BA stays the same
+				// RBA stays the same
 				RA[12] <= 0;
 				RA[11:0] <= A[9:1];
 				DQMH <=  A[0];
@@ -186,7 +186,7 @@ module RAM(
 				DQML <= 1;
 			end 4: begin // AREF/LDM
 				// Mode register contents
-				BA[1:0] <= 2'b00;		// Reserved in mode register
+				RBA[1:0] <= 2'b00;		// Reserved in mode register
 				RA[12:10] <= 3'b000;	// Reserved in mode register
 				RA[9] <= 1'b1;			// "1" for single write mode
 				RA[8] <= 1'b0;			// Reserved in mode register
@@ -210,12 +210,16 @@ module RAM(
 		RA[12] <= 0;
 	end
 	
+	/* Read data registration */
+	always @(posedge C8M) if (S==3) RDD[7:0] <= RD[7:0];
+	
+	/* Write data registration */
+	reg [7:0] WRDr;
+	always @(negedge PHI2) WRDr[7:0] <= WRD[7:0];
+	
 	/* RAM data bus control */
 	reg RDOE = 0;
-	always @(posedge C8M) begin RDOE = S==1; end
-	assign RD[7:0] = RDOE ? WRD[7:0] : 8'bZ;
-	
-	/* Read data registration */
-	always @(posedge C8M) begin if (S==3) RDD[7:0] <= RD[7:0]; end
+	always @(posedge C8M) RDOE <= S==1;
+	assign RD[7:0] = RDOE ? WRDr[7:0] : 8'bZ;
 
 endmodule
