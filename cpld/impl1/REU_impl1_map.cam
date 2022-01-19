@@ -1,0 +1,47 @@
+[ START MERGED ]
+n3237 RDOE_N_553
+n1225 ram/RDOE
+PHI2_N_558 PHI2_c
+C8M_N_498 C8M_c
+ram/n1649 ram/PLLLock
+[ END MERGED ]
+[ START CLIPPED ]
+RAMRDD_7__I_0_8/S0
+RAMRDD_7__I_0_8/CO
+reureg/add_835_1/S1
+reureg/add_835_1/S0
+reureg/add_835_1/CI
+reureg/add_835_9/CO
+reureg/add_836_1/S1
+reureg/add_836_1/S0
+reureg/add_836_1/CI
+reureg/add_836_9/CO
+reureg/add_837_1/S1
+reureg/add_837_1/S0
+reureg/add_837_1/CI
+reureg/add_837_9/CO
+reureg/sub_85_add_2_1/S0
+reureg/sub_85_add_2_1/CI
+reureg/add_834_9/CO
+reureg/sub_85_add_2_9/S1
+reureg/sub_85_add_2_9/CO
+reureg/sub_84_add_2_1/S0
+reureg/sub_84_add_2_1/CI
+reureg/sub_84_add_2_9/S1
+reureg/sub_84_add_2_9/CO
+reureg/add_834_1/S1
+reureg/add_834_1/S0
+reureg/add_834_1/CI
+RAMRDD_7__I_0_0/S1
+RAMRDD_7__I_0_0/S0
+RAMRDD_7__I_0_0/CI
+RAMRDD_7__I_0_7/S1
+RAMRDD_7__I_0_7/S0
+[ END CLIPPED ]
+[ START DESIGN PREFS ]
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Tue Jan 18 16:15:08 2022
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+SCHEMATIC END ;
+[ END DESIGN PREFS ]

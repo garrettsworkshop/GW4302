@@ -1,1 +1,46 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1642540522"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1642540527"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1642540508">
+            <Task name="Map" build_result="2" update_result="0" update_time="1642540508"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1642540508"/>
+            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
+            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1642540519">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1642540519"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1642540519"/>
+            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1642540507">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1642540507"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1642540527"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1642540468"/>
+            <Task name="BKM" build_result="0" update_result="3" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/REU_impl1_map.vdb" last_build_time="1642540508" last_build_size="109620"/>
+        <Report name="REU_impl1.bgn" last_build_time="1642540527" last_build_size="4258"/>
+        <Report name="REU_impl1.bit" last_build_time="1642540522" last_build_size="8126"/>
+        <Report name="REU_impl1.ior" last_build_time="1642538254" last_build_size="6467"/>
+        <Report name="REU_impl1.jed" last_build_time="1642540527" last_build_size="177243"/>
+        <Report name="REU_impl1.lsedata" last_build_time="1642540507" last_build_size="520744"/>
+        <Report name="REU_impl1.ncd" last_build_time="1642540519" last_build_size="413558"/>
+        <Report name="REU_impl1.ngd" last_build_time="1642540507" last_build_size="348064"/>
+        <Report name="REU_impl1.tw1" last_build_time="1642540508" last_build_size="15651"/>
+        <Report name="REU_impl1.twr" last_build_time="1642540519" last_build_size="91857"/>
+        <Report name="REU_impl1_map.ncd" last_build_time="1642540508" last_build_size="278139"/>
+    </Strategy>
+</BuildStatus>
+       

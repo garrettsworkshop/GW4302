@@ -1,0 +1,17 @@
+Results of NGD DRC are available in REU_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'nIO1' has no load.
+WARNING - synthesis: input pad net 'nIO1' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
+
+Design Results:
+    600 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file REU_impl1.ngd.
