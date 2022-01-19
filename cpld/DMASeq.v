@@ -1,23 +1,23 @@
 module DMASeq(
+	/* Clock & Reset */
 	input PHI2,
 	input nRESET,
-	
+	/* C64 Bus Available */
 	input BA,
-	
+	/* SDRAM Command Outputs */
 	output reg RAMRD,
 	output reg RAMWR,
-	
-	input Equal,
-	input Execute,
-	
+	/* DMA Command Outputs */
 	output reg DMA,
 	output reg DMARW,
-	
+	/* Reset Output to Registers */
 	output RegReset,
-	
+	/* Transfer Inputs */
+	input Equal,
+	input Execute,
 	input [1:0] XferType,
 	input Length1,
-	
+	/* Register Control Outputs */
 	output NextCA,
 	output NextREUA,
 	output XferEnd,
