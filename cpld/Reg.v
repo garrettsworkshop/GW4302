@@ -1,4 +1,4 @@
-module Reg(
+module REUReg(
 	/* Clock & Reset */
 	input PHI2,
 	input Reset,
@@ -22,6 +22,7 @@ module Reg(
 	output FF00DecodeOut,
 	output [1:0] XferTypeOut,
 	output [23:0] REUAOut,
+	output [15:0] CAOut,
 	output Length1);
 
 /* REU Registers - 0x0 Status Register */
@@ -43,6 +44,7 @@ assign XferTypeOut = XferType;
 /* REU Registers - 0x2, 0x3 Commodore Address */
 reg [15:0] CA;
 reg [15:0] CAWritten;
+assign CAOut = CA;
 
 /* REU Registers - 0x4, 0x5, 0x6 REU Address */
 reg [23:0] REUA;
@@ -131,7 +133,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		CA[7:0] <= CAWritten[7:0];
 	end else if (NextCA) begin
-		CA[7:0] <= CA+1;
+		CA[7:0] <= CA[7:0]+1;
 	end
 end 
 
@@ -145,7 +147,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		CA[15:8] <= CAWritten[15:8];
 	end else if (NextCA && CA[7:0]==8'hFF) begin
-		CA[15:8] <= CA+1;
+		CA[15:8] <= CA[15:8]+1;
 	end
 end
 
@@ -206,7 +208,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		Length[7:0] <= LengthWritten[7:0];
 	end else if (NextCA) begin
-		Length[15:0] <= Length[7:0]-1;
+		Length[7:0] <= Length[7:0]-1;
 	end
 end
 
