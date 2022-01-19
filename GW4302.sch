@@ -895,7 +895,7 @@ Text Label 7550 5800 0    50   ~ 0
 RDQMH
 Text Label 7550 5700 0    50   ~ 0
 RDQML
-Text Label 5700 4200 0    50   ~ 0
+Text Label 5700 3800 0    50   ~ 0
 RBA0
 Text Label 5700 3700 0    50   ~ 0
 RBA1
@@ -1641,13 +1641,13 @@ Wire Wire Line
 Connection ~ 1050 4650
 Wire Wire Line
 	1450 4850 1050 4850
-Text Label 5700 4000 0    50   ~ 0
-TCKr
 Text Label 5700 4100 0    50   ~ 0
+TCKr
+Text Label 5700 4200 0    50   ~ 0
 TMS
-Text Label 5700 3900 0    50   ~ 0
+Text Label 5700 4000 0    50   ~ 0
 TDI
-Text Label 5700 3800 0    50   ~ 0
+Text Label 5700 3900 0    50   ~ 0
 TDO
 Text Label 5700 4900 0    50   ~ 0
 ~JTAGEN~
@@ -2600,8 +2600,9 @@ Wire Wire Line
 Connection ~ 2000 5950
 NoConn ~ 3800 5200
 NoConn ~ 3800 5700
-NoConn ~ 3800 5600
 Text Label 2800 6550 0    50   ~ 0
 ~DMA~
 NoConn ~ 8950 1550
+Text Label 3800 5600 2    50   ~ 0
+B~RESET~
 $EndSCHEMATC
