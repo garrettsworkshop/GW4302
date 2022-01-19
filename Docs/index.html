@@ -223,9 +223,9 @@ The timing diagrams for the DMA sequencer are basically timing diagrams showing 
 {signal: [
 ['REU registers',
 {name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,3,2,1,0,0]},
-{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
-{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
-{name: 'XferEnd',			wave: '0...............................x..10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.....x10.x10.x10.x10.x10.x10.x10.x10.....', period: 0.5},
+{name: 'NextCA',			wave: '0.....x10.x10.x10.x10.x10.x10.x10.x10.....', period: 0.5},
+{name: 'XferEnd',			wave: '0.................................x10.....', period: 0.5},
 ],
 
 ['RAM control',
@@ -249,9 +249,9 @@ The timing diagrams for the DMA sequencer are basically timing diagrams showing 
 {signal: [
 ['REU registers',
 {name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,3,2,1,0,0]},
-{name: 'NextREUA',			wave: '0.......x..1x..1x..1x..1x..1x..1x..1x..0..', period: 0.5},
-{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
-{name: 'XferEnd',			wave: '0...............................x..10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.........x10.x10.x10.x10.x10.x10.x10.x10.', period: 0.5},
+{name: 'NextREUA',			wave: '0.....x10.x10.x10.x10.x10.x10.x10.x10.....', period: 0.5},
+{name: 'XferEnd',			wave: '0.................................x10.....', period: 0.5},
 ],
 
 ['RAM control',
@@ -275,9 +275,9 @@ The timing diagrams for the DMA sequencer are basically timing diagrams showing 
 {signal: [
 ['REU registers',
 {name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,3,2,1,0,0]},
-{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
-{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
-{name: 'XferEnd',			wave: '0...x..0x..0x..0x..0x..0x..0x..0x..10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.....x10.x10.x10.x10.x10.x10.x10.x10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.....x10.x10.x10.x10.x10.x10.x10.x10.....', period: 0.5},
+{name: 'XferEnd',			wave: '0.................................x10.....', period: 0.5},
 ],
 
 ['RAM control',
@@ -301,9 +301,9 @@ The timing diagrams for the DMA sequencer are basically timing diagrams showing 
 {signal: [
 ['REU registers',
 {name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2', period: 1, data:[12,11,10,9,8,7,6,5,5,5]},
-{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
-{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..1x..1x..1x..0......', period: 0.5},
-{name: 'XferEnd',			wave: '0...x..0x..0x..0x..0x..0x..0x..0x..10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.....x10.x10.x10.x10.x10.x10.x10.x10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.....x10.x10.x10.x10.x10.x10.x10.x10.....', period: 0.5},
+{name: 'VerifyErr',			wave: '0.................................x10.....', period: 0.5},
 ],
 
 ['RAM control',
@@ -328,9 +328,9 @@ The timing diagrams for the DMA sequencer are basically timing diagrams showing 
 {signal: [
 ['REU registers',
 {name: 'Length',			wave: '2.....2...2...2...2..', period: 1, data:[4,3,2,1,0]},
-{name: 'NextREUA',			wave: '0...1.0.1.0.1.0.1.0..', period: 1},
-{name: 'NextCA',			wave: '0...1.0.1.0.1.0.1.0..', period: 1},
-{name: 'XferEnd',			wave: '0...............................x..10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.........x10.....x10.....x10.....x10.....', period: 0.5},
+{name: 'NextCA',			wave: '0.........x10.....x10.....x10.....x10.....', period: 0.5},
+{name: 'XferEnd',			wave: '0.................................x10.....', period: 0.5},
 ],
 
 ['RAM control',
@@ -355,9 +355,9 @@ The timing diagrams for the DMA sequencer are basically timing diagrams showing 
 {signal: [
 ['REU registers',
 {name: 'Length',			wave: '2...2.2.2.2.2.2.2.2.2.2', period: 1, data:[8,7,6,5,4,4,3,2,1,0,0]},
-{name: 'NextREUA',			wave: '0...x..1x..1x..1x..1x..0x..1x..1x..1x..0......', period: 0.5},
-{name: 'NextCA',			wave: '0...x..1x..1x..1x..1x..0x..1x..1x..1x..0......', period: 0.5},
-{name: 'XferEnd',			wave: '0...................................x..10.....', period: 0.5},
+{name: 'NextREUA',			wave: '0.........x10.x10.x10.....x10.x10.x10.x10.x10.', period: 0.5},
+{name: 'NextREUA',			wave: '0.....x10.x10.x10.x10.....x10.x10.x10.x10.....', period: 0.5},
+{name: 'XferEnd',			wave: '0.....................................x10.....', period: 0.5},
 ],
 
 ['RAM control',
