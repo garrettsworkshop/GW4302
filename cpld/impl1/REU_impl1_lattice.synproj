@@ -30,16 +30,16 @@
 
 
 -lpf 1
--p "C:/Users/zanek/Documents/GitHub/GW4302/cpld"
--ver "C:/Users/zanek/Documents/GitHub/GW4302/cpld/RAM.v"
-"C:/Users/zanek/Documents/GitHub/GW4302/cpld/Reg.v"
-"C:/Users/zanek/Documents/GitHub/GW4302/cpld/DMASeq.v"
-"C:/Users/zanek/Documents/GitHub/GW4302/cpld/Glue.v"
-"C:/Users/zanek/Documents/GitHub/GW4302/cpld/REU.v"
+-p "//Mac/iCloud/Repos/GW4302/cpld"
+-ver "//Mac/iCloud/Repos/GW4302/cpld/RAM.v"
+"//Mac/iCloud/Repos/GW4302/cpld/Reg.v"
+"//Mac/iCloud/Repos/GW4302/cpld/DMASeq.v"
+"//Mac/iCloud/Repos/GW4302/cpld/Glue.v"
+"//Mac/iCloud/Repos/GW4302/cpld/REU.v"
 -top REU
 
 
--p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/zanek/Documents/GitHub/GW4302/cpld/impl1" "C:/Users/zanek/Documents/GitHub/GW4302/cpld"
+-p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "//Mac/iCloud/Repos/GW4302/cpld/impl1" "//Mac/iCloud/Repos/GW4302/cpld"
 
 -ngd "REU_impl1.ngd"
 

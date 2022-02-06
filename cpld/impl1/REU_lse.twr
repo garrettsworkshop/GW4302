@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Tue Jan 18 16:15:07 2022
+Wed Feb 02 21:55:38 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -44,9 +44,9 @@ Error:  The following path violates requirements by 3.274ns
 L_CO        ---     0.444             CK to Q              \ram/PLLLock_117 (from C8M_c)
 Route         3   e 1.315                                  \ram/PLLLock
 LUT4        ---     0.493              C to Z              \ram/i2_3_lut_rep_50_4_lut
-Route        13   e 1.803                                  C8M_N_498_enable_4
-LUT4        ---     0.493              D to Z              i1_2_lut_4_lut
-Route         1   e 0.941                                  C8M_c_enable_20
+Route        13   e 1.803                                  \ram/C8M_N_498_enable_4
+LUT4        ---     0.493              D to Z              \ram/i1_2_lut_4_lut
+Route         1   e 0.941                                  \ram/C8M_c_enable_13
                   --------
                     5.489  (26.1% logic, 73.9% route), 3 logic levels.
 
@@ -72,9 +72,9 @@ Error:  The following path violates requirements by 3.274ns
 L_CO        ---     0.444             CK to Q              \ram/PHI2r[0]_115 (from C8M_c)
 Route         3   e 1.315                                  \ram/PHI2r[0]
 LUT4        ---     0.493              A to Z              \ram/i2_3_lut_rep_50_4_lut
-Route        13   e 1.803                                  C8M_N_498_enable_4
-LUT4        ---     0.493              D to Z              i1_2_lut_4_lut
-Route         1   e 0.941                                  C8M_c_enable_20
+Route        13   e 1.803                                  \ram/C8M_N_498_enable_4
+LUT4        ---     0.493              D to Z              \ram/i1_2_lut_4_lut
+Route         1   e 0.941                                  \ram/C8M_c_enable_13
                   --------
                     5.489  (26.1% logic, 73.9% route), 3 logic levels.
 
@@ -99,9 +99,9 @@ Error:  The following path violates requirements by 2.570ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \ram/RDCMDr_120 (from C8M_c)
 Route         4   e 1.398                                  RDCMDr
-LUT4        ---     0.493              A to Z              \ram/i1_2_lut_rep_65
-Route         2   e 1.141                                  \ram/n3239
-LUT4        ---     0.493              C to Z              \ram/i2703_3_lut_4_lut
+LUT4        ---     0.493              A to Z              \ram/i1_2_lut_rep_67
+Route         2   e 1.141                                  \ram/n3446
+LUT4        ---     0.493              C to Z              \ram/i2916_3_lut_4_lut
 Route         1   e 0.941                                  \ram/nRAS_N_521
                   --------
                     4.910  (29.1% logic, 70.9% route), 3 logic levels.
@@ -136,21 +136,21 @@ Error:  The following path violates requirements by 10.985ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \dmaseq/DMA_63 (from PHI2_c)
 Route        33   e 2.099                                  AOE
-LUT4        ---     0.493              A to Z              \glue/i2694_2_lut_rep_67
-Route        29   e 2.034                                  n3241
+LUT4        ---     0.493              A to Z              \glue/i2905_2_lut_rep_64
+Route        29   e 2.034                                  n3443
 LUT4        ---     0.493              B to Z              \dmaseq/SwapState_N_564_I_0_82_4_lut
 Route         2   e 1.141                                  NextREUA_N_584
-LUT4        ---     0.493              A to Z              \reureg/i7_4_lut
-Route         1   e 0.941                                  \reureg/n17_adj_607
+LUT4        ---     0.493              A to Z              \reureg/i7_4_lut_adj_143
+Route         1   e 0.941                                  \reureg/n17_adj_612
 LUT4        ---     0.493              A to Z              \reureg/i9_4_lut
 Route         2   e 1.141                                  \reureg/REUAOut_15__N_62
-LUT4        ---     0.493              B to Z              \reureg/i1_4_lut
+LUT4        ---     0.493              B to Z              \reureg/i1_4_lut_adj_142
 Route         3   e 1.258                                  \reureg/REUAOut_18__N_45
-LUT4        ---     0.493              B to Z              \reureg/i720_2_lut_3_lut
-Route         1   e 0.941                                  \reureg/n1046
-LUT4        ---     0.493              D to Z              \reureg/mux_227_i3_4_lut
+LUT4        ---     0.493              B to Z              \reureg/i705_2_lut_3_lut
+Route         1   e 0.941                                  \reureg/n1028
+LUT4        ---     0.493              D to Z              \reureg/mux_205_i3_4_lut
 Route         1   e 0.941                                  \reureg/REUAOut_18__N_42
-LUT4        ---     0.493              D to Z              \reureg/mux_230_i3_3_lut_4_lut
+LUT4        ---     0.493              D to Z              \reureg/mux_211_i3_3_lut_4_lut
 Route         1   e 0.941                                  \reureg/REUAOut_18__N_41
                   --------
                    15.825  (27.7% logic, 72.3% route), 9 logic levels.
@@ -176,21 +176,21 @@ Error:  The following path violates requirements by 10.985ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \dmaseq/DMA_63 (from PHI2_c)
 Route        33   e 2.099                                  AOE
-LUT4        ---     0.493              A to Z              \glue/i2694_2_lut_rep_67
-Route        29   e 2.034                                  n3241
+LUT4        ---     0.493              A to Z              \glue/i2905_2_lut_rep_64
+Route        29   e 2.034                                  n3443
 LUT4        ---     0.493              B to Z              \dmaseq/SwapState_N_564_I_0_82_4_lut
 Route         2   e 1.141                                  NextREUA_N_584
-LUT4        ---     0.493              A to Z              \reureg/i7_4_lut
-Route         1   e 0.941                                  \reureg/n17_adj_607
+LUT4        ---     0.493              A to Z              \reureg/i7_4_lut_adj_143
+Route         1   e 0.941                                  \reureg/n17_adj_612
 LUT4        ---     0.493              A to Z              \reureg/i9_4_lut
 Route         2   e 1.141                                  \reureg/REUAOut_15__N_62
-LUT4        ---     0.493              B to Z              \reureg/i1_4_lut
+LUT4        ---     0.493              B to Z              \reureg/i1_4_lut_adj_142
 Route         3   e 1.258                                  \reureg/REUAOut_18__N_45
-LUT4        ---     0.493              B to Z              \reureg/i712_2_lut_rep_33
-Route         1   e 0.941                                  \reureg/n3207
-LUT4        ---     0.493              D to Z              \reureg/mux_227_i2_4_lut
+LUT4        ---     0.493              B to Z              \reureg/i697_2_lut_rep_31
+Route         1   e 0.941                                  \reureg/n3410
+LUT4        ---     0.493              D to Z              \reureg/mux_205_i2_4_lut
 Route         1   e 0.941                                  \reureg/REUAOut_17__N_49
-LUT4        ---     0.493              D to Z              \reureg/mux_230_i2_3_lut_4_lut
+LUT4        ---     0.493              D to Z              \reureg/mux_211_i2_3_lut_4_lut
 Route         1   e 0.941                                  \reureg/REUAOut_17__N_48
                   --------
                    15.825  (27.7% logic, 72.3% route), 9 logic levels.
@@ -201,17 +201,17 @@ Error:  The following path violates requirements by 9.959ns
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3JX    CK             \reureg/Length[2]_658  (from PHI2_c +)
-   Destination:    FD1S3IX    D              \reureg/CA[14]_590  (to PHI2_c -)
+   Destination:    FD1S3IX    D              \reureg/CA[15]_589  (to PHI2_c -)
 
    Delay:                  14.799ns  (34.7% logic, 65.3% route), 11 logic levels.
 
  Constraint Details:
 
-     14.799ns data_path \reureg/Length[2]_658 to \reureg/CA[14]_590 violates
+     14.799ns data_path \reureg/Length[2]_658 to \reureg/CA[15]_589 violates
       5.000ns delay constraint less
       0.160ns L_S requirement (totaling 4.840ns) by 9.959ns
 
- Path Details: \reureg/Length[2]_658 to \reureg/CA[14]_590
+ Path Details: \reureg/Length[2]_658 to \reureg/CA[15]_589
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \reureg/Length[2]_658 (from PHI2_c)
@@ -221,21 +221,21 @@ Route         1   e 0.941                                  \reureg/n22
 LUT4        ---     0.493              C to Z              \reureg/i14_4_lut
 Route         1   e 0.941                                  \reureg/n30
 LUT4        ---     0.493              B to Z              \reureg/i15_4_lut
-Route        12   e 1.657                                  n1420
-LUT4        ---     0.493              C to Z              \dmaseq/i1_2_lut_rep_41_3_lut_4_lut
-Route        24   e 1.838                                  n3215
-LUT4        ---     0.493              D to Z              \glue/i2377_3_lut_4_lut_4_lut
-Route         1   e 0.941                                  n2720
-A1_TO_FCO   ---     0.827           A[2] to COUT           \reureg/add_835_3
-Route         1   e 0.020                                  \reureg/n2777
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/add_835_5
-Route         1   e 0.020                                  \reureg/n2778
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/add_835_7
-Route         1   e 0.020                                  \reureg/n2779
-FCI_TO_F    ---     0.598            CIN to S[2]           \reureg/add_835_9
-Route         1   e 0.941                                  \reureg/CAOut_15__N_147[6]
-LUT4        ---     0.493              A to Z              \reureg/mux_233_i7_3_lut
-Route         1   e 0.941                                  \reureg/CAOut_14__N_153
+Route        12   e 1.657                                  n1390
+LUT4        ---     0.493              C to Z              \dmaseq/i1_2_lut_rep_39_3_lut_4_lut
+Route        24   e 1.838                                  n3418
+LUT4        ---     0.493              D to Z              \glue/i2608_3_lut_4_lut_4_lut
+Route         1   e 0.941                                  n2934
+A1_TO_FCO   ---     0.827           A[2] to COUT           \reureg/CAOut_15__I_0_3
+Route         1   e 0.020                                  \reureg/n2982
+FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_15__I_0_5
+Route         1   e 0.020                                  \reureg/n2983
+FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_15__I_0_7
+Route         1   e 0.020                                  \reureg/n2984
+FCI_TO_F    ---     0.598            CIN to S[2]           \reureg/CAOut_15__I_0_9
+Route         1   e 0.941                                  \reureg/CAOut_15__N_147[7]
+LUT4        ---     0.493              A to Z              \reureg/mux_212_i8_3_lut
+Route         1   e 0.941                                  \reureg/CAOut_15__N_144
                   --------
                    14.799  (34.7% logic, 65.3% route), 11 logic levels.
 
@@ -262,17 +262,17 @@ clk0 [get_nets PHI2_c]                  |     5.000 ns|    15.985 ns|     9 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-n1420                                   |      12|    3532|     82.64%
+n1390                                   |      12|    3532|     82.64%
                                         |        |        |
-PHI2_N_558_enable_18                    |      34|    2513|     58.80%
+PHI2_N_558_enable_20                    |      34|    2513|     58.80%
                                         |        |        |
-\reureg/n30                             |       1|    1956|     45.77%
+\reureg/n30                             |       1|    1952|     45.67%
                                         |        |        |
 \reureg/n28                             |       1|    1040|     24.33%
                                         |        |        |
-n3215                                   |      24|     918|     21.48%
+n3418                                   |      24|     918|     21.48%
                                         |        |        |
-\reureg/n26                             |       1|     776|     18.16%
+\reureg/n26                             |       1|     780|     18.25%
                                         |        |        |
 \reureg/n22                             |       1|     536|     12.54%
                                         |        |        |
@@ -284,8 +284,8 @@ Timing summary:
 
 Timing errors: 4274  Score: 28238024
 
-Constraints cover  7210 paths, 412 nets, and 1204 connections (63.8% coverage)
+Constraints cover  7210 paths, 412 nets, and 1204 connections (63.7% coverage)
 
 
-Peak memory: 64925696 bytes, TRCE: 7331840 bytes, DLYMAN: 163840 bytes
+Peak memory: 72982528 bytes, TRCE: 7487488 bytes, DLYMAN: 163840 bytes
 CPU_TIME_REPORT: 0 secs 
