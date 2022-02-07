@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jan 18 16:15:06 2022
+Thu Jan 20 14:41:49 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui 
@@ -89,15 +89,15 @@ Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADER
 Top module name (Verilog): REU
 INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
 INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(136): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(150): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(165): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(180): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(196): expression size 32 truncated to fit in target size 3. VERI-1209
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(211): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(226): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(129): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(143): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(158): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(173): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(189): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(204): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(219): expression size 32 truncated to fit in target size 8. VERI-1209
 INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/ram.v(1): compiling module RAM. VERI-1018
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/ram.v(59): expression size 32 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/ram.v(57): expression size 32 truncated to fit in target size 3. VERI-1209
 INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
 INFO - synthesis: c:/users/zanek/documents/github/gw4302/cpld/glue.v(1): compiling module Glue. VERI-1018
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -106,13 +106,7 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
-WARNING - synthesis: I/O Port nIO1 's net has no driver and is unused.
-WARNING - synthesis: c:/users/zanek/documents/github/gw4302/cpld/reg.v(104): Register \reureg/Size_567 is stuck at One. VDB-5014
-WARNING - synthesis: Bit 0 of Register \reureg/Version is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \reureg/Version is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \reureg/Version is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \reureg/Version is stuck at Zero
-WARNING - synthesis: Bit 0 of Register \ram/RA is stuck at Zero
+######## Missing driver on net RA[12]. Patching with GND.
 INFO - synthesis: Extracted state machine for register '\ram/S' with one-hot encoding
 original encoding -> new encoding (one-hot encoding)
 
@@ -135,7 +129,6 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
-WARNING - synthesis: I/O Port nIO1 's net has no driver and is unused.
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 Applying 200.000000 MHz constraint to all clocks
 
@@ -144,29 +137,26 @@ Results of NGD DRC are available in REU_drc.log.
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
-WARNING - synthesis: logical net 'nIO1' has no load.
-WARNING - synthesis: input pad net 'nIO1' has no legal load.
-WARNING - synthesis: DRC complete with 2 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.
 
 ################### Begin Area Report (REU)######################
-Number of register bits => 192 of 877 (21 % )
+Number of register bits => 189 of 877 (21 % )
 BB => 32
 CCU2D => 33
-FD1P3AX => 48
-FD1P3IX => 56
-FD1P3JX => 19
-FD1S3AX => 22
+FD1P3AX => 56
+FD1P3IX => 44
+FD1P3JX => 17
+FD1S3AX => 25
 FD1S3IX => 40
 FD1S3JX => 7
 GSR => 1
 IB => 6
 INV => 2
-L6MUX21 => 5
-LUT4 => 276
-OB => 32
-PFUMX => 18
+L6MUX21 => 4
+LUT4 => 263
+OB => 31
+PFUMX => 14
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -177,32 +167,32 @@ TSALL => 1
 Clock Nets
 Number of Clocks: 2
   Net : C8M_c, loads : 46
-  Net : PHI2_c, loads : 2
+  Net : PHI2_c, loads : 3
 Clock Enable Nets
-Number of Clock Enables: 25
+Number of Clock Enables: 24
 Top 10 highest fanout Clock Enables:
-  Net : ram/RDD_7__N_507, loads : 13
-  Net : ram/C8M_N_498_enable_4, loads : 12
-  Net : ram/C8M_c_enable_21, loads : 11
-  Net : reureg/PHI2_N_558_enable_12, loads : 8
-  Net : reureg/PHI2_N_558_enable_88, loads : 8
-  Net : reureg/PHI2_N_558_enable_53, loads : 8
-  Net : reureg/PHI2_N_558_enable_80, loads : 8
-  Net : reureg/PHI2_N_558_enable_60, loads : 8
-  Net : reureg/PHI2_N_558_enable_68, loads : 8
-  Net : reureg/PHI2_N_558_enable_54, loads : 8
+  Net : ram/RDD_7__N_493, loads : 17
+  Net : ram/C8M_N_484_enable_4, loads : 12
+  Net : ram/C8M_c_enable_12, loads : 10
+  Net : reureg/PHI2_N_544_enable_51, loads : 8
+  Net : reureg/PHI2_N_544_enable_73, loads : 8
+  Net : reureg/PHI2_N_544_enable_41, loads : 8
+  Net : reureg/PHI2_N_544_enable_81, loads : 8
+  Net : reureg/PHI2_N_544_enable_13, loads : 8
+  Net : reureg/PHI2_N_544_enable_60, loads : 8
+  Net : ram/C8M_c_enable_18, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_558, loads : 140
-  Net : dmaseq/n3235, loads : 102
-  Net : A_out_1, loads : 55
-  Net : A_out_0, loads : 44
-  Net : glue/PHI2_N_558_enable_18, loads : 33
-  Net : dmaseq/AOE, loads : 32
-  Net : glue/n3241, loads : 28
-  Net : dmaseq/n3215, loads : 23
-  Net : ram/RDOE_N_553, loads : 21
-  Net : glue/n3220, loads : 20
+  Net : PHI2_N_544, loads : 136
+  Net : dmaseq/n3379, loads : 93
+  Net : A_out_1, loads : 53
+  Net : A_out_0, loads : 45
+  Net : reureg/n3360, loads : 35
+  Net : dmaseq/AOE, loads : 34
+  Net : reureg/n3369, loads : 25
+  Net : reureg/Length1r, loads : 23
+  Net : ram/PHI2Start_N_536, loads : 22
+  Net : ram/RDOE_N_539, loads : 22
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -212,10 +202,10 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets C8M_c]                   |  200.000 MHz|   86.595 MHz|     3 *
+clk1 [get_nets PHI2_c]                  |  200.000 MHz|   54.271 MHz|     7 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets PHI2_c]                  |  200.000 MHz|   62.559 MHz|     9 *
+clk0 [get_nets C8M_c]                   |  200.000 MHz|   74.794 MHz|     4 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -223,8 +213,8 @@ clk0 [get_nets PHI2_c]                  |  200.000 MHz|   62.559 MHz|     9 *
 2 constraints not met.
 
 
-Peak Memory Usage: 62.250  MB
+Peak Memory Usage: 61.191  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.781  secs
+Elapsed CPU time for LSE flow : 0.828  secs
 --------------------------------------------------------------

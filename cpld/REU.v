@@ -3,8 +3,6 @@ module REU(
 	input C8M,
 	input PHI2,
 	input nRESET,
-	output nRESETOUT,
-	
 	/* 6502 Bus */
 	input BA,
 	inout [7:0] D,
@@ -12,19 +10,15 @@ module REU(
 	input nWE,
 	output nWEDMA,
 	output nDMA,
-	input nIO1,
 	input nIO2,
-	
 	/* Address / Data Buffer Control */
 	output nAOE,
 	output ADIR,
 	output nRWOE,
 	output nDOE,
 	output DDIR,
-	
 	/* DMA and IRQ */
 	output nIRQ,
-	
 	/* SDRAM Bus */
 	output RCLK,
 	output nCS,
@@ -52,7 +46,7 @@ module REU(
 	/* DMA Sequencer Outputs */
 	wire RAMRD, RAMWR;
 	wire RegReset;
-	wire NextCA, NextREUA, XferEnd, VerifyErr;
+	wire NextCA, NextREUA, VerifyErr, Autoload;
 	
 	/* Glue outputs */
 	wire AOE, DOE;
@@ -65,10 +59,10 @@ module REU(
 		/* Register Read/Write Interface */
 		RegRD, RegWR, A[4:0], D[7:0], RegRDD[7:0],
 		/* Increment, etc. Control */
-		NextCA, NextREUA, XferEnd, VerifyErr,
+		NextCA, NextREUA, VerifyErr, Autoload,
 		/* Register Outputs */
 		IRQ, ExecuteEN, FF00DecodeEN,
-		XferType, REUA[23:0], CA[15:0], Length1);
+		XferType[1:0], REUA[23:0], CA[15:0], Length1);
 	
 	RAM ram(
 		/* Clocks */
@@ -96,7 +90,7 @@ module REU(
 		/* Transfer Inputs */
 		RAMRDD[7:0]==D[7:0], Execute, XferType[1:0], Length1,
 		/* Register Control Outputs */
-		NextCA, NextREUA, XferEnd, VerifyErr);
+		NextCA, NextREUA, XferEnd, VerifyErr, Autoload);
 		
 	Glue glue(
 		/* 6502 Bus */
@@ -120,7 +114,5 @@ module REU(
 	assign D[7:0] = DOE ? DMA ? RAMRDD[7:0] : RegRDD[7:0] : 8'bZ;
 	
 	assign A[15:0] = AOE ? CA[15:0] : 16'bZ;
-	
-	assign nRESETOUT = 1;
 	
 endmodule

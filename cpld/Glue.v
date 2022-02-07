@@ -50,6 +50,6 @@ module Glue(
 	assign RegWR = RegCS && !nWE;
 	
 	assign Execute = FF00DecodeEN ? 
-		(ExecuteEN && A[15:0]==16'hFF00) :
+		(ExecuteEN && !nWE && A[15:0]==16'hFF00) :
 		(RegCS && A[4:0]==5'h1 && D[7]);
 endmodule

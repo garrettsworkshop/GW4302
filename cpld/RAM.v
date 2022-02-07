@@ -2,7 +2,6 @@ module RAM(
 	/* Clocks */
 	input C8M,
 	input PHI2,
-	
 	/* R/W Interface */
 	input WRCMD,
 	input RDCMD,
@@ -10,7 +9,6 @@ module RAM(
 	input [7:0] WRD,
 	output reg [7:0] RDD,
 	input nRESET,
-	
 	/* SDRAM Bus */
 	output RCLK,
 	output reg nCS,
@@ -174,7 +172,7 @@ module RAM(
 			end 1: begin // RD/WR/NOP
 				// RBA stays the same
 				RA[12] <= 0;
-				RA[11:0] <= A[9:1];
+				RA[11:0] <= { 2'b00, A[9:1] };
 				DQMH <=  A[0];
 				DQML <= !A[0];
 			end 2: begin // NOP
@@ -207,7 +205,7 @@ module RAM(
 				DQML <= 1;
 			end
 		endcase
-		RA[12] <= 0;
+		RA[12] <= RA[12];
 	end
 	
 	/* Read data registration */

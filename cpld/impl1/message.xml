@@ -1,18 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
-    <Task name="Map">
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>nIO1</Dynamic>
-        </Message>
-        <Message>
-            <ID>51001046</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>nIO1</Dynamic>
-        </Message>
-    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -41,65 +28,65 @@
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(136): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(129): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>136</Navigation>
+            <Navigation>129</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(150): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(143): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>150</Navigation>
+            <Navigation>143</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(165): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(158): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>165</Navigation>
+            <Navigation>158</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(180): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(173): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>180</Navigation>
+            <Navigation>173</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(196): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(189): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>3</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>196</Navigation>
+            <Navigation>189</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(211): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(204): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>211</Navigation>
+            <Navigation>204</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(226): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(219): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>8</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>226</Navigation>
+            <Navigation>219</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -112,11 +99,11 @@
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/ram.v(59): </Dynamic>
+            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/ram.v(57): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>3</Dynamic>
             <Navigation>c:/users/zanek/documents/github/gw4302/cpld/ram.v</Navigation>
-            <Navigation>59</Navigation>
+            <Navigation>57</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -135,80 +122,30 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>nIO1</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935014</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(104): </Dynamic>
-            <Dynamic>\reureg/Size_567</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>104</Navigation>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>0</Dynamic>
-            <Dynamic>\reureg/Version</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>1</Dynamic>
-            <Dynamic>\reureg/Version</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>2</Dynamic>
-            <Dynamic>\reureg/Version</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>3</Dynamic>
-            <Dynamic>\reureg/Version</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>0</Dynamic>
-            <Dynamic>\ram/RA</Dynamic>
-        </Message>
-        <Message>
             <ID>35001774</ID>
             <Severity>Info</Severity>
             <Dynamic>\ram/S</Dynamic>
             <Dynamic>one-hot</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>nIO1</Dynamic>
-        </Message>
-        <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
         </Message>
+    </Task>
+    <Task name="PAR">
         <Message>
-            <ID>1166052</ID>
+            <ID>61061008</ID>
             <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>nIO1</Dynamic>
-            <Navigation>nIO1</Navigation>
+            <Dynamic>PHI2_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>PHI2</Dynamic>
+            <Dynamic>31</Dynamic>
+            <Dynamic>Primary</Dynamic>
         </Message>
         <Message>
-            <ID>1166064</ID>
+            <ID>62061008</ID>
             <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>nIO1</Dynamic>
-        </Message>
-        <Message>
-            <ID>1163101</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>2</Dynamic>
+            <Dynamic>PHI2_c</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

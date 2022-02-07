@@ -21,7 +21,13 @@ module DMASeq(
 	output NextCA,
 	output NextREUA,
 	output XferEnd,
-	output VerifyErr);
+	output VerifyErr,
+	output Autoload);
+	
+	wire XferC64REU = XferType[1:0]==2'b00;
+	wire XferREUC64 = XferType[1:0]==2'b01;
+	wire XferSwap = XferType[1:0]==2'b10;
+	wire XferVerify = XferType[1:0]==2'b11;
 	
 	reg SwapState;
 	
@@ -87,25 +93,35 @@ module DMASeq(
 	end
 	
 	reg DMAr;
-	always @(negedge PHI2) DMAr <= DMA;
-	
+	reg BAr;
 	reg nRESETr;
-	always @(negedge PHI2) nRESETr <= nRESET;
+	always @(negedge PHI2) begin
+		DMAr <= DMA;
+		BAr <= BA;
+		nRESETr <= nRESET;
+	end
 	assign RegReset = !nRESETr && !DMA;
-	
-	assign NextCA = DMA && BA && // DMA must be active and bus must be available
-		(XferType[1:0]!=2'b10 || SwapState); // Don't NextCA on alternating swap cycles 
 		
-	assign NextREUA = (XferType[1:0]==2'b00 ? (DMAr) : (DMA && BA)) && 
+	wire SecondSwap = XferSwap ? SwapState : 1'b1;
+	
+	assign NextCA = 
+		// DMA must be active and bus must be available.
+		// Don't NextCA on alternating swap cycles 
+		DMA && BA && SecondSwap;
+		
+	assign NextREUA = 
 		// For C64-REU cycles, DMA must have been active previous cycle
 		// Otherwise DMA must be active current cycle and bus must be available
-		(XferType[1:0]!=2'b10 || SwapState); // Don't NextREUA on alternating swap cycles
-		
-	assign XferEnd = DMA && BA && // DMA must be active and bus must be available
-		Length1 && // Transfer over when length 1
-		(XferType[1:0]!=2'b10 || SwapState); // Only end transfer during second swap cycle
-		
+		(XferC64REU ? (DMAr && BAr) : (DMA && BA)) && 
+		SecondSwap; // Don't NextREUA on first swap cycles
+				
 	assign VerifyErr = DMA && BA && // DMA must be active and bus must be available
-		!Equal && XferType[1:0]==2'b11; // Verify error on verify cycles where not equal
+		!Equal && XferVerify; // Verify error on verify cycles where not equal
+		
+	assign Autoload = DMA && BA && // DMA must be active and bus must be available
+		// Autoload when length 1 in regular xfer or second swap cycle
+		((Length1 && SecondSwap) ||
+		// Autoload during verify xfer when not equal
+		 (!Equal && XferVerify));
 	
 endmodule

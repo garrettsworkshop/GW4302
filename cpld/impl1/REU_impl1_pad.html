@@ -14,82 +14,81 @@ Performance Grade:      4
 PACKAGE:          TQFP100
 Package Status:                     Final          Version 1.39
 
-Tue Jan 18 16:15:15 2022
+Thu Jan 20 14:41:56 2022
 
 Pinout by Port Name:
 +-----------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                               |
 +-----------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
-| ADIR      | 17/3     | LVCMOS25_OUT  | PL6B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| A[0]      | 43/2     | LVCMOS25_BIDI | PB12D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[10]     | 49/2     | LVCMOS25_BIDI | PB14D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[11]     | 77/0     | LVCMOS25_BIDI | PT11C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[12]     | 59/1     | LVCMOS25_BIDI | PR6B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[13]     | 69/1     | LVCMOS25_BIDI | PR3A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[14]     | 63/1     | LVCMOS25_BIDI | PR5C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[15]     | 65/1     | LVCMOS25_BIDI | PR5A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[1]      | 40/2     | LVCMOS25_BIDI | PB12A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[2]      | 48/2     | LVCMOS25_BIDI | PB14C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[3]      | 81/0     | LVCMOS25_BIDI | PT10D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| ADIR      | 35/2     | LVCMOS25_OUT  | PB6D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| A[0]      | 51/1     | LVCMOS25_BIDI | PR7D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[10]     | 39/2     | LVCMOS25_BIDI | PB10D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[11]     | 37/2     | LVCMOS25_BIDI | PB10B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[12]     | 38/2     | LVCMOS25_BIDI | PB10C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[13]     | 42/2     | LVCMOS25_BIDI | PB12C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[14]     | 40/2     | LVCMOS25_BIDI | PB12A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[15]     | 34/2     | LVCMOS25_BIDI | PB6C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[1]      | 52/1     | LVCMOS25_BIDI | PR7C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[2]      | 54/1     | LVCMOS25_BIDI | PR7A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[3]      | 53/1     | LVCMOS25_BIDI | PR7B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | A[4]      | 45/2     | LVCMOS25_BIDI | PB14A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[5]      | 85/0     | LVCMOS25_BIDI | PT9D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[6]      | 96/0     | LVCMOS25_BIDI | PT6D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[7]      | 62/1     | LVCMOS25_BIDI | PR5D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[8]      | 47/2     | LVCMOS25_BIDI | PB14B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[9]      | 64/1     | LVCMOS25_BIDI | PR5B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| BA        | 14/3     | LVCMOS25_IN   | PL5C  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
-| C8M       | 34/2     | LVCMOS25_IN   | PB6C  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
-| CKE       | 66/1     | LVCMOS25_OUT  | PR3D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| DDIR      | 27/2     | LVCMOS25_OUT  | PB4A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| DQMH      | 9/3      | LVCMOS25_OUT  | PL3C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| DQML      | 7/3      | LVCMOS25_OUT  | PL3A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| D[0]      | 31/2     | LVCMOS25_BIDI | PB6A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| D[1]      | 32/2     | LVCMOS25_BIDI | PB6B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| D[2]      | 29/2     | LVCMOS25_BIDI | PB4C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| D[3]      | 99/0     | LVCMOS25_BIDI | PT6A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| D[4]      | 35/2     | LVCMOS25_BIDI | PB6D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| D[5]      | 98/0     | LVCMOS25_BIDI | PT6B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| D[6]      | 30/2     | LVCMOS25_BIDI | PB4D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| D[7]      | 97/0     | LVCMOS25_BIDI | PT6C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| PHI2      | 38/2     | LVCMOS25_IN   | PB10C |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
-| RA[0]     | 74/1     | LVCMOS25_OUT  | PR2B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[10]    | 57/1     | LVCMOS25_OUT  | PR6D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[11]    | 58/1     | LVCMOS25_OUT  | PR6C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[12]    | 53/1     | LVCMOS25_OUT  | PR7B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[1]     | 71/1     | LVCMOS25_OUT  | PR2C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[2]     | 76/0     | LVCMOS25_OUT  | PT11D |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[3]     | 78/0     | LVCMOS25_OUT  | PT11A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| A[5]      | 49/2     | LVCMOS25_BIDI | PB14D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[6]      | 47/2     | LVCMOS25_BIDI | PB14B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[7]      | 48/2     | LVCMOS25_BIDI | PB14C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[8]      | 43/2     | LVCMOS25_BIDI | PB12D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[9]      | 41/2     | LVCMOS25_BIDI | PB12B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| BA        | 32/2     | LVCMOS25_IN   | PB6B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| C8M       | 63/1     | LVCMOS25_IN   | PR5C  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| CKE       | 67/1     | LVCMOS25_OUT  | PR3C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| DDIR      | 15/3     | LVCMOS25_OUT  | PL5D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| DQMH      | 83/0     | LVCMOS25_OUT  | PT10B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| DQML      | 84/0     | LVCMOS25_OUT  | PT10A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| D[0]      | 4/3      | LVCMOS25_BIDI | PL2D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| D[1]      | 7/3      | LVCMOS25_BIDI | PL3A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| D[2]      | 8/3      | LVCMOS25_BIDI | PL3B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| D[3]      | 10/3     | LVCMOS25_BIDI | PL3D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| D[4]      | 9/3      | LVCMOS25_BIDI | PL3C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| D[5]      | 12/3     | LVCMOS25_BIDI | PL5A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| D[6]      | 14/3     | LVCMOS25_BIDI | PL5C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| D[7]      | 13/3     | LVCMOS25_BIDI | PL5B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| PHI2      | 31/2     | LVCMOS25_IN   | PB6A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| RA[0]     | 99/0     | LVCMOS25_OUT  | PT6A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[10]    | 98/0     | LVCMOS25_OUT  | PT6B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[11]    | 69/1     | LVCMOS25_OUT  | PR3A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[12]    | 68/1     | LVCMOS25_OUT  | PR3B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[1]     | 1/3      | LVCMOS25_OUT  | PL2A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[2]     | 2/3      | LVCMOS25_OUT  | PL2B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[3]     | 3/3      | LVCMOS25_OUT  | PL2C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
 | RA[4]     | 82/0     | LVCMOS25_OUT  | PT10C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[5]     | 84/0     | LVCMOS25_OUT  | PT10A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[6]     | 3/3      | LVCMOS25_OUT  | PL2C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[7]     | 87/0     | LVCMOS25_OUT  | PT9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[8]     | 1/3      | LVCMOS25_OUT  | PL2A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RA[9]     | 2/3      | LVCMOS25_OUT  | PL2B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RBA[0]    | 60/1     | LVCMOS25_OUT  | PR6A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RBA[1]    | 54/1     | LVCMOS25_OUT  | PR7A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RCLK      | 51/1     | LVCMOS25_OUT  | PR7D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| RD[0]     | 86/0     | LVCMOS25_BIDI | PT9C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[1]     | 88/0     | LVCMOS25_BIDI | PT9A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[2]     | 41/2     | LVCMOS25_BIDI | PB12B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[3]     | 42/2     | LVCMOS25_BIDI | PB12C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[4]     | 83/0     | LVCMOS25_BIDI | PT10B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[5]     | 36/2     | LVCMOS25_BIDI | PB10A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[6]     | 37/2     | LVCMOS25_BIDI | PB10B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[7]     | 39/2     | LVCMOS25_BIDI | PB10D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| nAOE      | 8/3      | LVCMOS25_OUT  | PL3B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nCAS      | 70/1     | LVCMOS25_OUT  | PR2D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nCS       | 67/1     | LVCMOS25_OUT  | PR3C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nDMA      | 16/3     | LVCMOS25_OUT  | PL6A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nDOE      | 15/3     | LVCMOS25_OUT  | PL5D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nIO2      | 19/3     | LVCMOS25_IN   | PL6D  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
-| nIRQ      | 10/3     | LVCMOS25_OUT  | PL3D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nRAS      | 68/1     | LVCMOS25_OUT  | PR3B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nRESET    | 12/3     | LVCMOS25_IN   | PL5A  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
-| nRESETOUT | 52/1     | LVCMOS25_OUT  | PR7C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nRWE      | 75/1     | LVCMOS25_OUT  | PR2A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nRWOE     | 28/2     | LVCMOS25_OUT  | PB4B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
-| nWE       | 18/3     | LVCMOS25_IN   | PL6C  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
-| nWEDMA    | 13/3     | LVCMOS25_OUT  | PL5B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[5]     | 78/0     | LVCMOS25_OUT  | PT11A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[6]     | 75/1     | LVCMOS25_OUT  | PR2A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[7]     | 74/1     | LVCMOS25_OUT  | PR2B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[8]     | 71/1     | LVCMOS25_OUT  | PR2C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RA[9]     | 70/1     | LVCMOS25_OUT  | PR2D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RBA[0]    | 96/0     | LVCMOS25_OUT  | PT6D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RBA[1]    | 97/0     | LVCMOS25_OUT  | PT6C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RCLK      | 81/0     | LVCMOS25_OUT  | PT10D |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| RD[0]     | 57/1     | LVCMOS25_BIDI | PR6D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[1]     | 58/1     | LVCMOS25_BIDI | PR6C  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[2]     | 59/1     | LVCMOS25_BIDI | PR6B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[3]     | 60/1     | LVCMOS25_BIDI | PR6A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[4]     | 62/1     | LVCMOS25_BIDI | PR5D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[5]     | 64/1     | LVCMOS25_BIDI | PR5B  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[6]     | 65/1     | LVCMOS25_BIDI | PR5A  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[7]     | 66/1     | LVCMOS25_BIDI | PR3D  |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| nAOE      | 36/2     | LVCMOS25_OUT  | PB10A |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nCAS      | 86/0     | LVCMOS25_OUT  | PT9C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nCS       | 88/0     | LVCMOS25_OUT  | PT9A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nDMA      | 25/3     | LVCMOS25_OUT  | PL7D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nDOE      | 16/3     | LVCMOS25_OUT  | PL6A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nIO2      | 30/2     | LVCMOS25_IN   | PB4D  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| nIRQ      | 18/3     | LVCMOS25_OUT  | PL6C  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nRAS      | 87/0     | LVCMOS25_OUT  | PT9B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nRESET    | 28/2     | LVCMOS25_IN   | PB4B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| nRWE      | 85/0     | LVCMOS25_OUT  | PT9D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nRWOE     | 20/3     | LVCMOS25_OUT  | PL7A  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| nWE       | 21/3     | LVCMOS25_IN   | PL7B  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| nWEDMA    | 17/3     | LVCMOS25_OUT  | PL6B  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
 +-----------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
 
 Vccio by Bank:
@@ -113,85 +112,85 @@ Vccio by Bank:
 +----------+-----------------------+------------+---------------+-------+---------------+-----------+-----------+
 | Pin/Bank | Pin Info              | Preference | Buffer Type   | Site  | Dual Function | PG Enable | BC Enable |
 +----------+-----------------------+------------+---------------+-------+---------------+-----------+-----------+
-| 1/3      | RA[8]                 |            | LVCMOS25_OUT  | PL2A  |               |           |           |
-| 2/3      | RA[9]                 |            | LVCMOS25_OUT  | PL2B  |               |           |           |
-| 3/3      | RA[6]                 |            | LVCMOS25_OUT  | PL2C  | PCLKT3_2      |           |           |
-| 4/3      |     unused, PULL:DOWN |            |               | PL2D  | PCLKC3_2      |           |           |
-| 7/3      | DQML                  |            | LVCMOS25_OUT  | PL3A  |               |           |           |
-| 8/3      | nAOE                  |            | LVCMOS25_OUT  | PL3B  |               |           |           |
-| 9/3      | DQMH                  |            | LVCMOS25_OUT  | PL3C  |               |           |           |
-| 10/3     | nIRQ                  |            | LVCMOS25_OUT  | PL3D  |               |           |           |
-| 12/3     | nRESET                |            | LVCMOS25_IN   | PL5A  | PCLKT3_1      |           |           |
-| 13/3     | nWEDMA                |            | LVCMOS25_OUT  | PL5B  | PCLKC3_1      |           |           |
-| 14/3     | BA                    |            | LVCMOS25_IN   | PL5C  |               |           |           |
-| 15/3     | nDOE                  |            | LVCMOS25_OUT  | PL5D  |               |           |           |
-| 16/3     | nDMA                  |            | LVCMOS25_OUT  | PL6A  |               |           |           |
-| 17/3     | ADIR                  |            | LVCMOS25_OUT  | PL6B  |               |           |           |
-| 18/3     | nWE                   |            | LVCMOS25_IN   | PL6C  |               |           |           |
-| 19/3     | nIO2                  |            | LVCMOS25_IN   | PL6D  |               |           |           |
-| 20/3     |     unused, PULL:DOWN |            |               | PL7A  | PCLKT3_0      |           |           |
-| 21/3     |     unused, PULL:DOWN |            |               | PL7B  | PCLKC3_0      |           |           |
+| 1/3      | RA[1]                 | LOCATED    | LVCMOS25_OUT  | PL2A  |               |           |           |
+| 2/3      | RA[2]                 | LOCATED    | LVCMOS25_OUT  | PL2B  |               |           |           |
+| 3/3      | RA[3]                 | LOCATED    | LVCMOS25_OUT  | PL2C  | PCLKT3_2      |           |           |
+| 4/3      | D[0]                  | LOCATED    | LVCMOS25_BIDI | PL2D  | PCLKC3_2      |           |           |
+| 7/3      | D[1]                  | LOCATED    | LVCMOS25_BIDI | PL3A  |               |           |           |
+| 8/3      | D[2]                  | LOCATED    | LVCMOS25_BIDI | PL3B  |               |           |           |
+| 9/3      | D[4]                  | LOCATED    | LVCMOS25_BIDI | PL3C  |               |           |           |
+| 10/3     | D[3]                  | LOCATED    | LVCMOS25_BIDI | PL3D  |               |           |           |
+| 12/3     | D[5]                  | LOCATED    | LVCMOS25_BIDI | PL5A  | PCLKT3_1      |           |           |
+| 13/3     | D[7]                  | LOCATED    | LVCMOS25_BIDI | PL5B  | PCLKC3_1      |           |           |
+| 14/3     | D[6]                  | LOCATED    | LVCMOS25_BIDI | PL5C  |               |           |           |
+| 15/3     | DDIR                  | LOCATED    | LVCMOS25_OUT  | PL5D  |               |           |           |
+| 16/3     | nDOE                  | LOCATED    | LVCMOS25_OUT  | PL6A  |               |           |           |
+| 17/3     | nWEDMA                | LOCATED    | LVCMOS25_OUT  | PL6B  |               |           |           |
+| 18/3     | nIRQ                  | LOCATED    | LVCMOS25_OUT  | PL6C  |               |           |           |
+| 19/3     |     unused, PULL:DOWN |            |               | PL6D  |               |           |           |
+| 20/3     | nRWOE                 | LOCATED    | LVCMOS25_OUT  | PL7A  | PCLKT3_0      |           |           |
+| 21/3     | nWE                   | LOCATED    | LVCMOS25_IN   | PL7B  | PCLKC3_0      |           |           |
 | 24/3     |     unused, PULL:DOWN |            |               | PL7C  |               |           |           |
-| 25/3     |     unused, PULL:DOWN |            |               | PL7D  |               |           |           |
-| 27/2     | DDIR                  |            | LVCMOS25_OUT  | PB4A  | CSSPIN        |           |           |
-| 28/2     | nRWOE                 |            | LVCMOS25_OUT  | PB4B  |               |           |           |
-| 29/2     | D[2]                  |            | LVCMOS25_BIDI | PB4C  |               |           |           |
-| 30/2     | D[6]                  |            | LVCMOS25_BIDI | PB4D  |               |           |           |
-| 31/2     | D[0]                  |            | LVCMOS25_BIDI | PB6A  | MCLK/CCLK     |           |           |
-| 32/2     | D[1]                  |            | LVCMOS25_BIDI | PB6B  | SO/SPISO      |           |           |
-| 34/2     | C8M                   |            | LVCMOS25_IN   | PB6C  | PCLKT2_0      |           |           |
-| 35/2     | D[4]                  |            | LVCMOS25_BIDI | PB6D  | PCLKC2_0      |           |           |
-| 36/2     | RD[5]                 |            | LVCMOS25_BIDI | PB10A |               |           |           |
-| 37/2     | RD[6]                 |            | LVCMOS25_BIDI | PB10B |               |           |           |
-| 38/2     | PHI2                  |            | LVCMOS25_IN   | PB10C | PCLKT2_1      |           |           |
-| 39/2     | RD[7]                 |            | LVCMOS25_BIDI | PB10D | PCLKC2_1      |           |           |
-| 40/2     | A[1]                  |            | LVCMOS25_BIDI | PB12A |               |           |           |
-| 41/2     | RD[2]                 |            | LVCMOS25_BIDI | PB12B |               |           |           |
-| 42/2     | RD[3]                 |            | LVCMOS25_BIDI | PB12C |               |           |           |
-| 43/2     | A[0]                  |            | LVCMOS25_BIDI | PB12D |               |           |           |
-| 45/2     | A[4]                  |            | LVCMOS25_BIDI | PB14A |               |           |           |
-| 47/2     | A[8]                  |            | LVCMOS25_BIDI | PB14B |               |           |           |
-| 48/2     | A[2]                  |            | LVCMOS25_BIDI | PB14C | SN            |           |           |
-| 49/2     | A[10]                 |            | LVCMOS25_BIDI | PB14D | SI/SISPI      |           |           |
-| 51/1     | RCLK                  |            | LVCMOS25_OUT  | PR7D  |               |           |           |
-| 52/1     | nRESETOUT             |            | LVCMOS25_OUT  | PR7C  |               |           |           |
-| 53/1     | RA[12]                |            | LVCMOS25_OUT  | PR7B  |               |           |           |
-| 54/1     | RBA[1]                |            | LVCMOS25_OUT  | PR7A  |               |           |           |
-| 57/1     | RA[10]                |            | LVCMOS25_OUT  | PR6D  |               |           |           |
-| 58/1     | RA[11]                |            | LVCMOS25_OUT  | PR6C  |               |           |           |
-| 59/1     | A[12]                 |            | LVCMOS25_BIDI | PR6B  |               |           |           |
-| 60/1     | RBA[0]                |            | LVCMOS25_OUT  | PR6A  |               |           |           |
-| 62/1     | A[7]                  |            | LVCMOS25_BIDI | PR5D  | PCLKC1_0      |           |           |
-| 63/1     | A[14]                 |            | LVCMOS25_BIDI | PR5C  | PCLKT1_0      |           |           |
-| 64/1     | A[9]                  |            | LVCMOS25_BIDI | PR5B  |               |           |           |
-| 65/1     | A[15]                 |            | LVCMOS25_BIDI | PR5A  |               |           |           |
-| 66/1     | CKE                   |            | LVCMOS25_OUT  | PR3D  |               |           |           |
-| 67/1     | nCS                   |            | LVCMOS25_OUT  | PR3C  |               |           |           |
-| 68/1     | nRAS                  |            | LVCMOS25_OUT  | PR3B  |               |           |           |
-| 69/1     | A[13]                 |            | LVCMOS25_BIDI | PR3A  |               |           |           |
-| 70/1     | nCAS                  |            | LVCMOS25_OUT  | PR2D  |               |           |           |
-| 71/1     | RA[1]                 |            | LVCMOS25_OUT  | PR2C  |               |           |           |
-| 74/1     | RA[0]                 |            | LVCMOS25_OUT  | PR2B  |               |           |           |
-| 75/1     | nRWE                  |            | LVCMOS25_OUT  | PR2A  |               |           |           |
-| 76/0     | RA[2]                 |            | LVCMOS25_OUT  | PT11D | DONE          |           |           |
-| 77/0     | A[11]                 |            | LVCMOS25_BIDI | PT11C | INITN         |           |           |
-| 78/0     | RA[3]                 |            | LVCMOS25_OUT  | PT11A |               |           |           |
-| 81/0     | A[3]                  |            | LVCMOS25_BIDI | PT10D | PROGRAMN      |           |           |
-| 82/0     | RA[4]                 |            | LVCMOS25_OUT  | PT10C | JTAGENB       |           |           |
-| 83/0     | RD[4]                 |            | LVCMOS25_BIDI | PT10B |               |           |           |
-| 84/0     | RA[5]                 |            | LVCMOS25_OUT  | PT10A |               |           |           |
-| 85/0     | A[5]                  |            | LVCMOS25_BIDI | PT9D  | SDA/PCLKC0_0  |           |           |
-| 86/0     | RD[0]                 |            | LVCMOS25_BIDI | PT9C  | SCL/PCLKT0_0  |           |           |
-| 87/0     | RA[7]                 |            | LVCMOS25_OUT  | PT9B  | PCLKC0_1      |           |           |
-| 88/0     | RD[1]                 |            | LVCMOS25_BIDI | PT9A  | PCLKT0_1      |           |           |
+| 25/3     | nDMA                  | LOCATED    | LVCMOS25_OUT  | PL7D  |               |           |           |
+| 27/2     |     unused, PULL:DOWN |            |               | PB4A  | CSSPIN        |           |           |
+| 28/2     | nRESET                | LOCATED    | LVCMOS25_IN   | PB4B  |               |           |           |
+| 29/2     |     unused, PULL:DOWN |            |               | PB4C  |               |           |           |
+| 30/2     | nIO2                  | LOCATED    | LVCMOS25_IN   | PB4D  |               |           |           |
+| 31/2     | PHI2                  | LOCATED    | LVCMOS25_IN   | PB6A  | MCLK/CCLK     |           |           |
+| 32/2     | BA                    | LOCATED    | LVCMOS25_IN   | PB6B  | SO/SPISO      |           |           |
+| 34/2     | A[15]                 | LOCATED    | LVCMOS25_BIDI | PB6C  | PCLKT2_0      |           |           |
+| 35/2     | ADIR                  | LOCATED    | LVCMOS25_OUT  | PB6D  | PCLKC2_0      |           |           |
+| 36/2     | nAOE                  | LOCATED    | LVCMOS25_OUT  | PB10A |               |           |           |
+| 37/2     | A[11]                 | LOCATED    | LVCMOS25_BIDI | PB10B |               |           |           |
+| 38/2     | A[12]                 | LOCATED    | LVCMOS25_BIDI | PB10C | PCLKT2_1      |           |           |
+| 39/2     | A[10]                 | LOCATED    | LVCMOS25_BIDI | PB10D | PCLKC2_1      |           |           |
+| 40/2     | A[14]                 | LOCATED    | LVCMOS25_BIDI | PB12A |               |           |           |
+| 41/2     | A[9]                  | LOCATED    | LVCMOS25_BIDI | PB12B |               |           |           |
+| 42/2     | A[13]                 | LOCATED    | LVCMOS25_BIDI | PB12C |               |           |           |
+| 43/2     | A[8]                  | LOCATED    | LVCMOS25_BIDI | PB12D |               |           |           |
+| 45/2     | A[4]                  | LOCATED    | LVCMOS25_BIDI | PB14A |               |           |           |
+| 47/2     | A[6]                  | LOCATED    | LVCMOS25_BIDI | PB14B |               |           |           |
+| 48/2     | A[7]                  | LOCATED    | LVCMOS25_BIDI | PB14C | SN            |           |           |
+| 49/2     | A[5]                  | LOCATED    | LVCMOS25_BIDI | PB14D | SI/SISPI      |           |           |
+| 51/1     | A[0]                  | LOCATED    | LVCMOS25_BIDI | PR7D  |               |           |           |
+| 52/1     | A[1]                  | LOCATED    | LVCMOS25_BIDI | PR7C  |               |           |           |
+| 53/1     | A[3]                  | LOCATED    | LVCMOS25_BIDI | PR7B  |               |           |           |
+| 54/1     | A[2]                  | LOCATED    | LVCMOS25_BIDI | PR7A  |               |           |           |
+| 57/1     | RD[0]                 | LOCATED    | LVCMOS25_BIDI | PR6D  |               |           |           |
+| 58/1     | RD[1]                 | LOCATED    | LVCMOS25_BIDI | PR6C  |               |           |           |
+| 59/1     | RD[2]                 | LOCATED    | LVCMOS25_BIDI | PR6B  |               |           |           |
+| 60/1     | RD[3]                 | LOCATED    | LVCMOS25_BIDI | PR6A  |               |           |           |
+| 62/1     | RD[4]                 | LOCATED    | LVCMOS25_BIDI | PR5D  | PCLKC1_0      |           |           |
+| 63/1     | C8M                   | LOCATED    | LVCMOS25_IN   | PR5C  | PCLKT1_0      |           |           |
+| 64/1     | RD[5]                 | LOCATED    | LVCMOS25_BIDI | PR5B  |               |           |           |
+| 65/1     | RD[6]                 | LOCATED    | LVCMOS25_BIDI | PR5A  |               |           |           |
+| 66/1     | RD[7]                 | LOCATED    | LVCMOS25_BIDI | PR3D  |               |           |           |
+| 67/1     | CKE                   | LOCATED    | LVCMOS25_OUT  | PR3C  |               |           |           |
+| 68/1     | RA[12]                | LOCATED    | LVCMOS25_OUT  | PR3B  |               |           |           |
+| 69/1     | RA[11]                | LOCATED    | LVCMOS25_OUT  | PR3A  |               |           |           |
+| 70/1     | RA[9]                 | LOCATED    | LVCMOS25_OUT  | PR2D  |               |           |           |
+| 71/1     | RA[8]                 | LOCATED    | LVCMOS25_OUT  | PR2C  |               |           |           |
+| 74/1     | RA[7]                 | LOCATED    | LVCMOS25_OUT  | PR2B  |               |           |           |
+| 75/1     | RA[6]                 | LOCATED    | LVCMOS25_OUT  | PR2A  |               |           |           |
+| 76/0     |     unused, PULL:DOWN |            |               | PT11D | DONE          |           |           |
+| 77/0     |     unused, PULL:DOWN |            |               | PT11C | INITN         |           |           |
+| 78/0     | RA[5]                 | LOCATED    | LVCMOS25_OUT  | PT11A |               |           |           |
+| 81/0     | RCLK                  |            | LVCMOS25_OUT  | PT10D | PROGRAMN      |           |           |
+| 82/0     | RA[4]                 | LOCATED    | LVCMOS25_OUT  | PT10C | JTAGENB       |           |           |
+| 83/0     | DQMH                  | LOCATED    | LVCMOS25_OUT  | PT10B |               |           |           |
+| 84/0     | DQML                  | LOCATED    | LVCMOS25_OUT  | PT10A |               |           |           |
+| 85/0     | nRWE                  | LOCATED    | LVCMOS25_OUT  | PT9D  | SDA/PCLKC0_0  |           |           |
+| 86/0     | nCAS                  | LOCATED    | LVCMOS25_OUT  | PT9C  | SCL/PCLKT0_0  |           |           |
+| 87/0     | nRAS                  | LOCATED    | LVCMOS25_OUT  | PT9B  | PCLKC0_1      |           |           |
+| 88/0     | nCS                   | LOCATED    | LVCMOS25_OUT  | PT9A  | PCLKT0_1      |           |           |
 | 90/0     | Reserved: sysCONFIG   |            |               | PT7D  | TMS           |           |           |
 | 91/0     | Reserved: sysCONFIG   |            |               | PT7C  | TCK           |           |           |
 | 94/0     | Reserved: sysCONFIG   |            |               | PT7B  | TDI           |           |           |
 | 95/0     | Reserved: sysCONFIG   |            |               | PT7A  | TDO           |           |           |
-| 96/0     | A[6]                  |            | LVCMOS25_BIDI | PT6D  |               |           |           |
-| 97/0     | D[7]                  |            | LVCMOS25_BIDI | PT6C  |               |           |           |
-| 98/0     | D[5]                  |            | LVCMOS25_BIDI | PT6B  |               |           |           |
-| 99/0     | D[3]                  |            | LVCMOS25_BIDI | PT6A  |               |           |           |
+| 96/0     | RBA[0]                | LOCATED    | LVCMOS25_OUT  | PT6D  |               |           |           |
+| 97/0     | RBA[1]                | LOCATED    | LVCMOS25_OUT  | PT6C  |               |           |           |
+| 98/0     | RA[10]                | LOCATED    | LVCMOS25_OUT  | PT6B  |               |           |           |
+| 99/0     | RA[0]                 | LOCATED    | LVCMOS25_OUT  | PT6A  |               |           |           |
 | PT11B/0  |     unused, PULL:DOWN |            |               | PT11B |               |           |           |
 +----------+-----------------------+------------+---------------+-------+---------------+-----------+-----------+
 
@@ -211,76 +210,75 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "ADIR"  SITE  "17";
-LOCATE  COMP  "A[0]"  SITE  "43";
-LOCATE  COMP  "A[10]"  SITE  "49";
-LOCATE  COMP  "A[11]"  SITE  "77";
-LOCATE  COMP  "A[12]"  SITE  "59";
-LOCATE  COMP  "A[13]"  SITE  "69";
-LOCATE  COMP  "A[14]"  SITE  "63";
-LOCATE  COMP  "A[15]"  SITE  "65";
-LOCATE  COMP  "A[1]"  SITE  "40";
-LOCATE  COMP  "A[2]"  SITE  "48";
-LOCATE  COMP  "A[3]"  SITE  "81";
+LOCATE  COMP  "ADIR"  SITE  "35";
+LOCATE  COMP  "A[0]"  SITE  "51";
+LOCATE  COMP  "A[10]"  SITE  "39";
+LOCATE  COMP  "A[11]"  SITE  "37";
+LOCATE  COMP  "A[12]"  SITE  "38";
+LOCATE  COMP  "A[13]"  SITE  "42";
+LOCATE  COMP  "A[14]"  SITE  "40";
+LOCATE  COMP  "A[15]"  SITE  "34";
+LOCATE  COMP  "A[1]"  SITE  "52";
+LOCATE  COMP  "A[2]"  SITE  "54";
+LOCATE  COMP  "A[3]"  SITE  "53";
 LOCATE  COMP  "A[4]"  SITE  "45";
-LOCATE  COMP  "A[5]"  SITE  "85";
-LOCATE  COMP  "A[6]"  SITE  "96";
-LOCATE  COMP  "A[7]"  SITE  "62";
-LOCATE  COMP  "A[8]"  SITE  "47";
-LOCATE  COMP  "A[9]"  SITE  "64";
-LOCATE  COMP  "BA"  SITE  "14";
-LOCATE  COMP  "C8M"  SITE  "34";
-LOCATE  COMP  "CKE"  SITE  "66";
-LOCATE  COMP  "DDIR"  SITE  "27";
-LOCATE  COMP  "DQMH"  SITE  "9";
-LOCATE  COMP  "DQML"  SITE  "7";
-LOCATE  COMP  "D[0]"  SITE  "31";
-LOCATE  COMP  "D[1]"  SITE  "32";
-LOCATE  COMP  "D[2]"  SITE  "29";
-LOCATE  COMP  "D[3]"  SITE  "99";
-LOCATE  COMP  "D[4]"  SITE  "35";
-LOCATE  COMP  "D[5]"  SITE  "98";
-LOCATE  COMP  "D[6]"  SITE  "30";
-LOCATE  COMP  "D[7]"  SITE  "97";
-LOCATE  COMP  "PHI2"  SITE  "38";
-LOCATE  COMP  "RA[0]"  SITE  "74";
-LOCATE  COMP  "RA[10]"  SITE  "57";
-LOCATE  COMP  "RA[11]"  SITE  "58";
-LOCATE  COMP  "RA[12]"  SITE  "53";
-LOCATE  COMP  "RA[1]"  SITE  "71";
-LOCATE  COMP  "RA[2]"  SITE  "76";
-LOCATE  COMP  "RA[3]"  SITE  "78";
+LOCATE  COMP  "A[5]"  SITE  "49";
+LOCATE  COMP  "A[6]"  SITE  "47";
+LOCATE  COMP  "A[7]"  SITE  "48";
+LOCATE  COMP  "A[8]"  SITE  "43";
+LOCATE  COMP  "A[9]"  SITE  "41";
+LOCATE  COMP  "BA"  SITE  "32";
+LOCATE  COMP  "C8M"  SITE  "63";
+LOCATE  COMP  "CKE"  SITE  "67";
+LOCATE  COMP  "DDIR"  SITE  "15";
+LOCATE  COMP  "DQMH"  SITE  "83";
+LOCATE  COMP  "DQML"  SITE  "84";
+LOCATE  COMP  "D[0]"  SITE  "4";
+LOCATE  COMP  "D[1]"  SITE  "7";
+LOCATE  COMP  "D[2]"  SITE  "8";
+LOCATE  COMP  "D[3]"  SITE  "10";
+LOCATE  COMP  "D[4]"  SITE  "9";
+LOCATE  COMP  "D[5]"  SITE  "12";
+LOCATE  COMP  "D[6]"  SITE  "14";
+LOCATE  COMP  "D[7]"  SITE  "13";
+LOCATE  COMP  "PHI2"  SITE  "31";
+LOCATE  COMP  "RA[0]"  SITE  "99";
+LOCATE  COMP  "RA[10]"  SITE  "98";
+LOCATE  COMP  "RA[11]"  SITE  "69";
+LOCATE  COMP  "RA[12]"  SITE  "68";
+LOCATE  COMP  "RA[1]"  SITE  "1";
+LOCATE  COMP  "RA[2]"  SITE  "2";
+LOCATE  COMP  "RA[3]"  SITE  "3";
 LOCATE  COMP  "RA[4]"  SITE  "82";
-LOCATE  COMP  "RA[5]"  SITE  "84";
-LOCATE  COMP  "RA[6]"  SITE  "3";
-LOCATE  COMP  "RA[7]"  SITE  "87";
-LOCATE  COMP  "RA[8]"  SITE  "1";
-LOCATE  COMP  "RA[9]"  SITE  "2";
-LOCATE  COMP  "RBA[0]"  SITE  "60";
-LOCATE  COMP  "RBA[1]"  SITE  "54";
-LOCATE  COMP  "RCLK"  SITE  "51";
-LOCATE  COMP  "RD[0]"  SITE  "86";
-LOCATE  COMP  "RD[1]"  SITE  "88";
-LOCATE  COMP  "RD[2]"  SITE  "41";
-LOCATE  COMP  "RD[3]"  SITE  "42";
-LOCATE  COMP  "RD[4]"  SITE  "83";
-LOCATE  COMP  "RD[5]"  SITE  "36";
-LOCATE  COMP  "RD[6]"  SITE  "37";
-LOCATE  COMP  "RD[7]"  SITE  "39";
-LOCATE  COMP  "nAOE"  SITE  "8";
-LOCATE  COMP  "nCAS"  SITE  "70";
-LOCATE  COMP  "nCS"  SITE  "67";
-LOCATE  COMP  "nDMA"  SITE  "16";
-LOCATE  COMP  "nDOE"  SITE  "15";
-LOCATE  COMP  "nIO2"  SITE  "19";
-LOCATE  COMP  "nIRQ"  SITE  "10";
-LOCATE  COMP  "nRAS"  SITE  "68";
-LOCATE  COMP  "nRESET"  SITE  "12";
-LOCATE  COMP  "nRESETOUT"  SITE  "52";
-LOCATE  COMP  "nRWE"  SITE  "75";
-LOCATE  COMP  "nRWOE"  SITE  "28";
-LOCATE  COMP  "nWE"  SITE  "18";
-LOCATE  COMP  "nWEDMA"  SITE  "13";
+LOCATE  COMP  "RA[5]"  SITE  "78";
+LOCATE  COMP  "RA[6]"  SITE  "75";
+LOCATE  COMP  "RA[7]"  SITE  "74";
+LOCATE  COMP  "RA[8]"  SITE  "71";
+LOCATE  COMP  "RA[9]"  SITE  "70";
+LOCATE  COMP  "RBA[0]"  SITE  "96";
+LOCATE  COMP  "RBA[1]"  SITE  "97";
+LOCATE  COMP  "RCLK"  SITE  "81";
+LOCATE  COMP  "RD[0]"  SITE  "57";
+LOCATE  COMP  "RD[1]"  SITE  "58";
+LOCATE  COMP  "RD[2]"  SITE  "59";
+LOCATE  COMP  "RD[3]"  SITE  "60";
+LOCATE  COMP  "RD[4]"  SITE  "62";
+LOCATE  COMP  "RD[5]"  SITE  "64";
+LOCATE  COMP  "RD[6]"  SITE  "65";
+LOCATE  COMP  "RD[7]"  SITE  "66";
+LOCATE  COMP  "nAOE"  SITE  "36";
+LOCATE  COMP  "nCAS"  SITE  "86";
+LOCATE  COMP  "nCS"  SITE  "88";
+LOCATE  COMP  "nDMA"  SITE  "25";
+LOCATE  COMP  "nDOE"  SITE  "16";
+LOCATE  COMP  "nIO2"  SITE  "30";
+LOCATE  COMP  "nIRQ"  SITE  "18";
+LOCATE  COMP  "nRAS"  SITE  "87";
+LOCATE  COMP  "nRESET"  SITE  "28";
+LOCATE  COMP  "nRWE"  SITE  "85";
+LOCATE  COMP  "nRWOE"  SITE  "20";
+LOCATE  COMP  "nWE"  SITE  "21";
+LOCATE  COMP  "nWEDMA"  SITE  "17";
 
 
 
@@ -292,7 +290,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Jan 18 16:15:17 2022
+Thu Jan 20 14:41:58 2022
 
 
 

@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
-Tue Jan 18 16:15:08 2022
+Thu Jan 20 14:41:51 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -39,7 +39,7 @@ BLOCK RESETPATHS
 
 ================================================================================
 Preference: FREQUENCY NET "C8M_c" 201.126000 MHz ;
-            226 items scored, 83 timing errors detected.
+            226 items scored, 81 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -47,28 +47,28 @@ Error: The following path exceeds requirements by 2.965ns (weighted slack = -5.9
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              ram/nRESETr_i1  (from C8M_c +)
-   Destination:    FF         Data in        ram/PLLLock_117  (to C8M_c -)
+   Source:         FF         Q              ram/PHI2r_1__127  (from C8M_c +)
+   Destination:    FF         Data in        ram/PLLLock_128  (to C8M_c -)
 
    Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
 
  Constraint Details:
 
-      5.144ns physical path delay SLICE_183 to ram/SLICE_121 exceeds
+      5.144ns physical path delay ram/SLICE_62 to ram/SLICE_100 exceeds
       2.486ns delay constraint less
       0.307ns CE_SET requirement (totaling 2.179ns) by 2.965ns
 
  Physical Path Details:
 
-      Data path SLICE_183 to ram/SLICE_121:
+      Data path ram/SLICE_62 to ram/SLICE_100:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452  SLICE_183.CLK to   SLICE_183.Q1 SLICE_183 (from C8M_c)
-ROUTE         2   e 1.234   SLICE_183.Q1 to   SLICE_152.B1 ram/nRESETr_1
-CTOF_DEL    ---     0.495   SLICE_152.B1 to   SLICE_152.F1 SLICE_152
-ROUTE         1   e 1.234   SLICE_152.F1 to */SLICE_209.D0 ram/n6
-CTOF_DEL    ---     0.495 */SLICE_209.D0 to */SLICE_209.F0 ram/SLICE_209
-ROUTE         1   e 1.234 */SLICE_209.F0 to */SLICE_121.CE ram/PLLLock_N_545 (to C8M_c)
+REG_DEL     ---     0.452 */SLICE_62.CLK to *m/SLICE_62.Q1 ram/SLICE_62 (from C8M_c)
+ROUTE         2   e 1.234 *m/SLICE_62.Q1 to */SLICE_201.B0 ram/PHI2r_1
+CTOF_DEL    ---     0.495 */SLICE_201.B0 to */SLICE_201.F0 ram/SLICE_201
+ROUTE         3   e 1.234 */SLICE_201.F0 to */SLICE_202.B0 ram/n3383
+CTOF_DEL    ---     0.495 */SLICE_202.B0 to */SLICE_202.F0 ram/SLICE_202
+ROUTE         1   e 1.234 */SLICE_202.F0 to */SLICE_100.CE ram/PLLLock_N_531 (to C8M_c)
                   --------
                     5.144   (28.0% logic, 72.0% route), 3 logic levels.
 
@@ -76,57 +76,49 @@ Warning:  91.726MHz is the maximum frequency for this preference.
 
 
 ================================================================================
-Preference: FREQUENCY NET "PHI2_c" 107.170000 MHz ;
-            4096 items scored, 2634 timing errors detected.
+Preference: FREQUENCY NET "PHI2_c" 84.502000 MHz ;
+            4096 items scored, 706 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error: The following path exceeds requirements by 4.889ns
+Error: The following path exceeds requirements by 1.387ns (weighted slack = -2.774ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              reureg/Length_9__675  (from PHI2_c -)
-   Destination:    FF         Data in        reureg/REUA_7__605  (to PHI2_c -)
+   Source:         FF         Q              reureg/Length1r_547  (from PHI2_c +)
+   Destination:    FF         Data in        reureg/CA_15__571  (to PHI2_c -)
 
-   Delay:              14.054ns  (38.5% logic, 61.5% route), 11 logic levels.
+   Delay:               7.138ns  (48.1% logic, 51.9% route), 7 logic levels.
 
  Constraint Details:
 
-     14.054ns physical path delay reureg/SLICE_64 to reureg/SLICE_89 exceeds
-      9.331ns delay constraint less
-      0.166ns DIN_SET requirement (totaling 9.165ns) by 4.889ns
+      7.138ns physical path delay reureg/SLICE_49 to reureg/SLICE_41 exceeds
+      5.917ns delay constraint less
+      0.166ns DIN_SET requirement (totaling 5.751ns) by 1.387ns
 
  Physical Path Details:
 
-      Data path reureg/SLICE_64 to reureg/SLICE_89:
+      Data path reureg/SLICE_49 to reureg/SLICE_41:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452 */SLICE_64.CLK to *g/SLICE_64.Q0 reureg/SLICE_64 (from PHI2_c)
-ROUTE         3   e 1.234 *g/SLICE_64.Q0 to */SLICE_153.B0 Length_9
-CTOF_DEL    ---     0.495 */SLICE_153.B0 to */SLICE_153.F0 reureg/SLICE_153
-ROUTE         1   e 1.234 */SLICE_153.F0 to */SLICE_182.B0 reureg/n28
-CTOF_DEL    ---     0.495 */SLICE_182.B0 to */SLICE_182.F0 reureg/SLICE_182
-ROUTE         1   e 1.234 */SLICE_182.F0 to */SLICE_180.B1 reureg/n30
-CTOF_DEL    ---     0.495 */SLICE_180.B1 to */SLICE_180.F1 reureg/SLICE_180
-ROUTE        12   e 1.234 */SLICE_180.F1 to */SLICE_203.C1 n1420
-CTOF_DEL    ---     0.495 */SLICE_203.C1 to */SLICE_203.F1 dmaseq/SLICE_203
-ROUTE        24   e 1.234 */SLICE_203.F1 to */SLICE_223.D1 n3215
-CTOF_DEL    ---     0.495 */SLICE_223.D1 to */SLICE_223.F1 glue/SLICE_223
-ROUTE         1   e 1.234 */SLICE_223.F1 to *g/SLICE_25.A0 n2737
-C0TOFCO_DE  ---     1.023 *g/SLICE_25.A0 to */SLICE_25.FCO reureg/SLICE_25
-ROUTE         1   e 0.001 */SLICE_25.FCO to */SLICE_24.FCI reureg/n2785
-FCITOFCO_D  ---     0.162 */SLICE_24.FCI to */SLICE_24.FCO reureg/SLICE_24
-ROUTE         1   e 0.001 */SLICE_24.FCO to */SLICE_23.FCI reureg/n2786
-FCITOFCO_D  ---     0.162 */SLICE_23.FCI to */SLICE_23.FCO reureg/SLICE_23
-ROUTE         1   e 0.001 */SLICE_23.FCO to */SLICE_22.FCI reureg/n2787
-FCITOF1_DE  ---     0.643 */SLICE_22.FCI to *g/SLICE_22.F1 reureg/SLICE_22
-ROUTE         1   e 1.234 *g/SLICE_22.F1 to *g/SLICE_89.D1 reureg/REUAOut_7_N_105_7
-CTOF_DEL    ---     0.495 *g/SLICE_89.D1 to *g/SLICE_89.F1 reureg/SLICE_89
-ROUTE         1   e 0.001 *g/SLICE_89.F1 to */SLICE_89.DI1 reureg/REUAOut_7__N_102 (to PHI2_c)
+REG_DEL     ---     0.452 */SLICE_49.CLK to *g/SLICE_49.Q0 reureg/SLICE_49 (from PHI2_c)
+ROUTE        24   e 1.234 *g/SLICE_49.Q0 to   SLICE_182.B1 Length1r
+CTOF_DEL    ---     0.495   SLICE_182.B1 to   SLICE_182.F1 SLICE_182
+ROUTE        36   e 1.234   SLICE_182.F1 to *g/SLICE_31.B0 n3360
+C0TOFCO_DE  ---     1.023 *g/SLICE_31.B0 to */SLICE_31.FCO reureg/SLICE_31
+ROUTE         1   e 0.001 */SLICE_31.FCO to */SLICE_30.FCI reureg/n2901
+FCITOFCO_D  ---     0.162 */SLICE_30.FCI to */SLICE_30.FCO reureg/SLICE_30
+ROUTE         1   e 0.001 */SLICE_30.FCO to */SLICE_29.FCI reureg/n2902
+FCITOFCO_D  ---     0.162 */SLICE_29.FCI to */SLICE_29.FCO reureg/SLICE_29
+ROUTE         1   e 0.001 */SLICE_29.FCO to */SLICE_28.FCI reureg/n2903
+FCITOF1_DE  ---     0.643 */SLICE_28.FCI to *g/SLICE_28.F1 reureg/SLICE_28
+ROUTE         1   e 1.234 *g/SLICE_28.F1 to *g/SLICE_41.A1 reureg/CAOut_15_N_142_7
+CTOF_DEL    ---     0.495 *g/SLICE_41.A1 to *g/SLICE_41.F1 reureg/SLICE_41
+ROUTE         1   e 0.001 *g/SLICE_41.F1 to */SLICE_41.DI1 reureg/CAOut_15__N_139 (to PHI2_c)
                   --------
-                   14.054   (38.5% logic, 61.5% route), 11 logic levels.
+                    7.138   (48.1% logic, 51.9% route), 7 logic levels.
 
-Warning:  70.323MHz is the maximum frequency for this preference.
+Warning:  68.456MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -136,7 +128,7 @@ Preference                              |   Constraint|       Actual|Levels
                                         |             |             |
 FREQUENCY NET "C8M_c" 201.126000 MHz ;  |  201.126 MHz|   91.726 MHz|   3 *
                                         |             |             |
-FREQUENCY NET "PHI2_c" 107.170000 MHz ; |  107.170 MHz|   70.323 MHz|  11 *
+FREQUENCY NET "PHI2_c" 84.502000 MHz ;  |   84.502 MHz|   68.456 MHz|   7 *
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -146,29 +138,53 @@ FREQUENCY NET "PHI2_c" 107.170000 MHz ; |  107.170 MHz|   70.323 MHz|  11 *
 ----------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 ----------------------------------------------------------------------------
-n1420                                   |      12|    2546|     93.71%
+n3360                                   |      36|     688|     87.42%
                                         |        |        |
-reureg/n30                              |       1|    1642|     60.43%
+reureg/n30                              |       2|     582|     73.95%
                                         |        |        |
-PHI2_N_558_enable_18                    |      34|    1536|     56.53%
+n3369                                   |      26|     582|     73.95%
                                         |        |        |
-reureg/n28                              |       1|     952|     35.04%
+reureg/n27                              |       1|     388|     49.30%
                                         |        |        |
-n3215                                   |      24|     642|     23.63%
+reureg/n3373                            |       1|     194|     24.65%
                                         |        |        |
-reureg/n26                              |       1|     464|     17.08%
+reureg/n2902                            |       1|     112|     14.23%
                                         |        |        |
-reureg/n22                              |       1|     458|     16.86%
+reureg/n2910                            |       1|     112|     14.23%
                                         |        |        |
-reureg/n2794                            |       1|     332|     12.22%
+reureg/n2918                            |       1|     112|     14.23%
                                         |        |        |
-reureg/n2778                            |       1|     308|     11.34%
+reureg/n2934                            |       1|     112|     14.23%
                                         |        |        |
-reureg/n2786                            |       1|     308|     11.34%
+Length1r                                |      24|     112|     14.23%
                                         |        |        |
-reureg/n2793                            |       1|     306|     11.26%
+reureg/Length_9                         |       3|      97|     12.33%
                                         |        |        |
-reureg/n2810                            |       1|     304|     11.19%
+reureg/Length_15                        |       3|      97|     12.33%
+                                        |        |        |
+reureg/Length_14                        |       3|      97|     12.33%
+                                        |        |        |
+reureg/Length_12                        |       3|      97|     12.33%
+                                        |        |        |
+reureg/Length_2                         |       4|      97|     12.33%
+                                        |        |        |
+reureg/Length_5                         |       4|      97|     12.33%
+                                        |        |        |
+reureg/n2901                            |       1|      84|     10.67%
+                                        |        |        |
+reureg/n2903                            |       1|      84|     10.67%
+                                        |        |        |
+reureg/n2909                            |       1|      84|     10.67%
+                                        |        |        |
+reureg/n2911                            |       1|      84|     10.67%
+                                        |        |        |
+reureg/n2917                            |       1|      84|     10.67%
+                                        |        |        |
+reureg/n2919                            |       1|      84|     10.67%
+                                        |        |        |
+reureg/n2933                            |       1|      84|     10.67%
+                                        |        |        |
+reureg/n2935                            |       1|      84|     10.67%
                                         |        |        |
 ----------------------------------------------------------------------------
 
@@ -178,8 +194,8 @@ Clock Domains Analysis
 
 Found 2 clocks:
 
-Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 77
-   Covered under: FREQUENCY NET "PHI2_c" 107.170000 MHz ;
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 76
+   Covered under: FREQUENCY NET "PHI2_c" 84.502000 MHz ;
 
    Data transfers from:
    Clock Domain: C8M_c   Source: C8M.PAD
@@ -187,7 +203,7 @@ Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 77
       To report these transfers please refer to preference CLKSKEWDIFF to define
       external clock skew between clock ports.
 
-Clock Domain: C8M_c   Source: C8M.PAD   Loads: 34
+Clock Domain: C8M_c   Source: C8M.PAD   Loads: 33
    Covered under: FREQUENCY NET "C8M_c" 201.126000 MHz ;
 
    Data transfers from:
@@ -200,14 +216,14 @@ Clock Domain: C8M_c   Source: C8M.PAD   Loads: 34
 Timing summary (Setup):
 ---------------
 
-Timing errors: 2717  Score: 4559909
-Cumulative negative slack: 4510122
+Timing errors: 787  Score: 546656
+Cumulative negative slack: 387852
 
-Constraints cover 6286 paths, 2 nets, and 978 connections (58.88% coverage)
+Constraints cover 5115 paths, 2 nets, and 963 connections (59.48% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
-Tue Jan 18 16:15:08 2022
+Thu Jan 20 14:41:52 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -240,30 +256,30 @@ Passed: The following path meets requirements by 0.351ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              ram/nRESETr_i0  (from C8M_c +)
-   Destination:    FF         Data in        ram/nRESETr_i1  (to C8M_c +)
+   Source:         FF         Q              ram/S_FSM_i4  (from C8M_c +)
+   Destination:    FF         Data in        ram/S_FSM_i5  (to C8M_c +)
 
    Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
 
  Constraint Details:
 
-      0.332ns physical path delay SLICE_183 to SLICE_183 meets
+      0.332ns physical path delay SLICE_11 to SLICE_11 meets
      -0.019ns M_HLD and
       0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
 
  Physical Path Details:
 
-      Data path SLICE_183 to SLICE_183:
+      Data path SLICE_11 to SLICE_11:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133  SLICE_183.CLK to   SLICE_183.Q0 SLICE_183 (from C8M_c)
-ROUTE         1   e 0.199   SLICE_183.Q0 to   SLICE_183.M1 ram/nRESETr_0 (to C8M_c)
+REG_DEL     ---     0.133   SLICE_11.CLK to    SLICE_11.Q0 SLICE_11 (from C8M_c)
+ROUTE        13   e 0.199    SLICE_11.Q0 to    SLICE_11.M1 ram/RDD_7__N_493 (to C8M_c)
                   --------
                     0.332   (40.1% logic, 59.9% route), 1 logic levels.
 
 
 ================================================================================
-Preference: FREQUENCY NET "PHI2_c" 107.170000 MHz ;
+Preference: FREQUENCY NET "PHI2_c" 84.502000 MHz ;
             4096 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
@@ -272,26 +288,26 @@ Passed: The following path meets requirements by 0.447ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              dmaseq/SwapState_67  (from PHI2_c -)
-   Destination:    FF         Data in        dmaseq/SwapState_67  (to PHI2_c -)
+   Source:         FF         Q              dmaseq/SwapState_68  (from PHI2_c -)
+   Destination:    FF         Data in        dmaseq/SwapState_68  (to PHI2_c -)
 
    Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
 
  Constraint Details:
 
-      0.434ns physical path delay dmaseq/SLICE_107 to dmaseq/SLICE_107 meets
+      0.434ns physical path delay dmaseq/SLICE_78 to dmaseq/SLICE_78 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
 
  Physical Path Details:
 
-      Data path dmaseq/SLICE_107 to dmaseq/SLICE_107:
+      Data path dmaseq/SLICE_78 to dmaseq/SLICE_78:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133 *SLICE_107.CLK to */SLICE_107.Q0 dmaseq/SLICE_107 (from PHI2_c)
-ROUTE         9   e 0.199 */SLICE_107.Q0 to */SLICE_107.A0 dmaseq/SwapState
-CTOF_DEL    ---     0.101 */SLICE_107.A0 to */SLICE_107.F0 dmaseq/SLICE_107
-ROUTE         1   e 0.001 */SLICE_107.F0 to *SLICE_107.DI0 dmaseq/SwapState_N_562 (to PHI2_c)
+REG_DEL     ---     0.133 */SLICE_78.CLK to *q/SLICE_78.Q0 dmaseq/SLICE_78 (from PHI2_c)
+ROUTE         8   e 0.199 *q/SLICE_78.Q0 to *q/SLICE_78.A0 SwapState
+CTOF_DEL    ---     0.101 *q/SLICE_78.A0 to *q/SLICE_78.F0 dmaseq/SLICE_78
+ROUTE         1   e 0.001 *q/SLICE_78.F0 to */SLICE_78.DI0 dmaseq/SwapState_N_548 (to PHI2_c)
                   --------
                     0.434   (53.9% logic, 46.1% route), 2 logic levels.
 
@@ -303,7 +319,7 @@ Preference(MIN Delays)                  |   Constraint|       Actual|Levels
                                         |             |             |
 FREQUENCY NET "C8M_c" 201.126000 MHz ;  |     0.000 ns|     0.351 ns|   1  
                                         |             |             |
-FREQUENCY NET "PHI2_c" 107.170000 MHz ; |     0.000 ns|     0.447 ns|   2  
+FREQUENCY NET "PHI2_c" 84.502000 MHz ;  |     0.000 ns|     0.447 ns|   2  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -316,8 +332,8 @@ Clock Domains Analysis
 
 Found 2 clocks:
 
-Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 77
-   Covered under: FREQUENCY NET "PHI2_c" 107.170000 MHz ;
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 76
+   Covered under: FREQUENCY NET "PHI2_c" 84.502000 MHz ;
 
    Data transfers from:
    Clock Domain: C8M_c   Source: C8M.PAD
@@ -325,7 +341,7 @@ Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 77
       To report these transfers please refer to preference CLKSKEWDIFF to define
       external clock skew between clock ports.
 
-Clock Domain: C8M_c   Source: C8M.PAD   Loads: 34
+Clock Domain: C8M_c   Source: C8M.PAD   Loads: 33
    Covered under: FREQUENCY NET "C8M_c" 201.126000 MHz ;
 
    Data transfers from:
@@ -341,16 +357,16 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 6286 paths, 2 nets, and 1012 connections (60.93% coverage)
+Constraints cover 5115 paths, 2 nets, and 983 connections (60.72% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 2717 (setup), 0 (hold)
-Score: 4559909 (setup), 0 (hold)
-Cumulative negative slack: 4510122 (4510122+0)
+Timing errors: 787 (setup), 0 (hold)
+Score: 546656 (setup), 0 (hold)
+Cumulative negative slack: 387852 (387852+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
