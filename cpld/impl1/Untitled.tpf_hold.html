@@ -1,0 +1,1011 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<STYLE type=text/css>
+<!--
+.blink {text-decoration:blink}
+.ms  {font-size: 9pt; font-family: monospace; font-weight: normal}
+.msb {font-size: 9pt; font-family: monospace; font-weight: bold  }
+-->
+</STYLE>
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY><B>
+</B>
+<BR><PRE><A name="Report Header"></A>
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Tue Feb 08 01:17:35 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design file:     REU
+Device,speed:    LCMXO2-640HC,M
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0)
+                   3.300 V (Bank 1)
+                   3.300 V (Bank 2)
+                   3.300 V (Bank 3)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+</A><A name="PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 n"></A>================================================================================
+Preference: PERIOD PORT "C8M" 122.000000 ns HIGH 61.000000 ns ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.306ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_18">ram/nRESETr_i3</A>  (from <A href="#@net:C8M_c">C8M_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_18">ram/nRESETr_i4</A>  (to <A href="#@net:C8M_c">C8M_c</A> +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_18 to SLICE_18 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R4C13A.CLK,R4C13A.Q0,SLICE_18:ROUTE, 0.154,R4C13A.Q0,R4C13A.M1,nRESETr_3">Data path</A> SLICE_18 to SLICE_18:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R4C13A.CLK to      R4C13A.Q0 <A href="#@comp:SLICE_18">SLICE_18</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         2     0.154<A href="#@net:nRESETr_3:R4C13A.Q0:R4C13A.M1:0.154">      R4C13A.Q0 to R4C13A.M1     </A> <A href="#@net:nRESETr_3">nRESETr_3</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R4C13A.CLK,C8M_c">Source Clock Path</A> C8M to SLICE_18:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R4C13A.CLK:0.646">       34.PADDI to R4C13A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R4C13A.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_18:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R4C13A.CLK:0.646">       34.PADDI to R4C13A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.306ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_19">ram/nRESETr_i1</A>  (from <A href="#@net:C8M_c">C8M_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_19">ram/nRESETr_i2</A>  (to <A href="#@net:C8M_c">C8M_c</A> +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_19 to SLICE_19 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R4C12D.CLK,R4C12D.Q0,SLICE_19:ROUTE, 0.154,R4C12D.Q0,R4C12D.M1,ram/nRESETr_1">Data path</A> SLICE_19 to SLICE_19:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R4C12D.CLK to      R4C12D.Q0 <A href="#@comp:SLICE_19">SLICE_19</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         2     0.154<A href="#@net:ram/nRESETr_1:R4C12D.Q0:R4C12D.M1:0.154">      R4C12D.Q0 to R4C12D.M1     </A> <A href="#@net:ram/nRESETr_1">ram/nRESETr_1</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R4C12D.CLK,C8M_c">Source Clock Path</A> C8M to SLICE_19:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R4C12D.CLK:0.646">       34.PADDI to R4C12D.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R4C12D.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_19:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R4C12D.CLK:0.646">       34.PADDI to R4C12D.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.306ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_32">ram/S_FSM_i7</A>  (from <A href="#@net:C8M_c">C8M_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_31">ram/S_FSM_i8</A>  (to <A href="#@net:C8M_c">C8M_c</A> +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_32 to SLICE_31 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R6C11A.CLK,R6C11A.Q1,SLICE_32:ROUTE, 0.154,R6C11A.Q1,R6C11B.M0,ram/n241">Data path</A> SLICE_32 to SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R6C11A.CLK to      R6C11A.Q1 <A href="#@comp:SLICE_32">SLICE_32</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         3     0.154<A href="#@net:ram/n241:R6C11A.Q1:R6C11B.M0:0.154">      R6C11A.Q1 to R6C11B.M0     </A> <A href="#@net:ram/n241">ram/n241</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R6C11A.CLK,C8M_c">Source Clock Path</A> C8M to SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R6C11A.CLK:0.646">       34.PADDI to R6C11A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R6C11B.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_31:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R6C11B.CLK:0.646">       34.PADDI to R6C11B.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.306ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_32">ram/S_FSM_i6</A>  (from <A href="#@net:C8M_c">C8M_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_32">ram/S_FSM_i7</A>  (to <A href="#@net:C8M_c">C8M_c</A> +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_32 to SLICE_32 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R6C11A.CLK,R6C11A.Q0,SLICE_32:ROUTE, 0.154,R6C11A.Q0,R6C11A.M1,ram/n242">Data path</A> SLICE_32 to SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R6C11A.CLK to      R6C11A.Q0 <A href="#@comp:SLICE_32">SLICE_32</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         3     0.154<A href="#@net:ram/n242:R6C11A.Q0:R6C11A.M1:0.154">      R6C11A.Q0 to R6C11A.M1     </A> <A href="#@net:ram/n242">ram/n242</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R6C11A.CLK,C8M_c">Source Clock Path</A> C8M to SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R6C11A.CLK:0.646">       34.PADDI to R6C11A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R6C11A.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R6C11A.CLK:0.646">       34.PADDI to R6C11A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.307ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_23">ram/S_FSM_i4</A>  (from <A href="#@net:C8M_c">C8M_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_23">ram/S_FSM_i5</A>  (to <A href="#@net:C8M_c">C8M_c</A> +)
+
+   Delay:               0.288ns  (46.2% logic, 53.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.288ns physical path delay SLICE_23 to SLICE_23 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.307ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R5C13A.CLK,R5C13A.Q0,SLICE_23:ROUTE, 0.155,R5C13A.Q0,R5C13A.M1,ram/RDD_7__N_493">Data path</A> SLICE_23 to SLICE_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R5C13A.CLK to      R5C13A.Q0 <A href="#@comp:SLICE_23">SLICE_23</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE        13     0.155<A href="#@net:ram/RDD_7__N_493:R5C13A.Q0:R5C13A.M1:0.155">      R5C13A.Q0 to R5C13A.M1     </A> <A href="#@net:ram/RDD_7__N_493">ram/RDD_7__N_493</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.288   (46.2% logic, 53.8% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R5C13A.CLK,C8M_c">Source Clock Path</A> C8M to SLICE_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R5C13A.CLK:0.646">       34.PADDI to R5C13A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R5C13A.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_23:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R5C13A.CLK:0.646">       34.PADDI to R5C13A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.307ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_25">ram/S_FSM_i1</A>  (from <A href="#@net:C8M_c">C8M_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_24">ram/S_FSM_i2</A>  (to <A href="#@net:C8M_c">C8M_c</A> +)
+
+   Delay:               0.288ns  (46.2% logic, 53.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.288ns physical path delay SLICE_25 to SLICE_24 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.307ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R5C12C.CLK,R5C12C.Q0,SLICE_25:ROUTE, 0.155,R5C12C.Q0,R5C12D.M0,PHI2Start_N_536">Data path</A> SLICE_25 to SLICE_24:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R5C12C.CLK to      R5C12C.Q0 <A href="#@comp:SLICE_25">SLICE_25</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE        23     0.155<A href="#@net:PHI2Start_N_536:R5C12C.Q0:R5C12D.M0:0.155">      R5C12C.Q0 to R5C12D.M0     </A> <A href="#@net:PHI2Start_N_536">PHI2Start_N_536</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.288   (46.2% logic, 53.8% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R5C12C.CLK,C8M_c">Source Clock Path</A> C8M to SLICE_25:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R5C12C.CLK:0.646">       34.PADDI to R5C12C.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R5C12D.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_24:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R5C12D.CLK:0.646">       34.PADDI to R5C12D.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.381ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_49">ram/PLLLock_128</A>  (from <A href="#@net:C8M_c">C8M_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_49">ram/PLLLock_128</A>  (to <A href="#@net:C8M_c">C8M_c</A> -)
+
+   Delay:               0.368ns  (63.6% logic, 36.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.368ns physical path delay SLICE_49 to SLICE_49 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.381ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R4C13D.CLK,R4C13D.Q0,SLICE_49:ROUTE, 0.134,R4C13D.Q0,R4C13D.A0,PLLLock:CTOF_DEL, 0.101,R4C13D.A0,R4C13D.F0,SLICE_49:ROUTE, 0.000,R4C13D.F0,R4C13D.DI0,n3204">Data path</A> SLICE_49 to SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R4C13D.CLK to      R4C13D.Q0 <A href="#@comp:SLICE_49">SLICE_49</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         9     0.134<A href="#@net:PLLLock:R4C13D.Q0:R4C13D.A0:0.134">      R4C13D.Q0 to R4C13D.A0     </A> <A href="#@net:PLLLock">PLLLock</A>
+CTOF_DEL    ---     0.101      R4C13D.A0 to      R4C13D.F0 <A href="#@comp:SLICE_49">SLICE_49</A>
+ROUTE         1     0.000<A href="#@net:n3204:R4C13D.F0:R4C13D.DI0:0.000">      R4C13D.F0 to R4C13D.DI0    </A> <A href="#@net:n3204">n3204</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.368   (63.6% logic, 36.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R4C13D.CLK,C8M_c">Source Clock Path</A> C8M to SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R4C13D.CLK:0.646">       34.PADDI to R4C13D.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R4C13D.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R4C13D.CLK:0.646">       34.PADDI to R4C13D.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.381ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ram/SLICE_95">ram/CP1_123</A>  (from <A href="#@net:C8M_c">C8M_c</A> +)
+   Destination:    FF         Data in        <A href="#@comp:ram/SLICE_95">ram/CP1_123</A>  (to <A href="#@net:C8M_c">C8M_c</A> +)
+
+   Delay:               0.368ns  (63.6% logic, 36.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.368ns physical path delay ram/SLICE_95 to ram/SLICE_95 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.381ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R3C13B.CLK,R3C13B.Q0,ram/SLICE_95:ROUTE, 0.132,R3C13B.Q0,R3C13B.A0,ram/CP1:CTOF_DEL, 0.101,R3C13B.A0,R3C13B.F0,ram/SLICE_95:ROUTE, 0.002,R3C13B.F0,R3C13B.DI0,ram/CP1_N_527">Data path</A> ram/SLICE_95 to ram/SLICE_95:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R3C13B.CLK to      R3C13B.Q0 <A href="#@comp:ram/SLICE_95">ram/SLICE_95</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         2     0.132<A href="#@net:ram/CP1:R3C13B.Q0:R3C13B.A0:0.132">      R3C13B.Q0 to R3C13B.A0     </A> <A href="#@net:ram/CP1">ram/CP1</A>
+CTOF_DEL    ---     0.101      R3C13B.A0 to      R3C13B.F0 <A href="#@comp:ram/SLICE_95">ram/SLICE_95</A>
+ROUTE         2     0.002<A href="#@net:ram/CP1_N_527:R3C13B.F0:R3C13B.DI0:0.002">      R3C13B.F0 to R3C13B.DI0    </A> <A href="#@net:ram/CP1_N_527">ram/CP1_N_527</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.368   (63.6% logic, 36.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R3C13B.CLK,C8M_c">Source Clock Path</A> C8M to ram/SLICE_95:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R3C13B.CLK:0.646">       34.PADDI to R3C13B.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R3C13B.CLK,C8M_c">Destination Clock Path</A> C8M to ram/SLICE_95:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R3C13B.CLK:0.646">       34.PADDI to R3C13B.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.386ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ram/SLICE_45">ram/InitDone_133</A>  (from <A href="#@net:C8M_c">C8M_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_104">ram/WRCMDr_132</A>  (to <A href="#@net:C8M_c">C8M_c</A> -)
+
+   Delay:               0.373ns  (62.7% logic, 37.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.373ns physical path delay ram/SLICE_45 to SLICE_104 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.386ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R2C13B.CLK,R2C13B.Q0,ram/SLICE_45:ROUTE, 0.139,R2C13B.Q0,R2C13D.C0,InitDone:CTOF_DEL, 0.101,R2C13D.C0,R2C13D.F0,SLICE_104:ROUTE, 0.000,R2C13D.F0,R2C13D.DI0,WRCMDr_N_500">Data path</A> ram/SLICE_45 to SLICE_104:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C13B.CLK to      R2C13B.Q0 <A href="#@comp:ram/SLICE_45">ram/SLICE_45</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         3     0.139<A href="#@net:InitDone:R2C13B.Q0:R2C13D.C0:0.139">      R2C13B.Q0 to R2C13D.C0     </A> <A href="#@net:InitDone">InitDone</A>
+CTOF_DEL    ---     0.101      R2C13D.C0 to      R2C13D.F0 <A href="#@comp:SLICE_104">SLICE_104</A>
+ROUTE         1     0.000<A href="#@net:WRCMDr_N_500:R2C13D.F0:R2C13D.DI0:0.000">      R2C13D.F0 to R2C13D.DI0    </A> <A href="#@net:WRCMDr_N_500">WRCMDr_N_500</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.373   (62.7% logic, 37.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R2C13B.CLK,C8M_c">Source Clock Path</A> C8M to ram/SLICE_45:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R2C13B.CLK:0.646">       34.PADDI to R2C13B.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R2C13D.CLK,C8M_c">Destination Clock Path</A> C8M to SLICE_104:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R2C13D.CLK:0.646">       34.PADDI to R2C13D.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.386ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:ram/SLICE_45">ram/InitDone_133</A>  (from <A href="#@net:C8M_c">C8M_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:ram/SLICE_97">ram/INITCMDr_130</A>  (to <A href="#@net:C8M_c">C8M_c</A> -)
+
+   Delay:               0.373ns  (62.7% logic, 37.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.373ns physical path delay ram/SLICE_45 to ram/SLICE_97 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.386ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:REG_DEL, 0.133,R2C13B.CLK,R2C13B.Q0,ram/SLICE_45:ROUTE, 0.139,R2C13B.Q0,R2C13A.C0,InitDone:CTOF_DEL, 0.101,R2C13A.C0,R2C13A.F0,ram/SLICE_97:ROUTE, 0.000,R2C13A.F0,R2C13A.DI0,ram/InitDone_N_516">Data path</A> ram/SLICE_45 to ram/SLICE_97:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C13B.CLK to      R2C13B.Q0 <A href="#@comp:ram/SLICE_45">ram/SLICE_45</A> (from <A href="#@net:C8M_c">C8M_c</A>)
+ROUTE         3     0.139<A href="#@net:InitDone:R2C13B.Q0:R2C13A.C0:0.139">      R2C13B.Q0 to R2C13A.C0     </A> <A href="#@net:InitDone">InitDone</A>
+CTOF_DEL    ---     0.101      R2C13A.C0 to      R2C13A.F0 <A href="#@comp:ram/SLICE_97">ram/SLICE_97</A>
+ROUTE         1     0.000<A href="#@net:ram/InitDone_N_516:R2C13A.F0:R2C13A.DI0:0.000">      R2C13A.F0 to R2C13A.DI0    </A> <A href="#@net:ram/InitDone_N_516">ram/InitDone_N_516</A> (to <A href="#@net:C8M_c">C8M_c</A>)
+                  --------
+                    0.373   (62.7% logic, 37.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R2C13B.CLK,C8M_c">Source Clock Path</A> C8M to ram/SLICE_45:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R2C13B.CLK:0.646">       34.PADDI to R2C13B.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'C8M' 122.000000 ns HIGH 61.000000 ns ;:ROUTE, 0.646,34.PADDI,R2C13A.CLK,C8M_c">Destination Clock Path</A> C8M to ram/SLICE_97:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        33     0.646<A href="#@net:C8M_c:34.PADDI:R2C13A.CLK:0.646">       34.PADDI to R2C13A.CLK    </A> <A href="#@net:C8M_c">C8M_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+</A><A name="PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 n"></A>================================================================================
+Preference: PERIOD PORT "PHI2" 976.000000 ns HIGH 488.000000 ns ;
+            10 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.380ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_76">dmaseq/SwapState_68</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_76">dmaseq/SwapState_68</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.367ns  (63.8% logic, 36.2% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.367ns physical path delay SLICE_76 to SLICE_76 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.380ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R6C6D.CLK,R6C6D.Q0,SLICE_76:ROUTE, 0.133,R6C6D.Q0,R6C6D.A0,SwapState:CTOF_DEL, 0.101,R6C6D.A0,R6C6D.F0,SLICE_76:ROUTE, 0.000,R6C6D.F0,R6C6D.DI0,dmaseq/SwapState_N_548">Data path</A> SLICE_76 to SLICE_76:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R6C6D.CLK to       R6C6D.Q0 <A href="#@comp:SLICE_76">SLICE_76</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE         9     0.133<A href="#@net:SwapState:R6C6D.Q0:R6C6D.A0:0.133">       R6C6D.Q0 to R6C6D.A0      </A> <A href="#@net:SwapState">SwapState</A>
+CTOF_DEL    ---     0.101       R6C6D.A0 to       R6C6D.F0 <A href="#@comp:SLICE_76">SLICE_76</A>
+ROUTE         1     0.000<A href="#@net:dmaseq/SwapState_N_548:R6C6D.F0:R6C6D.DI0:0.000">       R6C6D.F0 to R6C6D.DI0     </A> <A href="#@net:dmaseq/SwapState_N_548">dmaseq/SwapState_N_548</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.367   (63.8% logic, 36.2% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C6D.CLK,PHI2_c">Source Clock Path</A> PHI2 to SLICE_76:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C6D.CLK:0.646">       38.PADDI to R6C6D.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C6D.CLK,PHI2_c">Destination Clock Path</A> PHI2 to SLICE_76:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C6D.CLK:0.646">       38.PADDI to R6C6D.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.398ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:reureg/SLICE_90">reureg/nFF00DecodeEN_552</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_33">dmaseq/DMA_64</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.385ns  (59.2% logic, 40.8% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.385ns physical path delay reureg/SLICE_90 to SLICE_33 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.398ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R6C7C.CLK,R6C7C.Q0,reureg/SLICE_90:ROUTE, 0.157,R6C7C.Q0,R6C9C.M0,nFF00DecodeEN:MTOOFX_DEL, 0.095,R6C9C.M0,R6C9C.OFX0,SLICE_33:ROUTE, 0.000,R6C9C.OFX0,R6C9C.DI0,Execute">Data path</A> reureg/SLICE_90 to SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R6C7C.CLK to       R6C7C.Q0 <A href="#@comp:reureg/SLICE_90">reureg/SLICE_90</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE         2     0.157<A href="#@net:nFF00DecodeEN:R6C7C.Q0:R6C9C.M0:0.157">       R6C7C.Q0 to R6C9C.M0      </A> <A href="#@net:nFF00DecodeEN">nFF00DecodeEN</A>
+MTOOFX_DEL  ---     0.095       R6C9C.M0 to     R6C9C.OFX0 <A href="#@comp:SLICE_33">SLICE_33</A>
+ROUTE         1     0.000<A href="#@net:Execute:R6C9C.OFX0:R6C9C.DI0:0.000">     R6C9C.OFX0 to R6C9C.DI0     </A> <A href="#@net:Execute">Execute</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.385   (59.2% logic, 40.8% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C7C.CLK,PHI2_c">Source Clock Path</A> PHI2 to reureg/SLICE_90:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C7C.CLK:0.646">       38.PADDI to R6C7C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C9C.CLK,PHI2_c">Destination Clock Path</A> PHI2 to SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C9C.CLK:0.646">       38.PADDI to R6C9C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.481ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_33">dmaseq/DMA_64</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_125">reureg/LengthWritten_3__642</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.468ns  (50.0% logic, 50.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.468ns physical path delay SLICE_33 to SLICE_125 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.481ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R6C9C.CLK,R6C9C.Q0,SLICE_33:ROUTE, 0.232,R6C9C.Q0,R4C8B.D1,AOE:CTOF_DEL, 0.101,R4C8B.D1,R4C8B.F1,SLICE_125:ROUTE, 0.002,R4C8B.F1,R4C8B.DI1,n1277">Data path</A> SLICE_33 to SLICE_125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R6C9C.CLK to       R6C9C.Q0 <A href="#@comp:SLICE_33">SLICE_33</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE        51     0.232<A href="#@net:AOE:R6C9C.Q0:R4C8B.D1:0.232">       R6C9C.Q0 to R4C8B.D1      </A> <A href="#@net:AOE">AOE</A>
+CTOF_DEL    ---     0.101       R4C8B.D1 to       R4C8B.F1 <A href="#@comp:SLICE_125">SLICE_125</A>
+ROUTE         2     0.002<A href="#@net:n1277:R4C8B.F1:R4C8B.DI1:0.002">       R4C8B.F1 to R4C8B.DI1     </A> <A href="#@net:n1277">n1277</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.468   (50.0% logic, 50.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C9C.CLK,PHI2_c">Source Clock Path</A> PHI2 to SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C9C.CLK:0.646">       38.PADDI to R6C9C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R4C8B.CLK,PHI2_c">Destination Clock Path</A> PHI2 to SLICE_125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R4C8B.CLK:0.646">       38.PADDI to R4C8B.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.481ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_33">dmaseq/DMA_64</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_125">reureg/LengthWritten_2__643</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.468ns  (50.0% logic, 50.0% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.468ns physical path delay SLICE_33 to SLICE_125 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.481ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R6C9C.CLK,R6C9C.Q0,SLICE_33:ROUTE, 0.232,R6C9C.Q0,R4C8B.D0,AOE:CTOF_DEL, 0.101,R4C8B.D0,R4C8B.F0,SLICE_125:ROUTE, 0.002,R4C8B.F0,R4C8B.DI0,n1246">Data path</A> SLICE_33 to SLICE_125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R6C9C.CLK to       R6C9C.Q0 <A href="#@comp:SLICE_33">SLICE_33</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE        51     0.232<A href="#@net:AOE:R6C9C.Q0:R4C8B.D0:0.232">       R6C9C.Q0 to R4C8B.D0      </A> <A href="#@net:AOE">AOE</A>
+CTOF_DEL    ---     0.101       R4C8B.D0 to       R4C8B.F0 <A href="#@comp:SLICE_125">SLICE_125</A>
+ROUTE         2     0.002<A href="#@net:n1246:R4C8B.F0:R4C8B.DI0:0.002">       R4C8B.F0 to R4C8B.DI0     </A> <A href="#@net:n1246">n1246</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.468   (50.0% logic, 50.0% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C9C.CLK,PHI2_c">Source Clock Path</A> PHI2 to SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C9C.CLK:0.646">       38.PADDI to R6C9C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R4C8B.CLK,PHI2_c">Destination Clock Path</A> PHI2 to SLICE_125:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R4C8B.CLK:0.646">       38.PADDI to R4C8B.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.521ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:SLICE_33">dmaseq/DMA_64</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:SLICE_33">dmaseq/DMA_64</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.508ns  (56.9% logic, 43.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.508ns physical path delay SLICE_33 to SLICE_33 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.521ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R6C9C.CLK,R6C9C.Q0,SLICE_33:ROUTE, 0.219,R6C9C.Q0,R6C9C.A1,AOE:CTOOFX_DEL, 0.156,R6C9C.A1,R6C9C.OFX0,SLICE_33:ROUTE, 0.000,R6C9C.OFX0,R6C9C.DI0,Execute">Data path</A> SLICE_33 to SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R6C9C.CLK to       R6C9C.Q0 <A href="#@comp:SLICE_33">SLICE_33</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE        51     0.219<A href="#@net:AOE:R6C9C.Q0:R6C9C.A1:0.219">       R6C9C.Q0 to R6C9C.A1      </A> <A href="#@net:AOE">AOE</A>
+CTOOFX_DEL  ---     0.156       R6C9C.A1 to     R6C9C.OFX0 <A href="#@comp:SLICE_33">SLICE_33</A>
+ROUTE         1     0.000<A href="#@net:Execute:R6C9C.OFX0:R6C9C.DI0:0.000">     R6C9C.OFX0 to R6C9C.DI0     </A> <A href="#@net:Execute">Execute</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.508   (56.9% logic, 43.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C9C.CLK,PHI2_c">Source Clock Path</A> PHI2 to SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C9C.CLK:0.646">       38.PADDI to R6C9C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R6C9C.CLK,PHI2_c">Destination Clock Path</A> PHI2 to SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R6C9C.CLK:0.646">       38.PADDI to R6C9C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.536ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:reureg/SLICE_66">reureg/REUA_7__587</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:reureg/SLICE_66">reureg/REUA_7__587</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.523ns  (64.1% logic, 35.9% route), 3 logic levels.
+
+ Constraint Details:
+
+      0.523ns physical path delay reureg/SLICE_66 to reureg/SLICE_66 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.536ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R4C13B.CLK,R4C13B.Q1,reureg/SLICE_66:ROUTE, 0.135,R4C13B.Q1,R4C13A.D1,REUA_7:CTOF_DEL, 0.101,R4C13A.D1,R4C13A.F1,SLICE_18:ROUTE, 0.053,R4C13A.F1,R4C13B.D1,reureg/REUAOut_7_N_100_7:CTOF_DEL, 0.101,R4C13B.D1,R4C13B.F1,reureg/SLICE_66:ROUTE, 0.000,R4C13B.F1,R4C13B.DI1,reureg/REUAOut_7__N_97">Data path</A> reureg/SLICE_66 to reureg/SLICE_66:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R4C13B.CLK to      R4C13B.Q1 <A href="#@comp:reureg/SLICE_66">reureg/SLICE_66</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE         4     0.135<A href="#@net:REUA_7:R4C13B.Q1:R4C13A.D1:0.135">      R4C13B.Q1 to R4C13A.D1     </A> <A href="#@net:REUA_7">REUA_7</A>
+CTOF_DEL    ---     0.101      R4C13A.D1 to      R4C13A.F1 <A href="#@comp:SLICE_18">SLICE_18</A>
+ROUTE         1     0.053<A href="#@net:reureg/REUAOut_7_N_100_7:R4C13A.F1:R4C13B.D1:0.053">      R4C13A.F1 to R4C13B.D1     </A> <A href="#@net:reureg/REUAOut_7_N_100_7">reureg/REUAOut_7_N_100_7</A>
+CTOF_DEL    ---     0.101      R4C13B.D1 to      R4C13B.F1 <A href="#@comp:reureg/SLICE_66">reureg/SLICE_66</A>
+ROUTE         1     0.000<A href="#@net:reureg/REUAOut_7__N_97:R4C13B.F1:R4C13B.DI1:0.000">      R4C13B.F1 to R4C13B.DI1    </A> <A href="#@net:reureg/REUAOut_7__N_97">reureg/REUAOut_7__N_97</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.523   (64.1% logic, 35.9% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R4C13B.CLK,PHI2_c">Source Clock Path</A> PHI2 to reureg/SLICE_66:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R4C13B.CLK:0.646">       38.PADDI to R4C13B.CLK    </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R4C13B.CLK,PHI2_c">Destination Clock Path</A> PHI2 to reureg/SLICE_66:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R4C13B.CLK:0.646">       38.PADDI to R4C13B.CLK    </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.537ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:reureg/SLICE_4">reureg/LengthWritten_10__659</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:reureg/SLICE_137">reureg/Length_10__651</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.524ns  (63.9% logic, 36.1% route), 3 logic levels.
+
+ Constraint Details:
+
+      0.524ns physical path delay reureg/SLICE_4 to reureg/SLICE_137 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.537ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R5C8A.CLK,R5C8A.Q0,reureg/SLICE_4:ROUTE, 0.136,R5C8A.Q0,R5C8B.C0,reureg/LengthWritten_10:CTOF_DEL, 0.101,R5C8B.C0,R5C8B.F0,reureg/SLICE_215:ROUTE, 0.053,R5C8B.F0,R5C8C.D0,reureg/Length_10__N_325:CTOF_DEL, 0.101,R5C8C.D0,R5C8C.F0,reureg/SLICE_137:ROUTE, 0.000,R5C8C.F0,R5C8C.DI0,reureg/Length_10__N_324">Data path</A> reureg/SLICE_4 to reureg/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C8A.CLK to       R5C8A.Q0 <A href="#@comp:reureg/SLICE_4">reureg/SLICE_4</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE         1     0.136<A href="#@net:reureg/LengthWritten_10:R5C8A.Q0:R5C8B.C0:0.136">       R5C8A.Q0 to R5C8B.C0      </A> <A href="#@net:reureg/LengthWritten_10">reureg/LengthWritten_10</A>
+CTOF_DEL    ---     0.101       R5C8B.C0 to       R5C8B.F0 <A href="#@comp:reureg/SLICE_215">reureg/SLICE_215</A>
+ROUTE         1     0.053<A href="#@net:reureg/Length_10__N_325:R5C8B.F0:R5C8C.D0:0.053">       R5C8B.F0 to R5C8C.D0      </A> <A href="#@net:reureg/Length_10__N_325">reureg/Length_10__N_325</A>
+CTOF_DEL    ---     0.101       R5C8C.D0 to       R5C8C.F0 <A href="#@comp:reureg/SLICE_137">reureg/SLICE_137</A>
+ROUTE         1     0.000<A href="#@net:reureg/Length_10__N_324:R5C8C.F0:R5C8C.DI0:0.000">       R5C8C.F0 to R5C8C.DI0     </A> <A href="#@net:reureg/Length_10__N_324">reureg/Length_10__N_324</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.524   (63.9% logic, 36.1% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R5C8A.CLK,PHI2_c">Source Clock Path</A> PHI2 to reureg/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R5C8A.CLK:0.646">       38.PADDI to R5C8A.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R5C8C.CLK,PHI2_c">Destination Clock Path</A> PHI2 to reureg/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R5C8C.CLK:0.646">       38.PADDI to R5C8C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.539ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:reureg/SLICE_12">reureg/LengthWritten_8__661</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:reureg/SLICE_136">reureg/Length_8__653</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.526ns  (63.7% logic, 36.3% route), 3 logic levels.
+
+ Constraint Details:
+
+      0.526ns physical path delay reureg/SLICE_12 to reureg/SLICE_136 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.539ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R3C9C.CLK,R3C9C.Q0,reureg/SLICE_12:ROUTE, 0.135,R3C9C.Q0,R5C9B.D1,reureg/LengthWritten_8:CTOF_DEL, 0.101,R5C9B.D1,R5C9B.F1,reureg/SLICE_210:ROUTE, 0.056,R5C9B.F1,R5C9C.C0,reureg/Length_8__N_335:CTOF_DEL, 0.101,R5C9C.C0,R5C9C.F0,reureg/SLICE_136:ROUTE, 0.000,R5C9C.F0,R5C9C.DI0,reureg/Length_8__N_334">Data path</A> reureg/SLICE_12 to reureg/SLICE_136:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R3C9C.CLK to       R3C9C.Q0 <A href="#@comp:reureg/SLICE_12">reureg/SLICE_12</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE         1     0.135<A href="#@net:reureg/LengthWritten_8:R3C9C.Q0:R5C9B.D1:0.135">       R3C9C.Q0 to R5C9B.D1      </A> <A href="#@net:reureg/LengthWritten_8">reureg/LengthWritten_8</A>
+CTOF_DEL    ---     0.101       R5C9B.D1 to       R5C9B.F1 <A href="#@comp:reureg/SLICE_210">reureg/SLICE_210</A>
+ROUTE         1     0.056<A href="#@net:reureg/Length_8__N_335:R5C9B.F1:R5C9C.C0:0.056">       R5C9B.F1 to R5C9C.C0      </A> <A href="#@net:reureg/Length_8__N_335">reureg/Length_8__N_335</A>
+CTOF_DEL    ---     0.101       R5C9C.C0 to       R5C9C.F0 <A href="#@comp:reureg/SLICE_136">reureg/SLICE_136</A>
+ROUTE         1     0.000<A href="#@net:reureg/Length_8__N_334:R5C9C.F0:R5C9C.DI0:0.000">       R5C9C.F0 to R5C9C.DI0     </A> <A href="#@net:reureg/Length_8__N_334">reureg/Length_8__N_334</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.526   (63.7% logic, 36.3% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R3C9C.CLK,PHI2_c">Source Clock Path</A> PHI2 to reureg/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R3C9C.CLK:0.646">       38.PADDI to R3C9C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R5C9C.CLK,PHI2_c">Destination Clock Path</A> PHI2 to reureg/SLICE_136:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R5C9C.CLK:0.646">       38.PADDI to R5C9C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.540ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:reureg/SLICE_4">reureg/LengthWritten_11__658</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:reureg/SLICE_137">reureg/Length_11__650</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.527ns  (63.6% logic, 36.4% route), 3 logic levels.
+
+ Constraint Details:
+
+      0.527ns physical path delay reureg/SLICE_4 to reureg/SLICE_137 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.540ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R5C8A.CLK,R5C8A.Q1,reureg/SLICE_4:ROUTE, 0.136,R5C8A.Q1,R5C8D.C0,reureg/LengthWritten_11:CTOF_DEL, 0.101,R5C8D.C0,R5C8D.F0,reureg/SLICE_214:ROUTE, 0.056,R5C8D.F0,R5C8C.C1,reureg/Length_11__N_320:CTOF_DEL, 0.101,R5C8C.C1,R5C8C.F1,reureg/SLICE_137:ROUTE, 0.000,R5C8C.F1,R5C8C.DI1,reureg/Length_11__N_319">Data path</A> reureg/SLICE_4 to reureg/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C8A.CLK to       R5C8A.Q1 <A href="#@comp:reureg/SLICE_4">reureg/SLICE_4</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE         1     0.136<A href="#@net:reureg/LengthWritten_11:R5C8A.Q1:R5C8D.C0:0.136">       R5C8A.Q1 to R5C8D.C0      </A> <A href="#@net:reureg/LengthWritten_11">reureg/LengthWritten_11</A>
+CTOF_DEL    ---     0.101       R5C8D.C0 to       R5C8D.F0 <A href="#@comp:reureg/SLICE_214">reureg/SLICE_214</A>
+ROUTE         1     0.056<A href="#@net:reureg/Length_11__N_320:R5C8D.F0:R5C8C.C1:0.056">       R5C8D.F0 to R5C8C.C1      </A> <A href="#@net:reureg/Length_11__N_320">reureg/Length_11__N_320</A>
+CTOF_DEL    ---     0.101       R5C8C.C1 to       R5C8C.F1 <A href="#@comp:reureg/SLICE_137">reureg/SLICE_137</A>
+ROUTE         1     0.000<A href="#@net:reureg/Length_11__N_319:R5C8C.F1:R5C8C.DI1:0.000">       R5C8C.F1 to R5C8C.DI1     </A> <A href="#@net:reureg/Length_11__N_319">reureg/Length_11__N_319</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.527   (63.6% logic, 36.4% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R5C8A.CLK,PHI2_c">Source Clock Path</A> PHI2 to reureg/SLICE_4:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R5C8A.CLK:0.646">       38.PADDI to R5C8A.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R5C8C.CLK,PHI2_c">Destination Clock Path</A> PHI2 to reureg/SLICE_137:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R5C8C.CLK:0.646">       38.PADDI to R5C8C.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+<font color=#000000> 
+
+Passed: The following path meets requirements by 0.551ns
+ </font>
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              <A href="#@comp:reureg/SLICE_71">reureg/REUA_16__626</A>  (from <A href="#@net:PHI2_c">PHI2_c</A> -)
+   Destination:    FF         Data in        <A href="#@comp:reureg/SLICE_71">reureg/REUA_16__626</A>  (to <A href="#@net:PHI2_c">PHI2_c</A> -)
+
+   Delay:               0.538ns  (62.3% logic, 37.7% route), 3 logic levels.
+
+ Constraint Details:
+
+      0.538ns physical path delay reureg/SLICE_71 to reureg/SLICE_71 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.551ns
+
+ Physical Path Details:
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:REG_DEL, 0.133,R2C8A.CLK,R2C8A.Q0,reureg/SLICE_71:ROUTE, 0.147,R2C8A.Q0,R2C8B.C0,REUA_16:CTOF_DEL, 0.101,R2C8B.C0,R2C8B.F0,reureg/SLICE_179:ROUTE, 0.056,R2C8B.F0,R2C8A.C0,reureg/REUAOut_16__N_49:CTOF_DEL, 0.101,R2C8A.C0,R2C8A.F0,reureg/SLICE_71:ROUTE, 0.000,R2C8A.F0,R2C8A.DI0,reureg/REUAOut_16__N_48">Data path</A> reureg/SLICE_71 to reureg/SLICE_71:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R2C8A.CLK to       R2C8A.Q0 <A href="#@comp:reureg/SLICE_71">reureg/SLICE_71</A> (from <A href="#@net:PHI2_c">PHI2_c</A>)
+ROUTE         5     0.147<A href="#@net:REUA_16:R2C8A.Q0:R2C8B.C0:0.147">       R2C8A.Q0 to R2C8B.C0      </A> <A href="#@net:REUA_16">REUA_16</A>
+CTOF_DEL    ---     0.101       R2C8B.C0 to       R2C8B.F0 <A href="#@comp:reureg/SLICE_179">reureg/SLICE_179</A>
+ROUTE         1     0.056<A href="#@net:reureg/REUAOut_16__N_49:R2C8B.F0:R2C8A.C0:0.056">       R2C8B.F0 to R2C8A.C0      </A> <A href="#@net:reureg/REUAOut_16__N_49">reureg/REUAOut_16__N_49</A>
+CTOF_DEL    ---     0.101       R2C8A.C0 to       R2C8A.F0 <A href="#@comp:reureg/SLICE_71">reureg/SLICE_71</A>
+ROUTE         1     0.000<A href="#@net:reureg/REUAOut_16__N_48:R2C8A.F0:R2C8A.DI0:0.000">       R2C8A.F0 to R2C8A.DI0     </A> <A href="#@net:reureg/REUAOut_16__N_48">reureg/REUAOut_16__N_48</A> (to <A href="#@net:PHI2_c">PHI2_c</A>)
+                  --------
+                    0.538   (62.3% logic, 37.7% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R2C8A.CLK,PHI2_c">Source Clock Path</A> PHI2 to reureg/SLICE_71:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R2C8A.CLK:0.646">       38.PADDI to R2C8A.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+      <A href="#@path:PERIOD PORT 'PHI2' 976.000000 ns HIGH 488.000000 ns ;:ROUTE, 0.646,38.PADDI,R2C8A.CLK,PHI2_c">Destination Clock Path</A> PHI2 to reureg/SLICE_71:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        77     0.646<A href="#@net:PHI2_c:38.PADDI:R2C8A.CLK:0.646">       38.PADDI to R2C8A.CLK     </A> <A href="#@net:PHI2_c">PHI2_c</A>
+                  --------
+                    0.646   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="Report Summary"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+PERIOD PORT "C8M" 122.000000 ns HIGH    |             |             |
+61.000000 ns ;                          |            -|            -|   1  
+                                        |             |             |
+PERIOD PORT "PHI2" 976.000000 ns HIGH   |             |             |
+488.000000 ns ;                         |            -|            -|   2  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="Clock Domains Analysis"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: <A href="#@net:PHI2_c">PHI2_c</A>   Source: PHI2.PAD   Loads: 77
+   Covered under: PERIOD PORT "PHI2" 976.000000 ns HIGH 488.000000 ns ;
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:C8M_c">C8M_c</A>   Source: C8M.PAD
+      Covered under: PERIOD PORT "PHI2" 976.000000 ns HIGH 488.000000 ns ;   Transfers: 8
+
+Clock Domain: <A href="#@net:C8M_c">C8M_c</A>   Source: C8M.PAD   Loads: 33
+   Covered under: PERIOD PORT "C8M" 122.000000 ns HIGH 61.000000 ns ;
+
+   Data transfers from:
+   Clock Domain: <A href="#@net:PHI2_c">PHI2_c</A>   Source: PHI2.PAD
+      Covered under: PERIOD PORT "C8M" 122.000000 ns HIGH 61.000000 ns ;   Transfers: 26
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 5157 paths, 2 nets, and 1037 connections (63.66% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)

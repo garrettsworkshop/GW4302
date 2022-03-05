@@ -126,7 +126,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		CA[7:0] <= CAWritten[7:0];
 	end else if (NextCA) begin
-		CA[7:0] <= CA[7:0]+1;
+		CA[7:0] <= CA[7:0]+8'h01;
 	end
 end 
 
@@ -140,7 +140,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		CA[15:8] <= CAWritten[15:8];
 	end else if (NextCA && CA[7:0]==8'hFF) begin
-		CA[15:8] <= CA[15:8]+1;
+		CA[15:8] <= CA[15:8]+8'h01;
 	end
 end
 
@@ -155,7 +155,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		REUA[7:0] <= REUAWritten[7:0];
 	end else if (NextREUA) begin
-		REUA[7:0] <= REUA[7:0]+1;
+		REUA[7:0] <= REUA[7:0]+8'h01;
 	end
 end
 
@@ -170,7 +170,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		REUA[15:8] <= REUAWritten[15:8];
 	end else if (NextREUA && REUA[7:0]==8'hFF) begin
-		REUA[15:8] <= REUA[15:8]+1;
+		REUA[15:8] <= REUA[15:8]+8'h01;
 	end
 end
 
@@ -186,7 +186,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		REUA[18:16] <= REUAWritten[18:16];
 	end else if (NextREUA && REUA[15:0]==16'hFFFF) begin
-		REUA[18:16] <= REUA[18:16]+1;
+		REUA[18:16] <= REUA[18:16]+3'h1;
 	end
 end
 
@@ -201,7 +201,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		Length[7:0] <= LengthWritten[7:0];
 	end else if (NextCA && !Length1) begin
-		Length[7:0] <= Length[7:0]-1;
+		Length[7:0] <= Length[7:0]-8'h01;
 	end
 end
 
@@ -216,7 +216,7 @@ always @(negedge PHI2) begin
 	end else if (XferEnd) begin
 		Length[15:8] <= LengthWritten[15:8];
 	end else if (NextCA && Length[7:0]==8'h00) begin
-		Length[15:8] <= Length[15:8]-1;
+		Length[15:8] <= Length[15:8]-8'h01;
 	end
 end
 

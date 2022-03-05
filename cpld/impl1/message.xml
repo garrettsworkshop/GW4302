@@ -12,113 +12,41 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reu.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/reu.v(1): </Dynamic>
             <Dynamic>REU</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reu.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/reu.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/reg.v(1): </Dynamic>
             <Dynamic>REUReg</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/reg.v</Navigation>
             <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(129): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>129</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(143): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>143</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(158): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>158</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(173): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>173</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(189): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>3</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>189</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(204): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>204</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/reg.v(219): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/reg.v</Navigation>
-            <Navigation>219</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/ram.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/ram.v(1): </Dynamic>
             <Dynamic>RAM</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/ram.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/ram.v</Navigation>
             <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/ram.v(57): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>3</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/ram.v</Navigation>
-            <Navigation>57</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/dmaseq.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/dmaseq.v(1): </Dynamic>
             <Dynamic>DMASeq</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/dmaseq.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/dmaseq.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/zanek/documents/github/gw4302/cpld/glue.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/glue.v(1): </Dynamic>
             <Dynamic>Glue</Dynamic>
-            <Navigation>c:/users/zanek/documents/github/gw4302/cpld/glue.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/glue.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
@@ -126,26 +54,6 @@
             <Severity>Info</Severity>
             <Dynamic>\ram/S</Dynamic>
             <Dynamic>one-hot</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001611</ID>
-            <Severity>Warning</Severity>
-        </Message>
-    </Task>
-    <Task name="PAR">
-        <Message>
-            <ID>61061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>PHI2_c</Dynamic>
-            <Dynamic>Primary</Dynamic>
-            <Dynamic>PHI2</Dynamic>
-            <Dynamic>31</Dynamic>
-            <Dynamic>Primary</Dynamic>
-        </Message>
-        <Message>
-            <ID>62061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>PHI2_c</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

@@ -19,15 +19,17 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>C:/Users/zanek/Documents/GitHub/GW4302/cpld/impl1/REU_impl1.jed</File>
-			<FileTime>01/19/22 09:36:23</FileTime>
-			<JedecChecksum>0x9224</JedecChecksum>
+			<File>//Mac/iCloud/Repos/GW4302/cpld/impl1/REU_impl1.jed</File>
+			<FileTime>03/05/22 01:56:52</FileTime>
+			<JedecChecksum>0xA0B5</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
 				<IOState>HighZ</IOState>
 				<PreloadLength>152</PreloadLength>
 				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+				<SVFProcessor>SVF Processor</SVFProcessor>
+				<Usercode>0x00000000</Usercode>
 				<AccessMode>FLASH</AccessMode>
 			</Option>
 		</Device>

@@ -53,8 +53,8 @@ module RAM(
 	reg [2:0] S = 0;
 	wire PHI2Start = S==0 && PHI2Fall && PLLLock;
 	always @(posedge C8M) begin
-		if (PHI2Start) S <= 1;
-		else if (S!=0) S <= S+1;
+		if (PHI2Start) S <= 3'h1;
+		else if (S!=0) S <= S+3'h1;
 	end
 	
 	/* Command/address registration */

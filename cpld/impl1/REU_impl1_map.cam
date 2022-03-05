@@ -1,47 +1,48 @@
 [ START MERGED ]
-n1197 ram/RDOE
+n1179 ram/RDOE
 PHI2_N_544 PHI2_c
+reureg/n3 A_out_2
 C8M_N_484 C8M_c
-ram/n1637 ram/PLLLock
-ram/n3384 ram/RDOE_N_539
+ram/n1607 PLLLock
+ram/n3470 ram/RDOE_N_539
 [ END MERGED ]
 [ START CLIPPED ]
 VCC_net
-reureg/add_810_1/S1
-reureg/add_810_1/S0
-reureg/add_810_1/CI
-reureg/add_810_9/CO
-reureg/add_811_1/S1
-reureg/add_811_1/S0
-reureg/add_811_1/CI
-reureg/add_811_9/CO
-reureg/add_812_1/S1
-reureg/add_812_1/S0
-reureg/add_812_1/CI
-reureg/add_812_9/CO
-reureg/sub_85_add_2_1/S0
-reureg/sub_85_add_2_1/CI
-reureg/sub_85_add_2_9/S1
-reureg/sub_85_add_2_9/CO
-reureg/add_809_9/CO
-reureg/sub_84_add_2_1/S0
-reureg/sub_84_add_2_1/CI
-reureg/sub_84_add_2_9/S1
-reureg/sub_84_add_2_9/CO
-reureg/add_809_1/S1
-reureg/add_809_1/S0
-reureg/add_809_1/CI
-RAMRDD_7__I_0_8/S0
-RAMRDD_7__I_0_8/CO
+reureg/CAOut_7__I_0_1/S1
+reureg/CAOut_7__I_0_1/S0
+reureg/CAOut_7__I_0_1/CI
+reureg/CAOut_7__I_0_9/CO
+reureg/CAOut_15__I_0_1/S1
+reureg/CAOut_15__I_0_1/S0
+reureg/CAOut_15__I_0_1/CI
+reureg/CAOut_15__I_0_9/CO
+reureg/REUAOut_7__I_0_1/S1
+reureg/REUAOut_7__I_0_1/S0
+reureg/REUAOut_7__I_0_1/CI
+reureg/REUAOut_7__I_0_9/CO
+reureg/Length_15__I_0_add_2_1/S0
+reureg/Length_15__I_0_add_2_1/CI
+reureg/REUAOut_15__I_0_9/CO
+reureg/Length_15__I_0_add_2_9/S1
+reureg/Length_15__I_0_add_2_9/CO
+reureg/Length_7__I_0_add_2_1/S0
+reureg/Length_7__I_0_add_2_1/CI
+reureg/Length_7__I_0_add_2_9/S1
+reureg/Length_7__I_0_add_2_9/CO
+reureg/REUAOut_15__I_0_1/S1
+reureg/REUAOut_15__I_0_1/S0
+reureg/REUAOut_15__I_0_1/CI
 RAMRDD_7__I_0_0/S1
 RAMRDD_7__I_0_0/S0
 RAMRDD_7__I_0_0/CI
 RAMRDD_7__I_0_7/S1
 RAMRDD_7__I_0_7/S0
+RAMRDD_7__I_0_8/S0
+RAMRDD_7__I_0_8/CO
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Thu Jan 20 14:41:51 2022
+# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Sat Mar 05 01:56:28 2022
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "D[2]" SITE "8" ;
@@ -52,10 +53,10 @@ LOCATE COMP "D[3]" SITE "10" ;
 LOCATE COMP "D[7]" SITE "13" ;
 LOCATE COMP "D[1]" SITE "7" ;
 LOCATE COMP "D[0]" SITE "4" ;
-LOCATE COMP "A[15]" SITE "34" ;
+LOCATE COMP "A[15]" SITE "35" ;
 LOCATE COMP "A[14]" SITE "40" ;
 LOCATE COMP "A[13]" SITE "42" ;
-LOCATE COMP "A[12]" SITE "38" ;
+LOCATE COMP "A[12]" SITE "36" ;
 LOCATE COMP "A[11]" SITE "37" ;
 LOCATE COMP "A[10]" SITE "39" ;
 LOCATE COMP "A[9]" SITE "41" ;
@@ -78,12 +79,13 @@ LOCATE COMP "RD[1]" SITE "58" ;
 LOCATE COMP "RD[0]" SITE "57" ;
 LOCATE COMP "nWEDMA" SITE "17" ;
 LOCATE COMP "nDMA" SITE "25" ;
-LOCATE COMP "nAOE" SITE "36" ;
-LOCATE COMP "ADIR" SITE "35" ;
+LOCATE COMP "nAOE" SITE "32" ;
+LOCATE COMP "ADIR" SITE "31" ;
 LOCATE COMP "nRWOE" SITE "20" ;
 LOCATE COMP "nDOE" SITE "16" ;
 LOCATE COMP "DDIR" SITE "15" ;
 LOCATE COMP "nIRQ" SITE "18" ;
+LOCATE COMP "RCLK" SITE "63" ;
 LOCATE COMP "nCS" SITE "88" ;
 LOCATE COMP "nRAS" SITE "87" ;
 LOCATE COMP "nCAS" SITE "86" ;
@@ -106,11 +108,13 @@ LOCATE COMP "RA[1]" SITE "1" ;
 LOCATE COMP "RA[0]" SITE "99" ;
 LOCATE COMP "DQMH" SITE "83" ;
 LOCATE COMP "DQML" SITE "84" ;
-LOCATE COMP "C8M" SITE "63" ;
-LOCATE COMP "PHI2" SITE "31" ;
+LOCATE COMP "C8M" SITE "34" ;
+LOCATE COMP "PHI2" SITE "38" ;
 LOCATE COMP "nRESET" SITE "28" ;
-LOCATE COMP "BA" SITE "32" ;
+LOCATE COMP "BA" SITE "30" ;
 LOCATE COMP "nWE" SITE "21" ;
-LOCATE COMP "nIO2" SITE "30" ;
+LOCATE COMP "nIO2" SITE "29" ;
+USE PRIMARY NET "C8M_c" ;
+USE PRIMARY NET "PHI2_c" ;
 SCHEMATIC END ;
 [ END DESIGN PREFS ]

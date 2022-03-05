@@ -15,8 +15,8 @@ I/O cells:      69
                                 GSR         1          100.0
                                  IB         6          100.0
                                 INV         2          100.0
-                            L6MUX21         4          100.0
-                               LUT4       263          100.0
+                            L6MUX21         6          100.0
+                               LUT4       267          100.0
                                  OB        31          100.0
                               PFUMX        14          100.0
 SUB MODULES
@@ -24,7 +24,7 @@ SUB MODULES
                                Glue         1
                                 RAM         1
                              REUReg         1
-                              TOTAL       579
+                              TOTAL       585
 ----------------------------------------------------------------------
 Report for cell DMASeq.v1
 Instance Path : dmaseq
@@ -33,16 +33,8 @@ Instance Path : dmaseq
                             FD1P3IX         1            2.3
                             FD1S3AX         5           20.0
                             FD1S3IX         2            5.0
-                               LUT4        28           10.6
-                              TOTAL        36
-----------------------------------------------------------------------
-Report for cell Glue.v1
-Instance Path : glue
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                               LUT4        11            4.2
-                              PFUMX         1            7.1
-                              TOTAL        12
+                               LUT4        25            9.4
+                              TOTAL        33
 ----------------------------------------------------------------------
 Report for cell REUReg.v1
 Instance Path : reureg
@@ -54,10 +46,18 @@ Instance Path : reureg
                             FD1P3JX        16           94.1
                             FD1S3AX         1            4.0
                             FD1S3IX        38           95.0
-                            L6MUX21         3           75.0
-                               LUT4       171           65.0
-                              PFUMX        11           78.6
-                              TOTAL       336
+                            L6MUX21         6          100.0
+                               LUT4       183           68.5
+                              PFUMX        13           92.9
+                              TOTAL       353
+----------------------------------------------------------------------
+Report for cell Glue.v1
+Instance Path : glue
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               LUT4        11            4.1
+                              PFUMX         1            7.1
+                              TOTAL        12
 ----------------------------------------------------------------------
 Report for cell RAM.v1
 Instance Path : ram
@@ -68,5 +68,5 @@ Instance Path : ram
                             FD1P3JX         1            5.9
                             FD1S3AX        19           76.0
                             FD1S3JX         7          100.0
-                               LUT4        38           14.4
-                              TOTAL        98
+                               LUT4        37           13.9
+                              TOTAL        97

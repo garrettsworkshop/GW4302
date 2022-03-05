@@ -1,0 +1,20 @@
+################################################
+# This section describes SDC language elements for timing-driven
+# synthesis that are supported by the Lattice Synthesis Engine (LSE).
+#
+# The constraints here will be translated to corresponding
+# timing Preference (Preferences are implementation constraints
+# for assigning design logic to physical resources) for back-end flow.
+################################################
+
+create_clock -period 122.000000 -name C8M [ get_ports { C8M } ]
+create_clock -period 976.000000 -name PHI2 [ get_ports { PHI2 } ]
+
+################################################
+# This section describes the HDL Attributes that are supported
+# by the Lattice Synthesis Engine (LSE).
+#
+# These attributes are directly interpreted by the engine and
+# influence the optimization or structure of the output netlist.
+################################################
+
