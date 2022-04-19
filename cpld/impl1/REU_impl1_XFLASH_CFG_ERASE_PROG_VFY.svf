@@ -3,9 +3,9 @@
 ! Lattice Semiconductor Corp.
 ! Serial Vector Format (.SVF) File.
 ! User information:
-! File name: \\Mac\iCloud\Repos\GW4302\cpld\impl1\REU_impl1.svf
+! File name: \\Mac\iCloud\Repos\GW4302\cpld\impl1\REU_impl1_XFLASH_CFG_ERASE_PROG_VFY.svf
 ! CREATED BY:    Diamond Deployment Tool 3.12
-! CREATION DATE: Sat Mar 05 02:28:47 2022
+! CREATION DATE: Sun Mar 06 03:29:23 2022
 ! Device: LCMXO2-640HC  XFLASH CFG Erase,Program,Verify //Mac/iCloud/Repos/GW4302/cpld/impl1/REU_impl1.jed
 ! LATTICE_NOTE "Device" "LCMXO2-640HC"
 ! LATTICE_NOTE "Checksum" "A0B5"
