@@ -44,6 +44,7 @@ module REU(
 	wire [7:0] RAMRDD;
 	
 	/* DMA Sequencer Outputs */
+	wire DMA;
 	wire RAMRD, RAMWR;
 	wire RegReset;
 	wire NextCA, NextREUA, VerifyErr, Autoload;
