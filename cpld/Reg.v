@@ -26,6 +26,7 @@ module REUReg(
 reg IntPending;
 reg EndOfBlock;
 reg Fault;
+reg nSize;
 
 /* REU Registers - 0x1 Command Register */
 reg ExecuteEN;
@@ -61,7 +62,7 @@ reg [1:0] IncMode;
 
 /* Data Output Mux */
 assign RDD[7:0] = 
-	A[4:0]==4'h0 ? { IntPending, EndOfBlock, Fault, 1'b1, 4'b0000 } :
+	A[4:0]==4'h0 ? { IntPending, EndOfBlock, Fault, ~nSize, 4'b0000 } :
 	A[4:0]==4'h1 ? { ExecuteEN, 1'b0, AutoloadEN, nFF00DecodeEN, 2'b00, XferType[1:0] } :
 	A[4:0]==4'h2 ? CA[7:0] :
 	A[4:0]==4'h3 ? CA[15:8] :
@@ -83,6 +84,9 @@ always @(negedge PHI2) begin
 		IntPending <= 0;
 		EndOfBlock <= 0;
 		Fault <= 0;
+		nSize <= 0;
+	end else if (RegWR && A[4:0]==5'h0) begin
+		nSize <= ~WRD[4];
 	end else if (RegRD && A[4:0]==5'h0) begin
 		IntPending <= 0;
 		EndOfBlock <= 0;
