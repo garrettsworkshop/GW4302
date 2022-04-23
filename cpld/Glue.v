@@ -34,12 +34,12 @@ module Glue(
 	
 	assign AOE = DMA;
 	assign ADIR = !DMA;
-	assign nAOE = !((DMA && BA) || (!DMA));
+	assign nAOE = !(!DMA || BA);
 	assign nRWOE = !(DMA && BA);
 	
-	assign DOE = DMA ? !DMARW : nWE;
+	assign DOE = DMA ? !DMARW : (RegCS && nWE);
 	assign DDIR = DMA ? DMARW : !nWE;
-	assign nDOE = !(DMA ? (BA && !DMARW) : (RegCS && nWE));
+	assign nDOE = !(DMA ? BA : RegCS);
 	
 	assign nDMA = !DMA;
 	
