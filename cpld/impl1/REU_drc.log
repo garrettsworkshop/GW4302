@@ -6,10 +6,19 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
-DRC complete with no errors or warnings
+WARNING - synthesis: logical net 'BA_c' has no load.
+WARNING - synthesis: logical net 'RD_out_0' has no load.
+WARNING - synthesis: logical net 'RD_out_1' has no load.
+WARNING - synthesis: logical net 'RD_out_2' has no load.
+WARNING - synthesis: logical net 'RD_out_3' has no load.
+WARNING - synthesis: logical net 'RD_out_4' has no load.
+WARNING - synthesis: logical net 'RD_out_5' has no load.
+WARNING - synthesis: logical net 'RD_out_6' has no load.
+WARNING - synthesis: logical net 'RD_out_7' has no load.
+WARNING - synthesis: DRC complete with 9 warnings.
 
 Design Results:
-    584 blocks expanded
+    436 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.

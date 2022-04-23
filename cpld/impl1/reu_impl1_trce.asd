@@ -1,7 +1,7 @@
 [ActiveSupport TRCE]
 ; Setup Analysis
-Period_0 = 9.488 ns (122.000 ns);
-Period_1 = 76.952 ns (976.000 ns);
+Period_0 = 9.312 ns (122.000 ns);
+Period_1 = 12.380 ns (976.000 ns);
 Failed = 0 (Total 2);
 Clock_ports = 2;
 Clock_nets = 2;

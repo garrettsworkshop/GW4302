@@ -60,7 +60,7 @@ module REU(
 		/* Register Read/Write Interface */
 		RegRD, RegWR, A[4:0], D[7:0], RegRDD[7:0],
 		/* Increment, etc. Control */
-		NextCA, NextREUA, VerifyErr, Autoload,
+		1'b0, 1'b0, 1'b0, 1'b0,
 		/* Register Outputs */
 		IRQ, ExecuteEN, FF00DecodeEN,
 		XferType[1:0], REUA[23:0], CA[15:0], Length1);
@@ -112,7 +112,7 @@ module REU(
 		/* DMA command inputs */
 		DMA, nWEDMA);
 	
-	assign D[7:0] = DOE ? DMA ? RAMRDD[7:0] : RegRDD[7:0] : 8'bZ;
+	assign D[7:0] = DOE ? RegRDD[7:0] : 8'bZ;
 	
 	assign A[15:0] = AOE ? CA[15:0] : 16'bZ;
 	

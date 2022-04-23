@@ -6,7 +6,7 @@ Performance Grade:      4
 PACKAGE:          TQFP100
 Package Status:                     Final          Version 1.39
 
-Sat Mar 05 01:56:39 2022
+Sat Apr 23 02:21:33 2022
 
 Pinout by Port Name:
 +-----------+----------+---------------+-------+-----------+-----------+------------------------------------------------------------+
@@ -14,22 +14,21 @@ Pinout by Port Name:
 +-----------+----------+---------------+-------+-----------+-----------+------------------------------------------------------------+
 | ADIR      | 31/2     | LVCMOS33_OUT  | PB6A  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
 | A[0]      | 51/1     | LVCMOS33_BIDI | PR7D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[10]     | 39/2     | LVCMOS33_BIDI | PB10D |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[11]     | 37/2     | LVCMOS33_BIDI | PB10B |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[12]     | 36/2     | LVCMOS33_BIDI | PB10A |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[13]     | 42/2     | LVCMOS33_BIDI | PB12C |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[14]     | 40/2     | LVCMOS33_BIDI | PB12A |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[15]     | 35/2     | LVCMOS33_BIDI | PB6D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| A[10]     | 39/2     | LVCMOS33_OUT  | PB10D |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[11]     | 37/2     | LVCMOS33_OUT  | PB10B |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[12]     | 36/2     | LVCMOS33_OUT  | PB10A |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[13]     | 42/2     | LVCMOS33_OUT  | PB12C |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[14]     | 40/2     | LVCMOS33_OUT  | PB12A |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[15]     | 35/2     | LVCMOS33_OUT  | PB6D  |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
 | A[1]      | 52/1     | LVCMOS33_BIDI | PR7C  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | A[2]      | 54/1     | LVCMOS33_BIDI | PR7A  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | A[3]      | 53/1     | LVCMOS33_BIDI | PR7B  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | A[4]      | 45/2     | LVCMOS33_BIDI | PB14A |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[5]      | 49/2     | LVCMOS33_BIDI | PB14D |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[6]      | 47/2     | LVCMOS33_BIDI | PB14B |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[7]      | 48/2     | LVCMOS33_BIDI | PB14C |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[8]      | 43/2     | LVCMOS33_BIDI | PB12D |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| A[9]      | 41/2     | LVCMOS33_BIDI | PB12B |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| BA        | 30/2     | LVCMOS33_IN   | PB4D  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
+| A[5]      | 49/2     | LVCMOS33_OUT  | PB14D |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[6]      | 47/2     | LVCMOS33_OUT  | PB14B |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[7]      | 48/2     | LVCMOS33_OUT  | PB14C |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[8]      | 43/2     | LVCMOS33_OUT  | PB12D |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
+| A[9]      | 41/2     | LVCMOS33_OUT  | PB12B |           |           | DRIVE:4mA PULL:KEEPER SLEW:SLOW                            |
 | C8M       | 34/2     | LVCMOS33_IN   | PB6C  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
 | CKE       | 67/1     | LVCMOS33_OUT  | PR3C  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
 | DDIR      | 15/3     | LVCMOS33_OUT  | PL5D  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
@@ -60,14 +59,14 @@ Pinout by Port Name:
 | RBA[0]    | 96/0     | LVCMOS33_OUT  | PT6D  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RBA[1]    | 97/0     | LVCMOS33_OUT  | PT6C  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RCLK      | 63/1     | LVCMOS33_OUT  | PR5C  |           |           | DRIVE:24mA SLEW:SLOW                                       |
-| RD[0]     | 57/1     | LVCMOS33_BIDI | PR6D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[1]     | 58/1     | LVCMOS33_BIDI | PR6C  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[2]     | 59/1     | LVCMOS33_BIDI | PR6B  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[3]     | 60/1     | LVCMOS33_BIDI | PR6A  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[4]     | 62/1     | LVCMOS33_BIDI | PR5D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[5]     | 64/1     | LVCMOS33_BIDI | PR5B  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[6]     | 65/1     | LVCMOS33_BIDI | PR5A  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| RD[7]     | 66/1     | LVCMOS33_BIDI | PR3D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| RD[0]     | 57/1     | LVCMOS33_OUT  | PR6D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
+| RD[1]     | 58/1     | LVCMOS33_OUT  | PR6C  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
+| RD[2]     | 59/1     | LVCMOS33_OUT  | PR6B  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
+| RD[3]     | 60/1     | LVCMOS33_OUT  | PR6A  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
+| RD[4]     | 62/1     | LVCMOS33_OUT  | PR5D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
+| RD[5]     | 64/1     | LVCMOS33_OUT  | PR5B  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
+| RD[6]     | 65/1     | LVCMOS33_OUT  | PR5A  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
+| RD[7]     | 66/1     | LVCMOS33_OUT  | PR3D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON SLEW:SLOW                   |
 | nAOE      | 32/2     | LVCMOS33_OUT  | PB6B  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
 | nCAS      | 86/0     | LVCMOS33_OUT  | PT9C  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | nCS       | 88/0     | LVCMOS33_OUT  | PT9A  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
@@ -126,36 +125,36 @@ Pinout by Pin Number:
 | 27/2     |     unused, PULL:DOWN |            |               | PB4A  | CSSPIN        |           |           |
 | 28/2     | nRESET                | LOCATED    | LVCMOS33_IN   | PB4B  |               |           |           |
 | 29/2     | nIO2                  | LOCATED    | LVCMOS33_IN   | PB4C  |               |           |           |
-| 30/2     | BA                    | LOCATED    | LVCMOS33_IN   | PB4D  |               |           |           |
+| 30/2     |     unused, PULL:DOWN |            |               | PB4D  |               |           |           |
 | 31/2     | ADIR                  | LOCATED    | LVCMOS33_OUT  | PB6A  | MCLK/CCLK     |           |           |
 | 32/2     | nAOE                  | LOCATED    | LVCMOS33_OUT  | PB6B  | SO/SPISO      |           |           |
 | 34/2     | C8M                   | LOCATED    | LVCMOS33_IN   | PB6C  | PCLKT2_0      |           |           |
-| 35/2     | A[15]                 | LOCATED    | LVCMOS33_BIDI | PB6D  | PCLKC2_0      |           |           |
-| 36/2     | A[12]                 | LOCATED    | LVCMOS33_BIDI | PB10A |               |           |           |
-| 37/2     | A[11]                 | LOCATED    | LVCMOS33_BIDI | PB10B |               |           |           |
+| 35/2     | A[15]                 | LOCATED    | LVCMOS33_OUT  | PB6D  | PCLKC2_0      |           |           |
+| 36/2     | A[12]                 | LOCATED    | LVCMOS33_OUT  | PB10A |               |           |           |
+| 37/2     | A[11]                 | LOCATED    | LVCMOS33_OUT  | PB10B |               |           |           |
 | 38/2     | PHI2                  | LOCATED    | LVCMOS33_IN   | PB10C | PCLKT2_1      |           |           |
-| 39/2     | A[10]                 | LOCATED    | LVCMOS33_BIDI | PB10D | PCLKC2_1      |           |           |
-| 40/2     | A[14]                 | LOCATED    | LVCMOS33_BIDI | PB12A |               |           |           |
-| 41/2     | A[9]                  | LOCATED    | LVCMOS33_BIDI | PB12B |               |           |           |
-| 42/2     | A[13]                 | LOCATED    | LVCMOS33_BIDI | PB12C |               |           |           |
-| 43/2     | A[8]                  | LOCATED    | LVCMOS33_BIDI | PB12D |               |           |           |
+| 39/2     | A[10]                 | LOCATED    | LVCMOS33_OUT  | PB10D | PCLKC2_1      |           |           |
+| 40/2     | A[14]                 | LOCATED    | LVCMOS33_OUT  | PB12A |               |           |           |
+| 41/2     | A[9]                  | LOCATED    | LVCMOS33_OUT  | PB12B |               |           |           |
+| 42/2     | A[13]                 | LOCATED    | LVCMOS33_OUT  | PB12C |               |           |           |
+| 43/2     | A[8]                  | LOCATED    | LVCMOS33_OUT  | PB12D |               |           |           |
 | 45/2     | A[4]                  | LOCATED    | LVCMOS33_BIDI | PB14A |               |           |           |
-| 47/2     | A[6]                  | LOCATED    | LVCMOS33_BIDI | PB14B |               |           |           |
-| 48/2     | A[7]                  | LOCATED    | LVCMOS33_BIDI | PB14C | SN            |           |           |
-| 49/2     | A[5]                  | LOCATED    | LVCMOS33_BIDI | PB14D | SI/SISPI      |           |           |
+| 47/2     | A[6]                  | LOCATED    | LVCMOS33_OUT  | PB14B |               |           |           |
+| 48/2     | A[7]                  | LOCATED    | LVCMOS33_OUT  | PB14C | SN            |           |           |
+| 49/2     | A[5]                  | LOCATED    | LVCMOS33_OUT  | PB14D | SI/SISPI      |           |           |
 | 51/1     | A[0]                  | LOCATED    | LVCMOS33_BIDI | PR7D  |               |           |           |
 | 52/1     | A[1]                  | LOCATED    | LVCMOS33_BIDI | PR7C  |               |           |           |
 | 53/1     | A[3]                  | LOCATED    | LVCMOS33_BIDI | PR7B  |               |           |           |
 | 54/1     | A[2]                  | LOCATED    | LVCMOS33_BIDI | PR7A  |               |           |           |
-| 57/1     | RD[0]                 | LOCATED    | LVCMOS33_BIDI | PR6D  |               |           |           |
-| 58/1     | RD[1]                 | LOCATED    | LVCMOS33_BIDI | PR6C  |               |           |           |
-| 59/1     | RD[2]                 | LOCATED    | LVCMOS33_BIDI | PR6B  |               |           |           |
-| 60/1     | RD[3]                 | LOCATED    | LVCMOS33_BIDI | PR6A  |               |           |           |
-| 62/1     | RD[4]                 | LOCATED    | LVCMOS33_BIDI | PR5D  | PCLKC1_0      |           |           |
+| 57/1     | RD[0]                 | LOCATED    | LVCMOS33_OUT  | PR6D  |               |           |           |
+| 58/1     | RD[1]                 | LOCATED    | LVCMOS33_OUT  | PR6C  |               |           |           |
+| 59/1     | RD[2]                 | LOCATED    | LVCMOS33_OUT  | PR6B  |               |           |           |
+| 60/1     | RD[3]                 | LOCATED    | LVCMOS33_OUT  | PR6A  |               |           |           |
+| 62/1     | RD[4]                 | LOCATED    | LVCMOS33_OUT  | PR5D  | PCLKC1_0      |           |           |
 | 63/1     | RCLK                  | LOCATED    | LVCMOS33_OUT  | PR5C  | PCLKT1_0      |           |           |
-| 64/1     | RD[5]                 | LOCATED    | LVCMOS33_BIDI | PR5B  |               |           |           |
-| 65/1     | RD[6]                 | LOCATED    | LVCMOS33_BIDI | PR5A  |               |           |           |
-| 66/1     | RD[7]                 | LOCATED    | LVCMOS33_BIDI | PR3D  |               |           |           |
+| 64/1     | RD[5]                 | LOCATED    | LVCMOS33_OUT  | PR5B  |               |           |           |
+| 65/1     | RD[6]                 | LOCATED    | LVCMOS33_OUT  | PR5A  |               |           |           |
+| 66/1     | RD[7]                 | LOCATED    | LVCMOS33_OUT  | PR3D  |               |           |           |
 | 67/1     | CKE                   | LOCATED    | LVCMOS33_OUT  | PR3C  |               |           |           |
 | 68/1     | RA[12]                | LOCATED    | LVCMOS33_OUT  | PR3B  |               |           |           |
 | 69/1     | RA[11]                | LOCATED    | LVCMOS33_OUT  | PR3A  |               |           |           |
@@ -218,7 +217,6 @@ LOCATE  COMP  "A[6]"  SITE  "47";
 LOCATE  COMP  "A[7]"  SITE  "48";
 LOCATE  COMP  "A[8]"  SITE  "43";
 LOCATE  COMP  "A[9]"  SITE  "41";
-LOCATE  COMP  "BA"  SITE  "30";
 LOCATE  COMP  "C8M"  SITE  "34";
 LOCATE  COMP  "CKE"  SITE  "67";
 LOCATE  COMP  "DDIR"  SITE  "15";
@@ -275,11 +273,11 @@ LOCATE  COMP  "nWEDMA"  SITE  "17";
 
 
 
-PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Mar 05 01:56:42 2022
+Sat Apr 23 02:21:35 2022
 

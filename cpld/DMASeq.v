@@ -89,7 +89,7 @@ module DMASeq(
 	always @(negedge PHI2) begin
 		// Alternate SwapState during DMA transfer when bus available
 		if (DMA && BA) SwapState <= !SwapState;
-		else SwapState <= 0; // Return SwapState to 0 when not doing DMA
+		else if (!DMA) SwapState <= 0; // Return SwapState to 0 when not doing DMA
 	end
 	
 	reg DMAr;
@@ -100,7 +100,7 @@ module DMASeq(
 		BAr <= BA;
 		nRESETr <= nRESET;
 	end
-	assign RegReset = !nRESETr && !DMA;
+	assign RegReset = 1'b0;
 		
 	wire SecondSwap = XferSwap ? SwapState : 1'b1;
 	

@@ -1,14 +1,14 @@
-synthesis:  version Diamond (64-bit) 3.12.1.454
+synthesis:  version Diamond (64-bit) 3.12.0.240.2
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Mar 05 01:56:24 2022
+Sat Apr 23 02:21:24 2022
 
 
-Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml 
+Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
 
 Synthesis options:
 The -a option is MachXO2.
@@ -61,17 +61,17 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p //Mac/iCloud/Repos/GW4302/cpld (searchpath added)
+-p C:/Users/garre/Repos/GW4302/cpld (searchpath added)
 -p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p //Mac/iCloud/Repos/GW4302/cpld/impl1 (searchpath added)
--p //Mac/iCloud/Repos/GW4302/cpld (searchpath added)
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/RAM.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Reg.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/DMASeq.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Glue.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/REU.v
+-p C:/Users/garre/Repos/GW4302/cpld/impl1 (searchpath added)
+-p C:/Users/garre/Repos/GW4302/cpld (searchpath added)
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/RAM.v
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/Reg.v
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/DMASeq.v
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/Glue.v
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/REU.v
 NGD file = REU_impl1.ngd
--sdc option: SDC file input is //Mac/iCloud/Repos/GW4302/cpld/REU.ldc.
+-sdc option: SDC file input is C:/Users/garre/Repos/GW4302/cpld/REU.ldc.
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -80,24 +80,35 @@ Technology check ok...
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/ram.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reg.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/dmaseq.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/glue.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reu.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/ram.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/reg.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/dmaseq.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/glue.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/reu.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): REU
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/ram.v(1): compiling module RAM. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/glue.v(1): compiling module Glue. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/ram.v(1): compiling module RAM. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/glue.v(1): compiling module Glue. VERI-1018
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
+######## Converting I/O port A[15] to output.
+######## Converting I/O port A[14] to output.
+######## Converting I/O port A[13] to output.
+######## Converting I/O port A[12] to output.
+######## Converting I/O port A[11] to output.
+######## Converting I/O port A[10] to output.
+######## Converting I/O port A[9] to output.
+######## Converting I/O port A[8] to output.
+######## Converting I/O port A[7] to output.
+######## Converting I/O port A[6] to output.
+######## Converting I/O port A[5] to output.
 ######## Missing driver on net RA[12]. Patching with GND.
 INFO - synthesis: Extracted state machine for register '\ram/S' with one-hot encoding
 original encoding -> new encoding (one-hot encoding)
@@ -121,32 +132,46 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(99): Register \reureg/Fault_522 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/dmaseq.v(87): Register \dmaseq/DMA_63 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/dmaseq.v(93): Register \dmaseq/SwapState_67 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/ram.v(72): Register \ram/RDCMDr_131 is stuck at Zero. VDB-5013
 GSR will not be inferred because no asynchronous signal was found in the netlist.
+Duplicate register/latch removal. \reureg/IntPending_520 is a one-to-one match with \reureg/EndOfBlock_521.
 Writing LPF file REU_impl1.lpf.
 Results of NGD DRC are available in REU_drc.log.
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'BA_c' has no load.
+WARNING - synthesis: logical net 'RD_out_0' has no load.
+WARNING - synthesis: logical net 'RD_out_1' has no load.
+WARNING - synthesis: logical net 'RD_out_2' has no load.
+WARNING - synthesis: logical net 'RD_out_3' has no load.
+WARNING - synthesis: logical net 'RD_out_4' has no load.
+WARNING - synthesis: logical net 'RD_out_5' has no load.
+WARNING - synthesis: logical net 'RD_out_6' has no load.
+WARNING - synthesis: logical net 'RD_out_7' has no load.
+WARNING - synthesis: DRC complete with 9 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.
 
 ################### Begin Area Report (REU)######################
-Number of register bits => 189 of 877 (21 % )
-BB => 32
-CCU2D => 33
-FD1P3AX => 56
-FD1P3IX => 44
-FD1P3JX => 17
-FD1S3AX => 25
-FD1S3IX => 40
-FD1S3JX => 7
+Number of register bits => 165 of 877 (18 % )
+BB => 21
+FD1P3AX => 121
+FD1P3IX => 11
+FD1P3JX => 1
+FD1S3AX => 23
+FD1S3JX => 9
 GSR => 1
 IB => 6
 INV => 2
-L6MUX21 => 6
-LUT4 => 267
+L6MUX21 => 7
+LUT4 => 177
 OB => 31
-PFUMX => 14
+OBZ => 11
+PFUMX => 12
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -156,33 +181,33 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : C8M_c, loads : 46
+  Net : C8M_c, loads : 38
   Net : PHI2_c, loads : 3
 Clock Enable Nets
 Number of Clock Enables: 24
 Top 10 highest fanout Clock Enables:
-  Net : ram/RDD_7__N_493, loads : 17
-  Net : ram/C8M_N_484_enable_4, loads : 12
-  Net : ram/C8M_c_enable_12, loads : 10
-  Net : reureg/PHI2_N_544_enable_50, loads : 8
-  Net : reureg/PHI2_N_544_enable_25, loads : 8
-  Net : reureg/PHI2_N_544_enable_73, loads : 8
-  Net : reureg/PHI2_N_544_enable_62, loads : 8
-  Net : reureg/PHI2_N_544_enable_81, loads : 8
-  Net : reureg/PHI2_N_544_enable_13, loads : 8
-  Net : reureg/PHI2_N_544_enable_60, loads : 8
+  Net : ram/PHI2Start, loads : 12
+  Net : ram/C8M_c_enable_20, loads : 11
+  Net : reureg/PHI2_N_495_enable_57, loads : 8
+  Net : reureg/PHI2_N_495_enable_91, loads : 8
+  Net : reureg/PHI2_N_495_enable_74, loads : 8
+  Net : reureg/PHI2_N_495_enable_72, loads : 8
+  Net : reureg/PHI2_N_495_enable_89, loads : 8
+  Net : reureg/CAOut_7__N_182, loads : 8
+  Net : reureg/PHI2_N_495_enable_24, loads : 8
+  Net : reureg/PHI2_N_495_enable_80, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_544, loads : 136
-  Net : dmaseq/n3464, loads : 91
+  Net : PHI2_N_495, loads : 121
   Net : A_out_0, loads : 41
-  Net : reureg/n3446, loads : 36
-  Net : dmaseq/AOE, loads : 33
-  Net : A_out_1, loads : 30
-  Net : reureg/n3455, loads : 25
-  Net : reureg/Length1r, loads : 23
-  Net : reureg/n3454, loads : 23
-  Net : ram/PHI2Start_N_536, loads : 22
+  Net : A_out_1, loads : 32
+  Net : A_out_2, loads : 31
+  Net : reureg/n2433, loads : 24
+  Net : ram/RDOE_N_490, loads : 21
+  Net : reureg/n2428, loads : 20
+  Net : ram/PHI2Start_N_487, loads : 18
+  Net : glue/n2424, loads : 17
+  Net : A_out_3, loads : 16
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -193,11 +218,11 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   54.271 MHz|     7  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   74.217 MHz|     4  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
-C8M [ get_ports { C8M } ]               |    8.196 MHz|   74.794 MHz|     4  
+C8M [ get_ports { C8M } ]               |    8.196 MHz|   88.842 MHz|     3  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -205,8 +230,8 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|   74.794 MHz|     4
 All constraints were met.
 
 
-Peak Memory Usage: 71.270  MB
+Peak Memory Usage: 55.578  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.922  secs
+Elapsed CPU time for LSE flow : 1.078  secs
 --------------------------------------------------------------

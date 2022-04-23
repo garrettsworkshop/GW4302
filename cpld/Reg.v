@@ -122,15 +122,9 @@ end
 
 /* Commodore address register lo (0x2) control */
 always @(negedge PHI2) begin
-	if (Reset) begin
-		CA[7:0] <= 0;
-	end else if (RegWR && A[4:0]==5'h2) begin
+	if (RegWR && A[4:0]==5'h2) begin
 		CA[7:0] <= WRD[7:0];
 		CAWritten[7:0] <= WRD[7:0];
-	end else if (XferEnd) begin
-		CA[7:0] <= CAWritten[7:0];
-	end else if (NextCA) begin
-		CA[7:0] <= CA[7:0]+8'h01;
 	end
 end 
 
@@ -236,14 +230,11 @@ always @(negedge PHI2) begin
 		VerifyErrMask <= WRD[5];
 	end
 end
-assign IRQOut = IntEnable && 
-	((EndOfBlock && EndOfBlockMask) || 
-	 (VerifyErr && VerifyErrMask));
+assign IRQOut = 1'b0;
 
 /* Address control register (0xA) control */
 always @(negedge PHI2) begin
-	if (Reset) IncMode <= 0;
-	else if (RegWR && A[4:0]==5'hA) IncMode[1:0] <= WRD[7:6];
+	if (RegWR && A[4:0]==5'hA) IncMode[1:0] <= WRD[7:6];
 end
 
 endmodule

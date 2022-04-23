@@ -32,24 +32,22 @@ module Glue(
 	input DMA,
 	input DMARW);
 	
-	assign AOE = DMA;
-	assign ADIR = !AOE;
-	assign nAOE = !(!DMA || BA);
-	assign nRWOE = !(DMA && BA);
+	assign AOE = 1'b0;
+	assign ADIR = 1'b1;
+	assign nAOE = 1'b0;
+	assign nRWOE = 1'b1;
 	
-	assign DOE = DMA ? !DMARW : nWE;
+	assign DOE = RegCS && nWE;
 	assign DDIR = !DOE;
-	assign nDOE = !(DMA ? (BA && !DMARW) : (RegCS && nWE));
+	assign nDOE = !DOE;
 	
-	assign nDMA = !DMA;
+	assign nDMA = 1'b1;
 	
-	assign nIRQ = !IRQ;
+	assign nIRQ = 1'b1;
 	
-	assign RegCS = !DMA && !nIO2;
+	assign RegCS = !nIO2;
 	assign RegRD = RegCS && nWE;
 	assign RegWR = RegCS && !nWE;
 	
-	assign Execute = FF00DecodeEN ? 
-		(ExecuteEN && !nWE && A[15:0]==16'hFF00) :
-		(RegCS && A[4:0]==5'h1 && D[7]);
+	assign Execute = 1'b0;
 endmodule

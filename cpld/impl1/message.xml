@@ -12,41 +12,41 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld/reu.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/reu.v(1): </Dynamic>
             <Dynamic>REU</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld/reu.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/reu.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld/reg.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(1): </Dynamic>
             <Dynamic>REUReg</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld/reg.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld/ram.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/ram.v(1): </Dynamic>
             <Dynamic>RAM</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld/ram.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/ram.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld/dmaseq.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/dmaseq.v(1): </Dynamic>
             <Dynamic>DMASeq</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld/dmaseq.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/dmaseq.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld/glue.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/glue.v(1): </Dynamic>
             <Dynamic>Glue</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld/glue.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/glue.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
@@ -54,6 +54,106 @@
             <Severity>Info</Severity>
             <Dynamic>\ram/S</Dynamic>
             <Dynamic>one-hot</Dynamic>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(99): </Dynamic>
+            <Dynamic>\reureg/Fault_522</Dynamic>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
+            <Navigation>99</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/dmaseq.v(87): </Dynamic>
+            <Dynamic>\dmaseq/DMA_63</Dynamic>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/dmaseq.v</Navigation>
+            <Navigation>87</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/dmaseq.v(93): </Dynamic>
+            <Dynamic>\dmaseq/SwapState_67</Dynamic>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/dmaseq.v</Navigation>
+            <Navigation>93</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/ram.v(72): </Dynamic>
+            <Dynamic>\ram/RDCMDr_131</Dynamic>
+            <Navigation>c:/users/garre/repos/gw4302/cpld/ram.v</Navigation>
+            <Navigation>72</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>BA_c</Dynamic>
+            <Navigation>BA_c</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_0</Dynamic>
+            <Navigation>RD_out_0</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_1</Dynamic>
+            <Navigation>RD_out_1</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_2</Dynamic>
+            <Navigation>RD_out_2</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_3</Dynamic>
+            <Navigation>RD_out_3</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_4</Dynamic>
+            <Navigation>RD_out_4</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_5</Dynamic>
+            <Navigation>RD_out_5</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_6</Dynamic>
+            <Navigation>RD_out_6</Navigation>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>RD_out_7</Dynamic>
+            <Navigation>RD_out_7</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>9</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

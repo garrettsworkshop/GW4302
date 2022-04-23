@@ -100,6 +100,31 @@ prj_run PAR -impl impl1 -task IOTiming -forceAll
 
 
 
+<A name="pn220307040201"></A><B><U><big>pn220307040201</big></U></B>
+#Start recording tcl command: 3/5/2022 01:55:45
+#Project Location: //Mac/iCloud/Repos/GW4302/cpld; Project name: REU
+prj_project open "//Mac/iCloud/Repos/GW4302/cpld/REU.ldf"
+prj_run Export -impl impl1 -task Jedecgen -forceAll
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project save "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+prj_run Export -impl impl1 -task Bitgen
+pgr_project save "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/Deploy.xcf"
+pgr_project close
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project close
+#Stop recording: 3/7/2022 04:02:01
+
+
+
 <BR>
 <BR>
 <BR>
