@@ -12,11 +12,11 @@ module REUReg(
 	input NextCA,
 	input NextREUA,
 	input VerifyErr,
-	input Autoload,
+	input XferEnd,
 	/* Register Outputs */
 	output IRQOut,
 	output ExecuteENOut,
-	output FF00DecodeENOut,
+	output reg FF00DecodeEN,
 	output [1:0] XferTypeOut,
 	output [23:0] REUAOut,
 	output [15:0] CAOut,
@@ -31,10 +31,8 @@ reg nSize;
 /* REU Registers - 0x1 Command Register */
 reg ExecuteEN;
 reg AutoloadEN;
-reg nFF00DecodeEN;
 reg [1:0] XferType;
 assign ExecuteENOut = ExecuteEN;
-assign FF00DecodeENOut = !nFF00DecodeEN;
 assign XferTypeOut = XferType;
 
 /* REU Registers - 0x2, 0x3 Commodore Address */
@@ -59,11 +57,14 @@ reg VerifyErrMask;
 
 /* REU Registers - 0xA Address Control */
 reg [1:0] IncMode;
+wire IncREUA = !IncMode[0] && NextREUA;
+wire IncCA = !IncMode[1] && NextCA;
+wire DecLen = NextCA;
 
 /* Data Output Mux */
 assign RDD[7:0] = 
 	A[4:0]==4'h0 ? { IntPending, EndOfBlock, Fault, ~nSize, 4'b0000 } :
-	A[4:0]==4'h1 ? { ExecuteEN, 1'b0, AutoloadEN, nFF00DecodeEN, 2'b00, XferType[1:0] } :
+	A[4:0]==4'h1 ? { ExecuteEN, 1'b0, AutoloadEN, ~FF00DecodeEN, 2'b00, XferType[1:0] } :
 	A[4:0]==4'h2 ? CA[7:0] :
 	A[4:0]==4'h3 ? CA[15:8] :
 	A[4:0]==4'h4 ? REUA[7:0] :
@@ -74,11 +75,10 @@ assign RDD[7:0] =
 	A[4:0]==4'h9 ? { IntEnable, EndOfBlockMask, VerifyErrMask, 5'b11111 } :
 	A[4:0]==4'hA ? { IncMode[1:0], 6'b111111 } :
 	8'hFF;
+	
+wire Autoload = AutoloadEN && XferEnd;
 
 /* Status register (0x0) control */
-reg Length1r;
-always @(posedge PHI2) Length1r <= Length1;
-wire XferEnd = !Length1r && Length1;
 always @(negedge PHI2) begin
 	if (Reset) begin
 		IntPending <= 0;
@@ -102,20 +102,20 @@ end
 always @(negedge PHI2) begin
 	if (Reset) begin
 		ExecuteEN <= 0;
-		nFF00DecodeEN <= 1;
+		FF00DecodeEN <= 0;
 	end else if (RegWR && A[4:0]==5'h1) begin
 		ExecuteEN = WRD[7];
-		nFF00DecodeEN <= WRD[4];
+		FF00DecodeEN <= ~WRD[4];
 	end else if (XferEnd || VerifyErr) begin
 		ExecuteEN <= 0;
-		nFF00DecodeEN <= 1;
+		FF00DecodeEN <= 0;
 	end
 	
 	if (Reset) begin
 		AutoloadEN <= 0;
 		XferType[1:0] <= 0;
 	end else if (RegWR && A[4:0]==5'h1) begin
-		AutoloadEN <= WRD[6];
+		AutoloadEN <= WRD[5];
 		XferType[1:0] <= WRD[1:0];
 	end
 end
@@ -127,9 +127,9 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h2) begin
 		CA[7:0] <= WRD[7:0];
 		CAWritten[7:0] <= WRD[7:0];
-	end else if (XferEnd) begin
+	end else if (Autoload) begin
 		CA[7:0] <= CAWritten[7:0];
-	end else if (NextCA) begin
+	end else if (IncCA) begin
 		CA[7:0] <= CA[7:0]+8'h01;
 	end
 end 
@@ -141,9 +141,9 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h3) begin
 		CA[15:8] <= WRD[7:0];
 		CAWritten[15:8] <= WRD[7:0];
-	end else if (XferEnd) begin
+	end else if (Autoload) begin
 		CA[15:8] <= CAWritten[15:8];
-	end else if (NextCA && CA[7:0]==8'hFF) begin
+	end else if (IncCA && CA[7:0]==8'hFF) begin
 		CA[15:8] <= CA[15:8]+8'h01;
 	end
 end
@@ -156,9 +156,9 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h4) begin
 		REUA[7:0] <= WRD[7:0];
 		REUAWritten[7:0] <= WRD[7:0];
-	end else if (XferEnd) begin
+	end else if (Autoload) begin
 		REUA[7:0] <= REUAWritten[7:0];
-	end else if (NextREUA) begin
+	end else if (IncREUA) begin
 		REUA[7:0] <= REUA[7:0]+8'h01;
 	end
 end
@@ -171,13 +171,12 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h5) begin
 		REUA[15:8] <= WRD[7:0];
 		REUAWritten[15:8] <= WRD[7:0];
-	end else if (XferEnd) begin
+	end else if (Autoload) begin
 		REUA[15:8] <= REUAWritten[15:8];
-	end else if (NextREUA && REUA[7:0]==8'hFF) begin
+	end else if (IncREUA && REUA[7:0]==8'hFF) begin
 		REUA[15:8] <= REUA[15:8]+8'h01;
 	end
 end
-
 
 /* REU address register hi (0x6) control */
 always @(negedge PHI2) begin
@@ -187,9 +186,9 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h6) begin
 		REUA[23:16] <= WRD[7:0];
 		REUAWritten[18:16] <= WRD[2:0];
-	end else if (XferEnd) begin
+	end else if (Autoload) begin
 		REUA[18:16] <= REUAWritten[18:16];
-	end else if (NextREUA && REUA[15:0]==16'hFFFF) begin
+	end else if (IncREUA && REUA[15:0]==16'hFFFF) begin
 		REUA[18:16] <= REUA[18:16]+3'h1;
 	end
 end
@@ -202,9 +201,9 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h7) begin
 		Length[7:0] <= WRD[7:0];
 		LengthWritten[7:0] <= WRD[7:0];
-	end else if (XferEnd) begin
+	end else if (Autoload) begin
 		Length[7:0] <= LengthWritten[7:0];
-	end else if (NextCA && !Length1) begin
+	end else if (DecLen && !Length1) begin
 		Length[7:0] <= Length[7:0]-8'h01;
 	end
 end
@@ -217,9 +216,9 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h8) begin
 		Length[15:8] <= WRD[7:0];
 		LengthWritten[15:8] <= WRD[7:0];
-	end else if (XferEnd) begin
+	end else if (Autoload) begin
 		Length[15:8] <= LengthWritten[15:8];
-	end else if (NextCA && Length[7:0]==8'h00) begin
+	end else if (DecLen && Length[7:0]==8'h00) begin
 		Length[15:8] <= Length[15:8]-8'h01;
 	end
 end
@@ -230,7 +229,7 @@ always @(negedge PHI2) begin
 		IntEnable <= 0;
 		EndOfBlockMask <= 0;
 		VerifyErrMask <= 0;
-	end else begin
+	end else if (RegWR && A[4:0]==5'h9) begin
 		IntEnable <= WRD[7];
 		EndOfBlockMask <= WRD[6];
 		VerifyErrMask <= WRD[5];

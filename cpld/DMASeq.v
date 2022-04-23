@@ -21,112 +21,113 @@ module DMASeq(
 	output NextCA,
 	output NextREUA,
 	output XferEnd,
-	output VerifyErr,
-	output Autoload);
+	output VerifyErr);
 	
-	wire XferC64REU = XferType[1:0]==2'b00;
-	wire XferREUC64 = XferType[1:0]==2'b01;
-	wire XferSwap = XferType[1:0]==2'b10;
-	wire XferVerify = XferType[1:0]==2'b11;
-	
-	reg SwapState;
-	
-	always @(negedge PHI2) begin
-		if (DMA) begin
-			case (XferType[1:0])
-				2'b00: begin // C64-to-REU
-					if (Length1 && BA) DMA <= 0; // End DMA if Length==1
-					DMARW <= 1; // Always read from C64
+wire XferC64REU = XferType[1:0]==2'b00;
+wire XferREUC64 = XferType[1:0]==2'b01;
+wire XferSwap = XferType[1:0]==2'b10;
+wire XferVerify = XferType[1:0]==2'b11;
+
+reg SwapState;
+
+always @(negedge PHI2) begin
+	// Alternate SwapState during DMA transfer when bus available
+	if (DMA && BA) SwapState <= !SwapState;
+	 // Return SwapState to 0 when not doing DMA
+	else if (!DMA || XferEnd) SwapState <= 0;
+end
+
+always @(negedge PHI2) begin
+	if (DMA) begin
+		if (XferEnd) begin
+			DMA <= 0;
+			if (XferC64REU) begin
+				DMARW <= 0;
+				RAMRD <= 0;
+				RAMWR <= 1; // Write to RAM
+			end else begin
+				DMARW <= 0;
+				RAMRD <= 0;
+				RAMWR <= 0;
+			end
+		end else begin
+			DMA <= 1;
+			if (XferC64REU) begin
+				DMARW <= 1; // Always read from C64
+				RAMRD <= 0;
+				RAMWR <= 1; // Write to RAM
+			end else if (XferREUC64) begin
+				DMARW <= 0; // Always write to C64
+				RAMRD <= 1; // Read from RAM
+				RAMWR <= 0;
+			end else if (XferSwap) begin
+				if (SwapState) begin
+					DMARW <= 1; // Read from C64
+					RAMRD <= 1; // Read from RAM
+					RAMWR <= 0;
+				end else begin
+					DMARW <= 0; // Write to C64
 					RAMRD <= 0;
 					RAMWR <= 1; // Write to RAM
-				end 2'b01: begin // REU-to-C64
-					if (Length1 && BA) DMA <= 0; // End DMA if Length==1
-					DMARW <= 0; // Always write to C64
-					RAMRD <= 1; // Read from RAM
-					RAMWR <= 0;
-				end 2'b10: begin // Swap
-					if (SwapState) begin
-						if (Length1 && BA) DMA <= 0; // End DMA if Length==1
-						DMARW <= 1; // Read from C64
-						RAMRD <= 1; // Read from RAM
-						RAMWR <= 0;
-					end else begin
-						DMARW <= 0; // Write to C64
-						RAMRD <= 0;
-						RAMWR <= 1; // Write to RAM
-					end
-				end 2'b11: begin // Verify
-					if ((!Equal || Length1) && BA) DMA <= 0; // End DMA if verify error or Length==1
-					DMARW <= 1; // Always read from C64
-					RAMRD <= 1; // Read from RAM
-					RAMWR <= 0;
 				end
-			endcase
-		end else begin
-			DMA <= Execute;
-			case (XferType[1:0])
-				2'b00: begin // C64-to-REU
-					DMARW <= 1; // Read from C64
-					RAMRD <= 0;
-					RAMWR <= 0; // Don't write to REU yet
-				end 2'b01: begin // REU-to-C64
-					DMARW <= 0; // Write to C64
-					RAMRD <= 1; // Read from REU
-					RAMWR <= 0;
-				end 2'b10: begin // Swap
-					DMARW <= 1; // Read from C64 as if SwapState==1
-					RAMRD <= 1; // Read from REU as if SwapState==1
-					RAMWR <= 0;
-				end 2'b11: begin // Verify
-					DMARW <= 1; // Read from C64
-					RAMRD <= 1; // Read from REU
-					RAMWR <= 0;
-				end
-			endcase
+			end else if (XferVerify) begin
+				DMARW <= 1; // Always read from C64
+				RAMRD <= 1; // Read from RAM
+				RAMWR <= 0;
+			end
 		end
+	end else if (Execute) begin
+		DMA <= 1;
+		if (XferC64REU) begin
+			DMARW <= 1; // Read from C64
+			RAMRD <= 0;
+			RAMWR <= 0; // Don't write to REU yet
+		end else if (XferREUC64) begin
+			DMARW <= 0; // Write to C64
+			RAMRD <= 1; // Read from REU
+			RAMWR <= 0;
+		end else if (XferSwap) begin
+			DMARW <= 1; // Read from C64 as if SwapState==1
+			RAMRD <= 1; // Read from REU as if SwapState==1
+			RAMWR <= 0;
+		end else if (XferVerify) begin
+			DMARW <= 1; // Read from C64
+			RAMRD <= 1; // Read from REU
+			RAMWR <= 0;
+		end
+	end else begin
+		DMA <= 0;
+		DMARW <= 0;
+		RAMRD <= 0;
+		RAMWR <= 0;
 	end
+end
+
+reg DMAr, BAr, nRESETr;
+always @(negedge PHI2) begin
+	DMAr <= DMA;
+	BAr <= BA;
+	nRESETr <= nRESET;
+end
+assign RegReset = !nRESETr && !DMA;
+
+assign NextCA =
+	// DMA must be active and bus must be available.
+	// Don't NextCA on alternating swap cycles 
+	DMA && BA && (!XferSwap || SwapState);
 	
-	always @(negedge PHI2) begin
-		// Alternate SwapState during DMA transfer when bus available
-		if (DMA && BA) SwapState <= !SwapState;
-		else SwapState <= 0; // Return SwapState to 0 when not doing DMA
-	end
+assign NextREUA =
+	XferC64REU ? DMAr && BAr : // Delay advancing REUA during C64->REU xfer
+	XferREUC64 ? DMA && BA :
+	XferSwap ? DMA && BA && SwapState : // Only advance after 2nd swap state
+	XferVerify ? DMA && BA : 1'b0;
 	
-	reg DMAr;
-	reg BAr;
-	reg nRESETr;
-	always @(negedge PHI2) begin
-		DMAr <= DMA;
-		BAr <= BA;
-		nRESETr <= nRESET;
-	end
-	assign RegReset = !nRESETr && !DMA;
-		
-	wire SecondSwap = XferSwap ? SwapState : 1'b1;
-	
-	assign NextCA = 0; /*
-		// DMA must be active and bus must be available.
-		// Don't NextCA on alternating swap cycles 
-		DMA && BA && SecondSwap;*/
-		
-	assign NextREUA = 0; /*
-		// For C64-REU cycles, DMA must have been active previous cycle
-		// Otherwise DMA must be active current cycle and bus must be available
-		(XferC64REU ? (DMAr && BAr) : (DMA && BA)) && 
-		SecondSwap; // Don't NextREUA on first swap cycles*/
-				
-	assign VerifyErr = 0; /*
-		// DMA must be active and bus must be available
-		DMA && BA &&
-		// Verify error on verify cycles where not equal
-		!Equal && XferVerify;*/
-		
-	assign Autoload = 0; /*
-	 	// DMA must be active and bus must be available
-		DMA && BA &&
-		// Autoload when length 1 in regular xfer or second swap cycle
-		((Length1 && SecondSwap) ||
-		// Autoload during verify xfer when not equal
-		(!Equal && XferVerify));*/
+assign XferEnd = DMA && BA && 
+	(XferC64REU ? Length1 : 
+	 XferREUC64 ? Length1 : 
+	 XferSwap ?   Length1 && SwapState : 
+	 XferVerify ? Length1 || !Equal : 1'b0);
+			
+assign VerifyErr = XferEnd && XferVerify && !Equal;
 	
 endmodule

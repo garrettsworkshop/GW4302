@@ -19,9 +19,9 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>//Mac/iCloud/Repos/GW4302/cpld/impl1/REU_impl1.jed</File>
-			<FileTime>03/05/22 01:56:52</FileTime>
-			<JedecChecksum>0xA0B5</JedecChecksum>
+			<File>C:/Users/garre/Repos/GW4302/cpld/impl1/REU_impl1.jed</File>
+			<FileTime>04/23/22 02:21:42</FileTime>
+			<JedecChecksum>0x39BF</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
@@ -46,5 +46,6 @@
 	<CableOptions>
 		<CableName>USB</CableName>
 		<PortAdd>EzUSB-0</PortAdd>
+		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#6&amp;amp;ab8e23f&amp;amp;0&amp;amp;4#</USBID>
 	</CableOptions>
 </ispXCF>

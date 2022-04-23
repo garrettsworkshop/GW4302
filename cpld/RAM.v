@@ -22,202 +22,202 @@ module RAM(
 	output reg DQML,
 	inout [7:0] RD);
 	
-	/* RAM clock output */
-	reg CP1, CP2;
-	always @(posedge C8M) begin CP1 <= !CP1; end
-	always @(negedge C8M) begin CP2 <= !CP1; end
-	assign RCLK = CP1 ^ CP2;
-	
-	/* Reset synchronization */
-	reg [4:0] nRESETr = 0;
-	always @(posedge C8M) begin
-		nRESETr[0] <= nRESET;
-		nRESETr[4:1] <= nRESETr[3:0];
+/* RAM clock output */
+reg CP1, CP2;
+always @(posedge C8M) begin CP1 <= !CP1; end
+always @(negedge C8M) begin CP2 <= !CP1; end
+assign RCLK = CP1 ^ CP2;
+
+/* Reset synchronization */
+reg [4:0] nRESETr = 0;
+always @(posedge C8M) begin
+	nRESETr[0] <= nRESET;
+	nRESETr[4:1] <= nRESETr[3:0];
+end
+
+/* PHI2 edge detect control */
+reg [1:0] PHI2r = 0;
+wire PHI2Fall = PHI2r[1] && !PHI2r[0];
+always @(negedge C8M) begin PHI2r[0] <= PHI2; end
+always @(posedge C8M) begin PHI2r[1] <= PHI2r[0]; end
+
+/* PLL locked bit */
+reg PLLLock = 0;
+always @(negedge C8M) begin
+	if (nRESETr[4] && nRESETr[3] && 
+		nRESETr[2] && nRESETr[1] && 
+		PHI2Fall) PLLLock <= 1;
+end
+
+/* PHI2 cycle substate */
+reg [2:0] S = 0;
+wire PHI2Start = S==0 && PHI2Fall && PLLLock;
+always @(posedge C8M) begin
+	if (PHI2Start) S <= 3'h1;
+	else if (S!=0) S <= S+3'h1;
+end
+
+/* Command/address registration */
+reg INITCMDr = 0;
+reg RDCMDr = 0;
+reg WRCMDr = 0;
+reg InitDone = 0;
+always @(negedge C8M) begin
+	if (PHI2Start) begin
+		INITCMDr <= !InitDone;
+		RDCMDr <= RDCMD && InitDone;
+		WRCMDr <= WRCMD && !RDCMD && InitDone;
+		InitDone <= 1;
 	end
-	
-	/* PHI2 edge detect control */
-	reg [1:0] PHI2r = 0;
-	wire PHI2Fall = PHI2r[1] && !PHI2r[0];
-	always @(negedge C8M) begin PHI2r[0] <= PHI2; end
-	always @(posedge C8M) begin PHI2r[1] <= PHI2r[0]; end
-	
-	/* PLL locked bit */
-	reg PLLLock = 0;
-	always @(negedge C8M) begin
-		if (nRESETr[4] && nRESETr[3] && 
-			nRESETr[2] && nRESETr[1] && 
-			PHI2Fall) PLLLock <= 1;
-	end
-	
-	/* PHI2 cycle substate */
-	reg [2:0] S = 0;
-	wire PHI2Start = S==0 && PHI2Fall && PLLLock;
-	always @(posedge C8M) begin
-		if (PHI2Start) S <= 3'h1;
-		else if (S!=0) S <= S+3'h1;
-	end
-	
-	/* Command/address registration */
-	reg INITCMDr = 0;
-	reg RDCMDr = 0;
-	reg WRCMDr = 0;
-	reg InitDone = 0;
-	always @(negedge C8M) begin
-		if (PHI2Start) begin
-			INITCMDr <= !InitDone;
-			RDCMDr <= RDCMD && InitDone;
-			WRCMDr <= WRCMD && !RDCMD && InitDone;
-			InitDone <= 1;
-		end
-	end
-	
-	/* SDRAM command issue */
-	always @(posedge C8M) begin
-		if (PLLLock) case (S[2:0])
-			0: begin
-				if (RDCMDr || WRCMDr) begin // ACT
-					nCS <= 0;
-					nRAS <= 0;
-					nCAS <= 1;
-					nRWE <= 1;
-					CKE <= 1;
-				end else begin // NOP CKD
-					nCS <= 1;
-					nRAS <= 1;
-					nCAS <= 1;
-					nRWE <= 1;
-					CKE <= 0;
-				end
-			end 1: begin
-				if (RDCMDr) begin // RD
-					nCS <= 0;
-					nRAS <= 1;
-					nCAS <= 0;
-					nRWE <= 1;
-					CKE <= 1;
-				end else if (WRCMDr) begin // WR
-					nCS <= 0;
-					nRAS <= 1;
-					nCAS <= 0;
-					nRWE <= 0;
-					CKE <= 1;
-				end else begin // NOP CKD
-					nCS <= 1;
-					nRAS <= 1;
-					nCAS <= 1;
-					nRWE <= 1;
-					CKE <= 0;
-				end
-			end 2: begin // NOP CKE
-				nCS <= 1;
-				nRAS <= 1;
-				nCAS <= 1;
-				nRWE <= 1;
-				CKE <= 1;
-			end 3: begin // PC all
+end
+
+/* SDRAM command issue */
+always @(posedge C8M) begin
+	if (PLLLock) case (S[2:0])
+		0: begin
+			if (RDCMDr || WRCMDr) begin // ACT
 				nCS <= 0;
 				nRAS <= 0;
 				nCAS <= 1;
+				nRWE <= 1;
+				CKE <= 1;
+			end else begin // NOP CKD
+				nCS <= 1;
+				nRAS <= 1;
+				nCAS <= 1;
+				nRWE <= 1;
+				CKE <= 0;
+			end
+		end 1: begin
+			if (RDCMDr) begin // RD
+				nCS <= 0;
+				nRAS <= 1;
+				nCAS <= 0;
+				nRWE <= 1;
+				CKE <= 1;
+			end else if (WRCMDr) begin // WR
+				nCS <= 0;
+				nRAS <= 1;
+				nCAS <= 0;
 				nRWE <= 0;
 				CKE <= 1;
-			end 4: begin
-				if (INITCMDr) begin // LDM
-					nCS <= 0;
-					nRAS <= 0;
-					nCAS <= 0;
-					nRWE <= 0;
-					CKE <= 1;
-				end else begin // AREF
-					nCS <= 0;
-					nRAS <= 0;
-					nCAS <= 0;
-					nRWE <= 1;
-					CKE <= 1;
-				end
-			end 5: begin // NOP CKD
+			end else begin // NOP CKD
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
 				nRWE <= 1;
 				CKE <= 0;
-			end 6: begin // NOP CKD
-				nCS <= 1;
-				nRAS <= 1;
-				nCAS <= 1;
-				nRWE <= 1;
-				CKE <= 0;
-			end 7: begin // NOP CKE
-				nCS <= 1;
-				nRAS <= 1;
-				nCAS <= 1;
-				nRWE <= 1;
-				CKE <= 1;
-			end endcase
-		else begin // NOP CKE
+			end
+		end 2: begin // NOP CKE
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
 			nRWE <= 1;
 			CKE <= 1;
-		end
-	end
-	
-	always @(posedge C8M) begin
-		case (S[2:0])
-			0: begin // ACT/NOP
-				RBA[1:0] <= A[23:22];
-				RA[11:0] <= A[21:10];
-				DQMH <= 1;
-				DQML <= 1;
-			end 1: begin // RD/WR/NOP
-				// RBA stays the same
-				RA[12] <= 0;
-				RA[11:0] <= { 2'b00, A[9:1] };
-				DQMH <=  A[0];
-				DQML <= !A[0];
-			end 2: begin // NOP
-				DQMH <= 1;
-				DQML <= 1;
-			end 3: begin // PC all
-				RA[10] <= 1; // "all"
-				DQMH <= 1;
-				DQML <= 1;
-			end 4: begin // AREF/LDM
-				// Mode register contents
-				RBA[1:0] <= 2'b00;		// Reserved in mode register
-				RA[12:10] <= 3'b000;	// Reserved in mode register
-				RA[9] <= 1'b1;			// "1" for single write mode
-				RA[8] <= 1'b0;			// Reserved in mode register
-				RA[7] <= 1'b0;			// "0" for not test mode
-				RA[6:4] <= 3'b010;		// "2" for CAS latency 2
-				RA[3] <= 1'b0;			// "0" for sequential burst (not used)
-				RA[2:0] <= 3'b000;		// "0" for burst length 1 (no burst)
-				DQMH <= 1;
-				DQML <= 1;
-			end 5: begin // NOP
-				DQMH <= 1;
-				DQML <= 1;
-			end 6: begin // NOP
-				DQMH <= 1;
-				DQML <= 1;
-			end 7: begin // NOP
-				DQMH <= 1;
-				DQML <= 1;
+		end 3: begin // PC all
+			nCS <= 0;
+			nRAS <= 0;
+			nCAS <= 1;
+			nRWE <= 0;
+			CKE <= 1;
+		end 4: begin
+			if (INITCMDr) begin // LDM
+				nCS <= 0;
+				nRAS <= 0;
+				nCAS <= 0;
+				nRWE <= 0;
+				CKE <= 1;
+			end else begin // AREF
+				nCS <= 0;
+				nRAS <= 0;
+				nCAS <= 0;
+				nRWE <= 1;
+				CKE <= 1;
 			end
-		endcase
-		RA[12] <= RA[12];
+		end 5: begin // NOP CKD
+			nCS <= 1;
+			nRAS <= 1;
+			nCAS <= 1;
+			nRWE <= 1;
+			CKE <= 0;
+		end 6: begin // NOP CKD
+			nCS <= 1;
+			nRAS <= 1;
+			nCAS <= 1;
+			nRWE <= 1;
+			CKE <= 0;
+		end 7: begin // NOP CKE
+			nCS <= 1;
+			nRAS <= 1;
+			nCAS <= 1;
+			nRWE <= 1;
+			CKE <= 1;
+		end endcase
+	else begin // NOP CKE
+		nCS <= 1;
+		nRAS <= 1;
+		nCAS <= 1;
+		nRWE <= 1;
+		CKE <= 1;
 	end
-	
-	/* Read data registration */
-	always @(posedge C8M) if (S==3) RDD[7:0] <= RD[7:0];
-	
-	/* Write data registration */
-	reg [7:0] WRDr;
-	always @(negedge PHI2) WRDr[7:0] <= WRD[7:0];
-	
-	/* RAM data bus control */
-	reg RDOE = 0;
-	always @(posedge C8M) RDOE <= S==1;
-	assign RD[7:0] = RDOE ? WRDr[7:0] : 8'bZ;
+end
+
+always @(posedge C8M) begin
+	case (S[2:0])
+		0: begin // ACT/NOP
+			RBA[1:0] <= A[23:22];
+			RA[11:0] <= A[21:10];
+			DQMH <= 1;
+			DQML <= 1;
+		end 1: begin // RD/WR/NOP
+			// RBA stays the same
+			RA[12] <= 0;
+			RA[11:0] <= { 2'b00, A[9:1] };
+			DQMH <=  A[0];
+			DQML <= !A[0];
+		end 2: begin // NOP
+			DQMH <= 1;
+			DQML <= 1;
+		end 3: begin // PC all
+			RA[10] <= 1; // "all"
+			DQMH <= 1;
+			DQML <= 1;
+		end 4: begin // AREF/LDM
+			// Mode register contents
+			RBA[1:0] <= 2'b00;		// Reserved in mode register
+			RA[12:10] <= 3'b000;	// Reserved in mode register
+			RA[9] <= 1'b1;			// "1" for single write mode
+			RA[8] <= 1'b0;			// Reserved in mode register
+			RA[7] <= 1'b0;			// "0" for not test mode
+			RA[6:4] <= 3'b010;		// "2" for CAS latency 2
+			RA[3] <= 1'b0;			// "0" for sequential burst (not used)
+			RA[2:0] <= 3'b000;		// "0" for burst length 1 (no burst)
+			DQMH <= 1;
+			DQML <= 1;
+		end 5: begin // NOP
+			DQMH <= 1;
+			DQML <= 1;
+		end 6: begin // NOP
+			DQMH <= 1;
+			DQML <= 1;
+		end 7: begin // NOP
+			DQMH <= 1;
+			DQML <= 1;
+		end
+	endcase
+	RA[12] <= RA[12];
+end
+
+/* Read data registration */
+always @(posedge C8M) if (S==3) RDD[7:0] <= RD[7:0];
+
+/* Write data registration */
+reg [7:0] WRDr;
+always @(negedge PHI2) WRDr[7:0] <= WRD[7:0];
+
+/* RAM data bus control */
+reg RDOE = 0;
+always @(posedge C8M) RDOE <= S==1;
+assign RD[7:0] = RDOE ? WRDr[7:0] : 8'bZ;
 
 endmodule

@@ -21,8 +21,8 @@ Performance Hardware Data Status:   Final          Version 34.4.
 Setup and Hold Report
 
 --------------------------------------------------------------------------------
-<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454</big></U></B>
-Sat Mar 05 01:56:29 2022
+<A name="Map_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
+Sat Apr 23 03:11:08 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -32,7 +32,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 <A name="mtw1_set_ri"></A><B><U><big>Report Information</big></U></B>
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o REU_impl1.tw1 -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml REU_impl1_map.ncd REU_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o REU_impl1.tw1 -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml REU_impl1_map.ncd REU_impl1.prf 
 Design file:     reu_impl1_map.ncd
 Preference file: reu_impl1.prf
 Device,speed:    LCMXO2-640HC,4
@@ -72,38 +72,36 @@ VCCIO Voltage:
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 55.948ns (weighted slack = 111.896ns)
+Passed: The following path meets requirements by 55.574ns (weighted slack = 111.148ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              ram/WRCMDr_132  (from C8M_c -)
-   Destination:    FF         Data in        ram/CKE_138  (to C8M_c +)
+   Source:         FF         Q              ram/PHI2r_0__126  (from C8M_c -)
+   Destination:    FF         Data in        ram/S_FSM_i2  (to C8M_c +)
 
-   Delay:               4.886ns  (39.6% logic, 60.4% route), 4 logic levels.
+   Delay:               5.144ns  (28.0% logic, 72.0% route), 3 logic levels.
 
  Constraint Details:
 
-      4.886ns physical path delay SLICE_104 to ram/SLICE_42 meets
+      5.144ns physical path delay ram/SLICE_207 to SLICE_18 meets
      61.000ns delay constraint less
-      0.166ns DIN_SET requirement (totaling 60.834ns) by 55.948ns
+      0.282ns CE_SET requirement (totaling 60.718ns) by 55.574ns
 
  Physical Path Details:
 
-      Data path SLICE_104 to ram/SLICE_42:
+      Data path ram/SLICE_207 to SLICE_18:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452  SLICE_104.CLK to   SLICE_104.Q0 SLICE_104 (from C8M_c)
-ROUTE         5   e 1.234   SLICE_104.Q0 to *m/SLICE_91.B1 ram/WRCMDr
-CTOF_DEL    ---     0.495 *m/SLICE_91.B1 to *m/SLICE_91.F1 ram/SLICE_91
-ROUTE         3   e 1.234 *m/SLICE_91.F1 to *m/SLICE_42.D1 ram/nCS_N_505
-CTOF_DEL    ---     0.495 *m/SLICE_42.D1 to *m/SLICE_42.F1 ram/SLICE_42
-ROUTE         1   e 0.480 *m/SLICE_42.F1 to *m/SLICE_42.D0 ram/n1221
-CTOF_DEL    ---     0.495 *m/SLICE_42.D0 to *m/SLICE_42.F0 ram/SLICE_42
-ROUTE         1   e 0.001 *m/SLICE_42.F0 to */SLICE_42.DI0 ram/CKE_N_520 (to C8M_c)
+REG_DEL     ---     0.452 *SLICE_207.CLK to */SLICE_207.Q1 ram/SLICE_207 (from C8M_c)
+ROUTE         4   e 1.234 */SLICE_207.Q1 to */SLICE_205.A0 ram/PHI2r_0
+CTOF_DEL    ---     0.495 */SLICE_205.A0 to */SLICE_205.F0 ram/SLICE_205
+ROUTE         2   e 1.234 */SLICE_205.F0 to */SLICE_206.B0 ram/n3804
+CTOF_DEL    ---     0.495 */SLICE_206.B0 to */SLICE_206.F0 ram/SLICE_206
+ROUTE         1   e 1.234 */SLICE_206.F0 to    SLICE_18.CE ram/C8M_c_enable_20 (to C8M_c)
                   --------
-                    4.886   (39.6% logic, 60.4% route), 4 logic levels.
+                    5.144   (28.0% logic, 72.0% route), 3 logic levels.
 
-Report:   10.104ns is the minimum period for this preference.
+Report:   10.852ns is the minimum period for this preference.
 
 
 ================================================================================
@@ -112,7 +110,7 @@ Report:   10.104ns is the minimum period for this preference.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 111.912ns (weighted slack = 895.296ns)
+Passed: The following path meets requirements by 111.890ns (weighted slack = 895.120ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
@@ -123,33 +121,33 @@ Passed: The following path meets requirements by 111.912ns (weighted slack = 895
 
  Constraint Details:
 
-      9.803ns physical path delay SLICE_26 to SLICE_33 meets
+      9.803ns physical path delay SLICE_20 to SLICE_43 meets
     122.000ns delay constraint less
-      0.285ns LSR_SET requirement (totaling 121.715ns) by 111.912ns
+      0.307ns CE_SET requirement (totaling 121.693ns) by 111.890ns
 
  Physical Path Details:
 
-      Data path SLICE_26 to SLICE_33:
+      Data path SLICE_20 to SLICE_43:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452   SLICE_26.CLK to    SLICE_26.Q1 SLICE_26 (from C8M_c)
-ROUTE         2   e 1.234    SLICE_26.Q1 to     SLICE_2.B1 RAMRDD_7
-C1TOFCO_DE  ---     0.889     SLICE_2.B1 to    SLICE_2.FCO SLICE_2
-ROUTE         1   e 0.001    SLICE_2.FCO to    SLICE_1.FCI n2780
+REG_DEL     ---     0.452   SLICE_20.CLK to    SLICE_20.Q1 SLICE_20 (from C8M_c)
+ROUTE         2   e 1.234    SLICE_20.Q1 to    SLICE_32.B1 RAMRDD_7
+C1TOFCO_DE  ---     0.889    SLICE_32.B1 to   SLICE_32.FCO SLICE_32
+ROUTE         1   e 0.001   SLICE_32.FCO to    SLICE_1.FCI n2970
 FCITOFCO_D  ---     0.162    SLICE_1.FCI to    SLICE_1.FCO SLICE_1
-ROUTE         1   e 0.001    SLICE_1.FCO to    SLICE_0.FCI n2781
+ROUTE         1   e 0.001    SLICE_1.FCO to    SLICE_0.FCI n2971
 FCITOF1_DE  ---     0.643    SLICE_0.FCI to     SLICE_0.F1 SLICE_0
-ROUTE         2   e 1.234     SLICE_0.F1 to    SLICE_76.B1 nWEDMA_N_9
-CTOF_DEL    ---     0.495    SLICE_76.B1 to    SLICE_76.F1 SLICE_76
-ROUTE         1   e 1.234    SLICE_76.F1 to   SLICE_170.B1 reureg/n3361
-CTOF_DEL    ---     0.495   SLICE_170.B1 to   SLICE_170.F1 SLICE_170
-ROUTE         2   e 1.234   SLICE_170.F1 to */SLICE_206.B0 n3363
-CTOF_DEL    ---     0.495 */SLICE_206.B0 to */SLICE_206.F0 dmaseq/SLICE_206
-ROUTE         1   e 1.234 */SLICE_206.F0 to   SLICE_33.LSR dmaseq/n1610 (to PHI2_c)
+ROUTE         2   e 1.234     SLICE_0.F1 to *q/SLICE_64.C1 nWEDMA_N_9
+CTOF_DEL    ---     0.495 *q/SLICE_64.C1 to *q/SLICE_64.F1 dmaseq/SLICE_64
+ROUTE         3   e 1.234 *q/SLICE_64.F1 to   SLICE_199.C0 n3771
+CTOF_DEL    ---     0.495   SLICE_199.C0 to   SLICE_199.F0 SLICE_199
+ROUTE         2   e 1.234   SLICE_199.F0 to   SLICE_223.B1 n1350
+CTOF_DEL    ---     0.495   SLICE_223.B1 to   SLICE_223.F1 SLICE_223
+ROUTE         1   e 1.234   SLICE_223.F1 to    SLICE_43.CE dmaseq/PHI2_N_554_enable_68 (to PHI2_c)
                   --------
                     9.803   (37.0% logic, 63.0% route), 7 logic levels.
 
-Report:   80.704ns is the minimum period for this preference.
+Report:   80.880ns is the minimum period for this preference.
 
 <A name="mtw1_set_rs"></A><B><U><big>Report Summary</big></U></B>
 --------------
@@ -158,10 +156,10 @@ Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
 PERIOD PORT "C8M" 122.000000 ns HIGH    |             |             |
-61.000000 ns ;                          |   122.000 ns|    10.104 ns|   4  
+61.000000 ns ;                          |   122.000 ns|    10.852 ns|   3  
                                         |             |             |
 PERIOD PORT "PHI2" 976.000000 ns HIGH   |             |             |
-488.000000 ns ;                         |   976.000 ns|    80.704 ns|   7  
+488.000000 ns ;                         |   976.000 ns|    80.880 ns|   7  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -174,7 +172,7 @@ All preferences were met.
 
 Found 2 clocks:
 
-Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 77
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 80
    Covered under: PERIOD PORT "PHI2" 976.000000 ns HIGH 488.000000 ns ;
 
    Data transfers from:
@@ -195,11 +193,11 @@ Clock Domain: C8M_c   Source: C8M.PAD   Loads: 33
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 5157 paths, 2 nets, and 1018 connections (62.49% coverage)
+Constraints cover 5221 paths, 2 nets, and 1035 connections (61.17% coverage)
 
 --------------------------------------------------------------------------------
-<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454</big></U></B>
-Sat Mar 05 01:56:29 2022
+<A name="Map_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2</big></U></B>
+Sat Apr 23 03:11:08 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -209,7 +207,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 <A name="mtw1_hold_ri"></A><B><U><big>Report Information</big></U></B>
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o REU_impl1.tw1 -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml REU_impl1_map.ncd REU_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o REU_impl1.tw1 -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml REU_impl1_map.ncd REU_impl1.prf 
 Design file:     reu_impl1_map.ncd
 Preference file: reu_impl1.prf
 Device,speed:    LCMXO2-640HC,M
@@ -260,17 +258,17 @@ Passed: The following path meets requirements by 0.351ns
 
  Constraint Details:
 
-      0.332ns physical path delay SLICE_18 to SLICE_18 meets
+      0.332ns physical path delay SLICE_13 to SLICE_13 meets
      -0.019ns M_HLD and
       0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
 
  Physical Path Details:
 
-      Data path SLICE_18 to SLICE_18:
+      Data path SLICE_13 to SLICE_13:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133   SLICE_18.CLK to    SLICE_18.Q0 SLICE_18 (from C8M_c)
-ROUTE         2   e 0.199    SLICE_18.Q0 to    SLICE_18.M1 nRESETr_3 (to C8M_c)
+REG_DEL     ---     0.133   SLICE_13.CLK to    SLICE_13.Q0 SLICE_13 (from C8M_c)
+ROUTE         2   e 0.199    SLICE_13.Q0 to    SLICE_13.M1 nRESETr_3 (to C8M_c)
                   --------
                     0.332   (40.1% logic, 59.9% route), 1 logic levels.
 
@@ -285,26 +283,26 @@ Passed: The following path meets requirements by 0.447ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              dmaseq/SwapState_68  (from PHI2_c -)
-   Destination:    FF         Data in        dmaseq/SwapState_68  (to PHI2_c -)
+   Source:         FF         Q              reureg/nSize_561  (from PHI2_c -)
+   Destination:    FF         Data in        reureg/nSize_561  (to PHI2_c -)
 
    Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
 
  Constraint Details:
 
-      0.434ns physical path delay SLICE_76 to SLICE_76 meets
+      0.434ns physical path delay SLICE_153 to SLICE_153 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
 
  Physical Path Details:
 
-      Data path SLICE_76 to SLICE_76:
+      Data path SLICE_153 to SLICE_153:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133   SLICE_76.CLK to    SLICE_76.Q0 SLICE_76 (from PHI2_c)
-ROUTE         9   e 0.199    SLICE_76.Q0 to    SLICE_76.A0 SwapState
-CTOF_DEL    ---     0.101    SLICE_76.A0 to    SLICE_76.F0 SLICE_76
-ROUTE         1   e 0.001    SLICE_76.F0 to   SLICE_76.DI0 dmaseq/SwapState_N_548 (to PHI2_c)
+REG_DEL     ---     0.133  SLICE_153.CLK to   SLICE_153.Q0 SLICE_153 (from PHI2_c)
+ROUTE         2   e 0.199   SLICE_153.Q0 to   SLICE_153.D0 reureg/nSize
+CTOF_DEL    ---     0.101   SLICE_153.D0 to   SLICE_153.F0 SLICE_153
+ROUTE         1   e 0.001   SLICE_153.F0 to  SLICE_153.DI0 reureg/n3438 (to PHI2_c)
                   --------
                     0.434   (53.9% logic, 46.1% route), 2 logic levels.
 
@@ -331,7 +329,7 @@ All preferences were met.
 
 Found 2 clocks:
 
-Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 77
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 80
    Covered under: PERIOD PORT "PHI2" 976.000000 ns HIGH 488.000000 ns ;
 
    Data transfers from:
@@ -352,7 +350,7 @@ Clock Domain: C8M_c   Source: C8M.PAD   Loads: 33
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 5157 paths, 2 nets, and 1032 connections (63.35% coverage)
+Constraints cover 5221 paths, 2 nets, and 1052 connections (62.17% coverage)
 
 
 

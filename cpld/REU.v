@@ -47,7 +47,7 @@ module REU(
 	wire DMA;
 	wire RAMRD, RAMWR;
 	wire RegReset;
-	wire NextCA, NextREUA, VerifyErr, Autoload;
+	wire NextCA, NextREUA, VerifyErr, XferEnd;
 	
 	/* Glue outputs */
 	wire AOE, DOE;
@@ -60,7 +60,7 @@ module REU(
 		/* Register Read/Write Interface */
 		RegRD, RegWR, A[4:0], D[7:0], RegRDD[7:0],
 		/* Increment, etc. Control */
-		NextCA, NextREUA, VerifyErr, Autoload,
+		NextCA, NextREUA, VerifyErr, XferEnd,
 		/* Register Outputs */
 		IRQ, ExecuteEN, FF00DecodeEN,
 		XferType[1:0], REUA[23:0], CA[15:0], Length1);
@@ -91,7 +91,7 @@ module REU(
 		/* Transfer Inputs */
 		RAMRDD[7:0]==D[7:0], Execute, XferType[1:0], Length1,
 		/* Register Control Outputs */
-		NextCA, NextREUA, XferEnd, VerifyErr, Autoload);
+		NextCA, NextREUA, XferEnd, VerifyErr);
 		
 	Glue glue(
 		/* 6502 Bus */
