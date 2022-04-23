@@ -38,7 +38,7 @@ module Glue(
 	assign nRWOE = !(DMA && BA);
 	
 	assign DOE = DMA ? !DMARW : nWE;
-	assign DDIR = !DOE;
+	assign DDIR = DMA ? DMARW : !nWE;
 	assign nDOE = !(DMA ? (BA && !DMARW) : (RegCS && nWE));
 	
 	assign nDMA = !DMA;
