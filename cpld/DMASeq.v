@@ -104,24 +104,29 @@ module DMASeq(
 		
 	wire SecondSwap = XferSwap ? SwapState : 1'b1;
 	
-	assign NextCA = 
+	assign NextCA = 0; /*
 		// DMA must be active and bus must be available.
 		// Don't NextCA on alternating swap cycles 
-		DMA && BA && SecondSwap;
+		DMA && BA && SecondSwap;*/
 		
-	assign NextREUA = 
+	assign NextREUA = 0; /*
 		// For C64-REU cycles, DMA must have been active previous cycle
 		// Otherwise DMA must be active current cycle and bus must be available
 		(XferC64REU ? (DMAr && BAr) : (DMA && BA)) && 
-		SecondSwap; // Don't NextREUA on first swap cycles
+		SecondSwap; // Don't NextREUA on first swap cycles*/
 				
-	assign VerifyErr = DMA && BA && // DMA must be active and bus must be available
-		!Equal && XferVerify; // Verify error on verify cycles where not equal
+	assign VerifyErr = 0; /*
+		// DMA must be active and bus must be available
+		DMA && BA &&
+		// Verify error on verify cycles where not equal
+		!Equal && XferVerify;*/
 		
-	assign Autoload = DMA && BA && // DMA must be active and bus must be available
+	assign Autoload = 0; /*
+	 	// DMA must be active and bus must be available
+		DMA && BA &&
 		// Autoload when length 1 in regular xfer or second swap cycle
 		((Length1 && SecondSwap) ||
 		// Autoload during verify xfer when not equal
-		 (!Equal && XferVerify));
+		(!Equal && XferVerify));*/
 	
 endmodule
