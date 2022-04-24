@@ -103,30 +103,31 @@ always @(negedge PHI2) begin
 	end
 end
 
-reg DMAr, BAr, nRESETr;
+reg DMAr, BAr;
+reg [2:1] nRESETr;
 always @(negedge PHI2) begin
 	DMAr <= DMA;
 	BAr <= BA;
-	nRESETr <= nRESET;
+	nRESETr[2:1] <= {nRESETr[1], nRESET};
 end
-assign RegReset = !nRESETr && !DMA;
+assign RegReset = (!nRESETr[1] && !DMA) || (!nRESETr[2] && !DMA && DMAr);
 
 assign NextCA =
 	// DMA must be active and bus must be available.
 	// Don't NextCA on alternating swap cycles 
 	DMA && BA && (!XferSwap || SwapState);
 	
-assign NextREUA =
+assign NextREUA = 
 	XferC64REU ? DMAr && BAr : // Delay advancing REUA during C64->REU xfer
 	XferREUC64 ? DMA && BA :
 	XferSwap ? DMA && BA && SwapState : // Only advance after 2nd swap state
 	XferVerify ? DMA && BA : 1'b0;
 	
-assign XferEnd = DMA && BA && 
+assign XferEnd = DMA && (!nRESETr[1] || (BA && 
 	(XferC64REU ? Length1 : 
 	 XferREUC64 ? Length1 : 
 	 XferSwap ?   Length1 && SwapState : 
-	 XferVerify ? Length1 || !Equal : 1'b0);
+	 XferVerify ? Length1 || !Equal : 1'b0)));
 			
 assign VerifyErr = XferEnd && XferVerify && !Equal;
 	

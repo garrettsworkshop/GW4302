@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Apr 23 07:19:59 2022
+Sun Apr 24 06:19:47 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
@@ -99,6 +99,7 @@ Loading device for application map from file 'xo2c640.nph' in environment: C:/ls
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
 ######## Missing driver on net RA[12]. Patching with GND.
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(100): Register \reureg/nSize_578 is stuck at Zero. VDB-5013
 INFO - synthesis: Extracted state machine for register '\ram/S' with one-hot encoding
 original encoding -> new encoding (one-hot encoding)
 
@@ -134,19 +135,19 @@ Writing NGD file REU_impl1.ngd.
 Number of register bits => 189 of 877 (21 % )
 BB => 32
 CCU2D => 33
-FD1P3AX => 56
-FD1P3IX => 48
-FD1P3JX => 17
-FD1S3AX => 25
+FD1P3AX => 55
+FD1P3IX => 49
+FD1P3JX => 16
+FD1S3AX => 26
 FD1S3IX => 36
 FD1S3JX => 7
 GSR => 1
 IB => 6
 INV => 2
-L6MUX21 => 4
-LUT4 => 280
+L6MUX21 => 5
+LUT4 => 287
 OB => 31
-PFUMX => 15
+PFUMX => 18
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -157,32 +158,32 @@ TSALL => 1
 Clock Nets
 Number of Clocks: 2
   Net : C8M_c, loads : 46
-  Net : PHI2_c, loads : 4
+  Net : PHI2_c, loads : 7
 Clock Enable Nets
-Number of Clock Enables: 24
+Number of Clock Enables: 22
 Top 10 highest fanout Clock Enables:
-  Net : ram/RDD_7__N_511, loads : 17
-  Net : ram/C8M_N_502_enable_5, loads : 12
-  Net : ram/C8M_c_enable_12, loads : 10
-  Net : reureg/PHI2_N_569_enable_20, loads : 9
-  Net : reureg/PHI2_N_569_enable_81, loads : 8
-  Net : reureg/PHI2_N_569_enable_63, loads : 8
-  Net : ram/C8M_c_enable_18, loads : 8
-  Net : reureg/PHI2_N_569_enable_87, loads : 8
-  Net : reureg/PHI2_N_569_enable_77, loads : 3
-  Net : reureg/PHI2_N_569_enable_16, loads : 2
+  Net : ram/C8M_c_enable_21, loads : 11
+  Net : reureg/PHI2_N_568_enable_79, loads : 8
+  Net : reureg/PHI2_N_568_enable_81, loads : 8
+  Net : reureg/PHI2_N_568_enable_69, loads : 8
+  Net : reureg/PHI2_N_568_enable_14, loads : 8
+  Net : reureg/PHI2_N_568_enable_64, loads : 8
+  Net : reureg/PHI2_N_568_enable_89, loads : 8
+  Net : reureg/PHI2_N_568_enable_62, loads : 8
+  Net : reureg/PHI2_N_568_enable_80, loads : 8
+  Net : ram/RDD_7__N_523, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_569, loads : 137
-  Net : dmaseq/n4057, loads : 90
-  Net : dmaseq/DMA, loads : 40
-  Net : A_out_0, loads : 40
-  Net : reureg/n4035, loads : 37
-  Net : n1526, loads : 31
-  Net : dmaseq/FF00DecodeEN_N_437, loads : 28
-  Net : A_out_3, loads : 28
-  Net : A_out_1, loads : 26
-  Net : ram/PHI2Start_N_554, loads : 22
+  Net : PHI2_N_568, loads : 140
+  Net : dmaseq/n4310, loads : 49
+  Net : dmaseq/RegReset, loads : 38
+  Net : A_out_1, loads : 38
+  Net : dmaseq/DMA, loads : 35
+  Net : dmaseq/n4059, loads : 35
+  Net : A_out_0, loads : 31
+  Net : A_out_3, loads : 25
+  Net : reureg/AutoloadEN, loads : 22
+  Net : n4081, loads : 22
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -193,11 +194,11 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   57.813 MHz|    12  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   48.377 MHz|    12  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
-C8M [ get_ports { C8M } ]               |    8.196 MHz|   74.794 MHz|     4  
+C8M [ get_ports { C8M } ]               |    8.196 MHz|   92.696 MHz|     3  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -205,8 +206,8 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|   74.794 MHz|     4
 All constraints were met.
 
 
-Peak Memory Usage: 63.500  MB
+Peak Memory Usage: 63.012  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.672  secs
+Elapsed CPU time for LSE flow : 1.625  secs
 --------------------------------------------------------------

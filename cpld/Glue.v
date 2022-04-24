@@ -23,11 +23,7 @@ module Glue(
 	output RegRD,
 	output RegWR,
 	/* Register inputs */
-	input FF00DecodeEN,
-	input ExecuteEN,
 	input IRQ,
-	/* Execute output to sequencer */
-	output Execute,
 	/* DMA command inputs */
 	input DMA,
 	input DMARW);
@@ -48,9 +44,5 @@ assign nIRQ = !IRQ;
 assign RegCS = !DMA && !nIO2;
 assign RegRD = RegCS && nWE;
 assign RegWR = RegCS && !nWE;
-
-assign Execute = FF00DecodeEN ? 
-	(ExecuteEN && !nWE && A[15:0]==16'hFF00) :
-	(RegWR && A[4:0]==5'h1 && D[7]);
 	
 endmodule

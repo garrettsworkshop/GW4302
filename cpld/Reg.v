@@ -5,6 +5,7 @@ module REUReg(
 	/* Register Read/Write Interface */
 	input RegRD,
 	input RegWR,
+	input FF00WR,
 	input [4:0] A,
 	input [7:0] WRD,
 	output [7:0] RDD,
@@ -15,12 +16,11 @@ module REUReg(
 	input XferEnd,
 	/* Register Outputs */
 	output IRQOut,
-	output ExecuteENOut,
-	output reg FF00DecodeEN,
 	output [1:0] XferTypeOut,
 	output [23:0] REUAOut,
 	output [15:0] CAOut,
-	output Length1);
+	output Length1,
+	output Execute);
 
 /* REU Registers - 0x0 Status Register */
 reg IntPending;
@@ -29,11 +29,12 @@ reg Fault;
 reg nSize;
 
 /* REU Registers - 0x1 Command Register */
+reg DF01Reserved6;
+reg [3:2] DF01Reserved32;
 reg ExecuteEN;
 reg AutoloadEN;
+reg FF00DecodeEN;
 reg [1:0] XferType;
-assign ExecuteENOut = ExecuteEN;
-assign XferTypeOut = XferType;
 
 /* REU Registers - 0x2, 0x3 Commodore Address */
 reg [15:0] CA;
@@ -64,7 +65,7 @@ wire DecLen = NextCA;
 /* Data Output Mux */
 assign RDD[7:0] = 
 	A[4:0]==4'h0 ? { IntPending, EndOfBlock, Fault, ~nSize, 4'b0000 } :
-	A[4:0]==4'h1 ? { ExecuteEN, 1'b0, AutoloadEN, ~FF00DecodeEN, 2'b00, XferType[1:0] } :
+	A[4:0]==4'h1 ? { ExecuteEN, DF01Reserved6, AutoloadEN, ~FF00DecodeEN, DF01Reserved32[3:2], XferType[1:0] } :
 	A[4:0]==4'h2 ? CA[7:0] :
 	A[4:0]==4'h3 ? CA[15:8] :
 	A[4:0]==4'h4 ? REUA[7:0] :
@@ -86,7 +87,7 @@ always @(negedge PHI2) begin
 		Fault <= 0;
 		nSize <= 0;
 	end else if (RegWR && A[4:0]==5'h0) begin
-		nSize <= ~WRD[4];
+		//nSize <= ~WRD[4];
 	end else if (RegRD && A[4:0]==5'h0) begin
 		IntPending <= 0;
 		EndOfBlock <= 0;
@@ -99,26 +100,28 @@ always @(negedge PHI2) begin
 end
 
 /* Command register (0x1) control */
+wire DF01WR = RegWR && A[4:0]==5'h1;
 always @(negedge PHI2) begin
 	if (Reset) begin
 		ExecuteEN <= 0;
+		DF01Reserved6 <= 0;
+		AutoloadEN <= 0;
 		FF00DecodeEN <= 0;
-	end else if (RegWR && A[4:0]==5'h1) begin
+		DF01Reserved32[3:2] <= 0;
+		XferType[1:0] <= 0;
+	end else if (DF01WR) begin
 		ExecuteEN = WRD[7];
+		DF01Reserved6 <= WRD[6];
+		AutoloadEN <= WRD[5];
 		FF00DecodeEN <= ~WRD[4];
+		DF01Reserved32[3:2] <=  WRD[3:2];
+		XferType[1:0] <= WRD[1:0];
 	end else if (XferEnd || VerifyErr) begin
 		ExecuteEN <= 0;
 		FF00DecodeEN <= 0;
 	end
-	
-	if (Reset) begin
-		AutoloadEN <= 0;
-		XferType[1:0] <= 0;
-	end else if (RegWR && A[4:0]==5'h1) begin
-		AutoloadEN <= WRD[5];
-		XferType[1:0] <= WRD[1:0];
-	end
 end
+assign XferTypeOut[1:0] = (DF01WR && PHI2) ? WRD[1:0] : XferType[1:0];
 
 /* Commodore address register lo (0x2) control */
 always @(negedge PHI2) begin
@@ -244,5 +247,9 @@ always @(negedge PHI2) begin
 	if (Reset) IncMode <= 0;
 	else if (RegWR && A[4:0]==5'hA) IncMode[1:0] <= WRD[7:6];
 end
+
+assign Execute = FF00DecodeEN ? 
+	(ExecuteEN && FF00WR) :
+	(RegWR && A[4:0]==5'h1 && WRD[7] && WRD[4]);
 
 endmodule
