@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sun Apr 24 06:19:47 2022
+Mon Apr 25 04:29:44 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
@@ -99,6 +99,7 @@ Top module name (Verilog): REU
 INFO - synthesis: c:/users/garre/repos/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
 INFO - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
 INFO - synthesis: c:/users/garre/repos/gw4302/cpld/ram.v(1): compiling module RAM. VERI-1018
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/ram.v(135): Register CKE_114 is stuck at One. VDB-5014
 INFO - synthesis: c:/users/garre/repos/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
 INFO - synthesis: c:/users/garre/repos/gw4302/cpld/glue.v(1): compiling module Glue. VERI-1018
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -107,30 +108,13 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
-######## Missing driver on net RA[12]. Patching with GND.
-WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(100): Register \reureg/nSize_578 is stuck at Zero. VDB-5013
-INFO - synthesis: Extracted state machine for register '\ram/S' with one-hot encoding
-original encoding -> new encoding (one-hot encoding)
-
- 000 -> 00000001
-
- 001 -> 00000010
-
- 010 -> 00000100
-
- 011 -> 00001000
-
- 100 -> 00010000
-
- 101 -> 00100000
-
- 110 -> 01000000
-
- 111 -> 10000000
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(100): Register \reureg/nSize_591 is stuck at Zero. VDB-5013
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(198): Register \reureg/REUA[23]_662 is stuck at Zero. VDB-5013
+WARNING - synthesis: Bit 0 of Register \ram/RA is stuck at Zero
 
 
 
-
+WARNING - synthesis: c:/users/garre/repos/gw4302/cpld/ram.v(180): Register \ram/RBA_i2 is stuck at Zero. VDB-5013
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 Writing LPF file REU_impl1.lpf.
 Results of NGD DRC are available in REU_drc.log.
@@ -141,22 +125,22 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.
 
 ################### Begin Area Report (REU)######################
-Number of register bits => 189 of 877 (21 % )
+Number of register bits => 175 of 877 (19 % )
 BB => 32
 CCU2D => 33
-FD1P3AX => 55
-FD1P3IX => 49
-FD1P3JX => 16
+FD1P3AX => 44
+FD1P3IX => 45
+FD1P3JX => 17
 FD1S3AX => 26
-FD1S3IX => 36
-FD1S3JX => 7
+FD1S3IX => 40
+FD1S3JX => 3
 GSR => 1
 IB => 6
 INV => 2
-L6MUX21 => 5
-LUT4 => 287
+L6MUX21 => 2
+LUT4 => 296
 OB => 31
-PFUMX => 18
+PFUMX => 20
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -166,33 +150,33 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : C8M_c, loads : 46
+  Net : C8M_c, loads : 38
   Net : PHI2_c, loads : 7
 Clock Enable Nets
 Number of Clock Enables: 22
 Top 10 highest fanout Clock Enables:
-  Net : ram/C8M_c_enable_21, loads : 11
-  Net : reureg/PHI2_N_568_enable_79, loads : 8
-  Net : reureg/PHI2_N_568_enable_81, loads : 8
-  Net : reureg/PHI2_N_568_enable_69, loads : 8
-  Net : reureg/PHI2_N_568_enable_14, loads : 8
-  Net : reureg/PHI2_N_568_enable_64, loads : 8
-  Net : reureg/PHI2_N_568_enable_89, loads : 8
-  Net : reureg/PHI2_N_568_enable_62, loads : 8
-  Net : reureg/PHI2_N_568_enable_80, loads : 8
-  Net : ram/RDD_7__N_523, loads : 8
+  Net : ram/S_2, loads : 10
+  Net : reureg/PHI2_N_556_enable_74, loads : 9
+  Net : reureg/PHI2_N_556_enable_68, loads : 9
+  Net : reureg/PHI2_N_556_enable_84, loads : 8
+  Net : reureg/PHI2_N_556_enable_72, loads : 8
+  Net : reureg/PHI2_N_556_enable_67, loads : 8
+  Net : reureg/PHI2_N_556_enable_46, loads : 8
+  Net : ram/RDD_7__N_530, loads : 8
+  Net : ram/C8M_c_enable_5, loads : 4
+  Net : reureg/PHI2_N_556_enable_22, loads : 3
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_568, loads : 140
-  Net : dmaseq/n4310, loads : 49
-  Net : dmaseq/RegReset, loads : 38
-  Net : A_out_1, loads : 38
-  Net : dmaseq/DMA, loads : 35
-  Net : dmaseq/n4059, loads : 35
-  Net : A_out_0, loads : 31
+  Net : PHI2_N_556, loads : 135
+  Net : dmaseq/n4067, loads : 49
+  Net : A_out_1, loads : 47
+  Net : A_out_0, loads : 44
+  Net : dmaseq/DMA, loads : 39
+  Net : n1437, loads : 34
+  Net : dmaseq/RegReset, loads : 33
+  Net : ram/S_0, loads : 26
+  Net : reureg/n3865, loads : 26
   Net : A_out_3, loads : 25
-  Net : reureg/AutoloadEN, loads : 22
-  Net : n4081, loads : 22
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -203,11 +187,11 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   48.377 MHz|    12  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   48.716 MHz|    14  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
-C8M [ get_ports { C8M } ]               |    8.196 MHz|   92.696 MHz|     3  
+C8M [ get_ports { C8M } ]               |    8.196 MHz|  104.450 MHz|     3  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -215,10 +199,10 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|   92.696 MHz|     3
 All constraints were met.
 
 
-Peak Memory Usage: 63.012  MB
+Peak Memory Usage: 62.566  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.625  secs
+Elapsed CPU time for LSE flow : 1.672  secs
 --------------------------------------------------------------
 
 

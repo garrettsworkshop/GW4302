@@ -1,70 +1,73 @@
 ----------------------------------------------------------------------
 Report for cell REU.TECH
-Register bits:  189 of 877 (21.551%)
+Register bits:  175 of 877 (19.954%)
 I/O cells:      69
                                   Cell usage:
                                cell     count   Res Usage(%)
                                  BB        32          100.0
                               CCU2D        33          100.0
-                            FD1P3AX        55          100.0
-                            FD1P3IX        49          100.0
-                            FD1P3JX        16          100.0
+                            FD1P3AX        44          100.0
+                            FD1P3IX        45          100.0
+                            FD1P3JX        17          100.0
                             FD1S3AX        26          100.0
-                            FD1S3IX        36          100.0
-                            FD1S3JX         7          100.0
+                            FD1S3IX        40          100.0
+                            FD1S3JX         3          100.0
                                 GSR         1          100.0
                                  IB         6          100.0
                                 INV         2          100.0
-                            L6MUX21         5          100.0
-                               LUT4       287          100.0
+                            L6MUX21         2          100.0
+                               LUT4       296          100.0
                                  OB        31          100.0
-                              PFUMX        18          100.0
+                              PFUMX        20          100.0
 SUB MODULES
                              DMASeq         1
                                Glue         1
                                 RAM         1
                              REUReg         1
-                              TOTAL       608
+                              TOTAL       602
 ----------------------------------------------------------------------
 Report for cell REUReg.v1
 Instance Path : reureg
                                   Cell usage:
                                cell     count   Res Usage(%)
                               CCU2D        30           90.9
-                            FD1P3AX        34           61.8
-                            FD1P3IX        38           77.6
-                            FD1P3JX        16          100.0
-                            FD1S3IX        35           97.2
-                            L6MUX21         5          100.0
-                               LUT4       171           59.6
-                              PFUMX        17           94.4
-                              TOTAL       346
+                            FD1P3AX        34           77.3
+                            FD1P3IX        33           73.3
+                            FD1P3JX        16           94.1
+                            FD1S3IX        35           87.5
+                            L6MUX21         2          100.0
+                               LUT4       179           60.5
+                              PFUMX        18           90.0
+                              TOTAL       347
 ----------------------------------------------------------------------
 Report for cell DMASeq.v1
 Instance Path : dmaseq
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3IX         1            2.0
+                            FD1P3IX         1            2.2
                             FD1S3AX         7           26.9
-                            FD1S3IX         1            2.8
-                               LUT4        42           14.6
-                              PFUMX         1            5.6
-                              TOTAL        52
+                            FD1S3IX         1            2.5
+                               LUT4        32           10.8
+                              PFUMX         1            5.0
+                              TOTAL        42
 ----------------------------------------------------------------------
 Report for cell Glue.v1
 Instance Path : glue
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               LUT4        15            5.2
-                              TOTAL        15
+                               LUT4        20            6.8
+                              TOTAL        20
 ----------------------------------------------------------------------
 Report for cell RAM.v1
 Instance Path : ram
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3AX        21           38.2
-                            FD1P3IX        10           20.4
+                            FD1P3AX        10           22.7
+                            FD1P3IX        11           24.4
+                            FD1P3JX         1            5.9
                             FD1S3AX        19           73.1
-                            FD1S3JX         7          100.0
-                               LUT4        36           12.5
-                              TOTAL        93
+                            FD1S3IX         4           10.0
+                            FD1S3JX         3          100.0
+                               LUT4        32           10.8
+                              PFUMX         1            5.0
+                              TOTAL        81

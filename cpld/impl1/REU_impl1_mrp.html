@@ -22,19 +22,19 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-640HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  04/24/22  06:19:49
+Mapped on:  04/25/22  04:29:46
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    189 out of   877 (22%)
-      PFU registers:          189 out of   640 (30%)
+   Number of registers:    175 out of   877 (20%)
+      PFU registers:          175 out of   640 (27%)
       PIO registers:            0 out of   237 (0%)
-   Number of SLICEs:       181 out of   320 (57%)
-      SLICEs as Logic/ROM:    181 out of   320 (57%)
+   Number of SLICEs:       185 out of   320 (58%)
+      SLICEs as Logic/ROM:    185 out of   320 (58%)
       SLICEs as RAM:            0 out of   240 (0%)
       SLICEs as Carry:         33 out of   320 (10%)
-   Number of LUT4s:        352 out of   640 (55%)
-      Number used as logic LUTs:        286
+   Number of LUT4s:        363 out of   640 (57%)
+      Number used as logic LUTs:        297
       Number used as distributed RAM:     0
       Number used as ripple logic:       66
       Number used as shift registers:     0
@@ -58,54 +58,54 @@ Mapped on:  04/24/22  06:19:49
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  2
-     Net C8M_c: 30 loads, 27 rising, 3 falling (Driver: PIO C8M )
-     Net PHI2_c: 86 loads, 0 rising, 86 falling (Driver: PIO PHI2 )
+     Net C8M_c: 28 loads, 26 rising, 2 falling (Driver: PIO C8M )
+     Net PHI2_c: 83 loads, 0 rising, 83 falling (Driver: PIO PHI2 )
    Number of Clock Enables:  22
-     Net C8M_c_enable_20: 1 loads, 1 LSLICEs
-     Net PHI2_N_568_enable_76: 2 loads, 2 LSLICEs
-     Net reureg/PHI2_N_568_enable_89: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_568_enable_45: 5 loads, 5 LSLICEs
-     Net reureg/PHI2_N_568_enable_72: 3 loads, 3 LSLICEs
-     Net reureg/PHI2_N_568_enable_14: 4 loads, 4 LSLICEs
+     Net PHI2_N_556_enable_69: 4 loads, 4 LSLICEs
+     Net S_2: 1 loads, 1 LSLICEs
+     Net C8M_c_enable_12: 5 loads, 5 LSLICEs
+     Net PHI2_N_556_enable_12: 3 loads, 3 LSLICEs
+     Net PHI2_N_556_enable_76: 5 loads, 5 LSLICEs
+     Net PHI2_N_556_enable_45: 5 loads, 5 LSLICEs
 
-     Net reureg/PHI2_N_568_enable_80: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_568_enable_79: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_568_enable_38: 3 loads, 3 LSLICEs
-     Net reureg/PHI2_N_568_enable_81: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_568_enable_69: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_568_enable_62: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_568_enable_85: 5 loads, 5 LSLICEs
-     Net reureg/PHI2_N_568_enable_64: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_568_enable_84: 2 loads, 2 LSLICEs
-     Net dmaseq/PHI2_N_568_enable_86: 1 loads, 1 LSLICEs
-     Net ram/C8M_c_enable_21: 6 loads, 6 LSLICEs
-     Net ram/InitDone_N_563: 1 loads, 1 LSLICEs
-     Net ram/PLLLock_N_538: 1 loads, 1 LSLICEs
-     Net ram/C8M_c_enable_19: 4 loads, 4 LSLICEs
-     Net ram/RDD_7__N_523: 4 loads, 4 LSLICEs
-     Net ram/C8M_c_enable_13: 1 loads, 1 LSLICEs
+     Net reureg/PHI2_N_556_enable_84: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_556_enable_67: 5 loads, 5 LSLICEs
+     Net PHI2_N_556_enable_78: 1 loads, 1 LSLICEs
+     Net reureg/PHI2_N_556_enable_59: 3 loads, 3 LSLICEs
+     Net reureg/PHI2_N_556_enable_22: 2 loads, 2 LSLICEs
+     Net reureg/PHI2_N_556_enable_74: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_556_enable_46: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_556_enable_68: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_556_enable_72: 5 loads, 5 LSLICEs
+     Net reureg/PHI2_N_556_enable_77: 2 loads, 2 LSLICEs
+     Net reureg/PHI2_N_556_enable_83: 2 loads, 2 LSLICEs
+     Net ram/PORDone_N_527: 1 loads, 1 LSLICEs
+     Net ram/C8M_c_enable_6: 1 loads, 1 LSLICEs
+     Net ram/C8M_c_enable_3: 1 loads, 1 LSLICEs
+     Net ram/C8M_c_enable_5: 1 loads, 1 LSLICEs
+     Net ram/RDD_7__N_530: 4 loads, 4 LSLICEs
    Number of LSRs:  9
-     Net n243: 1 loads, 1 LSLICEs
      Net DMA: 1 loads, 1 LSLICEs
-     Net n4310: 32 loads, 32 LSLICEs
-     Net RegReset: 26 loads, 26 LSLICEs
-     Net dmaseq/n3628: 1 loads, 1 LSLICEs
-     Net ram/RDOE_N_566: 1 loads, 1 LSLICEs
-     Net ram/PLLLock: 5 loads, 5 LSLICEs
-     Net ram/PHI2Start: 4 loads, 4 LSLICEs
-     Net ram/n2585: 1 loads, 1 LSLICEs
+     Net RegReset: 24 loads, 24 LSLICEs
+     Net n4067: 31 loads, 31 LSLICEs
+     Net n3429: 1 loads, 1 LSLICEs
+     Net ram/PORDone: 1 loads, 1 LSLICEs
+     Net ram/n3867: 10 loads, 10 LSLICEs
+     Net ram/n3463: 1 loads, 1 LSLICEs
+     Net ram/C8M_c_enable_6: 1 loads, 1 LSLICEs
+     Net ram/n1207: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net DMA: 53 loads
-     Net A_out_1: 38 loads
-     Net n4059: 36 loads
-     Net n4310: 32 loads
-     Net A_out_0: 31 loads
-     Net RegReset: 26 loads
+     Net DMA: 57 loads
+     Net A_out_1: 47 loads
+     Net A_out_0: 44 loads
+     Net n1437: 34 loads
+     Net n4067: 31 loads
+     Net n3865: 27 loads
+     Net S_0: 27 loads
      Net A_out_3: 25 loads
-     Net AutoloadEN: 23 loads
-     Net n4309: 23 loads
-     Net n4060: 22 loads
+     Net RegReset: 24 loads
+     Net n3833: 23 loads
 
 
 
@@ -130,22 +130,6 @@ Mapped on:  04/24/22  06:19:49
 
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-| A[9]                | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| A[10]               | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| A[7]                | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| A[11]               | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| A[12]               | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| A[13]               | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| A[14]               | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| A[15]               | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
 | D[0]                | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | D[1]                | BIDIR     | LVCMOS33  |            |
@@ -160,9 +144,25 @@ Mapped on:  04/24/22  06:19:49
 +---------------------+-----------+-----------+------------+
 | D[6]                | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| A[8]                | BIDIR     | LVCMOS33  |            |
+| A[15]               | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | D[7]                | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[14]               | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[13]               | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[12]               | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[11]               | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[10]               | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[9]                | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[8]                | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| A[7]                | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | A[6]                | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -275,16 +275,22 @@ Mapped on:  04/24/22  06:19:49
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block i2 undriven or does not drive anything - clipped.
 Block GSR_INST undriven or does not drive anything - clipped.
-Signal C8M_N_514 was merged into signal C8M_c
-Signal PHI2_N_568 was merged into signal PHI2_c
-Signal ram/n4090 was merged into signal ram/RDOE_N_566
-Signal ram/PLLLock_N_536 was merged into signal ram/PLLLock
-Signal n1225 was merged into signal ram/RDOE
-Signal VCC_net undriven or does not drive anything - clipped.
+Signal C8M_N_515 was merged into signal C8M_c
+Signal PHI2_N_556 was merged into signal PHI2_c
+Signal n1135 was merged into signal ram/RDOE
+Signal ram/n3871 was merged into signal ram/PORDone
+Signal RAMRDD_7__I_0_0/S1 undriven or does not drive anything - clipped.
+Signal RAMRDD_7__I_0_0/S0 undriven or does not drive anything - clipped.
+Signal RAMRDD_7__I_0_0/CI undriven or does not drive anything - clipped.
 Signal RAMRDD_7__I_0_7/S1 undriven or does not drive anything - clipped.
 Signal RAMRDD_7__I_0_7/S0 undriven or does not drive anything - clipped.
+Signal RAMRDD_7__I_0_8/S0 undriven or does not drive anything - clipped.
+Signal RAMRDD_7__I_0_8/CO undriven or does not drive anything - clipped.
+Signal reureg/Length_7__I_0_add_2_1/S0 undriven or does not drive anything -
+     clipped.
+Signal reureg/Length_7__I_0_add_2_1/CI undriven or does not drive anything -
+     clipped.
 Signal reureg/CAOut_7__I_0_1/S1 undriven or does not drive anything - clipped.
 Signal reureg/CAOut_7__I_0_1/S0 undriven or does not drive anything - clipped.
 Signal reureg/CAOut_7__I_0_1/CI undriven or does not drive anything - clipped.
@@ -293,15 +299,27 @@ Signal reureg/CAOut_15__I_0_1/S1 undriven or does not drive anything - clipped.
 Signal reureg/CAOut_15__I_0_1/S0 undriven or does not drive anything - clipped.
 Signal reureg/CAOut_15__I_0_1/CI undriven or does not drive anything - clipped.
 Signal reureg/CAOut_15__I_0_9/CO undriven or does not drive anything - clipped.
+
 Signal reureg/REUAOut_7__I_0_1/S1 undriven or does not drive anything - clipped.
      
 Signal reureg/REUAOut_7__I_0_1/S0 undriven or does not drive anything - clipped.
      
 Signal reureg/REUAOut_7__I_0_1/CI undriven or does not drive anything - clipped.
      
-
 Signal reureg/REUAOut_7__I_0_9/CO undriven or does not drive anything - clipped.
      
+Signal reureg/REUAOut_15__I_0_1/S1 undriven or does not drive anything -
+     clipped.
+Signal reureg/REUAOut_15__I_0_1/S0 undriven or does not drive anything -
+     clipped.
+Signal reureg/REUAOut_15__I_0_1/CI undriven or does not drive anything -
+     clipped.
+Signal reureg/REUAOut_15__I_0_9/CO undriven or does not drive anything -
+     clipped.
+Signal reureg/Length_7__I_0_add_2_9/S1 undriven or does not drive anything -
+     clipped.
+Signal reureg/Length_7__I_0_add_2_9/CO undriven or does not drive anything -
+     clipped.
 Signal reureg/Length_15__I_0_add_2_1/S0 undriven or does not drive anything -
      clipped.
 Signal reureg/Length_15__I_0_add_2_1/CI undriven or does not drive anything -
@@ -310,32 +328,10 @@ Signal reureg/Length_15__I_0_add_2_9/S1 undriven or does not drive anything -
      clipped.
 Signal reureg/Length_15__I_0_add_2_9/CO undriven or does not drive anything -
      clipped.
-Signal reureg/Length_7__I_0_add_2_1/S0 undriven or does not drive anything -
-     clipped.
-Signal reureg/Length_7__I_0_add_2_1/CI undriven or does not drive anything -
-     clipped.
-Signal reureg/REUAOut_15__I_0_9/CO undriven or does not drive anything -
-     clipped.
-Signal reureg/Length_7__I_0_add_2_9/S1 undriven or does not drive anything -
-     clipped.
-Signal reureg/Length_7__I_0_add_2_9/CO undriven or does not drive anything -
-     clipped.
-Signal reureg/REUAOut_15__I_0_1/S1 undriven or does not drive anything -
-     clipped.
-Signal reureg/REUAOut_15__I_0_1/S0 undriven or does not drive anything -
-     clipped.
-Signal reureg/REUAOut_15__I_0_1/CI undriven or does not drive anything -
-     clipped.
-Signal RAMRDD_7__I_0_0/S1 undriven or does not drive anything - clipped.
-Signal RAMRDD_7__I_0_0/S0 undriven or does not drive anything - clipped.
-Signal RAMRDD_7__I_0_0/CI undriven or does not drive anything - clipped.
-Signal RAMRDD_7__I_0_8/S0 undriven or does not drive anything - clipped.
-Signal RAMRDD_7__I_0_8/CO undriven or does not drive anything - clipped.
-Block i3749 was optimized away.
-Block i3750 was optimized away.
-Block ram/i914_1_lut_rep_87 was optimized away.
-Block ram/PLLLock_I_0_1_lut was optimized away.
-Block ram/i888_1_lut was optimized away.
+Block i3530 was optimized away.
+Block i3531 was optimized away.
+Block ram/i814_1_lut was optimized away.
+Block ram/i863_1_lut_rep_88 was optimized away.
 
      
 
@@ -346,8 +342,12 @@ Block ram/i888_1_lut was optimized away.
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 38 MB
+   Peak Memory Usage: 37 MB
         
+
+
+
+
 
 
 

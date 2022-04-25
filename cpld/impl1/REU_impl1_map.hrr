@@ -3,46 +3,46 @@ Report for cell REU
    Instance path: REU
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     181.00        100.0
-                                  LUT4	     286.00        100.0
+                                  SLIC	     185.00        100.0
+                                  LUT4	     297.00        100.0
                                  IOBUF	         69        100.0
-                                PFUREG	        189        100.0
+                                PFUREG	        175        100.0
                                 RIPPLE	         33        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                                REUReg	          1        63.5
-                                   RAM	          1        15.1
-                                  Glue	          1         3.3
-                                DMASeq	          1        11.0
+                                REUReg	          1        64.5
+                                   RAM	          1        13.7
+                                  Glue	          1         4.6
+                                DMASeq	          1         8.2
 ---------------------------------------------------
 Report for cell REUReg
    Instance path: REU/reureg
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     115.00        63.5
-                                  LUT4	     172.00        60.1
-                                PFUREG	        123        65.1
+                                  SLIC	     119.32        64.5
+                                  LUT4	     179.67        60.5
+                                PFUREG	        118        67.4
                                 RIPPLE	         30        90.9
 ---------------------------------------------------
 Report for cell DMASeq
    Instance path: REU/dmaseq
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      19.83        11.0
-                                  LUT4	      42.00        14.7
-                                PFUREG	          9         4.8
+                                  SLIC	      15.23         8.2
+                                  LUT4	      32.00        10.8
+                                PFUREG	          9         5.1
 ---------------------------------------------------
 Report for cell Glue
    Instance path: REU/glue
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       6.00         3.3
-                                  LUT4	      15.00         5.2
+                                  SLIC	       8.53         4.6
+                                  LUT4	      20.00         6.7
 ---------------------------------------------------
 Report for cell RAM
    Instance path: REU/ram
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      27.33        15.1
-                                  LUT4	      33.00        11.5
-                                PFUREG	         57        30.2
+                                  SLIC	      25.42        13.7
+                                  LUT4	      30.00        10.1
+                                PFUREG	         48        27.4

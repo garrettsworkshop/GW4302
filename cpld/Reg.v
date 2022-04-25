@@ -94,7 +94,7 @@ always @(negedge PHI2) begin
 		Fault <= 0;
 	end else if (XferEnd || VerifyErr) begin
 		IntPending <= 1;
-		EndOfBlock <= EndOfBlock || XferEnd;
+		EndOfBlock <= EndOfBlock || Length1;
 		Fault <= Fault || VerifyErr;
 	end
 end
@@ -130,7 +130,7 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h2) begin
 		CA[7:0] <= WRD[7:0];
 		CAWritten[7:0] <= WRD[7:0];
-	end else if (Autoload) begin
+	end else if (Autoload || (RegWR && A[4:0]==5'h3)) begin
 		CA[7:0] <= CAWritten[7:0];
 	end else if (IncCA) begin
 		CA[7:0] <= CA[7:0]+8'h01;
@@ -144,7 +144,7 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h3) begin
 		CA[15:8] <= WRD[7:0];
 		CAWritten[15:8] <= WRD[7:0];
-	end else if (Autoload) begin
+	end else if (Autoload || (RegWR && A[4:0]==5'h2)) begin
 		CA[15:8] <= CAWritten[15:8];
 	end else if (IncCA && CA[7:0]==8'hFF) begin
 		CA[15:8] <= CA[15:8]+8'h01;
@@ -159,7 +159,7 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h4) begin
 		REUA[7:0] <= WRD[7:0];
 		REUAWritten[7:0] <= WRD[7:0];
-	end else if (Autoload) begin
+	end else if (Autoload || (RegWR && A[4:0]==5'h5)) begin
 		REUA[7:0] <= REUAWritten[7:0];
 	end else if (IncREUA) begin
 		REUA[7:0] <= REUA[7:0]+8'h01;
@@ -174,7 +174,7 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h5) begin
 		REUA[15:8] <= WRD[7:0];
 		REUAWritten[15:8] <= WRD[7:0];
-	end else if (Autoload) begin
+	end else if (Autoload || (RegWR && A[4:0]==5'h4)) begin
 		REUA[15:8] <= REUAWritten[15:8];
 	end else if (IncREUA && REUA[7:0]==8'hFF) begin
 		REUA[15:8] <= REUA[15:8]+8'h01;
@@ -187,7 +187,8 @@ always @(negedge PHI2) begin
 		REUA[23:16] <= 0;
 		REUAWritten[18:16] <= 0;
 	end else if (RegWR && A[4:0]==5'h6) begin
-		REUA[23:16] <= WRD[7:0];
+		//REUA[23:16] <= WRD[7:0];
+		REUA[18:16] <= WRD[2:0];
 		REUAWritten[18:16] <= WRD[2:0];
 	end else if (Autoload) begin
 		REUA[18:16] <= REUAWritten[18:16];
@@ -204,7 +205,7 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h7) begin
 		Length[7:0] <= WRD[7:0];
 		LengthWritten[7:0] <= WRD[7:0];
-	end else if (Autoload) begin
+	end else if (Autoload || (RegWR && A[4:0]==5'h8)) begin
 		Length[7:0] <= LengthWritten[7:0];
 	end else if (DecLen && !Length1) begin
 		Length[7:0] <= Length[7:0]-8'h01;
@@ -219,7 +220,7 @@ always @(negedge PHI2) begin
 	end else if (RegWR && A[4:0]==5'h8) begin
 		Length[15:8] <= WRD[7:0];
 		LengthWritten[15:8] <= WRD[7:0];
-	end else if (Autoload) begin
+	end else if (Autoload || (RegWR && A[4:0]==5'h7)) begin
 		Length[15:8] <= LengthWritten[15:8];
 	end else if (DecLen && Length[7:0]==8'h00) begin
 		Length[15:8] <= Length[15:8]-8'h01;
