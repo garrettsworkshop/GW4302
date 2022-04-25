@@ -30,50 +30,42 @@ assign RCLK = CP1 ^ CP2;
 
 /* Reset synchronization */
 reg [4:0] nRESETr = 0;
+reg PORDone = 0;
+always @(posedge C8M) nRESETr[4:0] <= {nRESETr[3:0], nRESET};
 always @(posedge C8M) begin
-	nRESETr[4:0] <= {nRESETr[3:0], nRESET};
+	if (nRESETr[4] && nRESETr[3] && nRESETr[2] && nRESETr[1]) PORDone <= 1;
 end
 
-/* PHI2 edge detect control */
+/* PHI2 edge detector */
 reg [1:0] PHI2r = 0;
+always @(negedge C8M) PHI2r[0] <= PHI2;
+always @(posedge C8M) PHI2r[1] <= PHI2r[0];
 wire PHI2Fall = PHI2r[1] && !PHI2r[0];
-always @(negedge C8M) begin PHI2r[0] <= PHI2; end
-always @(posedge C8M) begin PHI2r[1] <= PHI2r[0]; end
 
 /* PHI2 cycle substate & PLL locked bit */
-reg PLLLock = 0;
 reg [2:0] S = 0;
-wire PHI2Start = S==0 && PHI2Fall;
 always @(posedge C8M) begin
-	if (PHI2Start) S <= 3'h1;
+	if (S==0 && PHI2Fall && PORDone) S <= 3'h1;
 	else if (S!=0) S <= S+3'h1;
-end
-always @(negedge C8M) begin
-	if (nRESETr[4] && nRESETr[3] && 
-		nRESETr[2] && nRESETr[1] && 
-		S[2:0]==3'h7) PLLLock <= 1;
 end
 
 /* Command gating */
 reg InitDone = 0;
 wire RDCMDg = RDCMD && InitDone;
 wire WRCMDg = WRCMD && !RDCMD && InitDone;
-wire INITCMDg = !InitDone;
-always @(negedge C8M) begin
-	if (S[2:0]==3'h7 && PLLLock && INITCMDg) InitDone <= 1;
-end
+always @(posedge C8M) if (S[2:0]==3'h7) InitDone <= 1;
 
 /* SDRAM command issue */
 always @(posedge C8M) begin
-	if (!PLLLock) begin // NOP CKE
-		nCS <= 1;
-		nRAS <= 1;
-		nCAS <= 1;
-		nRWE <= 1;
-		CKE <= 1;
-	end else case (S[2:0])
+	case (S[2:0])
 		0: begin
-			if (RDCMDg || WRCMDg) begin // ACT
+			if (!InitDone) begin // NOP CKE
+				nCS <= 1;
+				nRAS <= 1;
+				nCAS <= 1;
+				nRWE <= 1;
+				CKE <= 1;
+			end else if (RDCMDg || WRCMDg) begin // ACT
 				nCS <= 0;
 				nRAS <= 0;
 				nCAS <= 1;
@@ -84,7 +76,7 @@ always @(posedge C8M) begin
 				nRAS <= 1;
 				nCAS <= 1;
 				nRWE <= 1;
-				CKE <= 0;
+				CKE <= 1; //FIXME
 			end
 		end 1: begin
 			if (RDCMDg) begin // RD
@@ -104,7 +96,7 @@ always @(posedge C8M) begin
 				nRAS <= 1;
 				nCAS <= 1;
 				nRWE <= 1;
-				CKE <= 0;
+				CKE <= 1; //FIXME
 			end
 		end 2: begin // NOP CKE
 			nCS <= 1;
@@ -119,7 +111,7 @@ always @(posedge C8M) begin
 			nRWE <= 0;
 			CKE <= 1;
 		end 4: begin
-			if (INITCMDg) begin // LDM
+			if (!InitDone) begin // LDM
 				nCS <= 0;
 				nRAS <= 0;
 				nCAS <= 0;
@@ -132,18 +124,18 @@ always @(posedge C8M) begin
 				nRWE <= 1;
 				CKE <= 1;
 			end
-		end 5: begin // NOP CKD
+		end 5: begin
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
 			nRWE <= 1;
-			CKE <= 0;
+			CKE <= 1; //FIXME
 		end 6: begin // NOP CKD
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
 			nRWE <= 1;
-			CKE <= 0;
+			CKE <= 1; //FIXME
 		end 7: begin // NOP CKE
 			nCS <= 1;
 			nRAS <= 1;
@@ -209,7 +201,7 @@ always @(negedge PHI2) WRDr[7:0] <= WRD[7:0];
 
 /* RAM data bus control */
 reg RDOE = 0;
-always @(posedge C8M) RDOE <= S==1;
+always @(posedge C8M) RDOE <= S==1 && WRCMDg;
 assign RD[7:0] = RDOE ? WRDr[7:0] : 8'bZ;
 
 endmodule
