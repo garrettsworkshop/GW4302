@@ -248,6 +248,7 @@ always @(negedge PHI2) begin
 	else if (RegWR && A[4:0]==5'hA) IncMode[1:0] <= WRD[7:6];
 end
 
+/* Execute output control */
 assign Execute = FF00DecodeEN ? 
 	(ExecuteEN && FF00WR) :
 	(RegWR && A[4:0]==5'h1 && WRD[7] && WRD[4]);
