@@ -10,16 +10,19 @@ module REUReg(
 	input [7:0] WRD,
 	output [7:0] RDD,
 	/* Increment, etc. Control */
-	input NextCA,
-	input NextREUA,
-	input VerifyErr,
+	input IncCA,
+	input DecLen,
+	input IncREUA,
 	input XferEnd,
+	input SetEndOfBlock,
+	input SetVerifyErr,
 	/* Register Outputs */
 	output IRQOut,
 	output [1:0] XferTypeOut,
 	output [23:0] REUAOut,
 	output [15:0] CAOut,
 	output Length1,
+	output Length2,
 	output Execute);
 
 /* REU Registers - 0x0 Status Register */
@@ -49,7 +52,8 @@ assign REUAOut = REUA;
 /* REU Registers - 0x7, 0x8 Transfer Length */
 reg [15:0] Length;
 reg [15:0] LengthWritten;
-assign Length1 = Length==1;
+assign Length1 = Length[15:0]==16'h01;
+assign Length2 = Length[15:0]==16'h02;
 
 /* REU Registers - 0x9 Interrupt Mask Register */
 reg IntEnable;
@@ -58,9 +62,9 @@ reg VerifyErrMask;
 
 /* REU Registers - 0xA Address Control */
 reg [1:0] IncMode;
-wire IncREUA = !IncMode[0] && NextREUA;
-wire IncCA = !IncMode[1] && NextCA;
-wire DecLen = NextCA;
+wire IncREUAg = !IncMode[0] && IncREUA;
+wire IncCAg = !IncMode[1] && IncCA;
+wire DecLeng = DecLen;
 
 /* Data Output Mux */
 assign RDD[7:0] = 
@@ -92,10 +96,10 @@ always @(negedge PHI2) begin
 		IntPending <= 0;
 		EndOfBlock <= 0;
 		Fault <= 0;
-	end else if (XferEnd || VerifyErr) begin
+	end else if (SetEndOfBlock || SetVerifyErr) begin
 		IntPending <= 1;
-		EndOfBlock <= EndOfBlock || Length1;
-		Fault <= Fault || VerifyErr;
+		EndOfBlock <= EndOfBlock || SetEndOfBlock;
+		Fault <= Fault || SetVerifyErr;
 	end
 end
 
@@ -116,7 +120,7 @@ always @(negedge PHI2) begin
 		FF00DecodeEN <= ~WRD[4];
 		DF01Reserved32[3:2] <=  WRD[3:2];
 		XferType[1:0] <= WRD[1:0];
-	end else if (XferEnd || VerifyErr) begin
+	end else if (XferEnd) begin
 		ExecuteEN <= 0;
 		FF00DecodeEN <= 0;
 	end
@@ -132,7 +136,7 @@ always @(negedge PHI2) begin
 		CAWritten[7:0] <= WRD[7:0];
 	end else if (Autoload || (RegWR && A[4:0]==5'h3)) begin
 		CA[7:0] <= CAWritten[7:0];
-	end else if (IncCA) begin
+	end else if (IncCAg) begin
 		CA[7:0] <= CA[7:0]+8'h01;
 	end
 end 
@@ -146,7 +150,7 @@ always @(negedge PHI2) begin
 		CAWritten[15:8] <= WRD[7:0];
 	end else if (Autoload || (RegWR && A[4:0]==5'h2)) begin
 		CA[15:8] <= CAWritten[15:8];
-	end else if (IncCA && CA[7:0]==8'hFF) begin
+	end else if (IncCAg && CA[7:0]==8'hFF) begin
 		CA[15:8] <= CA[15:8]+8'h01;
 	end
 end
@@ -161,7 +165,7 @@ always @(negedge PHI2) begin
 		REUAWritten[7:0] <= WRD[7:0];
 	end else if (Autoload || (RegWR && A[4:0]==5'h5)) begin
 		REUA[7:0] <= REUAWritten[7:0];
-	end else if (IncREUA) begin
+	end else if (IncREUAg) begin
 		REUA[7:0] <= REUA[7:0]+8'h01;
 	end
 end
@@ -176,7 +180,7 @@ always @(negedge PHI2) begin
 		REUAWritten[15:8] <= WRD[7:0];
 	end else if (Autoload || (RegWR && A[4:0]==5'h4)) begin
 		REUA[15:8] <= REUAWritten[15:8];
-	end else if (IncREUA && REUA[7:0]==8'hFF) begin
+	end else if (IncREUAg && REUA[7:0]==8'hFF) begin
 		REUA[15:8] <= REUA[15:8]+8'h01;
 	end
 end
@@ -192,7 +196,7 @@ always @(negedge PHI2) begin
 		REUAWritten[18:16] <= WRD[2:0];
 	end else if (Autoload) begin
 		REUA[18:16] <= REUAWritten[18:16];
-	end else if (IncREUA && REUA[15:0]==16'hFFFF) begin
+	end else if (IncREUAg && REUA[15:0]==16'hFFFF) begin
 		REUA[18:16] <= REUA[18:16]+3'h1;
 	end
 end
@@ -207,7 +211,7 @@ always @(negedge PHI2) begin
 		LengthWritten[7:0] <= WRD[7:0];
 	end else if (Autoload || (RegWR && A[4:0]==5'h8)) begin
 		Length[7:0] <= LengthWritten[7:0];
-	end else if (DecLen && !Length1) begin
+	end else if (DecLeng) begin
 		Length[7:0] <= Length[7:0]-8'h01;
 	end
 end
@@ -222,7 +226,7 @@ always @(negedge PHI2) begin
 		LengthWritten[15:8] <= WRD[7:0];
 	end else if (Autoload || (RegWR && A[4:0]==5'h7)) begin
 		Length[15:8] <= LengthWritten[15:8];
-	end else if (DecLen && Length[7:0]==8'h00) begin
+	end else if (DecLeng && Length[7:0]==8'h00) begin
 		Length[15:8] <= Length[15:8]-8'h01;
 	end
 end
@@ -241,7 +245,7 @@ always @(negedge PHI2) begin
 end
 assign IRQOut = IntEnable && 
 	((EndOfBlock && EndOfBlockMask) || 
-	 (VerifyErr && VerifyErrMask));
+	 (Fault && VerifyErrMask));
 
 /* Address control register (0xA) control */
 always @(negedge PHI2) begin

@@ -37,7 +37,7 @@ module REU(
 	wire [1:0] XferType;
 	wire [23:0] REUA;
 	wire [15:0] CA;
-	wire Length1;
+	wire Length1, Length2;
 	wire [7:0] RegRDD;
 	
 	/* RAM Outputs */
@@ -47,7 +47,7 @@ module REU(
 	wire DMA;
 	wire RAMRD, RAMWR;
 	wire RegReset;
-	wire NextCA, NextREUA, VerifyErr, XferEnd;
+	wire IncCA, DecLen, IncREUA, XferEnd, SetEndOfBlock, SetVerifyErr;
 	
 	/* Glue outputs */
 	wire AOE, DOE;
@@ -61,9 +61,9 @@ module REU(
 		RegRD, RegWR, !nWE && A[15:0]==16'hFF00, 
 		A[4:0], D[7:0], RegRDD[7:0],
 		/* Increment, etc. Control */
-		NextCA, NextREUA, VerifyErr, XferEnd,
+		IncCA, DecLen, IncREUA, XferEnd, SetEndOfBlock, SetVerifyErr,
 		/* Register Outputs */
-		IRQ, XferType[1:0], REUA[23:0], CA[15:0], Length1,
+		IRQ, XferType[1:0], REUA[23:0], CA[15:0], Length1, Length2,
 		/* Execute output to sequencer */
 		Execute);
 	
@@ -91,9 +91,9 @@ module REU(
 		/* Reset Output to Registers */
 		RegReset,
 		/* Transfer Inputs */
-		RAMRDD[7:0]==D[7:0], Execute, XferType[1:0], Length1,
+		RAMRDD[7:0]==D[7:0], Execute, XferType[1:0], Length1, Length2,
 		/* Register Control Outputs */
-		NextCA, NextREUA, XferEnd, VerifyErr);
+		IncCA, DecLen, IncREUA, XferEnd, SetEndOfBlock, SetVerifyErr);
 		
 	Glue glue(
 		/* 6502 Bus */

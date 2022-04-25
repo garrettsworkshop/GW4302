@@ -17,12 +17,15 @@ module DMASeq(
 	input Execute,
 	input [1:0] XferType,
 	input Length1,
+	input Length2,
 	/* Register Control Outputs */
-	output NextCA,
-	output NextREUA,
+	output IncCA,
+	output DecLen,
+	output IncREUA,
 	output XferEnd,
-	output VerifyErr);
-	
+	output SetEndOfBlock,
+	output SetVerifyErr);
+
 wire XferC64REU = XferType[1:0]==2'b00;
 wire XferREUC64 = XferType[1:0]==2'b01;
 wire XferSwap = XferType[1:0]==2'b10;
@@ -103,32 +106,40 @@ always @(negedge PHI2) begin
 	end
 end
 
-reg DMAr, BAr;
+reg DMAr, BAr, Equalr;
 reg [2:1] nRESETr;
 always @(negedge PHI2) begin
 	DMAr <= DMA;
 	BAr <= BA;
+	Equalr <= Equal;
 	nRESETr[2:1] <= {nRESETr[1], nRESET};
 end
 assign RegReset = (!nRESETr[1] && !DMA) || (!nRESETr[2] && !DMA && DMAr);
 
-assign NextCA =
+assign IncCA =
 	// DMA must be active and bus must be available.
 	// Don't NextCA on alternating swap cycles 
 	DMA && BA && (!XferSwap || SwapState);
 	
-assign NextREUA = 
+assign DecLen =
+	// DMA must be active and bus must be available.
+	// Don't NextCA on alternating swap cycles 
+	DMA && BA && (!XferSwap || SwapState) && !Length1;
+	
+assign IncREUA = 
 	XferC64REU ? DMAr && BAr : // Delay advancing REUA during C64->REU xfer
 	XferREUC64 ? DMA && BA :
 	XferSwap ? DMA && BA && SwapState : // Only advance after 2nd swap state
 	XferVerify ? DMA && BA : 1'b0;
 	
-assign XferEnd = DMA && (!nRESETr[1] || (BA && 
-	(XferC64REU ? Length1 : 
-	 XferREUC64 ? Length1 : 
-	 XferSwap ?   Length1 && SwapState : 
-	 XferVerify ? Length1 || !Equal : 1'b0)));
-			
-assign VerifyErr = XferEnd && XferVerify && !Equal;
-	
+assign XferEnd = (DMA && !nRESETr[1]) || 
+	(XferC64REU ? DMA && BA && Length1 : 
+	 XferREUC64 ? DMA && BA && Length1 : 
+	 XferSwap ?   DMA && BA && Length1 && SwapState : 
+	 XferVerify ? (DMA && BA && Length1) || (DMAr && BAr && !Equalr): 1'b0);
+
+assign SetEndOfBlock = DecLen && Length2;
+
+assign SetVerifyErr = XferVerify && DMA && BA && !Equal;
+		
 endmodule

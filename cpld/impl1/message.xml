@@ -60,18 +60,18 @@
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(100): </Dynamic>
-            <Dynamic>\reureg/nSize_591</Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(104): </Dynamic>
+            <Dynamic>\reureg/nSize_589</Dynamic>
             <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
-            <Navigation>100</Navigation>
+            <Navigation>104</Navigation>
         </Message>
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(198): </Dynamic>
-            <Dynamic>\reureg/REUA[23]_662</Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(202): </Dynamic>
+            <Dynamic>\reureg/REUA[23]_660</Dynamic>
             <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
-            <Navigation>198</Navigation>
+            <Navigation>202</Navigation>
         </Message>
         <Message>
             <ID>35001747</ID>
@@ -83,7 +83,7 @@
             <ID>35935013</ID>
             <Severity>Warning</Severity>
             <Dynamic>c:/users/garre/repos/gw4302/cpld/ram.v(180): </Dynamic>
-            <Dynamic>\ram/RBA_i2</Dynamic>
+            <Dynamic>\ram/RA_i12</Dynamic>
             <Navigation>c:/users/garre/repos/gw4302/cpld/ram.v</Navigation>
             <Navigation>180</Navigation>
         </Message>
