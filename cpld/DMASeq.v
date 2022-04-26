@@ -119,18 +119,18 @@ assign RegReset = (!nRESETr[1] && !DMA) || (!nRESETr[2] && !DMA && DMAr);
 assign IncCA =
 	// DMA must be active and bus must be available.
 	// Don't NextCA on alternating swap cycles 
-	DMA && BA && (!XferSwap || SwapState);
+	DMA && BA && (!XferSwap || SwapState) && !(DMAr && BAr && !Equalr);
 	
 assign DecLen =
 	// DMA must be active and bus must be available.
 	// Don't NextCA on alternating swap cycles 
-	DMA && BA && (!XferSwap || SwapState) && !Length1;
+	DMA && BA && (!XferSwap || SwapState) && !(DMAr && BAr && !Equalr) && !Length1;
 	
 assign IncREUA = 
 	XferC64REU ? DMAr && BAr : // Delay advancing REUA during C64->REU xfer
 	XferREUC64 ? DMA && BA :
-	XferSwap ? DMA && BA && SwapState : // Only advance after 2nd swap state
-	XferVerify ? DMA && BA : 1'b0;
+	XferSwap ?   DMA && BA && SwapState : // Only advance after 2nd swap state
+	XferVerify ? DMA && BA && !(DMAr && BAr && !Equalr) : 1'b0;
 	
 assign XferEnd = (DMA && !nRESETr[1]) || 
 	(XferC64REU ? DMA && BA && Length1 : 
