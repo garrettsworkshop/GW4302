@@ -12,72 +12,56 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reu.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/reu.v(1): </Dynamic>
             <Dynamic>REU</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/reu.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/reu.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/reg.v(1): </Dynamic>
             <Dynamic>REUReg</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/reg.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/ram.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/ram.v(1): </Dynamic>
             <Dynamic>RAM</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/ram.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/ram.v</Navigation>
             <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35935014</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/ram.v(135): </Dynamic>
-            <Dynamic>CKE_114</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/ram.v</Navigation>
-            <Navigation>135</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/dmaseq.v(1): </Dynamic>
+            <Dynamic>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1601): </Dynamic>
+            <Dynamic>ODDRXE</Dynamic>
+            <Navigation>C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1601</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/dmaseq.v(1): </Dynamic>
             <Dynamic>DMASeq</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/dmaseq.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/dmaseq.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/glue.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/glue.v(1): </Dynamic>
             <Dynamic>Glue</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/glue.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/glue.v</Navigation>
             <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(198): </Dynamic>
-            <Dynamic>\reureg/REUA[23]_650</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
-            <Navigation>198</Navigation>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>0</Dynamic>
+            <Dynamic>12</Dynamic>
             <Dynamic>\ram/RA</Dynamic>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/ram.v(180): </Dynamic>
-            <Dynamic>\ram/RA_i12</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/ram.v</Navigation>
-            <Navigation>180</Navigation>
         </Message>
     </Task>
 </BaliMessageLog>

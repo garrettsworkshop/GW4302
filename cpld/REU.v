@@ -112,7 +112,8 @@ module REU(
 		/* DMA command inputs */
 		DMA, nWEDMA);
 	
-	assign D[7:0] = DOE ? DMA ? RAMRDD[7:0] : RegRDD[7:0] : 8'bZ;
+	wire [7:0] Dout = DMA ? RAMRDD[7:0] : RegRDD[7:0];
+	assign D[7:0] = DOE ? Dout[7:0] : 8'bZ;
 	
 	assign A[15:0] = AOE ? CA[15:0] : 16'bZ;
 	

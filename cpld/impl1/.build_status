@@ -5,42 +5,41 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="0" update_result="2" update_time="1650959833"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1650959836"/>
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1650993690"/>
+            <Task name="Jedecgen" build_result="0" update_result="2" update_time="1650993690"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1650959819">
-            <Task name="Map" build_result="2" update_result="0" update_time="1650959819"/>
-            <Task name="MapTrace" build_result="0" update_result="2" update_time="1650959819"/>
+        <Milestone name="Map" build_result="0" build_time="1650993693">
+            <Task name="Map" build_result="0" update_result="2" update_time="1650993693"/>
+            <Task name="MapTrace" build_result="0" update_result="2" update_time="1650993693"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1650959833">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1650959833"/>
-            <Task name="PARTrace" build_result="0" update_result="2" update_time="1650959833"/>
-            <Task name="IOTiming" build_result="0" update_result="2" update_time="1650959833"/>
+        <Milestone name="PAR" build_result="0" build_time="1650993693">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1650993693"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1650993693"/>
+            <Task name="IOTiming" build_result="0" update_result="2" update_time="1650993693"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1650959818">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1650959818"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1650959836"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1650993673">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1650993673"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1650993673"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="2" update_result="0" update_time="1650959738"/>
-            <Task name="BKM" build_result="0" update_result="2" update_time="1650959738"/>
+            <Task name="HDLE" build_result="0" update_result="2" update_time="1650993673"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1650993673"/>
             <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/REU_impl1_map.vdb" last_build_time="1650959819" last_build_size="106133"/>
-        <Report name="REU_impl1.bgn" last_build_time="1650959836" last_build_size="4300"/>
+        <Report name=".vdbs/REU_impl1_map.vdb" last_build_time="1650993657" last_build_size="106399"/>
+        <Report name="REU_impl1.bgn" last_build_time="1650993679" last_build_size="4294"/>
         <Report name="REU_impl1.bit" last_build_time="1650864007" last_build_size="8096"/>
-        <Report name="REU_impl1.ior" last_build_time="1650697823" last_build_size="8488"/>
-        <Report name="REU_impl1.jed" last_build_time="1650959836" last_build_size="177209"/>
-        <Report name="REU_impl1.lsedata" last_build_time="1650959816" last_build_size="508014"/>
-        <Report name="REU_impl1.ncd" last_build_time="1650959833" last_build_size="433635"/>
-        <Report name="REU_impl1.ngd" last_build_time="1650959818" last_build_size="343429"/>
+        <Report name="REU_impl1.ior" last_build_time="1650993676" last_build_size="8424"/>
+        <Report name="REU_impl1.jed" last_build_time="1650993679" last_build_size="177207"/>
+        <Report name="REU_impl1.lsedata" last_build_time="1650993654" last_build_size="517127"/>
+        <Report name="REU_impl1.ncd" last_build_time="1650993673" last_build_size="435873"/>
+        <Report name="REU_impl1.ngd" last_build_time="1650993656" last_build_size="346742"/>
         <Report name="REU_impl1.tw1" last_build_time="1650697868" last_build_size="13818"/>
-        <Report name="REU_impl1.twr" last_build_time="1650697821" last_build_size="87460"/>
-        <Report name="REU_impl1_map.ncd" last_build_time="1650959819" last_build_size="293345"/>
+        <Report name="REU_impl1.twr" last_build_time="1650993674" last_build_size="85439"/>
+        <Report name="REU_impl1_map.ncd" last_build_time="1650993657" last_build_size="295407"/>
     </Strategy>
 </BuildStatus>
-                                      

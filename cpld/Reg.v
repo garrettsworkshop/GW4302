@@ -1,29 +1,29 @@
 module REUReg(
 	/* Clock & Reset */
-	input PHI2,
-	input Reset,
+	input PHI2,				// C64 PHI2 clock input
+	input Reset,			// Register reset signal gated by DMA sequencer
 	/* Register Read/Write Interface */
-	input RegRD,
-	input RegWR,
-	input FF00WR,
-	input [4:0] A,
-	input [7:0] WRD,
-	output [7:0] RDD,
+	input RegRD,			// REU read select signal on C64 bus
+	input RegWR,			// REU write select signal on C64 bus
+	input FF00WR,			// 0xFF00 write decode on C64 bus
+	input [4:0] A,			// C64 A[4:0] used as register select
+	input [7:0] WRD,		// Write data from C64
+	output [7:0] RDD,		// Read data to C64
 	/* Increment, etc. Control */
-	input IncCA,
-	input DecLen,
-	input IncREUA,
-	input XferEnd,
-	input SetEndOfBlock,
-	input SetVerifyErr,
+	input IncCA,			// Increment C64 address signal from DMA sequencer
+	input DecLen,			// Decrement length signal from DMA sequencer
+	input IncREUA,			// Increment REU address signal from DMA sequencer
+	input XferEnd,			// Transfer end signal from DMA sequencer
+	input SetEndOfBlock,	// Set end of block signal from DMA sequencer
+	input SetVerifyErr,		// Set fault/verify err. signal from DMA sequencer
 	/* Register Outputs */
-	output IRQOut,
-	output [1:0] XferTypeOut,
-	output [23:0] REUAOut,
-	output [15:0] CAOut,
-	output Length1,
-	output Length2,
-	output Execute);
+	output IRQOut,			// IRQ output to 6510
+	output [1:0] XferTypeOut,	// REU transfer type register output (bypassed) to DMA sequencer
+	output [23:0] REUAOut,		// REU address register output to SDRAM ctrl.
+	output [15:0] CAOut,		// C64 address register output to C64 bus
+	output Length1,				// Transfer length == 1 indication to DMA sequencer
+	output Length2,				// Transfer length == 1 indication to DMA sequencer
+	output Execute);			// Execute signal to DMA sequencer
 
 /* REU Registers - 0x0 Status Register */
 reg IntPending;
@@ -121,6 +121,9 @@ always @(negedge PHI2) begin
 		FF00DecodeEN <= 0;
 	end
 end
+// XferType bypassing
+// Usually output XferType as stored in registers
+// But during write to 0xDF01, substitute corresponding bits of write data
 assign XferTypeOut[1:0] = (DF01WR) ? WRD[1:0] : XferType[1:0];
 
 /* Commodore address register lo (0x2) control */
@@ -187,7 +190,7 @@ always @(negedge PHI2) begin
 		REUA[23:16] <= 0;
 		REUAWritten[18:16] <= 0;
 	end else if (RegWR && A[4:0]==5'h6) begin
-		//REUA[23:16] <= WRD[7:0];
+		//REUA[23:19] <= WRD[7:3];
 		REUA[18:16] <= WRD[2:0];
 		REUAWritten[18:16] <= WRD[2:0];
 	end else if (Autoload) begin
@@ -250,8 +253,12 @@ always @(negedge PHI2) begin
 end
 
 /* Execute output control */
-assign Execute = FF00DecodeEN ? 
-	(ExecuteEN && FF00WR) :
+assign Execute = 
+	// If FF00 decode enabled, execute if
+	// execute bit set and write to FF00
+	(FF00DecodeEN && ExecuteEN && FF00WR) ||
+	// Otherwise if writing to 0xDF01, execute if
+	// setting execute and FF00 decode disable bits
 	(RegWR && A[4:0]==5'h1 && WRD[7] && WRD[4]);
 
 endmodule
