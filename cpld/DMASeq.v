@@ -138,7 +138,7 @@ assign XferEnd = (DMA && !nRESETr[1]) ||
 	 XferSwap ?   DMA && BA && Length1 && SwapState : 
 	 XferVerify ? (DMA && BA && Length1) || (DMAr && BAr && !Equalr): 1'b0);
 
-assign SetEndOfBlock = DecLen && Length2;
+assign SetEndOfBlock = (DecLen && Length2) || (DMA && Length1);
 
 assign SetVerifyErr = XferVerify && DMA && BA && !Equal;
 		

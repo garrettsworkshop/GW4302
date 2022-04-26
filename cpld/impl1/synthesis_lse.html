@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Apr 26 03:05:17 2022
+Tue Apr 26 03:56:56 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
@@ -136,10 +136,10 @@ FD1S3JX => 3
 GSR => 1
 IB => 6
 INV => 2
-L6MUX21 => 5
-LUT4 => 301
+L6MUX21 => 7
+LUT4 => 299
 OB => 31
-PFUMX => 21
+PFUMX => 22
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -154,28 +154,28 @@ Number of Clocks: 2
 Clock Enable Nets
 Number of Clock Enables: 24
 Top 10 highest fanout Clock Enables:
-  Net : ram/S_2, loads : 10
+  Net : ram/S_2, loads : 9
   Net : reureg/PHI2_N_543_enable_43, loads : 9
-  Net : reureg/PHI2_N_543_enable_51, loads : 8
-  Net : ram/RDD_7__N_517, loads : 8
-  Net : reureg/PHI2_N_543_enable_79, loads : 8
-  Net : reureg/PHI2_N_543_enable_63, loads : 8
+  Net : reureg/PHI2_N_543_enable_35, loads : 8
   Net : reureg/PHI2_N_543_enable_49, loads : 8
   Net : reureg/PHI2_N_543_enable_66, loads : 8
-  Net : reureg/PHI2_N_543_enable_35, loads : 8
   Net : reureg/PHI2_N_543_enable_68, loads : 8
+  Net : ram/RDD_7__N_517, loads : 8
+  Net : reureg/PHI2_N_543_enable_63, loads : 8
+  Net : reureg/PHI2_N_543_enable_51, loads : 8
+  Net : reureg/PHI2_N_543_enable_79, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : PHI2_N_543, loads : 136
-  Net : dmaseq/n4280, loads : 49
-  Net : A_out_0, loads : 39
-  Net : A_out_1, loads : 37
-  Net : reureg/n8, loads : 36
-  Net : dmaseq/DMA, loads : 31
+  Net : dmaseq/n4097, loads : 49
+  Net : A_out_0, loads : 41
+  Net : reureg/n8, loads : 35
+  Net : A_out_1, loads : 35
+  Net : dmaseq/DMA, loads : 34
   Net : dmaseq/RegReset, loads : 30
-  Net : A_out_3, loads : 28
-  Net : reureg/n4042, loads : 27
+  Net : reureg/n3852, loads : 28
   Net : ram/S_0, loads : 26
+  Net : A_out_3, loads : 25
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -186,7 +186,7 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   46.057 MHz|    13  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   46.590 MHz|    14  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
@@ -198,10 +198,10 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|  104.450 MHz|     3
 All constraints were met.
 
 
-Peak Memory Usage: 63.617  MB
+Peak Memory Usage: 62.535  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.797  secs
+Elapsed CPU time for LSE flow : 1.672  secs
 --------------------------------------------------------------
 
 
