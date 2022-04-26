@@ -1,4 +1,4 @@
-module DMASeq(
+ module DMASeq(
 	/* Clock & Reset */
 	input PHI2,
 	input nRESET,
@@ -119,12 +119,12 @@ assign RegReset = (!nRESETr[1] && !DMA) || (!nRESETr[2] && !DMA && DMAr);
 assign IncCA =
 	// DMA must be active and bus must be available.
 	// Don't NextCA on alternating swap cycles 
-	DMA && BA && (!XferSwap || SwapState) && !(DMAr && BAr && !Equalr);
+	DMA && BA && (!XferSwap || SwapState) && (!XferVerify || !(DMAr && BAr && !Equalr));
 	
 assign DecLen =
 	// DMA must be active and bus must be available.
 	// Don't NextCA on alternating swap cycles 
-	DMA && BA && (!XferSwap || SwapState) && !(DMAr && BAr && !Equalr) && !Length1;
+	DMA && BA && (!XferSwap || SwapState) && (!XferVerify || !(DMAr && BAr && !Equalr)) && !Length1;
 	
 assign IncREUA = 
 	XferC64REU ? DMAr && BAr : // Delay advancing REUA during C64->REU xfer

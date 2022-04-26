@@ -60,18 +60,10 @@
         <Message>
             <ID>35935013</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(104): </Dynamic>
-            <Dynamic>\reureg/nSize_589</Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(198): </Dynamic>
+            <Dynamic>\reureg/REUA[23]_650</Dynamic>
             <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
-            <Navigation>104</Navigation>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(202): </Dynamic>
-            <Dynamic>\reureg/REUA[23]_660</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
-            <Navigation>202</Navigation>
+            <Navigation>198</Navigation>
         </Message>
         <Message>
             <ID>35001747</ID>

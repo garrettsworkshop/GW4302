@@ -29,7 +29,6 @@ module REUReg(
 reg IntPending;
 reg EndOfBlock;
 reg Fault;
-reg nSize;
 
 /* REU Registers - 0x1 Command Register */
 reg DF01Reserved6;
@@ -68,7 +67,7 @@ wire DecLeng = DecLen;
 
 /* Data Output Mux */
 assign RDD[7:0] = 
-	A[4:0]==4'h0 ? { IntPending, EndOfBlock, Fault, ~nSize, 4'b0000 } :
+	A[4:0]==4'h0 ? { IntPending, EndOfBlock, Fault, 1'b1, 4'b0000 } :
 	A[4:0]==4'h1 ? { ExecuteEN, DF01Reserved6, AutoloadEN, ~FF00DecodeEN, DF01Reserved32[3:2], XferType[1:0] } :
 	A[4:0]==4'h2 ? CA[7:0] :
 	A[4:0]==4'h3 ? CA[15:8] :
@@ -89,17 +88,14 @@ always @(negedge PHI2) begin
 		IntPending <= 0;
 		EndOfBlock <= 0;
 		Fault <= 0;
-		nSize <= 0;
-	end else if (RegWR && A[4:0]==5'h0) begin
-		//nSize <= ~WRD[4];
 	end else if (RegRD && A[4:0]==5'h0) begin
 		IntPending <= 0;
 		EndOfBlock <= 0;
 		Fault <= 0;
 	end else if (SetEndOfBlock || SetVerifyErr) begin
 		IntPending <= 1;
-		EndOfBlock <= EndOfBlock || SetEndOfBlock;
-		Fault <= Fault || SetVerifyErr;
+		if (SetEndOfBlock) EndOfBlock <= 1;
+		if (SetVerifyErr) Fault <= 1;
 	end
 end
 
@@ -125,7 +121,7 @@ always @(negedge PHI2) begin
 		FF00DecodeEN <= 0;
 	end
 end
-assign XferTypeOut[1:0] = (DF01WR && PHI2) ? WRD[1:0] : XferType[1:0];
+assign XferTypeOut[1:0] = (DF01WR) ? WRD[1:0] : XferType[1:0];
 
 /* Commodore address register lo (0x2) control */
 always @(negedge PHI2) begin
