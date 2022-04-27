@@ -1,0 +1,29 @@
+---------------------------------------------------
+Report for cell REU
+   Instance path: REU
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.00        100.0
+                                  LUT4	      42.00        100.0
+                                 IOBUF	         60        100.0
+                                PFUREG	         58        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                GeoReg	          1        20.8
+                                   RAM	          1        76.0
+---------------------------------------------------
+Report for cell GeoReg
+   Instance path: REU/georeg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.08        20.8
+                                  LUT4	       4.00         9.5
+                                PFUREG	         15        25.9
+---------------------------------------------------
+Report for cell RAM
+   Instance path: REU/ram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      25.83        76.0
+                                  LUT4	      34.00        81.0
+                                PFUREG	         43        74.1

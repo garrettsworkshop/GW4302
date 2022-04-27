@@ -1,0 +1,251 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Wed Apr 27 14:43:25 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     REU
+Constraint file: REU_temp_lse.sdc 
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk501 [get_nets PHI2_c]
+            28 items scored, 28 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 1.719ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \georeg/nRESETr_24  (from PHI2_c +)
+   Destination:    FD1P3IX    CD             \georeg/Block__i6  (to PHI2_c -)
+
+   Delay:                   4.059ns  (23.1% logic, 76.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      4.059ns data_path \georeg/nRESETr_24 to \georeg/Block__i6 violates
+      2.500ns delay constraint less
+      0.160ns L_S requirement (totaling 2.340ns) by 1.719ns
+
+ Path Details: \georeg/nRESETr_24 to \georeg/Block__i6
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \georeg/nRESETr_24 (from PHI2_c)
+Route         3   e 1.315                                  \georeg/nRESETr
+LUT4        ---     0.493              A to Z              \georeg/i83_1_lut_rep_14
+Route        14   e 1.807                                  \georeg/n688
+                  --------
+                    4.059  (23.1% logic, 76.9% route), 2 logic levels.
+
+
+Error:  The following path violates requirements by 1.719ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \georeg/nRESETr_24  (from PHI2_c +)
+   Destination:    FD1P3IX    CD             \georeg/Block__i5  (to PHI2_c -)
+
+   Delay:                   4.059ns  (23.1% logic, 76.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      4.059ns data_path \georeg/nRESETr_24 to \georeg/Block__i5 violates
+      2.500ns delay constraint less
+      0.160ns L_S requirement (totaling 2.340ns) by 1.719ns
+
+ Path Details: \georeg/nRESETr_24 to \georeg/Block__i5
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \georeg/nRESETr_24 (from PHI2_c)
+Route         3   e 1.315                                  \georeg/nRESETr
+LUT4        ---     0.493              A to Z              \georeg/i83_1_lut_rep_14
+Route        14   e 1.807                                  \georeg/n688
+                  --------
+                    4.059  (23.1% logic, 76.9% route), 2 logic levels.
+
+
+Error:  The following path violates requirements by 1.719ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             \georeg/nRESETr_24  (from PHI2_c +)
+   Destination:    FD1P3IX    CD             \georeg/Block__i0  (to PHI2_c -)
+
+   Delay:                   4.059ns  (23.1% logic, 76.9% route), 2 logic levels.
+
+ Constraint Details:
+
+      4.059ns data_path \georeg/nRESETr_24 to \georeg/Block__i0 violates
+      2.500ns delay constraint less
+      0.160ns L_S requirement (totaling 2.340ns) by 1.719ns
+
+ Path Details: \georeg/nRESETr_24 to \georeg/Block__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \georeg/nRESETr_24 (from PHI2_c)
+Route         3   e 1.315                                  \georeg/nRESETr
+LUT4        ---     0.493              A to Z              \georeg/i83_1_lut_rep_14
+Route        14   e 1.807                                  \georeg/n688
+                  --------
+                    4.059  (23.1% logic, 76.9% route), 2 logic levels.
+
+Warning: 4.219 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk500 [get_nets \ram/FCLK]
+            124 items scored, 31 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.590ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \ram/S__i0  (from \ram/FCLK +)
+   Destination:    FD1P3AX    SP             \ram/RDD_i0_i0  (to \ram/FCLK -)
+
+   Delay:                   5.805ns  (24.6% logic, 75.4% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.805ns data_path \ram/S__i0 to \ram/RDD_i0_i0 violates
+      2.500ns delay constraint less
+      0.285ns LCE_S requirement (totaling 2.215ns) by 3.590ns
+
+ Path Details: \ram/S__i0 to \ram/RDD_i0_i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \ram/S__i0 (from \ram/FCLK)
+Route        23   e 1.894                                  \ram/S[0]
+LUT4        ---     0.493              B to Z              \ram/i1_2_lut_rep_15
+Route         1   e 0.941                                  \ram/n689
+LUT4        ---     0.493              D to Z              \ram/i3_4_lut
+Route         8   e 1.540                                  \ram/RDD_7__N_83
+                  --------
+                    5.805  (24.6% logic, 75.4% route), 3 logic levels.
+
+
+Error:  The following path violates requirements by 3.590ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \ram/S__i0  (from \ram/FCLK +)
+   Destination:    FD1P3AX    SP             \ram/RDD_i0_i1  (to \ram/FCLK -)
+
+   Delay:                   5.805ns  (24.6% logic, 75.4% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.805ns data_path \ram/S__i0 to \ram/RDD_i0_i1 violates
+      2.500ns delay constraint less
+      0.285ns LCE_S requirement (totaling 2.215ns) by 3.590ns
+
+ Path Details: \ram/S__i0 to \ram/RDD_i0_i1
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \ram/S__i0 (from \ram/FCLK)
+Route        23   e 1.894                                  \ram/S[0]
+LUT4        ---     0.493              B to Z              \ram/i1_2_lut_rep_15
+Route         1   e 0.941                                  \ram/n689
+LUT4        ---     0.493              D to Z              \ram/i3_4_lut
+Route         8   e 1.540                                  \ram/RDD_7__N_83
+                  --------
+                    5.805  (24.6% logic, 75.4% route), 3 logic levels.
+
+
+Error:  The following path violates requirements by 3.590ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \ram/S__i0  (from \ram/FCLK +)
+   Destination:    FD1P3AX    SP             \ram/RDD_i0_i2  (to \ram/FCLK -)
+
+   Delay:                   5.805ns  (24.6% logic, 75.4% route), 3 logic levels.
+
+ Constraint Details:
+
+      5.805ns data_path \ram/S__i0 to \ram/RDD_i0_i2 violates
+      2.500ns delay constraint less
+      0.285ns LCE_S requirement (totaling 2.215ns) by 3.590ns
+
+ Path Details: \ram/S__i0 to \ram/RDD_i0_i2
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              \ram/S__i0 (from \ram/FCLK)
+Route        23   e 1.894                                  \ram/S[0]
+LUT4        ---     0.493              B to Z              \ram/i1_2_lut_rep_15
+Route         1   e 0.941                                  \ram/n689
+LUT4        ---     0.493              D to Z              \ram/i3_4_lut
+Route         8   e 1.540                                  \ram/RDD_7__N_83
+                  --------
+                    5.805  (24.6% logic, 75.4% route), 3 logic levels.
+
+Warning: 6.090 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk501 [get_nets PHI2_c]                |     5.000 ns|     8.438 ns|     2 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk500 [get_nets \ram/FCLK]             |     5.000 ns|    12.180 ns|     3 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\georeg/nRESETr                         |       3|      28|     47.46%
+                                        |        |        |
+\ram/RDD_7__N_83                        |       8|      24|     40.68%
+                                        |        |        |
+\ram/n689                               |       1|      16|     27.12%
+                                        |        |        |
+\georeg/n688                            |      14|      14|     23.73%
+                                        |        |        |
+\ram/S[0]                               |      23|      11|     18.64%
+                                        |        |        |
+\ram/S[1]                               |      17|      10|     16.95%
+                                        |        |        |
+\georeg/PHI2_N_15_enable_9              |       8|       8|     13.56%
+                                        |        |        |
+\ram/S[2]                               |      15|       8|     13.56%
+                                        |        |        |
+\georeg/PHI2_N_15_enable_14             |       6|       6|     10.17%
+                                        |        |        |
+\ram/n227                               |       2|       6|     10.17%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 59  Score: 242714
+
+Constraints cover  152 paths, 54 nets, and 215 connections (62.0% coverage)
+
+
+Peak memory: 63819776 bytes, TRCE: 1970176 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

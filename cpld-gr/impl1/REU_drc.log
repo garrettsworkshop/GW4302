@@ -1,0 +1,35 @@
+Results of NGD DRC are available in REU_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'C8M' has no load.
+WARNING - synthesis: input pad net 'C8M' has no legal load.
+WARNING - synthesis: logical net 'BA' has no load.
+WARNING - synthesis: input pad net 'BA' has no legal load.
+WARNING - synthesis: logical net 'A[15]' has no load.
+WARNING - synthesis: input pad net 'A[15]' has no legal load.
+WARNING - synthesis: logical net 'A[14]' has no load.
+WARNING - synthesis: input pad net 'A[14]' has no legal load.
+WARNING - synthesis: logical net 'A[13]' has no load.
+WARNING - synthesis: input pad net 'A[13]' has no legal load.
+WARNING - synthesis: logical net 'A[12]' has no load.
+WARNING - synthesis: input pad net 'A[12]' has no legal load.
+WARNING - synthesis: logical net 'A[11]' has no load.
+WARNING - synthesis: input pad net 'A[11]' has no legal load.
+WARNING - synthesis: logical net 'A[10]' has no load.
+WARNING - synthesis: input pad net 'A[10]' has no legal load.
+WARNING - synthesis: logical net 'A[9]' has no load.
+WARNING - synthesis: input pad net 'A[9]' has no legal load.
+WARNING - synthesis: logical net 'A[8]' has no load.
+WARNING - synthesis: input pad net 'A[8]' has no legal load.
+WARNING - synthesis: DRC complete with 20 warnings.
+
+Design Results:
+    170 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file REU_impl1.ngd.
