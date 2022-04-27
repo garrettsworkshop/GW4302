@@ -11100,12 +11100,12 @@
         <pitem  name = "data[10]"  direction = "in"  />
         <pitem  name = "data[9]"  direction = "in"  />
         <pitem  name = "data[8]"  direction = "in"  />
-        <pitem  name = "data[7]"  direction = "in"  />
-        <pitem  name = "data[6]"  direction = "in"  />
         <pitem  name = "data[5]"  direction = "in"  />
         <pitem  name = "data[4]"  direction = "in"  />
+        <pitem  name = "data[7]"  direction = "in"  />
         <pitem  name = "data[3]"  direction = "in"  />
         <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[6]"  direction = "in"  />
         <pitem  name = "data[2]"  direction = "in"  />
         <pitem  name = "data[0]"  direction = "in"  />
         <pitem  name = "sel[2]"  direction = "in"  />
@@ -11182,12 +11182,12 @@
 
     <instance  name = "ram/S_2__I_0_140"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "data[7]"  direction = "in"  />
-        <pitem  name = "data[6]"  direction = "in"  />
-        <pitem  name = "data[5]"  direction = "in"  />
         <pitem  name = "data[3]"  direction = "in"  />
         <pitem  name = "data[2]"  direction = "in"  />
         <pitem  name = "data[1]"  direction = "in"  />
+        <pitem  name = "data[7]"  direction = "in"  />
+        <pitem  name = "data[6]"  direction = "in"  />
+        <pitem  name = "data[5]"  direction = "in"  />
         <pitem  name = "data[4]"  direction = "in"  />
         <pitem  name = "data[0]"  direction = "in"  />
         <pitem  name = "sel[2]"  direction = "in"  />
@@ -11290,11 +11290,11 @@
 
     <instance  name = "ram/S_2__I_0_144"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "data[3]"  direction = "in"  />
+        <pitem  name = "data[2]"  direction = "in"  />
         <pitem  name = "data[7]"  direction = "in"  />
         <pitem  name = "data[6]"  direction = "in"  />
         <pitem  name = "data[5]"  direction = "in"  />
-        <pitem  name = "data[3]"  direction = "in"  />
-        <pitem  name = "data[2]"  direction = "in"  />
         <pitem  name = "data[4]"  direction = "in"  />
         <pitem  name = "data[0]"  direction = "in"  />
         <pitem  name = "data[1]"  direction = "in"  />

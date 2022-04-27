@@ -190,7 +190,7 @@ always @(negedge PHI2) begin
 		REUA[23:16] <= 0;
 		REUAWritten[18:16] <= 0;
 	end else if (RegWR && A[4:0]==5'h6) begin
-		//REUA[23:19] <= WRD[7:3];
+		REUA[23:19] <= WRD[7:3];
 		REUA[18:16] <= WRD[2:0];
 		REUAWritten[18:16] <= WRD[2:0];
 	end else if (Autoload) begin

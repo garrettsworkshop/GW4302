@@ -195,7 +195,7 @@ always @(posedge C8M) begin
 			DQML <= 1;
 		end 3'h3: begin // PC all
 			// Bank address is don't care
-			RBA[1:0] <=	2'b00;
+			RBA[1:0] <= A[22:21];
 			// RA[11] is don't care
 			RA[11] <=	1'b0;
 			// RA[10] high to indicate "precharge all"
@@ -205,23 +205,16 @@ always @(posedge C8M) begin
 			// Mask both bytes
 			DQMH <= 1;
 			DQML <= 1;
-		end 3'h4: begin // AREF/LDM
-			// Mode register contents
+		end 3'h4, 3'h5, 3'h6, 3'h7: begin // AREF/LDM, NOP, NOP, NOP
+			// Mode register contents for LDM, don't care for AREF and NOP
 			RBA[1:0] <=	2'b00;	// Reserved in mode register
-			RA[11:10] <=2'b00;	// Reserved in mode register
-			RA[9] <=	1'b1;	// "1" for single write mode
-			RA[8] <=	1'b0;	// Reserved in mode register
-			RA[7] <=	1'b0;	// "0" for not test mode
-			RA[6:4] <=	3'b010;	// "2" for CAS latency 2
-			RA[3] <= 	1'b0;	// "0" for sequential burst (not used)
-			RA[2:0] <=	3'b000;	// "0" for burst length 1 (no burst)
-			// Mask both bytes
-			DQMH <= 1;
-			DQML <= 1;
-		end 3'h5, 3'h6, 3'h7: begin // NOP
-			// RAM address is don't care
-			RBA[1:0] <=	2'b00;
-			RA[11:0] <=	12'h000;
+			RA[11:10] <=	2'b00;	// Reserved in mode register
+			RA[9] <=		1'b1;	// "1" for single write mode
+			RA[8] <=		1'b0;	// Reserved in mode register
+			RA[7] <=		1'b0;	// "0" for not test mode
+			RA[6:4] <=		3'b010;	// "2" for CAS latency 2
+			RA[3] <= 		1'b0;	// "0" for sequential burst (not used)
+			RA[2:0] <=		3'b000;	// "0" for burst length 1 (no burst)
 			// Mask both bytes
 			DQMH <= 1;
 			DQML <= 1;

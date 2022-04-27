@@ -1,13 +1,11 @@
 [ START MERGED ]
-n1008 ram/RDOE
+n1038 ram/RDOE
 PHI2_N_548 PHI2_c
-n1454 reureg/REUA_20
-ram/n3437 ram/PORDone
+n1496 reureg/REUA_20
+ram/n1202 ram/PORDone
 C8M_N_500 C8M_c
 [ END MERGED ]
 [ START CLIPPED ]
-reureg/Length_7__I_0_add_2_9/S1
-reureg/Length_7__I_0_add_2_9/CO
 reureg/CAOut_7__I_0_1/S1
 reureg/CAOut_7__I_0_1/S0
 reureg/CAOut_7__I_0_1/CI
@@ -20,31 +18,31 @@ reureg/REUAOut_7__I_0_1/S1
 reureg/REUAOut_7__I_0_1/S0
 reureg/REUAOut_7__I_0_1/CI
 reureg/REUAOut_7__I_0_9/CO
+reureg/Length_15__I_0_839_add_2_1/S0
+reureg/Length_15__I_0_839_add_2_1/CI
+reureg/Length_15__I_0_839_add_2_9/S1
+reureg/Length_15__I_0_839_add_2_9/CO
 reureg/REUAOut_15__I_0_1/S1
 reureg/REUAOut_15__I_0_1/S0
 reureg/REUAOut_15__I_0_1/CI
-reureg/REUAOut_15__I_0_9/CO
-reureg/Length_15__I_0_839_add_2_1/S0
-reureg/Length_15__I_0_839_add_2_1/CI
 reureg/Length_7__I_0_add_2_1/S0
 reureg/Length_7__I_0_add_2_1/CI
-reureg/Length_15__I_0_839_add_2_9/S1
-reureg/Length_15__I_0_839_add_2_9/CO
+reureg/Length_7__I_0_add_2_9/S1
+reureg/Length_7__I_0_add_2_9/CO
+reureg/REUAOut_15__I_0_9/CO
+RAMRDD_7__I_0_0/S1
+RAMRDD_7__I_0_0/S0
+RAMRDD_7__I_0_0/CI
 RAMRDD_7__I_0_7/S1
 RAMRDD_7__I_0_7/S0
 RAMRDD_7__I_0_8/S0
 RAMRDD_7__I_0_8/CO
-RAMRDD_7__I_0_0/S1
-RAMRDD_7__I_0_0/S0
-RAMRDD_7__I_0_0/CI
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Tue Apr 26 13:20:57 2022
+# map:  version Diamond (64-bit) 3.12.0.240.2 -- WARNING: Map write only section -- Wed Apr 27 05:11:23 2022
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
-LOCATE COMP "A[14]" SITE "40" ;
-LOCATE COMP "A[15]" SITE "35" ;
 LOCATE COMP "D[0]" SITE "4" ;
 LOCATE COMP "D[1]" SITE "7" ;
 LOCATE COMP "D[2]" SITE "8" ;
@@ -53,6 +51,8 @@ LOCATE COMP "D[4]" SITE "9" ;
 LOCATE COMP "D[5]" SITE "12" ;
 LOCATE COMP "D[6]" SITE "14" ;
 LOCATE COMP "D[7]" SITE "13" ;
+LOCATE COMP "A[15]" SITE "35" ;
+LOCATE COMP "A[14]" SITE "40" ;
 LOCATE COMP "A[13]" SITE "42" ;
 LOCATE COMP "A[12]" SITE "36" ;
 LOCATE COMP "A[11]" SITE "37" ;
