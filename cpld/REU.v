@@ -10,6 +10,7 @@ module REU(
 	input nWE,
 	output nWEDMA,
 	output nDMA,
+	input nIO1,
 	input nIO2,
 	/* Address / Data Buffer Control */
 	output nAOE,
@@ -37,7 +38,7 @@ module REU(
 	wire [1:0] XferType;
 	wire [23:0] REUA;
 	wire [15:0] CA;
-	wire Length1, Length2;
+	wire Length1;
 	wire [7:0] RegRDD;
 	
 	/* RAM Outputs */
@@ -63,7 +64,7 @@ module REU(
 		/* Increment, etc. Control */
 		IncCA, DecLen, IncREUA, XferEnd, SetEndOfBlock, SetVerifyErr,
 		/* Register Outputs */
-		IRQ, XferType[1:0], REUA[23:0], CA[15:0], Length1, Length2,
+		IRQ, XferType[1:0], REUA[23:0], CA[15:0], Length1,
 		/* Execute output to sequencer */
 		Execute);
 	
@@ -91,7 +92,7 @@ module REU(
 		/* Reset Output to Registers */
 		RegReset,
 		/* Transfer Inputs */
-		RAMRDD[7:0]==D[7:0], Execute, XferType[1:0], Length1, Length2,
+		RAMRDD[7:0]==D[7:0], Execute, XferType[1:0], Length1,
 		/* Register Control Outputs */
 		IncCA, DecLen, IncREUA, XferEnd, SetEndOfBlock, SetVerifyErr);
 		

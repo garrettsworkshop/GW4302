@@ -22,7 +22,6 @@ module REUReg(
 	output [23:0] REUAOut,		// REU address register output to SDRAM ctrl.
 	output [15:0] CAOut,		// C64 address register output to C64 bus
 	output Length1,				// Transfer length == 1 indication to DMA sequencer
-	output Length2,				// Transfer length == 1 indication to DMA sequencer
 	output Execute);			// Execute signal to DMA sequencer
 
 /* REU Registers - 0x0 Status Register */

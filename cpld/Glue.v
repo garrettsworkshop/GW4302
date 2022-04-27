@@ -28,9 +28,11 @@ module Glue(
 	input DMA,
 	input DMARW);
 	
-assign AOE = DMA;
-assign ADIR = !DMA;
+assign AOE = DMA; // Output address from FPGA during DMA
+assign ADIR = !DMA; // Address buffer direction -- out during DMA, in otherwise
+// Address buffer output enable -- enabled during PHI2 except except during 
 assign nAOE = !(PHI2 && (!DMA || BA));
+// DMA R/W signal output enable -- 
 assign nRWOE = !(DMA && BA);
 
 assign DOE = DMA ? !DMARW : (RegRD);

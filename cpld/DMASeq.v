@@ -17,7 +17,6 @@
 	input Execute,			// Execute signal (starts transfer) from registers
 	input [1:0] XferType,	// REU transfer type (bypassed) from registers
 	input Length1,			// Transfer length == 1 indication from registers
-	input Length2,			// Transfer length == 2 indication from registers
 	/* Register Control Outputs */
 	output IncCA,			// Increment C64 address signal to registers
 	output DecLen,			// Decrement transfer length signal to registers

@@ -70,7 +70,7 @@ always @(posedge C8M) begin
 				nRAS <= 1;
 				nCAS <= 1;
 				nRWE <= 1;
-				CKE <= 0;
+				CKE <= 1;
 			end else if (RDCMDg || WRCMDg) begin
 				// If read/write command, issue ACT
 				nCS <= 0;
@@ -78,7 +78,7 @@ always @(posedge C8M) begin
 				nCAS <= 1;
 				nRWE <= 1;
 				CKE <= 1;
-			end else begin // NOP CKD
+			end else begin
 				// Otherwise if initialized but idle, issue NOP CKD
 				nCS <= 1;
 				nRAS <= 1;
@@ -109,15 +109,13 @@ always @(posedge C8M) begin
 				nRWE <= 1;
 				CKE <= 0;
 			end
-		end 3'h2: begin
-			// Issue NOP CKE in preparation to precharge all
+		end 3'h2: begin // Issue NOP CKE in preparation to precharge
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
 			nRWE <= 1;
 			CKE <= 1;
-		end 3'h3: begin
-			// Issue PC all
+		end 3'h3: begin // Issue PC all
 			nCS <= 0;
 			nRAS <= 0;
 			nCAS <= 1;
@@ -139,15 +137,13 @@ always @(posedge C8M) begin
 				nRWE <= 0;
 				CKE <= 1;
 			end
-		end 3'h5: begin
-			// Issue NOP CKE (consider changing to CKD)
+		end 3'h5: begin // Issue NOP CKE (consider changing to CKD)
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
 			nRWE <= 1;
 			CKE <= 1;
-		end 3'h6: begin
-			// Issue NOP CKD
+		end 3'h6: begin // Issue NOP CKD
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
@@ -234,7 +230,7 @@ always @(negedge PHI2) WRDr[7:0] <= WRD[7:0];
 
 /* SDRAM data bus */
 reg RDOE = 0; // Output enable for SDRAM data bus
-// Enable only during S[1] of a write cycle
+// Enable only during S1 of a write cycle
 always @(posedge C8M) RDOE <= WRCMDg && S[2:0]==3'h1;
 assign RD[7:0] = RDOE ? WRDr[7:0] : 8'bZ; // SDRAM data bus
 
