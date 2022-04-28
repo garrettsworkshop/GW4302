@@ -1,0 +1,1653 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+FDCPE_A0: FDCPE port map (A_I(0),A(0),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(0) <= ((D(0).PIN AND NOT RegReset AND reureg/CA_7_and0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CAWritten(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND N_PZ_954)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND A(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/IncMode(1) AND N_PZ_954)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0) AND NOT reureg/IncMode(1) AND N_PZ_954));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(0) <= A_I(0) when A_OE(0) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(0) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FDCPE_A1: FDCPE port map (A_I(1),A(1),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(1) <= ((NOT RegReset AND D(1).PIN AND reureg/CA_7_and0001)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CAWritten(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_954 AND A(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/IncMode(1) AND N_PZ_954 AND A(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND NOT A(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND A(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(1) <= A_I(1) when A_OE(1) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(1) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A2: FTCPE port map (A_I(2),A_T(2),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(2) <= ((RegReset AND A(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(2).PIN AND reureg/CA_7_and0001 AND A(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(2).PIN AND reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND A(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CAWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2) AND reureg/CAWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND A(1)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(2) <= A_I(2) when A_OE(2) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(2) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A3: FTCPE port map (A_I(3),A_T(3),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(3) <= ((RegReset AND A(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(3).PIN AND reureg/CA_7_and0001 AND A(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(3).PIN AND reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND A(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CAWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3) AND reureg/CAWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND A(1) AND A(2)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(3) <= A_I(3) when A_OE(3) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(3) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A4: FTCPE port map (A_I(4),A_T(4),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(4) <= ((RegReset AND A(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(4).PIN AND reureg/CA_7_and0001 AND A(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(4).PIN AND reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND A(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CAWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4) AND reureg/CAWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND A(1) AND A(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(4) <= A_I(4) when A_OE(4) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(4) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A5: FTCPE port map (A_I(5),A_T(5),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(5) <= ((RegReset AND A(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(5).PIN AND reureg/CA_7_and0001 AND A(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(5).PIN AND reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND A(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CAWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(5) AND reureg/CAWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND A(1) AND A(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3) AND A(4)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(5) <= A_I(5) when A_OE(5) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(5) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A6: FTCPE port map (A_I(6),A_T(6),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(6) <= ((RegReset AND A(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(6).PIN AND reureg/CA_7_and0001 AND A(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(6).PIN AND reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND A(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CAWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(6) AND reureg/CAWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND A(1) AND A(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3) AND A(4) AND A(5)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(6) <= A_I(6) when A_OE(6) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(6) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A7: FTCPE port map (A_I(7),A_T(7),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(7) <= ((RegReset AND A(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(7).PIN AND reureg/CA_7_and0001 AND A(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(7).PIN AND reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND A(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CAWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND NOT N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(7) AND reureg/CAWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_816 AND NOT reureg/CA_7_and0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(0) AND NOT reureg/IncMode(1) AND N_PZ_954 AND A(1) AND A(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3) AND A(4) AND A(5) AND A(6)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(7) <= A_I(7) when A_OE(7) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(7) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FDCPE_A8: FDCPE port map (A_I(8),A(8),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(8) <= ((D(0).PIN AND NOT RegReset AND N_PZ_1010)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND reureg/CAWritten(8) AND N_PZ_990)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND NOT reureg/CA_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(8) AND reureg/CA_15_and0000));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(8) <= A_I(8) when A_OE(8) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(8) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FDCPE_A9: FDCPE port map (A_I(9),A(9),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(9) <= ((NOT RegReset AND D(1).PIN AND N_PZ_1010)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_990 AND reureg/CAWritten(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CA_15_and0000 AND A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND reureg/CA_15_and0000 AND NOT A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(8) AND reureg/CA_15_and0000 AND A(9)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(9) <= A_I(9) when A_OE(9) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(9) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FDCPE_A10: FDCPE port map (A_I(10),A(10),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(10) <= ((NOT RegReset AND D(2).PIN AND N_PZ_1010)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_990 AND reureg/CAWritten(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/CA_15_and0000 AND A(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(8) AND reureg/CA_15_and0000 AND A(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CA_15_and0000 AND A(10) AND NOT A(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND reureg/CA_15_and0000 AND NOT A(10) AND A(9)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(10) <= A_I(10) when A_OE(10) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(10) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A11: FTCPE port map (A_I(11),A_T(11),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(11) <= ((RegReset AND A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(3).PIN AND N_PZ_1010 AND A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_990 AND A(11) AND NOT reureg/CAWritten(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(3).PIN AND N_PZ_1010 AND NOT A(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_990 AND NOT A(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CAWritten(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND reureg/CA_15_and0000 AND A(10) AND A(9)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(11) <= A_I(11) when A_OE(11) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(11) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A12: FTCPE port map (A_I(12),A_T(12),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(12) <= ((RegReset AND A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(4).PIN AND N_PZ_1010 AND A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_990 AND A(12) AND NOT reureg/CAWritten(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(4).PIN AND N_PZ_1010 AND NOT A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_990 AND NOT A(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CAWritten(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND reureg/CA_15_and0000 AND A(10) AND A(9) AND A(11)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(12) <= A_I(12) when A_OE(12) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(12) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A13: FTCPE port map (A_I(13),A_T(13),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(13) <= ((RegReset AND A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(5).PIN AND N_PZ_1010 AND A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_990 AND A(13) AND NOT reureg/CAWritten(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(5).PIN AND N_PZ_1010 AND NOT A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_990 AND NOT A(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CAWritten(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND reureg/CA_15_and0000 AND A(10) AND A(9) AND A(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(12)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(13) <= A_I(13) when A_OE(13) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(13) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A14: FTCPE port map (A_I(14),A_T(14),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(14) <= ((RegReset AND A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(6).PIN AND N_PZ_1010 AND A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_990 AND A(14) AND NOT reureg/CAWritten(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(6).PIN AND N_PZ_1010 AND NOT A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_990 AND NOT A(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CAWritten(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND reureg/CA_15_and0000 AND A(10) AND A(9) AND A(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(12) AND A(13)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(14) <= A_I(14) when A_OE(14) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(14) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_A15: FTCPE port map (A_I(15),A_T(15),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_T(15) <= ((RegReset AND A(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(7).PIN AND N_PZ_1010 AND A(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_990 AND A(15) AND NOT reureg/CAWritten(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(7).PIN AND N_PZ_1010 AND NOT A(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_990 AND NOT A(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/CAWritten(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/CA_7_and0001 AND N_PZ_954 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(8) AND reureg/CA_15_and0000 AND A(10) AND A(9) AND A(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(12) AND A(13) AND A(14)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A(15) <= A_I(15) when A_OE(15) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A_OE(15) <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+DOE_MC.GLB <= ((nDMA AND nWE.PIN AND NOT nIO2 AND PHI2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND BA AND PHI2 AND NOT nWE));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Length1 <= (reureg/Length(0) AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2) AND NOT reureg/Length(3) AND NOT reureg/Length(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(5) AND NOT reureg/Length(6) AND NOT reureg/Length(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(7) AND NOT reureg/Length(10) AND NOT reureg/Length(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(11) AND NOT reureg/Length(12) AND NOT reureg/Length(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(14) AND NOT reureg/Length(15));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_1010 <= (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_1017 <= (NOT RegReset AND N_PZ_823)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND N_PZ_823 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_1099 <= (REUA(0) AND NOT reureg/IncMode(0) AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(1) AND REUA(2) AND REUA(3) AND REUA(4) AND REUA(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(6) AND REUA(7));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_816 <= ((nDMA)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT BA)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XferType(0) AND NOT XferType(1) AND NOT RAMWR)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (dmaseq/DMAr AND dmaseq/BAr AND NOT dmaseq/Equalr AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XferType(0) AND NOT XferType(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_823 <= ((NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_833 <= ((NOT XferType(0) AND NOT N_PZ_816)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XferType(1) AND NOT N_PZ_816)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (dmaseq/DMAr AND dmaseq/BAr AND XferType(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XferType(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_949 <= (NOT nDMA AND dmaseq/XferEnd8 AND reureg/AutoloadEN);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_953 <= (NOT N_PZ_949 AND NOT reureg/REUAWritten_15_and0000);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_954 <= (NOT N_PZ_949 AND NOT N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_955 <= ((NOT N_PZ_823)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_958 <= (NOT N_PZ_949 AND NOT reureg/REUAWritten_7_and0000);
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_990 <= ((N_PZ_949 AND NOT N_PZ_1010)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_1010 AND reureg/CA_7_and0001));
+</td></tr><tr><td>
+FDCPE_RA0: FDCPE port map (RA(0),RA_D(0),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(0) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(9)));
+</td></tr><tr><td>
+FDCPE_RA1: FDCPE port map (RA(1),RA_D(1),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(1) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(10)));
+</td></tr><tr><td>
+FDCPE_RA2: FDCPE port map (RA(2),RA_D(2),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(2) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(11)));
+</td></tr><tr><td>
+FDCPE_RA3: FDCPE port map (RA(3),RA_D(3),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(3) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(12)));
+</td></tr><tr><td>
+FDCPE_RA4: FDCPE port map (RA(4),RA_D(4),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(4) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(13)));
+</td></tr><tr><td>
+FDCPE_RA5: FDCPE port map (RA(5),RA_D(5),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(5) <= NOT (((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND NOT REUA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND NOT REUA(14))));
+</td></tr><tr><td>
+FDCPE_RA6: FDCPE port map (RA(6),RA_D(6),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(6) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(15)));
+</td></tr><tr><td>
+FDCPE_RA7: FDCPE port map (RA(7),RA_D(7),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(7) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(16)));
+</td></tr><tr><td>
+FDCPE_RA8: FDCPE port map (RA(8),RA_D(8),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(8) <= ((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1) AND REUA(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND REUA(17)));
+</td></tr><tr><td>
+FDCPE_RA9: FDCPE port map (RA(9),RA_D(9),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RA_D(9) <= NOT (((NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND NOT ram/S(1) AND NOT REUA(18))));
+</td></tr><tr><td>
+FDCPE_RAMRD: FDCPE port map (RAMRD,RAMRD_D,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAMRD_D <= NOT (((XferType(0) AND XferType(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT reureg/Execute8 AND NOT reureg/Execute1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/XferEnd8 AND NOT dmaseq/nRESETr_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/XferEnd8 AND NOT XferType(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/XferEnd8 AND BA)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND XferType(0) AND BA AND RAMRD)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/nRESETr_0 AND XferType(0) AND NOT BA AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT RAMRD)));
+</td></tr><tr><td>
+FDCPE_RAMWR: FDCPE port map (RAMWR,RAMWR_D,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RAMWR_D <= ((NOT nDMA AND XferType(0) AND XferType(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND NOT dmaseq/XferEnd8 AND XferType(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XferType(1) AND BA AND NOT RAMWR)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/nRESETr_0 AND XferType(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XferType(1) AND NOT BA AND RAMWR));
+</td></tr><tr><td>
+FDCPE_RD0: FDCPE port map (RD_I(0),D(0).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(0) <= RD_I(0) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_RD1: FDCPE port map (RD_I(1),D(1).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(1) <= RD_I(1) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_RD2: FDCPE port map (RD_I(2),D(2).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(2) <= RD_I(2) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_RD3: FDCPE port map (RD_I(3),D(3).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(3) <= RD_I(3) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_RD4: FDCPE port map (RD_I(4),D(4).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(4) <= RD_I(4) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_RD5: FDCPE port map (RD_I(5),D(5).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(5) <= RD_I(5) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_RD6: FDCPE port map (RD_I(6),D(6).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(6) <= RD_I(6) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_RD7: FDCPE port map (RD_I(7),D(7).PIN,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RD(7) <= RD_I(7) when ram/RDOE_MC.GLB = '1' else 'Z';
+</td></tr><tr><td>
+FDCPE_REUA0: FDCPE port map (REUA(0),REUA_D(0),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_D(0) <= ((D(0).PIN AND NOT RegReset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND reureg/REUAWritten(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND reureg/IncMode(0) AND N_PZ_953)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND N_PZ_953 AND NOT N_PZ_833)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833));
+</td></tr><tr><td>
+FDCPE_REUA1: FDCPE port map (REUA(1),REUA_D(1),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_D(1) <= ((NOT RegReset AND D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND reureg/REUAWritten(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND N_PZ_953 AND REUA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/IncMode(0) AND N_PZ_953 AND REUA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND NOT N_PZ_833 AND REUA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT REUA(1)));
+</td></tr><tr><td>
+FTCPE_REUA2: FTCPE port map (REUA(2),REUA_T(2),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(2) <= ((RegReset AND REUA(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(2).PIN AND reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000 AND NOT REUA(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_7_and0000 AND NOT N_PZ_953 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(2) AND NOT reureg/REUAWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND NOT REUA(2) AND reureg/REUAWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(1)));
+</td></tr><tr><td>
+FTCPE_REUA3: FTCPE port map (REUA(3),REUA_T(3),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(3) <= ((RegReset AND REUA(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(3).PIN AND reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000 AND NOT REUA(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_7_and0000 AND NOT N_PZ_953 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(3) AND NOT reureg/REUAWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND NOT REUA(3) AND reureg/REUAWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(1) AND REUA(2)));
+</td></tr><tr><td>
+FTCPE_REUA4: FTCPE port map (REUA(4),REUA_T(4),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(4) <= ((RegReset AND REUA(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(4).PIN AND reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000 AND NOT REUA(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_7_and0000 AND NOT N_PZ_953 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(4) AND NOT reureg/REUAWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND NOT REUA(4) AND reureg/REUAWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(1) AND REUA(2) AND REUA(3)));
+</td></tr><tr><td>
+FTCPE_REUA5: FTCPE port map (REUA(5),REUA_T(5),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(5) <= ((RegReset AND REUA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(5).PIN AND reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(5).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000 AND NOT REUA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_7_and0000 AND NOT N_PZ_953 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(5) AND NOT reureg/REUAWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND NOT REUA(5) AND reureg/REUAWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(1) AND REUA(2) AND REUA(3) AND REUA(4)));
+</td></tr><tr><td>
+FTCPE_REUA6: FTCPE port map (REUA(6),REUA_T(6),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(6) <= ((RegReset AND REUA(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(6).PIN AND reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(6).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000 AND NOT REUA(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_7_and0000 AND NOT N_PZ_953 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(6) AND NOT reureg/REUAWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND NOT REUA(6) AND reureg/REUAWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(1) AND REUA(2) AND REUA(3) AND REUA(4) AND REUA(5)));
+</td></tr><tr><td>
+FTCPE_REUA7: FTCPE port map (REUA(7),REUA_T(7),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(7) <= ((RegReset AND REUA(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(7).PIN AND reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(7).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000 AND NOT REUA(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_7_and0000 AND NOT N_PZ_953 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(7) AND NOT reureg/REUAWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_953 AND NOT REUA(7) AND reureg/REUAWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND REUA(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_7_and0000 AND NOT reureg/IncMode(0) AND N_PZ_953 AND N_PZ_833 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(1) AND REUA(2) AND REUA(3) AND REUA(4) AND REUA(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(6)));
+</td></tr><tr><td>
+FDCPE_REUA8: FDCPE port map (REUA(8),REUA_D(8),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_D(8) <= ((D(0).PIN AND NOT RegReset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_958 AND reureg/REUAWritten(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(8) AND NOT N_PZ_1099)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND NOT REUA(8) AND N_PZ_1099));
+</td></tr><tr><td>
+FDCPE_REUA9: FDCPE port map (REUA(9),REUA_D(9),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_D(9) <= ((NOT RegReset AND D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(9) AND NOT N_PZ_958)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND NOT N_PZ_1099)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND NOT REUA(8) AND N_PZ_1099)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND NOT REUA(9) AND REUA(8) AND N_PZ_1099));
+</td></tr><tr><td>
+FDCPE_REUA10: FDCPE port map (REUA(10),REUA_D(10),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_D(10) <= ((NOT RegReset AND D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_958 AND reureg/REUAWritten(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND NOT N_PZ_1099 AND REUA(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND NOT REUA(9) AND N_PZ_1099 AND REUA(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND NOT REUA(8) AND N_PZ_1099 AND REUA(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND REUA(8) AND N_PZ_1099 AND NOT REUA(10)));
+</td></tr><tr><td>
+FTCPE_REUA11: FTCPE port map (REUA(11),REUA_T(11),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(11) <= ((RegReset AND REUA(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(3).PIN AND reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000 AND NOT REUA(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_15_and0000 AND NOT N_PZ_958 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(11) AND NOT reureg/REUAWritten(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_958 AND NOT REUA(11) AND reureg/REUAWritten(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND REUA(8) AND N_PZ_1099 AND REUA(10)));
+</td></tr><tr><td>
+FTCPE_REUA12: FTCPE port map (REUA(12),REUA_T(12),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(12) <= ((RegReset AND REUA(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(4).PIN AND reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000 AND NOT REUA(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_15_and0000 AND NOT N_PZ_958 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(12) AND NOT reureg/REUAWritten(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_958 AND NOT REUA(12) AND reureg/REUAWritten(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND REUA(8) AND N_PZ_1099 AND REUA(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(11)));
+</td></tr><tr><td>
+FTCPE_REUA13: FTCPE port map (REUA(13),REUA_T(13),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(13) <= ((RegReset AND REUA(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(5).PIN AND reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(5).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000 AND NOT REUA(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_15_and0000 AND NOT N_PZ_958 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(13) AND NOT reureg/REUAWritten(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_958 AND NOT REUA(13) AND reureg/REUAWritten(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND REUA(8) AND N_PZ_1099 AND REUA(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(11) AND REUA(12)));
+</td></tr><tr><td>
+FTCPE_REUA14: FTCPE port map (REUA(14),REUA_T(14),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(14) <= ((RegReset AND REUA(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(6).PIN AND reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(6).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000 AND NOT REUA(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_15_and0000 AND NOT N_PZ_958 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(14) AND NOT reureg/REUAWritten(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_958 AND NOT REUA(14) AND reureg/REUAWritten(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND REUA(8) AND N_PZ_1099 AND REUA(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(11) AND REUA(12) AND REUA(13)));
+</td></tr><tr><td>
+FTCPE_REUA15: FTCPE port map (REUA(15),REUA_T(15),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(15) <= ((RegReset AND REUA(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(7).PIN AND reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(7).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000 AND NOT REUA(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/REUAWritten_15_and0000 AND NOT N_PZ_958 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(15) AND NOT reureg/REUAWritten(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_958 AND NOT REUA(15) AND reureg/REUAWritten(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_953 AND REUA(9) AND REUA(8) AND N_PZ_1099 AND REUA(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(11) AND REUA(12) AND REUA(13) AND REUA(14)));
+</td></tr><tr><td>
+FTCPE_REUA16: FTCPE port map (REUA(16),REUA_T(16),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(16) <= ((RegReset AND REUA(16))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(0).PIN AND REUA(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_18_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(0).PIN AND NOT RegReset AND NOT REUA(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_18_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_949 AND REUA(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_18_and0000 AND NOT reureg/REUAWritten(16))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_949 AND NOT REUA(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_18_and0000 AND reureg/REUAWritten(16))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_949 AND REUA(9) AND REUA(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_1099 AND REUA(10) AND REUA(11) AND REUA(12) AND REUA(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(14) AND REUA(15) AND NOT reureg/REUAWritten_18_and0000));
+</td></tr><tr><td>
+FTCPE_REUA17: FTCPE port map (REUA(17),REUA_T(17),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(17) <= ((RegReset AND REUA(17))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(1).PIN AND reureg/REUAWritten_18_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(17))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_18_and0000 AND NOT REUA(17))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_949 AND NOT reureg/REUAWritten_18_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(17) AND NOT reureg/REUAWritten(17))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_949 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_18_and0000 AND NOT REUA(17) AND reureg/REUAWritten(17))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_949 AND REUA(9) AND REUA(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_1099 AND REUA(10) AND REUA(11) AND REUA(12) AND REUA(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(14) AND REUA(15) AND REUA(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_18_and0000));
+</td></tr><tr><td>
+FTCPE_REUA18: FTCPE port map (REUA(18),REUA_T(18),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;REUA_T(18) <= ((RegReset AND REUA(18))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(2).PIN AND reureg/REUAWritten_18_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(18))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_18_and0000 AND NOT REUA(18))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_949 AND NOT reureg/REUAWritten_18_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(18) AND NOT reureg/REUAWritten(18))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND N_PZ_949 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_18_and0000 AND NOT REUA(18) AND reureg/REUAWritten(18))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_949 AND REUA(9) AND REUA(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_1099 AND REUA(10) AND REUA(11) AND REUA(12) AND REUA(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	REUA(14) AND REUA(15) AND REUA(16) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/REUAWritten_18_and0000 AND REUA(17)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+RegReset <= ((nDMA AND NOT dmaseq/nRESETr_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND dmaseq/DMAr AND NOT dmaseq/nRESETr(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+XferType(0) <= NOT reureg/XferType(0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((D(0).PIN AND nDMA AND NOT reureg/XferType(0) AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(0).PIN AND nDMA AND reureg/XferType(0) AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+XferType(1) <= NOT reureg/XferType(1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((nDMA AND D(1).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/XferType(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(1).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/XferType(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+_cmp_eq0000 <= ((D(0).PIN AND NOT ram/RDD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(0).PIN AND ram/RDD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(1).PIN AND NOT ram/RDD(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(1).PIN AND ram/RDD(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(2).PIN AND NOT ram/RDD(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(2).PIN AND ram/RDD(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(3).PIN AND NOT ram/RDD(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(3).PIN AND ram/RDD(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(4).PIN AND NOT ram/RDD(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(4).PIN AND ram/RDD(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(5).PIN AND NOT ram/RDD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(5).PIN AND ram/RDD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(6).PIN AND NOT ram/RDD(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(6).PIN AND ram/RDD(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(7).PIN AND NOT ram/RDD(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(7).PIN AND ram/RDD(7)));
+</td></tr><tr><td>
+FDCPE_dmaseq/BAr: FDCPE port map (dmaseq/BAr,BA,NOT PHI2,'0','0','1');
+</td></tr><tr><td>
+FDCPE_dmaseq/DMAr: FDCPE port map (dmaseq/DMAr,NOT nDMA,NOT PHI2,'0','0','1');
+</td></tr><tr><td>
+FDCPE_dmaseq/Equalr: FDCPE port map (dmaseq/Equalr,NOT _cmp_eq0000,NOT PHI2,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+dmaseq/XferEnd8 <= ((NOT dmaseq/nRESETr_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT XferType(0) AND BA AND Length1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (XferType(1) AND BA AND Length1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (BA AND RAMWR AND Length1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (dmaseq/DMAr AND dmaseq/BAr AND NOT dmaseq/Equalr AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XferType(0) AND NOT XferType(1)));
+</td></tr><tr><td>
+FDCPE_dmaseq/nRESETr1: FDCPE port map (dmaseq/nRESETr(1),dmaseq/nRESETr_0,NOT PHI2,'0','0','1');
+</td></tr><tr><td>
+FDCPE_dmaseq/nRESETr_0: FDCPE port map (dmaseq/nRESETr_0,nRESET,NOT PHI2,'0','0','1');
+</td></tr><tr><td>
+FDCPE_nCAS: FDCPE port map (nCAS,nCAS_D,C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nCAS_D <= NOT (((ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND ram/S(0) AND NOT ram/S(1))));
+</td></tr><tr><td>
+FDCPE_nDMA: FDCPE port map (nDMA,nDMA_D,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nDMA_D <= ((NOT nDMA AND dmaseq/XferEnd8)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT reureg/Execute8 AND NOT reureg/Execute1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+nIRQ <= NOT (((reureg/EndOfBlock AND reureg/EndOfBlockMask AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/IntEnable)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (reureg/IntEnable AND reureg/Fault AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/VerifyErrMask)));
+</td></tr><tr><td>
+FDCPE_nRAS: FDCPE port map (nRAS,nRAS_D,C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nRAS_D <= NOT (((ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND ram/S(0) AND ram/S(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(0) AND NOT ram/S(1) AND RAMWR AND ram/InitDone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(0) AND NOT ram/S(1) AND ram/InitDone AND RAMRD)));
+</td></tr><tr><td>
+FDCPE_nRWE: FDCPE port map (nRWE,nRWE_D,C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nRWE_D <= NOT (((NOT ram/S(2) AND ram/S(0) AND ram/S(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ram/S(2) AND NOT ram/S(0) AND NOT ram/S(1) AND NOT ram/InitDone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(2) AND ram/S(0) AND RAMWR AND ram/InitDone)));
+</td></tr><tr><td>
+FDCPE_nWE: FDCPE port map (nWE_I,nWE,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nWE <= NOT ((NOT nDMA AND dmaseq/XferEnd8)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((nDMA AND NOT XferType(0) AND XferType(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT reureg/Execute8 AND NOT reureg/Execute1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT dmaseq/XferEnd8 AND NOT XferType(0) AND XferType(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND NOT dmaseq/XferEnd8 AND XferType(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XferType(1) AND BA AND nWE)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/XferEnd8 AND dmaseq/nRESETr_0 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XferType(0) AND NOT XferType(1) AND NOT BA AND nWE)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND NOT dmaseq/XferEnd8 AND dmaseq/nRESETr_0 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XferType(0) AND NOT XferType(1) AND NOT BA AND NOT nWE)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nWE <= nWE_I when nWE_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nWE_OE <= (NOT nDMA AND BA AND PHI2);
+</td></tr><tr><td>
+FTCPE_ram/InitDone: FTCPE port map (ram/InitDone,ram/InitDone_T,C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram/InitDone_T <= (ram/S(2) AND ram/S(0) AND ram/S(1) AND NOT ram/InitDone);
+</td></tr><tr><td>
+FDCPE_ram/PHI2r0: FDCPE port map (ram/PHI2r(0),PHI2,NOT C8M,'0','0','1');
+</td></tr><tr><td>
+FDCPE_ram/PHI2r1: FDCPE port map (ram/PHI2r(1),ram/PHI2r(0),C8M,'0','0','1');
+</td></tr><tr><td>
+FDCPE_ram/PORDone: FDCPE port map (ram/PORDone,ram/PORDone_D,C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram/PORDone_D <= NOT ((NOT ram/PORDone AND NOT ram/nRESETr));
+</td></tr><tr><td>
+FDCPE_ram/RDD0: FDCPE port map (ram/RDD(0),RD(0).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDD1: FDCPE port map (ram/RDD(1),RD(1).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDD2: FDCPE port map (ram/RDD(2),RD(2).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDD3: FDCPE port map (ram/RDD(3),RD(3).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDD4: FDCPE port map (ram/RDD(4),RD(4).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDD5: FDCPE port map (ram/RDD(5),RD(5).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDD6: FDCPE port map (ram/RDD(6),RD(6).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDD7: FDCPE port map (ram/RDD(7),RD(7).PIN,C8M,'0','0',NOT ram/S(2));
+</td></tr><tr><td>
+FDCPE_ram/RDOE_MC.GLB: FDCPE port map (ram/RDOE_MC.GLB,ram/RDOE_MC.GLB_D,C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram/RDOE_MC.GLB_D <= (NOT ram/S(2) AND NOT ram/S(1));
+</td></tr><tr><td>
+FDCPE_ram/S0: FDCPE port map (ram/S(0),ram/S_D(0),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram/S_D(0) <= ((ram/S(2) AND NOT ram/S(0) AND ram/PORDone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(0) AND ram/PORDone AND ram/S(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(0) AND ram/PORDone AND NOT ram/PHI2r(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	ram/PHI2r(1)));
+</td></tr><tr><td>
+FDCPE_ram/S1: FDCPE port map (ram/S(1),ram/S_D(1),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram/S_D(1) <= ((ram/S(0) AND ram/PORDone AND NOT ram/S(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT ram/S(0) AND ram/PORDone AND ram/S(1)));
+</td></tr><tr><td>
+FTCPE_ram/S2: FTCPE port map (ram/S(2),ram/S_T(2),C8M,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ram/S_T(2) <= ((ram/S(2) AND NOT ram/PORDone)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (ram/S(0) AND ram/PORDone AND ram/S(1)));
+</td></tr><tr><td>
+FDCPE_ram/nRESETr: FDCPE port map (ram/nRESETr,nRESET,C8M,'0','0','1');
+</td></tr><tr><td>
+FTCPE_reureg/AutoloadEN: FTCPE port map (reureg/AutoloadEN,reureg/AutoloadEN_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/AutoloadEN_T <= ((RegReset AND reureg/AutoloadEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(5).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/AutoloadEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(5).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/AutoloadEN));
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(0) <= NOT (((NOT nDMA AND NOT ram/RDD(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT reureg/XferType(0) AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2).PIN AND NOT A(1).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT A(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT REUA(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT reureg/Length(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT REUA(16))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(8))));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(0) <= D_I(0) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten0: FDCPE port map (reureg/CAWritten(0),D(0).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(0) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(1) <= NOT (((NOT nDMA AND NOT ram/RDD(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT reureg/XferType(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT A(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT REUA(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT reureg/Length(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT REUA(17))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(9))));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(1) <= D_I(1) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten1: FDCPE port map (reureg/CAWritten(1),D(1).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(1) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten2: FDCPE port map (reureg/CAWritten(2),D(2).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(2) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten3: FDCPE port map (reureg/CAWritten(3),D(3).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(3) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten4: FDCPE port map (reureg/CAWritten(4),D(4).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(4) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten5: FDCPE port map (reureg/CAWritten(5),D(5).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(5) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten6: FDCPE port map (reureg/CAWritten(6),D(6).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(6) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten7: FDCPE port map (reureg/CAWritten(7),D(7).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(7) <= (NOT RegReset AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten8: FDCPE port map (reureg/CAWritten(8),D(0).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(8));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(8) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+FDCPE_reureg/CAWritten9: FDCPE port map (reureg/CAWritten(9),D(1).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(9));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(9) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(2) <= NOT (((NOT nDMA AND NOT ram/RDD(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT reureg/DF01Reserved32_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT A(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT REUA(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT reureg/Length(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT REUA(18))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(10))));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(2) <= D_I(2) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten10: FDCPE port map (reureg/CAWritten(10),D(2).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(10));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(10) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(3) <= NOT (((NOT nDMA AND NOT ram/RDD(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT reureg/DF01Reserved32_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT A(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT REUA(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(0).PIN AND NOT reureg/Length(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(11))));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(3) <= D_I(3) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten11: FDCPE port map (reureg/CAWritten(11),D(3).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(11));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(11) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(4) <= NOT (((NOT nDMA AND NOT ram/RDD(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT reureg/Length(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT REUA(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT A(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND reureg/FF00DecodeEN)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(4) <= D_I(4) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten12: FDCPE port map (reureg/CAWritten(12),D(4).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(12) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(5) <= NOT (((NOT nDMA AND NOT ram/RDD(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT reureg/VerifyErrMask)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT reureg/Length(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT REUA(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT A(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT reureg/AutoloadEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT reureg/Fault)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(5) <= D_I(5) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten13: FDCPE port map (reureg/CAWritten(13),D(5).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(13));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(13) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(6) <= NOT (((NOT nDMA AND NOT ram/RDD(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT reureg/IncMode(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT reureg/EndOfBlockMask)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT reureg/Length(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT REUA(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT A(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT reureg/DF01Reserved6)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT reureg/EndOfBlock)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(6) <= D_I(6) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten14: FDCPE port map (reureg/CAWritten(14),D(6).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(14));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(14) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+D(7) <= NOT (((NOT nDMA AND NOT ram/RDD(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT reureg/IncMode(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT reureg/IntEnable)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT reureg/Length(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT reureg/Length(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT REUA(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT REUA(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND A(0).PIN AND NOT A(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(1).PIN AND NOT A(0).PIN AND NOT A(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND A(0).PIN AND NOT reureg/ExecuteEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND NOT reureg/IntPending)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D(7) <= D_I(7) when DOE_MC.GLB = '1' else 'Z';FDCPE_reureg/CAWritten15: FDCPE port map (reureg/CAWritten(15),D(7).PIN,NOT PHI2,'0','0',reureg/CAWritten_CE(15));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/CAWritten_CE(15) <= (NOT RegReset AND N_PZ_1010);
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/CA_15_and0000 <= (NOT N_PZ_816 AND A(0) AND NOT reureg/IncMode(1) AND A(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(2) AND A(3) AND A(4) AND A(5) AND A(6) AND A(7));
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/CA_7_and0001 <= (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FTCPE_reureg/DF01Reserved32_0: FTCPE port map (reureg/DF01Reserved32_0,reureg/DF01Reserved32_0_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/DF01Reserved32_0_T <= ((RegReset AND reureg/DF01Reserved32_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(2).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/DF01Reserved32_0)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(2).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/DF01Reserved32_0));
+</td></tr><tr><td>
+FTCPE_reureg/DF01Reserved32_1: FTCPE port map (reureg/DF01Reserved32_1,reureg/DF01Reserved32_1_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/DF01Reserved32_1_T <= ((RegReset AND reureg/DF01Reserved32_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(3).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/DF01Reserved32_1)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(3).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/DF01Reserved32_1));
+</td></tr><tr><td>
+FTCPE_reureg/DF01Reserved6: FTCPE port map (reureg/DF01Reserved6,reureg/DF01Reserved6_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/DF01Reserved6_T <= ((RegReset AND reureg/DF01Reserved6)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(6).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/DF01Reserved6)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(6).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/DF01Reserved6));
+</td></tr><tr><td>
+FTCPE_reureg/EndOfBlockMask: FTCPE port map (reureg/EndOfBlockMask,reureg/EndOfBlockMask_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/EndOfBlockMask_T <= ((RegReset AND reureg/EndOfBlockMask)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(6).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/EndOfBlockMask)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(6).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/EndOfBlockMask));
+</td></tr><tr><td>
+FTCPE_reureg/EndOfBlock: FTCPE port map (reureg/EndOfBlock,reureg/EndOfBlock_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/EndOfBlock_T <= ((RegReset AND reureg/EndOfBlock)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT nDMA AND Length1 AND NOT reureg/EndOfBlock)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2).PIN AND NOT A(1).PIN AND NOT A(0).PIN AND NOT nIO2 AND reureg/EndOfBlock));
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/Execute1 <= (NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(1).PIN AND NOT A(0).PIN AND A(9).PIN AND A(8).PIN AND A(15).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(14).PIN AND A(13).PIN AND A(12).PIN AND A(11).PIN AND A(10).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(6).PIN AND NOT A(5).PIN AND NOT A(7).PIN AND reureg/ExecuteEN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/FF00DecodeEN);
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/Execute8 <= (nDMA AND D(4).PIN AND D(7).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2);
+</td></tr><tr><td>
+FTCPE_reureg/ExecuteEN: FTCPE port map (reureg/ExecuteEN,reureg/ExecuteEN_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/ExecuteEN_T <= ((RegReset AND reureg/ExecuteEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/XferEnd8 AND reureg/ExecuteEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(7).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/ExecuteEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(7).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/ExecuteEN));
+</td></tr><tr><td>
+FTCPE_reureg/FF00DecodeEN: FTCPE port map (reureg/FF00DecodeEN,reureg/FF00DecodeEN_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/FF00DecodeEN_T <= ((RegReset AND reureg/FF00DecodeEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT nDMA AND dmaseq/XferEnd8 AND reureg/FF00DecodeEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(4).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/FF00DecodeEN)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(4).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/FF00DecodeEN));
+</td></tr><tr><td>
+FTCPE_reureg/Fault: FTCPE port map (reureg/Fault,reureg/Fault_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Fault_T <= ((RegReset AND reureg/Fault)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT nDMA AND _cmp_eq0000 AND NOT XferType(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XferType(1) AND BA AND NOT reureg/Fault)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2).PIN AND NOT A(1).PIN AND NOT A(0).PIN AND NOT nIO2 AND reureg/Fault));
+</td></tr><tr><td>
+FTCPE_reureg/IncMode0: FTCPE port map (reureg/IncMode(0),reureg/IncMode_T(0),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/IncMode_T(0) <= ((RegReset AND reureg/IncMode(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(6).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/IncMode(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(6).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/IncMode(0)));
+</td></tr><tr><td>
+FTCPE_reureg/IncMode1: FTCPE port map (reureg/IncMode(1),reureg/IncMode_T(1),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/IncMode_T(1) <= ((RegReset AND reureg/IncMode(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(7).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/IncMode(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(7).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/IncMode(1)));
+</td></tr><tr><td>
+FTCPE_reureg/IntEnable: FTCPE port map (reureg/IntEnable,reureg/IntEnable_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/IntEnable_T <= ((RegReset AND reureg/IntEnable)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(7).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/IntEnable)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(7).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/IntEnable));
+</td></tr><tr><td>
+FTCPE_reureg/IntPending: FTCPE port map (reureg/IntPending,reureg/IntPending_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/IntPending_T <= ((RegReset AND reureg/IntPending)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT nDMA AND Length1 AND NOT reureg/IntPending)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT nDMA AND _cmp_eq0000 AND NOT XferType(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT XferType(1) AND BA AND NOT reureg/IntPending)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2).PIN AND NOT A(1).PIN AND NOT A(0).PIN AND NOT nIO2 AND reureg/IntPending));
+</td></tr><tr><td>
+FTCPE_reureg/Length0: FTCPE port map (reureg/Length(0),reureg/Length_T(0),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(0) <= ((RegReset AND NOT reureg/Length(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/Length(0) AND reureg/LengthWritten(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_823)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(0) AND NOT N_PZ_823)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(0).PIN AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(0).PIN AND NOT RegReset AND nDMA AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(0)));
+</td></tr><tr><td>
+FTCPE_reureg/Length1: FTCPE port map (reureg/Length(1),reureg/Length_T(1),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(1) <= ((RegReset AND NOT reureg/Length(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_823 AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_823 AND reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND NOT reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(1).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(1).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(1)));
+</td></tr><tr><td>
+FTCPE_reureg/Length2: FTCPE port map (reureg/Length(2),reureg/Length_T(2),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(2) <= ((RegReset AND NOT reureg/Length(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_823 AND NOT reureg/Length(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_823 AND reureg/Length(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND NOT reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816 AND NOT reureg/Length(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(2).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(2).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(2)));
+</td></tr><tr><td>
+FTCPE_reureg/Length3: FTCPE port map (reureg/Length(3),reureg/Length_T(3),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(3) <= ((RegReset AND NOT reureg/Length(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_823 AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_823 AND reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND NOT reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816 AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(3).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(3).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(3)));
+</td></tr><tr><td>
+FTCPE_reureg/Length4: FTCPE port map (reureg/Length(4),reureg/Length_T(4),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(4) <= ((RegReset AND NOT reureg/Length(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_823 AND NOT reureg/Length(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_823 AND reureg/Length(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND NOT reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816 AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2) AND NOT reureg/Length(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(4).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(4).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(4)));
+</td></tr><tr><td>
+FTCPE_reureg/Length5: FTCPE port map (reureg/Length(5),reureg/Length_T(5),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(5) <= ((RegReset AND NOT reureg/Length(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_823 AND NOT reureg/Length(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_823 AND reureg/Length(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND NOT reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816 AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2) AND NOT reureg/Length(3) AND NOT reureg/Length(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(5).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(5).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(5)));
+</td></tr><tr><td>
+FTCPE_reureg/Length6: FTCPE port map (reureg/Length(6),reureg/Length_T(6),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(6) <= ((RegReset AND NOT reureg/Length(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_823 AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_823 AND reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(6).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(6).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND NOT reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816 AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2) AND NOT reureg/Length(3) AND NOT reureg/Length(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(5)));
+</td></tr><tr><td>
+FTCPE_reureg/Length7: FTCPE port map (reureg/Length(7),reureg/Length_T(7),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(7) <= ((RegReset AND NOT reureg/Length(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_823 AND NOT reureg/Length(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT N_PZ_823 AND reureg/Length(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(7).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(7).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/Length(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT Length1 AND NOT reureg/Length(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten_15_and0000 AND NOT N_PZ_949 AND NOT N_PZ_816 AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2) AND NOT reureg/Length(3) AND NOT reureg/Length(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(5) AND NOT reureg/Length(6)));
+</td></tr><tr><td>
+FTCPE_reureg/Length8: FTCPE port map (reureg/Length(8),reureg/Length_T(8),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(8) <= ((RegReset AND NOT reureg/Length(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(0).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(0).PIN AND NOT RegReset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(8))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8) AND reureg/LengthWritten(8) AND N_PZ_955)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/Length(8) AND NOT reureg/LengthWritten(8) AND N_PZ_955)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Length1 AND NOT reureg/Length(0) AND NOT N_PZ_816 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1) AND NOT reureg/Length(2) AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4) AND NOT reureg/Length(5) AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(7) AND N_PZ_1017));
+</td></tr><tr><td>
+FTCPE_reureg/Length9: FTCPE port map (reureg/Length(9),reureg/Length_T(9),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(9) <= ((RegReset AND NOT reureg/Length(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(1).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND N_PZ_955 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(9) AND reureg/LengthWritten(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_955 AND reureg/Length(9) AND NOT reureg/LengthWritten(9))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Length1 AND NOT reureg/Length(0) AND NOT N_PZ_816 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1) AND NOT reureg/Length(2) AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4) AND NOT reureg/Length(5) AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8) AND NOT reureg/Length(7) AND N_PZ_1017));
+</td></tr><tr><td>
+FTCPE_reureg/Length10: FTCPE port map (reureg/Length(10),reureg/Length_T(10),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(10) <= ((RegReset AND NOT reureg/Length(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(2).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND N_PZ_955 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(10) AND reureg/LengthWritten(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_955 AND reureg/Length(10) AND NOT reureg/LengthWritten(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Length1 AND NOT reureg/Length(0) AND NOT N_PZ_816 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1) AND NOT reureg/Length(2) AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4) AND NOT reureg/Length(5) AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8) AND NOT reureg/Length(7) AND N_PZ_1017 AND NOT reureg/Length(9)));
+</td></tr><tr><td>
+FTCPE_reureg/Length11: FTCPE port map (reureg/Length(11),reureg/Length_T(11),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(11) <= ((RegReset AND NOT reureg/Length(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(3).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT D(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND N_PZ_955 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(11) AND reureg/LengthWritten(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_955 AND reureg/Length(11) AND NOT reureg/LengthWritten(11))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Length1 AND NOT reureg/Length(0) AND NOT N_PZ_816 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1) AND NOT reureg/Length(2) AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4) AND NOT reureg/Length(5) AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8) AND NOT reureg/Length(7) AND N_PZ_1017 AND NOT reureg/Length(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(9)));
+</td></tr><tr><td>
+FTCPE_reureg/Length12: FTCPE port map (reureg/Length(12),reureg/Length_T(12),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(12) <= ((RegReset AND NOT reureg/Length(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(4).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT D(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND N_PZ_955 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(12) AND reureg/LengthWritten(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_955 AND reureg/Length(12) AND NOT reureg/LengthWritten(12))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Length1 AND NOT reureg/Length(0) AND NOT N_PZ_816 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1) AND NOT reureg/Length(2) AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4) AND NOT reureg/Length(5) AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8) AND NOT reureg/Length(7) AND N_PZ_1017 AND NOT reureg/Length(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(9) AND NOT reureg/Length(11)));
+</td></tr><tr><td>
+FTCPE_reureg/Length13: FTCPE port map (reureg/Length(13),reureg/Length_T(13),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(13) <= ((RegReset AND NOT reureg/Length(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(5).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT D(5).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND N_PZ_955 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(13) AND reureg/LengthWritten(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_955 AND reureg/Length(13) AND NOT reureg/LengthWritten(13))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Length1 AND NOT reureg/Length(0) AND NOT N_PZ_816 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1) AND NOT reureg/Length(2) AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4) AND NOT reureg/Length(5) AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8) AND NOT reureg/Length(7) AND N_PZ_1017 AND NOT reureg/Length(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(9) AND NOT reureg/Length(11) AND NOT reureg/Length(12)));
+</td></tr><tr><td>
+FTCPE_reureg/Length14: FTCPE port map (reureg/Length(14),reureg/Length_T(14),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(14) <= ((RegReset AND NOT reureg/Length(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(6).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT D(6).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND N_PZ_955 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(14) AND reureg/LengthWritten(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_955 AND reureg/Length(14) AND NOT reureg/LengthWritten(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Length1 AND NOT reureg/Length(0) AND NOT N_PZ_816 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(1) AND NOT reureg/Length(2) AND NOT reureg/Length(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(4) AND NOT reureg/Length(5) AND NOT reureg/Length(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(8) AND NOT reureg/Length(7) AND N_PZ_1017 AND NOT reureg/Length(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(9) AND NOT reureg/Length(11) AND NOT reureg/Length(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(13)));
+</td></tr><tr><td>
+FTCPE_reureg/Length15: FTCPE port map (reureg/Length(15),reureg/Length_T(15),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/Length_T(15) <= ((RegReset AND NOT reureg/Length(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(7).PIN AND reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT D(7).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000 AND reureg/Length(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/LengthWritten_15_and0000 AND N_PZ_955 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(15) AND reureg/LengthWritten(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_955 AND reureg/Length(15) AND NOT reureg/LengthWritten(15))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT reureg/Length(0) AND NOT N_PZ_816 AND NOT reureg/Length(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(2) AND NOT reureg/Length(3) AND NOT reureg/Length(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(5) AND NOT reureg/Length(6) AND NOT reureg/Length(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(7) AND N_PZ_1017 AND NOT reureg/Length(10) AND NOT reureg/Length(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(11) AND NOT reureg/Length(12) AND NOT reureg/Length(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/Length(14)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten0: FTCPE port map (reureg/LengthWritten(0),reureg/LengthWritten_T(0),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(0) <= ((RegReset AND NOT reureg/LengthWritten(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (D(0).PIN AND nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT D(0).PIN AND NOT RegReset AND nDMA AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(0)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten1: FTCPE port map (reureg/LengthWritten(1),reureg/LengthWritten_T(1),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(1) <= ((RegReset AND NOT reureg/LengthWritten(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(1).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(1).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(1)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten2: FTCPE port map (reureg/LengthWritten(2),reureg/LengthWritten_T(2),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(2) <= ((RegReset AND NOT reureg/LengthWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(2).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(2).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(2)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten3: FTCPE port map (reureg/LengthWritten(3),reureg/LengthWritten_T(3),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(3) <= ((RegReset AND NOT reureg/LengthWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(3).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(3).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(3)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten4: FTCPE port map (reureg/LengthWritten(4),reureg/LengthWritten_T(4),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(4) <= ((RegReset AND NOT reureg/LengthWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(4).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(4).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(4)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten5: FTCPE port map (reureg/LengthWritten(5),reureg/LengthWritten_T(5),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(5) <= ((RegReset AND NOT reureg/LengthWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(5).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(5).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(5)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten6: FTCPE port map (reureg/LengthWritten(6),reureg/LengthWritten_T(6),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(6) <= ((RegReset AND NOT reureg/LengthWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(6).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(6).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(6)));
+</td></tr><tr><td>
+FTCPE_reureg/LengthWritten7: FTCPE port map (reureg/LengthWritten(7),reureg/LengthWritten_T(7),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_T(7) <= ((RegReset AND NOT reureg/LengthWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND D(7).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND NOT D(7).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND NOT A(3).PIN AND A(2).PIN AND A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND reureg/LengthWritten(7)));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten8: FDCPE port map (reureg/LengthWritten(8),reureg/LengthWritten_D(8),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(8) <= NOT (((NOT D(0).PIN AND NOT RegReset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(8))));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten9: FDCPE port map (reureg/LengthWritten(9),reureg/LengthWritten_D(9),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(9) <= NOT (((NOT RegReset AND NOT D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(9))));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten10: FDCPE port map (reureg/LengthWritten(10),reureg/LengthWritten_D(10),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(10) <= NOT (((NOT RegReset AND NOT D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(10))));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten11: FDCPE port map (reureg/LengthWritten(11),reureg/LengthWritten_D(11),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(11) <= NOT (((NOT RegReset AND NOT D(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(11))));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten12: FDCPE port map (reureg/LengthWritten(12),reureg/LengthWritten_D(12),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(12) <= NOT (((NOT RegReset AND NOT D(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(12))));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten13: FDCPE port map (reureg/LengthWritten(13),reureg/LengthWritten_D(13),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(13) <= NOT (((NOT RegReset AND NOT D(5).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(13))));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten14: FDCPE port map (reureg/LengthWritten(14),reureg/LengthWritten_D(14),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(14) <= NOT (((NOT RegReset AND NOT D(6).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(14))));
+</td></tr><tr><td>
+FDCPE_reureg/LengthWritten15: FDCPE port map (reureg/LengthWritten(15),reureg/LengthWritten_D(15),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/LengthWritten_D(15) <= NOT (((NOT RegReset AND NOT D(7).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/LengthWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/LengthWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT reureg/LengthWritten(15))));
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/LengthWritten_15_and0000 <= (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(2).PIN AND NOT A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten0: FDCPE port map (reureg/REUAWritten(0),reureg/REUAWritten_D(0),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(0) <= ((D(0).PIN AND NOT RegReset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(0)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten1: FDCPE port map (reureg/REUAWritten(1),reureg/REUAWritten_D(1),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(1) <= ((NOT RegReset AND D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(1)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten2: FDCPE port map (reureg/REUAWritten(2),reureg/REUAWritten_D(2),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(2) <= ((NOT RegReset AND D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(2)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten3: FDCPE port map (reureg/REUAWritten(3),reureg/REUAWritten_D(3),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(3) <= ((NOT RegReset AND D(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(3)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten4: FDCPE port map (reureg/REUAWritten(4),reureg/REUAWritten_D(4),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(4) <= ((NOT RegReset AND D(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(4)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten5: FDCPE port map (reureg/REUAWritten(5),reureg/REUAWritten_D(5),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(5) <= ((NOT RegReset AND D(5).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(5)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten6: FDCPE port map (reureg/REUAWritten(6),reureg/REUAWritten_D(6),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(6) <= ((NOT RegReset AND D(6).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(6)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten7: FDCPE port map (reureg/REUAWritten(7),reureg/REUAWritten_D(7),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(7) <= ((NOT RegReset AND D(7).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_7_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_7_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(7)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten8: FDCPE port map (reureg/REUAWritten(8),reureg/REUAWritten_D(8),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(8) <= ((D(0).PIN AND NOT RegReset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(8)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten9: FDCPE port map (reureg/REUAWritten(9),reureg/REUAWritten_D(9),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(9) <= ((NOT RegReset AND D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(9)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten10: FDCPE port map (reureg/REUAWritten(10),reureg/REUAWritten_D(10),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(10) <= ((NOT RegReset AND D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(10)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten11: FDCPE port map (reureg/REUAWritten(11),reureg/REUAWritten_D(11),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(11) <= ((NOT RegReset AND D(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(11)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten12: FDCPE port map (reureg/REUAWritten(12),reureg/REUAWritten_D(12),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(12) <= ((NOT RegReset AND D(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(12)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten13: FDCPE port map (reureg/REUAWritten(13),reureg/REUAWritten_D(13),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(13) <= ((NOT RegReset AND D(5).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(13)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten14: FDCPE port map (reureg/REUAWritten(14),reureg/REUAWritten_D(14),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(14) <= ((NOT RegReset AND D(6).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(14)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten15: FDCPE port map (reureg/REUAWritten(15),reureg/REUAWritten_D(15),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(15) <= ((NOT RegReset AND D(7).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_15_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_15_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(15)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten16: FDCPE port map (reureg/REUAWritten(16),reureg/REUAWritten_D(16),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(16) <= ((D(0).PIN AND NOT RegReset AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_18_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_18_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(16)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten17: FDCPE port map (reureg/REUAWritten(17),reureg/REUAWritten_D(17),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(17) <= ((NOT RegReset AND D(1).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_18_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_18_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(17)));
+</td></tr><tr><td>
+FDCPE_reureg/REUAWritten18: FDCPE port map (reureg/REUAWritten(18),reureg/REUAWritten_D(18),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/REUAWritten_D(18) <= ((NOT RegReset AND D(2).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten_18_and0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND NOT reureg/REUAWritten_18_and0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/REUAWritten(18)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/REUAWritten_15_and0000 <= (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/REUAWritten_18_and0000 <= (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(2).PIN AND A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+reureg/REUAWritten_7_and0000 <= (nDMA AND NOT nWE.PIN AND NOT A(4).PIN AND NOT A(3).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(2).PIN AND NOT A(1).PIN AND NOT A(0).PIN AND NOT nIO2);
+</td></tr><tr><td>
+FTCPE_reureg/VerifyErrMask: FTCPE port map (reureg/VerifyErrMask,reureg/VerifyErrMask_T,NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/VerifyErrMask_T <= ((RegReset AND reureg/VerifyErrMask)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (nDMA AND NOT D(5).PIN AND NOT nWE.PIN AND NOT A(4).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND NOT nIO2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	reureg/VerifyErrMask)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT RegReset AND nDMA AND D(5).PIN AND NOT nWE.PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT A(4).PIN AND A(3).PIN AND NOT A(2).PIN AND NOT A(1).PIN AND A(0).PIN AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT nIO2 AND NOT reureg/VerifyErrMask));
+</td></tr><tr><td>
+FDCPE_reureg/XferType0: FDCPE port map (reureg/XferType(0),reureg/XferType_D(0),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/XferType_D(0) <= (NOT RegReset AND NOT XferType(0));
+</td></tr><tr><td>
+FDCPE_reureg/XferType1: FDCPE port map (reureg/XferType(1),reureg/XferType_D(1),NOT PHI2,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reureg/XferType_D(1) <= (NOT RegReset AND NOT XferType(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

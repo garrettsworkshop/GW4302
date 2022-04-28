@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="REU.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="REU.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="REU.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="REU.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="REU.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="REU.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="REU.jed"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="REU.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="REU.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="REU.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="REU.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="REU.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="REU.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="REU.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="REU.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="REU.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="REU.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="REU.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="REU.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="REU.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="REU.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="REU.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="REU.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="REU_build.xml"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="REU_envsettings.html"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="REU_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="REU_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="REU_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="REU_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="REU_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1651165313" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1651165313">
+      <status xil_pn:value="SuccessfullyRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1651165313" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="3358659252721780158" xil_pn:start_ts="1651165313">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1651165360" xil_pn:in_ck="4691530387425234909" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="5047981039295228505" xil_pn:start_ts="1651165313">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="REU.lso"/>
+      <outfile xil_pn:name="REU.ngc"/>
+      <outfile xil_pn:name="REU.ngr"/>
+      <outfile xil_pn:name="REU.prj"/>
+      <outfile xil_pn:name="REU.stx"/>
+      <outfile xil_pn:name="REU.syr"/>
+      <outfile xil_pn:name="REU.xst"/>
+      <outfile xil_pn:name="REU_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1651165360" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="3734212952573518" xil_pn:start_ts="1651165360">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1651165391" xil_pn:in_ck="108703295250" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-9169999550781981502" xil_pn:start_ts="1651165360">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="REU.bld"/>
+      <outfile xil_pn:name="REU.ngd"/>
+      <outfile xil_pn:name="REU_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1651165569" xil_pn:in_ck="108703295251" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="-7817432758067914232" xil_pn:start_ts="1651165391">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="REU.chk"/>
+      <outfile xil_pn:name="REU.cxt"/>
+      <outfile xil_pn:name="REU.gyd"/>
+      <outfile xil_pn:name="REU.log"/>
+      <outfile xil_pn:name="REU.mfd"/>
+      <outfile xil_pn:name="REU.nga"/>
+      <outfile xil_pn:name="REU.pad"/>
+      <outfile xil_pn:name="REU.pnx"/>
+      <outfile xil_pn:name="REU.rpt"/>
+      <outfile xil_pn:name="REU.vm6"/>
+      <outfile xil_pn:name="REU.xml"/>
+      <outfile xil_pn:name="REU_build.xml"/>
+      <outfile xil_pn:name="REU_html"/>
+      <outfile xil_pn:name="REU_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1651165588" xil_pn:in_ck="108703304115" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="5245363024343" xil_pn:start_ts="1651165569">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="REU.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1651165569" xil_pn:in_ck="108703304115" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1651165530">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

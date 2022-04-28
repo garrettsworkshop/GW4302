@@ -1,0 +1,412 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+GTS2: 208=ram/RDOE.n
+GTS3: 328=DOE.n
+GCLK0: 9=C8M.p
+GCLK1: 0=PHI2.p
+----------------- B l o c k 0 ------------------
+PLApt(38/56), Fanin(37/38), Clk(1/3), Bct(0/4), Pin(4/4), Mcell(11/16)
+PLApts[38/56] 13 14 42 57 71 72 85 102 125 175 15 43 59 89 90 106 298 116 128 298 188 16 44 61 75 92 109 117 
+              131 193 () 21 () () 38 () () 36 () () 35 () () 541 () () () () () 39 () () 37 () () 34
+Fanins[37] A<0>.n A<10>.n A<1>.n A<2>.n A<8>.n A<9>.n nDMA.n N_PZ_1010.n REUA<0>.n REUA<10>.n REUA<16>.n 
+           REUA<17>.n REUA<18>.n REUA<1>.n REUA<2>.n REUA<8>.n REUA<9>.n RegReset.n ram/RDD<0>.n ram/RDD<1>.n 
+           ram/RDD<2>.n reureg/DF01Reserved32_0.n reureg/Length<0>.n reureg/Length<10>.n reureg/Length<1>.n 
+           reureg/Length<2>.n reureg/Length<8>.n reureg/Length<9>.n reureg/XferType<0>.n reureg/XferType<1>.n 
+           A<0>.p A<1>.p A<2>.p A<3>.p A<4>.p nIO2.p nWE.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[15] [dmaseq/BAr,BA(139)] [D<0>(147),reureg/CAWritten<0>,D<0>(143)]  
+           [D<2>(156),reureg/CAWritten<10>,D<2>(140)] [D<1>(148),reureg/CAWritten<1>,D<1>(142)]  
+           [N_PZ_1010(160)] [reureg/CA_7_and0001(159)] [reureg/LengthWritten_15_and0000(158)]  
+           [reureg/REUAWritten_15_and0000(155)] [reureg/REUAWritten_18_and0000(154)]  
+           [reureg/REUAWritten_7_and0000(153)] [dmaseq/DMAr(152)] 
+Signal[15] [ 0:  ][ 1:  ][ 2: D<0>(147) reureg/CAWritten<0>(147) D<0>(143)  ][ 3: D<1>(148)  
+           reureg/CAWritten<1>(148) D<1>(142)  ][ 4:  ][ 5:  ][ 6:  ][ 7: dmaseq/DMAr(152)  ][ 8:  
+           reureg/REUAWritten_7_and0000(153)  ][ 9: reureg/REUAWritten_18_and0000(154)  ][ 10:  
+           reureg/REUAWritten_15_and0000(155)  ][ 11: D<2>(156) reureg/CAWritten<10>(156) D<2>(140)  ][ 12:  
+           dmaseq/BAr(157) BA(139)  ][ 13: reureg/LengthWritten_15_and0000(158)  ][ 14:  
+           reureg/CA_7_and0001(159)  ][ 15: N_PZ_1010(160)  ]
+----------------- B l o c k 1 ------------------
+PLApt(41/56), Fanin(37/38), Clk(1/3), Bct(0/4), Pin(3/6), Mcell(12/16)
+PLApts[41/47] 13 17 45 63 77 94 110 134 195 18 54 31 65 79 96 111 137 155 40 541 47 194 541 287 316 6 203 293 
+              321 156 282 298 312 461 2 204 294 298 322 5 () () () () () () 298
+Fanins[37] A<11>.n A<12>.n A<3>.n A<4>.n nDMA.n nWE.n N_PZ_1010.n REUA<11>.n REUA<12>.n REUA<3>.n REUA<4>.n 
+           RegReset.n dmaseq/XferEnd8.n ram/RDD<3>.n ram/RDD<4>.n ram/S<1>.n ram/S<2>.n 
+           reureg/DF01Reserved32_1.n reureg/FF00DecodeEN.n reureg/Length<11>.n reureg/Length<12>.n 
+           reureg/Length<3>.n reureg/Length<4>.n reureg/LengthWritten<3>.n reureg/LengthWritten<4>.n A<0>.p 
+           A<1>.p A<2>.p A<3>.p A<4>.p BA.p D<2>.p D<3>.p D<4>.p PHI2.p nIO2.p nWE.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[15] [ram/RDOE(161)] [DOE(163)] [dmaseq/nRESETr_0,nRESET(6)] [D<3>(164),reureg/CAWritten<11>,D<3>(4)]  
+           [D<4>(165),reureg/CAWritten<12>,D<4>(5)] [reureg/DF01Reserved32_1(174)]  
+           [reureg/CAWritten<3>(173)] [reureg/LengthWritten<3>(172)] [reureg/FF00DecodeEN(171)]  
+           [reureg/CAWritten<4>(170)] [reureg/LengthWritten<4>(169)] [reureg/CAWritten<2>(168)] 
+Signal[15] [ 0: ram/RDOE(161) (2)  ][ 1:  ][ 2: DOE(163) (3)  ][ 3: D<3>(164) reureg/CAWritten<11>(164)  
+           D<3>(4)  ][ 4: D<4>(165) reureg/CAWritten<12>(165) D<4>(5)  ][ 5:  ][ 6:  ][ 7:  
+           reureg/CAWritten<2>(168)  ][ 8: reureg/LengthWritten<4>(169)  ][ 9: reureg/CAWritten<4>(170)  ] 
+           [ 10: reureg/FF00DecodeEN(171)  ][ 11: reureg/LengthWritten<3>(172)  ][ 12:  
+           reureg/CAWritten<3>(173)  ][ 13: reureg/DF01Reserved32_1(174)  ][ 14: dmaseq/nRESETr_0(175)  
+           nRESET(6)  ][ 15: (7)  ]
+----------------- B l o c k 2 ------------------
+PLApt(53/56), Fanin(37/38), Clk(1/3), Bct(0/4), Pin(2/5), Mcell(13/16)
+PLApts[53/53] 19 46 66 81 98 112 140 148 159 165 298 20 49 69 82 100 541 108 113 541 143 150 152 197 147 278 
+              309 163 285 314 7 298 196 288 317 151 280 310 107 267 306 8 149 279 448 205 298 295 323 206 296 
+              324 1
+Fanins[37] A<13>.n A<14>.n A<5>.n A<6>.n nDMA.n Length1.n N_PZ_1010.n REUA<13>.n REUA<14>.n REUA<5>.n 
+           REUA<6>.n RegReset.n ram/RDD<5>.n ram/RDD<6>.n reureg/AutoloadEN.n reureg/DF01Reserved6.n 
+           reureg/EndOfBlock.n reureg/EndOfBlockMask.n reureg/Fault.n reureg/IncMode<0>.n reureg/Length<13>.n 
+           reureg/Length<14>.n reureg/Length<5>.n reureg/Length<6>.n reureg/LengthWritten<5>.n 
+           reureg/LengthWritten<6>.n reureg/VerifyErrMask.n A<0>.p A<1>.p A<2>.p A<3>.p A<4>.p D<5>.p D<6>.p 
+           D<7>.p nIO2.p nWE.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[15] [D<5>(179),reureg/CAWritten<13>,D<5>(138)] [D<6>(180),reureg/CAWritten<14>,D<6>(137)]  
+           [reureg/AutoloadEN(191)] [reureg/VerifyErrMask(190)] [reureg/CAWritten<5>(189)]  
+           [reureg/DF01Reserved6(187)] [reureg/EndOfBlockMask(186)] [reureg/IncMode<0>(185)]  
+           [reureg/CAWritten<6>(184)] [reureg/EndOfBlock(183)] [reureg/LengthWritten<5>(182)]  
+           [reureg/LengthWritten<6>(178)] [reureg/CAWritten<7>(177)] 
+Signal[15] [ 0: reureg/CAWritten<7>(177)  ][ 1: reureg/LengthWritten<6>(178)  ][ 2: D<5>(179)  
+           reureg/CAWritten<13>(179) D<5>(138)  ][ 3: D<6>(180) reureg/CAWritten<14>(180) D<6>(137)  ][ 4:  
+           (136)  ][ 5: reureg/LengthWritten<5>(182)  ][ 6: reureg/EndOfBlock(183)  ][ 7:  
+           reureg/CAWritten<6>(184)  ][ 8: reureg/IncMode<0>(185)  ][ 9: reureg/EndOfBlockMask(186)  ][ 10:  
+           reureg/DF01Reserved6(187)  ][ 11: (135)  ][ 12: reureg/CAWritten<5>(189)  ][ 13:  
+           reureg/VerifyErrMask(190)  ][ 14: reureg/AutoloadEN(191)  ][ 15: (134)  ]
+----------------- B l o c k 3 ------------------
+PLApt(38/56), Fanin(37/38), Clk(1/3), Bct(0/4), Pin(1/4), Mcell(11/16)
+PLApts[38/41] 48 50 87 104 114 120 121 146 154 162 541 199 119 276 308 160 284 313 153 281 311 460 115 273 
+              307 624 632 650 651 207 297 41 325 615 33 640 616 () () () 606
+Fanins[37] A<15>.n A<7>.n nDMA.n Length1.n N_PZ_1010.n N_PZ_816.n N_PZ_823.n N_PZ_949.n REUA<15>.n REUA<7>.n 
+           RegReset.n dmaseq/XferEnd8.n ram/RDD<7>.n reureg/ExecuteEN.n reureg/IncMode<1>.n 
+           reureg/IntEnable.n reureg/IntPending.n reureg/Length<0>.n reureg/Length<15>.n reureg/Length<1>.n 
+           reureg/Length<2>.n reureg/Length<3>.n reureg/Length<4>.n reureg/Length<5>.n reureg/Length<6>.n 
+           reureg/Length<7>.n reureg/LengthWritten<7>.n reureg/LengthWritten_15_and0000.n A<0>.p A<1>.p 
+           A<2>.p A<3>.p A<4>.p D<4>.p D<7>.p nIO2.p nWE.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[12] [D<7>(193),reureg/CAWritten<15>,D<7>(9)] [reureg/IncMode<1>(208)] [reureg/IntEnable(207)]  
+           [reureg/ExecuteEN(206)] [reureg/Length<7>(205)] [reureg/LengthWritten<7>(204)] [N_PZ_1017(203)]  
+           [N_PZ_823(202)] [N_PZ_955(201)] [reureg/Execute8(200)] [N_PZ_954(199)] 
+Signal[12] [ 0: D<7>(193) reureg/CAWritten<15>(193) D<7>(9)  ][ 1: (10)  ][ 2: (11)  ][ 3: (12)  ][ 4:  ] 
+           [ 5:  ][ 6: N_PZ_954(199)  ][ 7: reureg/Execute8(200)  ][ 8: N_PZ_955(201)  ][ 9: N_PZ_823(202)  ] 
+           [ 10: N_PZ_1017(203)  ][ 11: reureg/LengthWritten<7>(204)  ][ 12: reureg/Length<7>(205)  ][ 13:  
+           reureg/ExecuteEN(206)  ][ 14: reureg/IntEnable(207)  ][ 15: reureg/IncMode<1>(208)  ]
+----------------- B l o c k 4 ------------------
+PLApt(55/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(0/5), Mcell(12/16)
+PLApts[55/55] 272 338 354 456 659 667 271 337 353 455 658 666 277 332 340 356 660 668 270 336 352 454 657 665 
+              269 122 335 351 453 656 664 268 334 350 452 655 663 274 339 355 451 662 670 264 333 349 450 661 
+              669 345 357 346 358 342 359
+Fanins[38] Length1.n N_PZ_1017.n N_PZ_816.n N_PZ_955.n RegReset.n reureg/Length<0>.n reureg/Length<10>.n 
+           reureg/Length<11>.n reureg/Length<12>.n reureg/Length<13>.n reureg/Length<14>.n 
+           reureg/Length<15>.n reureg/Length<1>.n reureg/Length<2>.n reureg/Length<3>.n reureg/Length<4>.n 
+           reureg/Length<5>.n reureg/Length<6>.n reureg/Length<7>.n reureg/Length<8>.n reureg/Length<9>.n 
+           reureg/LengthWritten<10>.n reureg/LengthWritten<11>.n reureg/LengthWritten<12>.n 
+           reureg/LengthWritten<13>.n reureg/LengthWritten<14>.n reureg/LengthWritten<15>.n 
+           reureg/LengthWritten<8>.n reureg/LengthWritten<9>.n reureg/LengthWritten_15_and0000.n D<0>.p 
+           D<1>.p D<2>.p D<3>.p D<4>.p D<5>.p D<6>.p D<7>.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[12] [reureg/Length<14>(222)] [reureg/Length<13>(220)] [reureg/Length<15>(219)]  
+           [reureg/Length<12>(218)] [reureg/Length<11>(217)] [reureg/Length<10>(216)]  
+           [reureg/Length<9>(215)] [Length1(214)] [reureg/Length<8>(213)] [reureg/LengthWritten<10>(212)]  
+           [reureg/LengthWritten<11>(209)] [reureg/LengthWritten<12>(224)] 
+Signal[12] [ 0: reureg/LengthWritten<11>(209)  ][ 1: (133)  ][ 2: (132)  ][ 3: reureg/LengthWritten<10>(212)  
+            ][ 4: reureg/Length<8>(213)  ][ 5: Length1(214)  ][ 6: reureg/Length<9>(215)  ][ 7:  
+           reureg/Length<10>(216)  ][ 8: reureg/Length<11>(217)  ][ 9: reureg/Length<12>(218)  ][ 10:  
+           reureg/Length<15>(219)  ][ 11: reureg/Length<13>(220)  ][ 12: (131)  ][ 13:  
+           reureg/Length<14>(222)  ][ 14: (130)  ][ 15: reureg/LengthWritten<12>(224) (129)  ]
+----------------- B l o c k 5 ------------------
+PLApt(56/56), Fanin(37/38), Clk(1/3), Bct(0/4), Pin(0/6), Mcell(12/16)
+PLApts[56/56] 101 263 305 623 631 649 99 262 304 622 630 648 97 261 303 621 629 647 95 260 302 620 628 646 93 
+              259 301 619 627 645 91 258 300 618 626 644 73 251 299 617 625 643 200 290 318 201 291 319 202 
+              292 320 192 286 315 347 360
+Fanins[37] nDMA.n Length1.n N_PZ_816.n N_PZ_823.n N_PZ_949.n RegReset.n reureg/DF01Reserved32_0.n 
+           reureg/Length<0>.n reureg/Length<1>.n reureg/Length<2>.n reureg/Length<3>.n reureg/Length<4>.n 
+           reureg/Length<5>.n reureg/Length<6>.n reureg/LengthWritten<0>.n reureg/LengthWritten<13>.n 
+           reureg/LengthWritten<1>.n reureg/LengthWritten<2>.n reureg/LengthWritten<3>.n 
+           reureg/LengthWritten<4>.n reureg/LengthWritten<5>.n reureg/LengthWritten<6>.n 
+           reureg/LengthWritten_15_and0000.n A<0>.p A<1>.p A<2>.p A<3>.p A<4>.p D<0>.p D<1>.p D<2>.p D<3>.p 
+           D<4>.p D<5>.p D<6>.p nIO2.p nWE.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[12] [reureg/Length<6>(239)] [reureg/Length<5>(236)] [reureg/Length<4>(235)] [reureg/Length<3>(234)]  
+           [reureg/Length<2>(233)] [reureg/Length<1>(232)] [reureg/Length<0>(231)]  
+           [reureg/LengthWritten<0>(230)] [reureg/LengthWritten<1>(229)] [reureg/LengthWritten<2>(225)]  
+           [reureg/DF01Reserved32_0(240)] [reureg/LengthWritten<13>(238)] 
+Signal[12] [ 0: reureg/LengthWritten<2>(225)  ][ 1: (13)  ][ 2: (14)  ][ 3: (15)  ][ 4:  
+           reureg/LengthWritten<1>(229)  ][ 5: reureg/LengthWritten<0>(230)  ][ 6: reureg/Length<0>(231)  ] 
+           [ 7: reureg/Length<1>(232)  ][ 8: reureg/Length<2>(233)  ][ 9: reureg/Length<3>(234)  ][ 10:  
+           reureg/Length<4>(235)  ][ 11: reureg/Length<5>(236)  ][ 12: (16)  ][ 13:  
+           reureg/LengthWritten<13>(238) (17)  ][ 14: reureg/Length<6>(239)  ][ 15:  
+           reureg/DF01Reserved32_0(240) (18)  ]
+----------------- B l o c k 6 ------------------
+PLApt(53/56), Fanin(35/38), Clk(2/3), Bct(0/4), Pin(5/6), Mcell(16/16)
+PLApts[53/56] 343 363 344 364 348 361 341 362 123 124 3 126 127 129 130 132 133 135 136 4 138 139 141 142 144 
+              145 425 437 553 555 563 571 426 552 554 557 564 572 246 417 431 556 565 573 247 418 541 432 558 
+              566 574 438 () () () 541
+Fanins[35] N_PZ_1010.n N_PZ_833.n N_PZ_953.n REUA<0>.n REUA<1>.n REUA<2>.n REUA<3>.n RegReset.n ram/RDD<0>.n 
+           ram/RDD<1>.n ram/RDD<2>.n ram/RDD<3>.n ram/RDD<4>.n ram/RDD<5>.n ram/RDD<6>.n ram/RDD<7>.n 
+           reureg/IncMode<0>.n reureg/LengthWritten<14>.n reureg/LengthWritten<15>.n 
+           reureg/LengthWritten<8>.n reureg/LengthWritten<9>.n reureg/LengthWritten_15_and0000.n 
+           reureg/REUAWritten<0>.n reureg/REUAWritten<1>.n reureg/REUAWritten<2>.n reureg/REUAWritten<3>.n 
+           reureg/REUAWritten_7_and0000.n D<0>.p D<1>.p D<2>.p D<3>.p D<4>.p D<5>.p D<6>.p D<7>.p
+clk[2] PHI2 C8M 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[19] [RD<0>(241),RD<0>(35)] [RD<1>(244),RD<1>(34)] [C8M(30)] [nIO2(33)] [ram/PHI2r<0>,PHI2(32)]  
+           [reureg/CAWritten<8>(256)] [reureg/CAWritten<9>(253)] [reureg/LengthWritten<8>(251)]  
+           [reureg/LengthWritten<9>(250)] [reureg/LengthWritten<14>(249)] [reureg/LengthWritten<15>(248)]  
+           [_cmp_eq0000(247)] [reureg/REUAWritten<0>(246)] [REUA<0>(243)] [REUA<1>(242)] [REUA<2>(255)]  
+           [REUA<3>(254)] [reureg/REUAWritten<1>(245)] 
+Signal[19] [ 0: RD<0>(241) RD<0>(35)  ][ 1: REUA<1>(242)  ][ 2: REUA<0>(243)  ][ 3: RD<1>(244) RD<1>(34)  ] 
+           [ 4: reureg/REUAWritten<1>(245) nIO2(33)  ][ 5: reureg/REUAWritten<0>(246)  ][ 6:  
+           _cmp_eq0000(247)  ][ 7: reureg/LengthWritten<15>(248)  ][ 8: reureg/LengthWritten<14>(249)  ][ 9:  
+           reureg/LengthWritten<9>(250)  ][ 10: reureg/LengthWritten<8>(251)  ][ 11: ram/PHI2r<0>(252)  
+           PHI2(32)  ][ 12: reureg/CAWritten<9>(253)  ][ 13: REUA<3>(254) (31)  ][ 14: REUA<2>(255) C8M(30)  
+            ][ 15: reureg/CAWritten<8>(256)  ]
+----------------- B l o c k 7 ------------------
+PLApt(44/56), Fanin(38/38), Clk(1/3), Bct(1/4), Pin(6/6), Mcell(8/16)
+PLApts[44/44] 498 500 501 508 528 544 241 22 499 523 529 537 546 240 502 524 530 536 545 242 503 525 531 538 
+              547 244 504 526 532 539 548 245 505 527 533 540 549 374 383 584 593 596 602 604
+Fanins[38] A<10>.n A<11>.n A<12>.n A<13>.n A<14>.n A<15>.n A<8>.n A<9>.n nDMA.n N_PZ_1010.n N_PZ_1099.n 
+           N_PZ_953.n N_PZ_954.n N_PZ_958.n N_PZ_990.n REUA<10>.n REUA<8>.n REUA<9>.n RegReset.n 
+           reureg/CAWritten<10>.n reureg/CAWritten<11>.n reureg/CAWritten<12>.n reureg/CAWritten<13>.n 
+           reureg/CAWritten<14>.n reureg/CAWritten<15>.n reureg/CA_15_and0000.n reureg/CA_7_and0001.n 
+           reureg/REUAWritten<10>.n reureg/REUAWritten_15_and0000.n reureg/REUAWritten_7_and0000.n BA.p 
+           D<2>.p D<3>.p D<4>.p D<5>.p D<6>.p D<7>.p PHI2.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=22) PHI2 BA nDMA' ;
+vref: [0]
+Signal[ 8] [A<10>(272),A<10>(43)] [A<11>(271),A<11>(42)] [A<12>(270),A<12>(41)] [A<13>(269),A<13>(40)]  
+           [A<14>(261),A<14>(39)] [A<15>(258),A<15>(38)] [reureg/REUAWritten<10>(268)] [REUA<10>(267)] 
+Signal[ 8] [ 0:  ][ 1: A<15>(258) A<15>(38)  ][ 2:  ][ 3:  ][ 4: A<14>(261) A<14>(39)  ][ 5:  ][ 6:  ][ 7:  ] 
+           [ 8:  ][ 9:  ][ 10: REUA<10>(267)  ][ 11: reureg/REUAWritten<10>(268)  ][ 12: A<13>(269)  
+           A<13>(40)  ][ 13: A<12>(270) A<12>(41)  ][ 14: A<11>(271) A<11>(42)  ][ 15: A<10>(272) A<10>(43)  
+            ]
+----------------- B l o c k 8 ------------------
+PLApt(34/56), Fanin(38/38), Clk(1/3), Bct(1/4), Pin(3/3), Mcell(11/16)
+PLApts[34/50] 238 406 414 492 512 520 239 22 407 415 493 513 521 243 408 416 494 514 522 158 283 479 198 289 
+              449 480 166 178 209 () () 481 () () 327 () () 326 () () 167 () () () () () () () () 329
+Fanins[38] A<0>.n A<1>.n A<2>.n A<3>.n A<4>.n A<5>.n A<6>.n A<7>.n nDMA.n Length1.n N_PZ_816.n N_PZ_954.n 
+           RegReset.n XferType<0>.n XferType<1>.n _cmp_eq0000.n dmaseq/nRESETr_0.n reureg/CAWritten<5>.n 
+           reureg/CAWritten<6>.n reureg/CAWritten<7>.n reureg/CA_7_and0001.n reureg/Fault.n 
+           reureg/IncMode<1>.n reureg/IntPending.n reureg/XferType<0>.n A<0>.p A<1>.p A<2>.p A<3>.p A<4>.p 
+           BA.p D<0>.p D<5>.p D<6>.p D<7>.p PHI2.p nIO2.p nWE.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=22) PHI2 BA nDMA' ;
+vref: [0]
+Signal[11] [A<5>(288),A<5>(25)] [A<6>(287),A<6>(26)] [A<7>(274),A<7>(28)] [reureg/CA_15_and0000(286)]  
+           [reureg/Fault(285)] [reureg/IntPending(284)] [XferType<0>(283)] [reureg/XferType<0>(282)]  
+           [reureg/XferType<1>(281)] [dmaseq/Equalr(280)] [dmaseq/nRESETr<1>(279)] 
+Signal[11] [ 0:  ][ 1: A<7>(274) A<7>(28)  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6: dmaseq/nRESETr<1>(279)  ][ 7:  
+           dmaseq/Equalr(280)  ][ 8: reureg/XferType<1>(281)  ][ 9: reureg/XferType<0>(282)  ][ 10:  
+           XferType<0>(283)  ][ 11: reureg/IntPending(284)  ][ 12: reureg/Fault(285)  ][ 13:  
+           reureg/CA_15_and0000(286)  ][ 14: A<6>(287) A<6>(26)  ][ 15: A<5>(288) A<5>(25)  ]
+----------------- B l o c k 9 ------------------
+PLApt(12/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(0/6), Mcell(4/16)
+PLApts[12/47] 179 191 395 401 266 392 398 634 637 653 () () () () () () () () () () () () () () () () () () 
+              () () () () () () () () () () () () () () () 180 () () 157
+Fanins[38] nDMA.n N_PZ_1099.n N_PZ_949.n REUA<10>.n REUA<11>.n REUA<12>.n REUA<13>.n REUA<14>.n REUA<15>.n 
+           REUA<16>.n REUA<17>.n REUA<8>.n REUA<9>.n RegReset.n reureg/ExecuteEN.n reureg/FF00DecodeEN.n 
+           reureg/REUAWritten<17>.n reureg/REUAWritten_18_and0000.n reureg/XferType<1>.n A<0>.p A<10>.p 
+           A<11>.p A<12>.p A<13>.p A<14>.p A<15>.p A<1>.p A<2>.p A<3>.p A<4>.p A<5>.p A<6>.p A<7>.p A<8>.p 
+           A<9>.p D<1>.p nIO2.p nWE.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 4] [reureg/Execute1(301)] [XferType<1>(300)] [reureg/REUAWritten<17>(299)] [REUA<17>(298)] 
+Signal[ 4] [ 0: (44)  ][ 1: (45)  ][ 2:  ][ 3: (46)  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9: REUA<17>(298)  
+            ][ 10: reureg/REUAWritten<17>(299)  ][ 11: XferType<1>(300)  ][ 12: reureg/Execute1(301)  ][ 13:  
+           (48)  ][ 14: (49)  ][ 15: (50)  ]
+----------------- B l o c k 10 ------------------
+PLApt(55/56), Fanin(34/38), Clk(1/3), Bct(0/4), Pin(6/6), Mcell(16/16)
+PLApts[55/55] 375 384 252 365 378 579 585 595 253 366 5 379 580 6 586 597 2 254 367 7 380 581 8 587 598 255 
+              368 381 582 588 599 265 369 382 583 589 600 275 393 399 635 638 654 1 256 391 397 633 636 652 
+              372 590 592 603 389
+Fanins[34] N_PZ_1099.n N_PZ_949.n N_PZ_953.n N_PZ_958.n REUA<10>.n REUA<11>.n REUA<12>.n REUA<13>.n 
+           REUA<14>.n REUA<15>.n REUA<16>.n REUA<17>.n REUA<18>.n REUA<8>.n REUA<9>.n RegReset.n 
+           reureg/REUAWritten<11>.n reureg/REUAWritten<12>.n reureg/REUAWritten<13>.n 
+           reureg/REUAWritten<14>.n reureg/REUAWritten<15>.n reureg/REUAWritten<16>.n 
+           reureg/REUAWritten<18>.n reureg/REUAWritten<8>.n reureg/REUAWritten_15_and0000.n 
+           reureg/REUAWritten_18_and0000.n reureg/REUAWritten_7_and0000.n D<0>.p D<2>.p D<3>.p D<4>.p D<5>.p 
+           D<6>.p D<7>.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [RD<2>(305),RD<2>(24)] [RD<3>(306),RD<3>(23)] [RD<4>(307),RD<4>(22)] [RD<5>(308),RD<5>(21)]  
+           [RD<6>(309),RD<6>(20)] [RD<7>(316),RD<7>(19)] [reureg/REUAWritten<11>(320)] [REUA<11>(319)]  
+           [REUA<12>(318)] [REUA<13>(317)] [REUA<14>(315)] [REUA<15>(314)] [REUA<18>(313)] [REUA<16>(312)]  
+           [REUA<8>(311)] [reureg/REUAWritten<8>(310)] 
+Signal[16] [ 0: RD<2>(305) RD<2>(24)  ][ 1: RD<3>(306) RD<3>(23)  ][ 2: RD<4>(307) RD<4>(22)  ][ 3:  
+           RD<5>(308) RD<5>(21)  ][ 4: RD<6>(309) RD<6>(20)  ][ 5: reureg/REUAWritten<8>(310)  ][ 6:  
+           REUA<8>(311)  ][ 7: REUA<16>(312)  ][ 8: REUA<18>(313)  ][ 9: REUA<15>(314)  ][ 10: REUA<14>(315)  
+            ][ 11: RD<7>(316) RD<7>(19)  ][ 12: REUA<13>(317)  ][ 13: REUA<12>(318)  ][ 14: REUA<11>(319)  ] 
+           [ 15: reureg/REUAWritten<11>(320)  ]
+----------------- B l o c k 11 ------------------
+PLApt(41/56), Fanin(38/38), Clk(1/3), Bct(1/4), Pin(4/4), Mcell(9/16)
+PLApts[41/41] 411 483 485 488 489 516 235 22 404 412 487 509 517 236 405 413 490 510 518 237 403 409 491 511 
+              519 371 385 373 390 591 594 601 605 248 419 433 559 567 575 424 441
+Fanins[38] A<0>.n A<1>.n A<2>.n A<3>.n A<4>.n nDMA.n N_PZ_1099.n N_PZ_816.n N_PZ_833.n N_PZ_953.n N_PZ_954.n 
+           N_PZ_958.n REUA<0>.n REUA<1>.n REUA<2>.n REUA<3>.n REUA<4>.n REUA<8>.n REUA<9>.n RegReset.n 
+           reureg/CAWritten<1>.n reureg/CAWritten<2>.n reureg/CAWritten<3>.n reureg/CAWritten<4>.n 
+           reureg/CA_7_and0001.n reureg/IncMode<0>.n reureg/IncMode<1>.n reureg/REUAWritten<12>.n 
+           reureg/REUAWritten<4>.n reureg/REUAWritten<9>.n reureg/REUAWritten_15_and0000.n 
+           reureg/REUAWritten_7_and0000.n BA.p D<1>.p D<2>.p D<3>.p D<4>.p PHI2.p
+clk[1] PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=22) PHI2 BA nDMA' ;
+vref: [0]
+Signal[ 9] [A<1>(325),A<1>(54)] [A<2>(323),A<2>(53)] [A<3>(322),A<3>(52)] [A<4>(321),A<4>(51)]  
+           [reureg/REUAWritten<12>(336)] [reureg/REUAWritten<9>(335)] [REUA<9>(334)] [REUA<4>(333)]  
+           [reureg/REUAWritten<4>(332)] 
+Signal[ 9] [ 0: A<4>(321) A<4>(51)  ][ 1: A<3>(322) A<3>(52)  ][ 2: A<2>(323) A<2>(53)  ][ 3:  ][ 4:  
+           A<1>(325) A<1>(54)  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: reureg/REUAWritten<4>(332)  
+            ][ 12: REUA<4>(333)  ][ 13: REUA<9>(334)  ][ 14: reureg/REUAWritten<9>(335)  ][ 15:  
+           reureg/REUAWritten<12>(336)  ]
+----------------- B l o c k 12 ------------------
+PLApt(42/56), Fanin(32/38), Clk(2/3), Bct(0/4), Pin(4/4), Mcell(16/16)
+PLApts[42/42] 56 88 58 74 60 76 62 78 249 420 434 560 568 576 250 421 435 561 569 577 257 422 436 562 570 578 
+              429 442 215 430 443 423 444 218 221 217 219 223 220 376 551 386
+Fanins[32] N_PZ_833.n N_PZ_953.n REUA<0>.n REUA<10>.n REUA<11>.n REUA<12>.n REUA<1>.n REUA<2>.n REUA<3>.n 
+           REUA<4>.n REUA<5>.n REUA<6>.n REUA<7>.n REUA<9>.n RegReset.n ram/InitDone.n ram/PHI2r<0>.n 
+           ram/PHI2r<1>.n ram/PORDone.n ram/S<0>.n ram/S<1>.n ram/S<2>.n reureg/IncMode<0>.n 
+           reureg/REUAWritten<13>.n reureg/REUAWritten<5>.n reureg/REUAWritten<6>.n reureg/REUAWritten<7>.n 
+           reureg/REUAWritten_15_and0000.n reureg/REUAWritten_7_and0000.n D<5>.p D<6>.p D<7>.p
+clk[2] C8M PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [RA<0>(339),RA<0>(112)] [RA<1>(340),RA<1>(113)] [RA<2>(348),RA<2>(114)] [RA<3>(349),RA<3>(115)]  
+           [REUA<5>(352)] [REUA<6>(351)] [REUA<7>(350)] [N_PZ_1099(347)] [reureg/REUAWritten<5>(346)]  
+           [reureg/REUAWritten<6>(345)] [reureg/REUAWritten<7>(344)] [ram/InitDone(343)] [ram/S<2>(342)]  
+           [ram/S<0>(341)] [ram/S<1>(338)] [reureg/REUAWritten<13>(337)] 
+Signal[16] [ 0: reureg/REUAWritten<13>(337)  ][ 1: ram/S<1>(338)  ][ 2: RA<0>(339) RA<0>(112)  ][ 3:  
+           RA<1>(340) RA<1>(113)  ][ 4: ram/S<0>(341)  ][ 5: ram/S<2>(342)  ][ 6: ram/InitDone(343)  ][ 7:  
+           reureg/REUAWritten<7>(344)  ][ 8: reureg/REUAWritten<6>(345)  ][ 9: reureg/REUAWritten<5>(346)  ] 
+           [ 10: N_PZ_1099(347)  ][ 11: RA<2>(348) RA<2>(114)  ][ 12: RA<3>(349) RA<3>(115)  ][ 13:  
+           REUA<7>(350)  ][ 14: REUA<6>(351)  ][ 15: REUA<5>(352)  ]
+----------------- B l o c k 13 ------------------
+PLApt(49/56), Fanin(38/38), Clk(2/3), Bct(1/4), Pin(6/6), Mcell(13/16)
+PLApts[49/49] 410 482 484 486 515 495 506 22 534 542 496 497 507 535 543 478 52 53 213 457 214 231 464 469 
+              470 472 226 227 228 458 462 463 229 233 459 471 11 12 232 234 210 445 446 447 230 330 331 211 
+              224
+Fanins[38] A<0>.n A<8>.n A<9>.n nDMA.n nWE.n Length1.n N_PZ_1010.n N_PZ_816.n N_PZ_954.n N_PZ_990.n RAMRD.n 
+           RAMWR.n RegReset.n XferType<0>.n XferType<1>.n dmaseq/BAr.n dmaseq/DMAr.n dmaseq/Equalr.n 
+           dmaseq/XferEnd8.n dmaseq/nRESETr<1>.n dmaseq/nRESETr_0.n ram/InitDone.n ram/S<0>.n ram/S<1>.n 
+           ram/S<2>.n reureg/AutoloadEN.n reureg/CAWritten<0>.n reureg/CAWritten<8>.n reureg/CAWritten<9>.n 
+           reureg/CA_15_and0000.n reureg/CA_7_and0001.n reureg/Execute1.n reureg/Execute8.n 
+           reureg/IncMode<1>.n BA.p D<0>.p D<1>.p PHI2.p
+clk[2] PHI2 C8M 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=22) PHI2 BA nDMA' ;
+vref: [0]
+Signal[13] [A<0>(355),A<0>(107)] [A<8>(354),A<8>(110)] [A<9>(353),A<9>(111)] [nDMA(357),nDMA(105)]  
+           [nRAS(365),nRAS(104)] [nWE(356),nWE(106)] [RAMRD(368)] [RAMWR(367)] [N_PZ_816(366)]  
+           [dmaseq/XferEnd8(364)] [N_PZ_833(363)] [RegReset(362)] [N_PZ_949(361)] 
+Signal[13] [ 0: A<9>(353) A<9>(111)  ][ 1: A<8>(354) A<8>(110)  ][ 2: A<0>(355) A<0>(107)  ][ 3: nWE(356)  
+           nWE(106)  ][ 4: nDMA(357) nDMA(105)  ][ 5:  ][ 6:  ][ 7:  ][ 8: N_PZ_949(361)  ][ 9:  
+           RegReset(362)  ][ 10: N_PZ_833(363)  ][ 11: dmaseq/XferEnd8(364)  ][ 12: nRAS(365) nRAS(104)  ] 
+           [ 13: N_PZ_816(366)  ][ 14: RAMWR(367)  ][ 15: RAMRD(368)  ]
+----------------- B l o c k 14 ------------------
+PLApt(29/56), Fanin(22/38), Clk(1/3), Bct(0/4), Pin(5/5), Mcell(16/16)
+PLApts[29/50] 64 80 67 83 55 118 53 52 212 216 225 23 24 25 26 27 32 28 29 222 30 () () () () 51 () () 51 () 
+              () 51 () () 51 () () 51 () () 51 () () 51 () () () () () 51
+Fanins[22] RAMWR.n REUA<13>.n REUA<14>.n REUA<18>.n REUA<4>.n REUA<5>.n ram/InitDone.n ram/PHI2r<0>.n 
+           ram/PORDone.n ram/S<0>.n ram/S<1>.n ram/S<2>.n ram/nRESETr.n RD<0>.p RD<1>.p RD<2>.p RD<3>.p 
+           RD<4>.p RD<5>.p RD<6>.p RD<7>.p nRESET.p
+clk[1] C8M 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [RA<4>(383),RA<4>(119)] [RA<5>(384),RA<5>(120)] [RA<9>(381),RA<9>(118)] [nCAS(373),nCAS(117)]  
+           [nRWE(370),nRWE(116)] [ram/RDD<0>(382)] [ram/RDD<1>(380)] [ram/RDD<2>(379)] [ram/RDD<3>(378)]  
+           [ram/RDD<4>(377)] [ram/RDD<5>(376)] [ram/RDD<6>(375)] [ram/RDD<7>(374)] [ram/PHI2r<1>(372)]  
+           [ram/nRESETr(371)] [ram/PORDone(369)] 
+Signal[16] [ 0: ram/PORDone(369)  ][ 1: nRWE(370) nRWE(116)  ][ 2: ram/nRESETr(371)  ][ 3: ram/PHI2r<1>(372)  
+            ][ 4: nCAS(373) nCAS(117)  ][ 5: ram/RDD<7>(374)  ][ 6: ram/RDD<6>(375)  ][ 7: ram/RDD<5>(376)  ] 
+           [ 8: ram/RDD<4>(377)  ][ 9: ram/RDD<3>(378)  ][ 10: ram/RDD<2>(379)  ][ 11: ram/RDD<1>(380)  ] 
+           [ 12: RA<9>(381) RA<9>(118)  ][ 13: ram/RDD<0>(382)  ][ 14: RA<4>(383) RA<4>(119)  ][ 15:  
+           RA<5>(384) RA<5>(120)  ]
+----------------- B l o c k 15 ------------------
+PLApt(24/56), Fanin(32/38), Clk(2/3), Bct(0/4), Pin(4/4), Mcell(13/16)
+PLApts[24/32] 68 103 84 86 70 105 161 164 377 387 370 388 394 400 396 402 427 439 428 440 550 639 () () () () 
+              () () 642 () () 641
+Fanins[32] N_PZ_1010.n N_PZ_949.n REUA<15>.n REUA<16>.n REUA<17>.n REUA<6>.n REUA<7>.n REUA<8>.n RegReset.n 
+           ram/S<0>.n ram/S<1>.n ram/S<2>.n reureg/CA_7_and0001.n reureg/EndOfBlock.n reureg/EndOfBlockMask.n 
+           reureg/Fault.n reureg/IntEnable.n reureg/REUAWritten<14>.n reureg/REUAWritten<15>.n 
+           reureg/REUAWritten<16>.n reureg/REUAWritten<18>.n reureg/REUAWritten<2>.n reureg/REUAWritten<3>.n 
+           reureg/REUAWritten_15_and0000.n reureg/REUAWritten_18_and0000.n reureg/REUAWritten_7_and0000.n 
+           reureg/VerifyErrMask.n D<0>.p D<2>.p D<3>.p D<6>.p D<7>.p
+clk[2] C8M PHI2 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[13] [RA<6>(385),RA<6>(103)] [RA<7>(387),RA<7>(102)] [RA<8>(398),RA<8>(101)] [nIRQ(400),nIRQ(100)]  
+           [reureg/REUAWritten<14>(399)] [reureg/REUAWritten<15>(397)] [reureg/REUAWritten<16>(396)]  
+           [reureg/REUAWritten<18>(395)] [reureg/REUAWritten<2>(394)] [reureg/REUAWritten<3>(393)]  
+           [N_PZ_953(392)] [N_PZ_958(391)] [N_PZ_990(390)] 
+Signal[13] [ 0: RA<6>(385) RA<6>(103)  ][ 1:  ][ 2: RA<7>(387) RA<7>(102)  ][ 3:  ][ 4:  ][ 5: N_PZ_990(390)  
+            ][ 6: N_PZ_958(391)  ][ 7: N_PZ_953(392)  ][ 8: reureg/REUAWritten<3>(393)  ][ 9:  
+           reureg/REUAWritten<2>(394)  ][ 10: reureg/REUAWritten<18>(395)  ][ 11:  
+           reureg/REUAWritten<16>(396)  ][ 12: reureg/REUAWritten<15>(397)  ][ 13: RA<8>(398) RA<8>(101)  ] 
+           [ 14: reureg/REUAWritten<14>(399)  ][ 15: nIRQ(400) nIRQ(100)  ]
+----------------- B l o c k 16 ------------------
+----------------- B l o c k 17 ------------------
+----------------- B l o c k 18 ------------------
+----------------- B l o c k 19 ------------------
+----------------- B l o c k 20 ------------------
+----------------- B l o c k 21 ------------------
+----------------- B l o c k 22 ------------------
+----------------- B l o c k 23 ------------------

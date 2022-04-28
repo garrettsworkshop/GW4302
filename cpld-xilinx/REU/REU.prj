@@ -1,0 +1,5 @@
+verilog work "../Reg.v"
+verilog work "../RAM.v"
+verilog work "../Glue.v"
+verilog work "../DMASeq.v"
+verilog work "../REU.v"

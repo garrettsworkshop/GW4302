@@ -1,0 +1,173 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 4-28-2022  1:04PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The pipe '|'
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  REU.ngd
+output file: REU.pad
+Part type:   xc2c384
+Speed grade: -7
+Package:     tq144
+
+Pinout by Pin Number:
+
+-----|-----|-----|-----|-----|-----|-----|-----|-----|-----|
+Pin Number|Signal Name|Pin Usage|Pin Name|Direction|IO Standard|IO Bank Number|{blank}|Slew Rate|Termination|{blank}|Voltage|Constraint|
+P1||VCC|VCC||||||||||
+P2|KPR||I/O/GTS2|||2|||||||
+P3|KPR||I/O/GTS3|||2|||||||
+P4|D<3>|I/O|I/O|BIDIR|LVCMOS18|2||FAST||||
+P5|D<4>|I/O|I/O/GTS0|BIDIR|LVCMOS18|2||FAST||||
+P6|nRESET|I|I/O/GTS1|INPUT|LVCMOS18|2||FAST||||
+P7|KPR||I/O|||2|||||||
+P8||VCCAUX|VAUX||||||||||
+P9|D<7>|I/O|I/O|BIDIR|LVCMOS18|2||FAST||||
+P10|KPR||I/O|||2|||||||
+P11|KPR||I/O|||2|||||||
+P12|KPR||I/O|||2|||||||
+P13|KPR||I/O|||2|||||||
+P14|KPR||I/O|||2|||||||
+P15|KPR||I/O|||2|||||||
+P16|KPR||I/O|||2|||||||
+P17|KPR||I/O|||2|||||||
+P18|KPR||I/O|||2|||||||
+P19|RD<7>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P20|RD<6>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P21|RD<5>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P22|RD<4>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P23|RD<3>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P24|RD<2>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P25|A<5>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P26|A<6>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P27||VCCIO-1.8|VCCIO||||||||||
+P28|A<7>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P29|GND||GND||||||||||
+P30|C8M|GCK|I/O/GCK0||LVCMOS18|1||FAST||||
+P31|KPR||I/O|||1|||||||
+P32|PHI2|GCK/I|I/O/GCK1||LVCMOS18|1||FAST||||
+P33|nIO2|I|I/O|INPUT|LVCMOS18|1||FAST||||
+P34|RD<1>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P35|RD<0>|I/O|I/O/CDR|BIDIR|LVCMOS18|1||FAST||||
+P36|GND||GND||||||||||
+P37||VCC|VCC||||||||||
+P38|A<15>|I/O|I/O/GCK2|BIDIR|LVCMOS18|1||FAST||||
+P39|A<14>|I/O|I/O/DGE|BIDIR|LVCMOS18|1||FAST||||
+P40|A<13>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P41|A<12>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P42|A<11>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P43|A<10>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P44|KPR||I/O|||1|||||||
+P45|KPR||I/O|||1|||||||
+P46|KPR||I/O|||1|||||||
+P47|GND||GND||||||||||
+P48|KPR||I/O|||1|||||||
+P49|KPR||I/O|||1|||||||
+P50|KPR||I/O|||1|||||||
+P51|A<4>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P52|A<3>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P53|A<2>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P54|A<1>|I/O|I/O|BIDIR|LVCMOS18|1||FAST||||
+P55||VCCIO-1.8|VCCIO||||||||||
+P56|KPR||I/O|||3|||||||
+P57|KPR||I/O|||3|||||||
+P58|KPR||I/O|||3|||||||
+P59|KPR||I/O|||3|||||||
+P60|KPR||I/O|||3|||||||
+P61|KPR||I/O|||3|||||||
+P62|GND||GND||||||||||
+P63|TDI||TDI||||||||||
+P64|KPR||I/O|||3|||||||
+P65|TMS||TMS||||||||||
+P66|KPR||I/O|||3|||||||
+P67|TCK||TCK||||||||||
+P68|KPR||I/O|||3|||||||
+P69|KPR||I/O|||3|||||||
+P70|KPR||I/O|||3|||||||
+P71|KPR||I/O|||3|||||||
+P72|GND||GND||||||||||
+P73||VCCIO-UNUSED|VCCIO||||||||||
+P74|KPR||I/O|||3|||||||
+P75|KPR||I/O|||3|||||||
+P76|KPR||I/O|||3|||||||
+P77|KPR||I/O|||3|||||||
+P78|KPR||I/O|||3|||||||
+P79|KPR||I/O|||3|||||||
+P80|KPR||I/O|||3|||||||
+P81|KPR||I/O|||3|||||||
+P82|KPR||I/O|||3|||||||
+P83|KPR||I/O|||3|||||||
+P84||VCC|VCC||||||||||
+P85|KPR||I/O|||3|||||||
+P86|KPR||I/O|||3|||||||
+P87|KPR||I/O|||3|||||||
+P88|KPR||I/O|||3|||||||
+P89|GND||GND||||||||||
+P90|GND||GND||||||||||
+P91|KPR||I/O|||3|||||||
+P92|KPR||I/O|||3|||||||
+P93||VCCIO-UNUSED|VCCIO||||||||||
+P94|KPR||I/O|||4|||||||
+P95|KPR||I/O|||4|||||||
+P96|KPR||I/O|||4|||||||
+P97|KPR||I/O|||4|||||||
+P98|KPR||I/O|||4|||||||
+P99|GND||GND||||||||||
+P100|nIRQ|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P101|RA<8>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P102|RA<7>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P103|RA<6>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P104|nRAS|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P105|nDMA|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P106|nWE|I/O|I/O|BIDIR|LVCMOS18|4||FAST||||
+P107|A<0>|I/O|I/O|BIDIR|LVCMOS18|4||FAST||||
+P108|GND||GND||||||||||
+P109||VCCIO-1.8|VCCIO||||||||||
+P110|A<8>|I/O|I/O|BIDIR|LVCMOS18|4||FAST||||
+P111|A<9>|I/O|I/O|BIDIR|LVCMOS18|4||FAST||||
+P112|RA<0>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P113|RA<1>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P114|RA<2>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P115|RA<3>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P116|nRWE|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P117|nCAS|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P118|RA<9>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P119|RA<4>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P120|RA<5>|O|I/O|OUTPUT|LVCMOS18|4||FAST||||
+P121|KPR||I/O|||4|||||||
+P122|TDO||TDO||||||||||
+P123|GND||GND||||||||||
+P124|KPR||I/O|||4|||||||
+P125|KPR||I/O|||4|||||||
+P126|KPR||I/O|||4|||||||
+P127||VCCIO-1.8|VCCIO||||||||||
+P128|KPR||I/O|||4|||||||
+P129|KPR||I/O|||2|||||||
+P130|KPR||I/O|||2|||||||
+P131|KPR||I/O|||2|||||||
+P132|KPR||I/O|||2|||||||
+P133|KPR||I/O|||2|||||||
+P134|KPR||I/O|||2|||||||
+P135|KPR||I/O|||2|||||||
+P136|KPR||I/O|||2|||||||
+P137|D<6>|I/O|I/O|BIDIR|LVCMOS18|2||FAST||||
+P138|D<5>|I/O|I/O|BIDIR|LVCMOS18|2||FAST||||
+P139|BA|I|I/O|INPUT|LVCMOS18|2||FAST||||
+P140|D<2>|I/O|I/O|BIDIR|LVCMOS18|2||FAST||||
+P141||VCCIO-1.8|VCCIO||||||||||
+P142|D<1>|I/O|I/O|BIDIR|LVCMOS18|2||FAST||||
+P143|D<0>|I/O|I/O/GSR|BIDIR|LVCMOS18|2||FAST||||
+P144|GND||GND||||||||||
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

@@ -1,0 +1,3162 @@
+MDF Database:  version 1.0
+MDF_INFO | REU | XC2C384-7-TQ144
+MACROCELL | 13 | 2 | A<0>_MC
+ATTRIBUTES | 2223276802 | 2
+OUTPUTMC | 10 | 13 | 2 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 0 | 2
+INPUTS | 8 | D<0>.PIN  | RegReset  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<0>  | N_PZ_816  | A<0>  | reureg/IncMode<1>
+INPUTMC | 7 | 13 | 9 | 0 | 14 | 3 | 6 | 0 | 2 | 13 | 13 | 13 | 2 | 3 | 15
+INPUTP | 1 | 288
+LCT | 1 | 5 | Internal_Name
+EQ | 11 | 
+   A<0> := D<0>.PIN & !RegReset & reureg/CA_7_and0001
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	reureg/CAWritten<0>
+	# !RegReset & N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & N_PZ_954
+	# !RegReset & !reureg/CA_7_and0001 & A<0> & 
+	reureg/IncMode<1> & N_PZ_954
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	!A<0> & !reureg/IncMode<1> & N_PZ_954;	// (5 pt, 8 inp)
+    A<0>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 13 | 9 | RegReset_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 119 | 8 | 9 | 8 | 8 | 5 | 5 | 2 | 14 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 3 | 10 | 6 | 10 | 4 | 4 | 6 | 9 | 4 | 6 | 4 | 3 | 4 | 7 | 4 | 0 | 4 | 8 | 4 | 15 | 4 | 9 | 5 | 13 | 4 | 11 | 6 | 8 | 4 | 13 | 6 | 7 | 4 | 10 | 3 | 13 | 1 | 10 | 3 | 15 | 0 | 2 | 13 | 2 | 0 | 3 | 11 | 4 | 1 | 7 | 11 | 2 | 1 | 12 | 11 | 1 | 1 | 9 | 11 | 0 | 2 | 12 | 8 | 15 | 2 | 7 | 8 | 14 | 2 | 0 | 8 | 1 | 6 | 15 | 13 | 1 | 6 | 12 | 13 | 0 | 0 | 11 | 7 | 15 | 1 | 3 | 7 | 14 | 1 | 4 | 7 | 13 | 2 | 2 | 7 | 12 | 2 | 3 | 7 | 4 | 3 | 0 | 7 | 1 | 2 | 8 | 6 | 5 | 6 | 2 | 11 | 14 | 10 | 5 | 6 | 4 | 6 | 1 | 15 | 9 | 6 | 14 | 15 | 8 | 6 | 13 | 11 | 11 | 11 | 12 | 12 | 9 | 12 | 15 | 12 | 8 | 12 | 14 | 12 | 7 | 12 | 13 | 10 | 6 | 11 | 13 | 7 | 11 | 7 | 10 | 10 | 15 | 10 | 14 | 11 | 15 | 10 | 13 | 12 | 0 | 10 | 12 | 15 | 14 | 10 | 10 | 15 | 12 | 10 | 9 | 15 | 11 | 10 | 7 | 9 | 10 | 9 | 9 | 15 | 10 | 10 | 8 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 1 | 13 | 2 | 10 | 8 | 11
+INPUTS | 4 | nDMA  | dmaseq/nRESETr_0  | dmaseq/DMAr  | dmaseq/nRESETr<1>
+INPUTMC | 4 | 13 | 4 | 1 | 14 | 0 | 7 | 8 | 6
+EQ | 2 | 
+   RegReset = nDMA & !dmaseq/nRESETr_0
+	# nDMA & dmaseq/DMAr & !dmaseq/nRESETr<1>;	// (2 pt, 4 inp)
+
+MACROCELL | 13 | 4 | nDMA_MC
+ATTRIBUTES | 2156167942 | 0
+OUTPUTMC | 65 | 0 | 7 | 8 | 10 | 9 | 11 | 13 | 14 | 5 | 5 | 0 | 13 | 2 | 14 | 13 | 8 | 3 | 9 | 13 | 13 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 10 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 13 | 4 | 13 | 9 | 0 | 14 | 3 | 15 | 0 | 2 | 13 | 3 | 1 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 13 | 15 | 5 | 15 | 0 | 11 | 1 | 13 | 1 | 3 | 1 | 4 | 2 | 2 | 2 | 10 | 2 | 3 | 8 | 11 | 3 | 0
+INPUTS | 4 | nDMA  | dmaseq/XferEnd8  | reureg/Execute8  | reureg/Execute1
+INPUTMC | 4 | 13 | 4 | 13 | 11 | 3 | 7 | 9 | 12
+EQ | 3 | 
+   nDMA := !nDMA & dmaseq/XferEnd8
+	# nDMA & !reureg/Execute8 & !reureg/Execute1;	// (2 pt, 4 inp)
+   nDMA.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 13 | 11 | dmaseq/XferEnd8_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 7 | 13 | 14 | 13 | 8 | 3 | 13 | 1 | 10 | 13 | 4 | 13 | 3 | 13 | 15
+INPUTS | 9 | dmaseq/nRESETr_0  | XferType<0>  | BA  | Length1  | XferType<1>  | RAMWR  | dmaseq/DMAr  | dmaseq/BAr  | dmaseq/Equalr
+INPUTMC | 8 | 1 | 14 | 8 | 10 | 4 | 5 | 9 | 11 | 13 | 14 | 0 | 7 | 0 | 12 | 8 | 7
+INPUTP | 1 | 283
+EQ | 6 | 
+   dmaseq/XferEnd8 = !dmaseq/nRESETr_0
+	# !XferType<0> & BA & Length1
+	# XferType<1> & BA & Length1
+	# BA & RAMWR & Length1
+	# dmaseq/DMAr & dmaseq/BAr & !dmaseq/Equalr & 
+	!XferType<0> & !XferType<1>;	// (5 pt, 9 inp)
+
+MACROCELL | 1 | 14 | dmaseq/nRESETr_0_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 6 | 13 | 14 | 13 | 11 | 8 | 6 | 13 | 9 | 13 | 3 | 13 | 15
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+dmaseq/nRESETr_0 := nRESET;	// (0 pt, 0 inp)
+   dmaseq/nRESETr_0.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 0 | 7 | dmaseq/DMAr_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 13 | 13 | 13 | 11 | 13 | 9 | 13 | 10
+INPUTS | 1 | nDMA
+INPUTMC | 1 | 13 | 4
+EQ | 2 | 
+   dmaseq/DMAr := !nDMA;	// (1 pt, 1 inp)
+   dmaseq/DMAr.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 0 | 12 | dmaseq/BAr_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 3 | 13 | 13 | 13 | 11 | 13 | 10
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+dmaseq/BAr := BA;	// (0 pt, 0 inp)
+   dmaseq/BAr.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 7 | dmaseq/Equalr_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 13 | 13 | 13 | 11
+INPUTS | 1 | _cmp_eq0000
+INPUTMC | 1 | 6 | 6
+EQ | 2 | 
+   dmaseq/Equalr := !_cmp_eq0000;	// (1 pt, 1 inp)
+   dmaseq/Equalr.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 6 | _cmp_eq0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 8 | 7 | 8 | 12 | 8 | 11
+INPUTS | 16 | D<0>.PIN  | ram/RDD<0>  | D<1>.PIN  | ram/RDD<1>  | D<2>.PIN  | ram/RDD<2>  | D<3>.PIN  | ram/RDD<3>  | D<4>.PIN  | ram/RDD<4>  | D<5>.PIN  | ram/RDD<5>  | D<6>.PIN  | ram/RDD<6>  | D<7>.PIN  | ram/RDD<7>
+INPUTMC | 8 | 14 | 13 | 14 | 11 | 14 | 10 | 14 | 9 | 14 | 8 | 14 | 7 | 14 | 6 | 14 | 5
+INPUTP | 8 | 288 | 287 | 284 | 8 | 9 | 277 | 276 | 16
+EQ | 16 | 
+   _cmp_eq0000 = D<0>.PIN & !ram/RDD<0>
+	# !D<0>.PIN & ram/RDD<0>
+	# D<1>.PIN & !ram/RDD<1>
+	# !D<1>.PIN & ram/RDD<1>
+	# D<2>.PIN & !ram/RDD<2>
+	# !D<2>.PIN & ram/RDD<2>
+	# D<3>.PIN & !ram/RDD<3>
+	# !D<3>.PIN & ram/RDD<3>
+	# D<4>.PIN & !ram/RDD<4>
+	# !D<4>.PIN & ram/RDD<4>
+	# D<5>.PIN & !ram/RDD<5>
+	# !D<5>.PIN & ram/RDD<5>
+	# D<6>.PIN & !ram/RDD<6>
+	# !D<6>.PIN & ram/RDD<6>
+	# D<7>.PIN & !ram/RDD<7>
+	# !D<7>.PIN & ram/RDD<7>;	// (16 pt, 16 inp)
+
+MACROCELL | 14 | 13 | ram/RDD<0>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 0 | 2
+INPUTS | 2 | RD<0>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 73
+EQ | 3 | 
+   ram/RDD<0> := RD<0>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<0>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<0>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 12 | 5 | ram/S<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 25 | 12 | 4 | 12 | 5 | 14 | 13 | 14 | 11 | 14 | 10 | 14 | 9 | 14 | 8 | 14 | 7 | 14 | 6 | 14 | 5 | 12 | 2 | 12 | 3 | 12 | 11 | 12 | 12 | 14 | 14 | 14 | 15 | 15 | 0 | 15 | 2 | 15 | 13 | 14 | 12 | 1 | 0 | 14 | 4 | 12 | 6 | 13 | 12 | 14 | 1
+INPUTS | 4 | ram/S<2>  | ram/PORDone  | ram/S<0>  | ram/S<1>
+INPUTMC | 4 | 12 | 5 | 14 | 0 | 12 | 4 | 12 | 1
+EQ | 3 | 
+   ram/S<2>.T := ram/S<2> & !ram/PORDone
+	# ram/S<0> & ram/PORDone & ram/S<1>;	// (2 pt, 4 inp)
+   ram/S<2>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 12 | 4 | ram/S<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 17 | 12 | 1 | 12 | 4 | 12 | 5 | 12 | 2 | 12 | 3 | 12 | 11 | 12 | 12 | 14 | 14 | 14 | 15 | 15 | 0 | 15 | 2 | 15 | 13 | 14 | 12 | 14 | 4 | 12 | 6 | 13 | 12 | 14 | 1
+INPUTS | 6 | ram/S<2>  | ram/S<0>  | ram/PORDone  | ram/S<1>  | ram/PHI2r<0>  | ram/PHI2r<1>
+INPUTMC | 6 | 12 | 5 | 12 | 4 | 14 | 0 | 12 | 1 | 6 | 11 | 14 | 3
+EQ | 5 | 
+   ram/S<0> := ram/S<2> & !ram/S<0> & ram/PORDone
+	# !ram/S<0> & ram/PORDone & ram/S<1>
+	# !ram/S<0> & ram/PORDone & !ram/PHI2r<0> & 
+	ram/PHI2r<1>;	// (3 pt, 6 inp)
+   ram/S<0>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 0 | ram/PORDone_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 4 | 14 | 0 | 12 | 1 | 12 | 4 | 12 | 5
+INPUTS | 2 | ram/PORDone  | ram/nRESETr
+INPUTMC | 2 | 14 | 0 | 14 | 2
+EQ | 2 | 
+   !ram/PORDone := !ram/PORDone & !ram/nRESETr;	// (1 pt, 2 inp)
+   ram/PORDone.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 2 | ram/nRESETr_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 14 | 0
+INPUTS | 1 | nRESET
+INPUTP | 1 | 13
+EQ | 2 | 
+   ram/nRESETr := nRESET;	// (1 pt, 1 inp)
+   ram/nRESETr.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 12 | 1 | ram/S<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 18 | 12 | 1 | 12 | 4 | 12 | 5 | 12 | 2 | 12 | 3 | 12 | 11 | 12 | 12 | 14 | 14 | 14 | 15 | 15 | 0 | 15 | 2 | 15 | 13 | 14 | 12 | 1 | 0 | 14 | 4 | 12 | 6 | 13 | 12 | 14 | 1
+INPUTS | 3 | ram/S<0>  | ram/PORDone  | ram/S<1>
+INPUTMC | 3 | 12 | 4 | 14 | 0 | 12 | 1
+EQ | 3 | 
+   ram/S<1> := ram/S<0> & ram/PORDone & !ram/S<1>
+	# !ram/S<0> & ram/PORDone & ram/S<1>;	// (2 pt, 3 inp)
+   ram/S<1>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 6 | 11 | ram/PHI2r<0>_MC
+ATTRIBUTES | 2155905024 | 4
+OUTPUTMC | 2 | 14 | 3 | 12 | 4
+INPUTS | 0 
+EQ | 4 | 
+   
+// Direct Input Register
+ram/PHI2r<0> := PHI2;	// (0 pt, 0 inp)
+   ram/PHI2r<0>.CLK  =  !C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 3 | ram/PHI2r<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 12 | 4
+INPUTS | 1 | ram/PHI2r<0>
+INPUTMC | 1 | 6 | 11
+EQ | 2 | 
+   ram/PHI2r<1> := ram/PHI2r<0>;	// (1 pt, 1 inp)
+   ram/PHI2r<1>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 11 | ram/RDD<1>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 0 | 3
+INPUTS | 2 | RD<1>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 70
+EQ | 3 | 
+   ram/RDD<1> := RD<1>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<1>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<1>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 10 | ram/RDD<2>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 0 | 11
+INPUTS | 2 | RD<2>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 49
+EQ | 3 | 
+   ram/RDD<2> := RD<2>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<2>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<2>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 9 | ram/RDD<3>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 1 | 3
+INPUTS | 2 | RD<3>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 48
+EQ | 3 | 
+   ram/RDD<3> := RD<3>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<3>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<3>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 8 | ram/RDD<4>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 1 | 4
+INPUTS | 2 | RD<4>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 47
+EQ | 3 | 
+   ram/RDD<4> := RD<4>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<4>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<4>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 7 | ram/RDD<5>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 2 | 2
+INPUTS | 2 | RD<5>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 46
+EQ | 3 | 
+   ram/RDD<5> := RD<5>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<5>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<5>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 6 | ram/RDD<6>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 2 | 3
+INPUTS | 2 | RD<6>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 45
+EQ | 3 | 
+   ram/RDD<6> := RD<6>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<6>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<6>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 14 | 5 | ram/RDD<7>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 2 | 6 | 6 | 3 | 0
+INPUTS | 2 | RD<7>.PIN  | ram/S<2>
+INPUTMC | 1 | 12 | 5
+INPUTP | 1 | 44
+EQ | 3 | 
+   ram/RDD<7> := RD<7>.PIN;	// (1 pt, 1 inp)
+   ram/RDD<7>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+    ram/RDD<7>.CE = !ram/S<2>;	// (1 pt, 1 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 8 | 10 | XferType<0>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 9 | 8 | 9 | 13 | 14 | 13 | 13 | 13 | 11 | 13 | 3 | 13 | 10 | 8 | 12 | 13 | 15 | 8 | 11
+INPUTS | 10 | reureg/XferType<0>  | D<0>.PIN  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 8 | 9 | 13 | 4
+INPUTP | 8 | 288 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 7 | 
+   XferType<0> = !reureg/XferType<0>
+	$ D<0>.PIN & nDMA & !reureg/XferType<0> & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2
+	# !D<0>.PIN & nDMA & reureg/XferType<0> & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2;	// (3 pt, 10 inp)
+
+MACROCELL | 8 | 9 | reureg/XferType<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 8 | 10 | 0 | 2
+INPUTS | 2 | RegReset  | XferType<0>
+INPUTMC | 2 | 13 | 9 | 8 | 10
+EQ | 2 | 
+   reureg/XferType<0> := !RegReset & !XferType<0>;	// (1 pt, 2 inp)
+   reureg/XferType<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 9 | 11 | XferType<1>_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 9 | 8 | 8 | 13 | 14 | 13 | 13 | 13 | 11 | 13 | 3 | 13 | 10 | 8 | 12 | 13 | 15 | 8 | 11
+INPUTS | 10 | reureg/XferType<1>  | nDMA  | D<1>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 8 | 8 | 13 | 4
+INPUTP | 8 | 287 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 7 | 
+   XferType<1> = !reureg/XferType<1>
+	$ nDMA & D<1>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/XferType<1>
+	# nDMA & !D<1>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/XferType<1>;	// (3 pt, 10 inp)
+
+MACROCELL | 8 | 8 | reureg/XferType<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 9 | 11 | 0 | 3
+INPUTS | 2 | RegReset  | XferType<1>
+INPUTMC | 2 | 13 | 9 | 9 | 11
+EQ | 2 | 
+   reureg/XferType<1> := !RegReset & !XferType<1>;	// (1 pt, 2 inp)
+   reureg/XferType<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 13 | 14 | RAMWR_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 5 | 13 | 14 | 13 | 13 | 13 | 11 | 13 | 12 | 14 | 1
+INPUTS | 7 | nDMA  | XferType<0>  | XferType<1>  | dmaseq/XferEnd8  | BA  | RAMWR  | dmaseq/nRESETr_0
+INPUTMC | 6 | 13 | 4 | 8 | 10 | 9 | 11 | 13 | 11 | 13 | 14 | 1 | 14
+INPUTP | 1 | 283
+EQ | 6 | 
+   RAMWR := !nDMA & XferType<0> & XferType<1>
+	# !nDMA & !dmaseq/XferEnd8 & XferType<0> & 
+	!XferType<1> & BA & !RAMWR
+	# !nDMA & dmaseq/nRESETr_0 & XferType<0> & 
+	!XferType<1> & !BA & RAMWR;	// (3 pt, 7 inp)
+   RAMWR.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 5 | Length1_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 18 | 5 | 6 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 13 | 11 | 2 | 6 | 8 | 11
+INPUTS | 16 | reureg/Length<0>  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | reureg/Length<10>  | reureg/Length<9>  | reureg/Length<11>  | reureg/Length<12>  | reureg/Length<13>  | reureg/Length<14>  | reureg/Length<15>
+INPUTMC | 16 | 5 | 6 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 4 | 7 | 4 | 6 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10
+EQ | 6 | 
+   Length1 = reureg/Length<0> & !reureg/Length<1> & 
+	!reureg/Length<2> & !reureg/Length<3> & !reureg/Length<4> & 
+	!reureg/Length<5> & !reureg/Length<6> & !reureg/Length<8> & 
+	!reureg/Length<7> & !reureg/Length<10> & !reureg/Length<9> & 
+	!reureg/Length<11> & !reureg/Length<12> & !reureg/Length<13> & 
+	!reureg/Length<14> & !reureg/Length<15>;	// (1 pt, 16 inp)
+
+MACROCELL | 5 | 6 | reureg/Length<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 18 | 5 | 6 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 0 | 2
+INPUTS | 17 | RegReset  | reureg/Length<0>  | reureg/LengthWritten<0>  | N_PZ_823  | Length1  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | D<0>.PIN  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 9 | 13 | 9 | 5 | 6 | 5 | 5 | 3 | 9 | 4 | 5 | 0 | 13 | 13 | 8 | 13 | 13 | 13 | 4
+INPUTP | 8 | 288 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 14 | 
+   reureg/Length<0>.T := RegReset & !reureg/Length<0>
+	# !reureg/Length<0> & reureg/LengthWritten<0> & 
+	!N_PZ_823
+	# !RegReset & reureg/Length<0> & 
+	!reureg/LengthWritten<0> & !N_PZ_823
+	# !RegReset & !Length1 & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816
+	# D<0>.PIN & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<0>
+	# !D<0>.PIN & !RegReset & nDMA & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<0>;	// (6 pt, 17 inp)
+   reureg/Length<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 5 | reureg/LengthWritten<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 5 | 5 | 5 | 6
+INPUTS | 11 | RegReset  | reureg/LengthWritten<0>  | D<0>.PIN  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 5 | 5 | 13 | 4
+INPUTP | 8 | 288 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<0>.T := RegReset & !reureg/LengthWritten<0>
+	# D<0>.PIN & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<0>
+	# !D<0>.PIN & !RegReset & nDMA & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<0>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 9 | N_PZ_823_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 10 | 5 | 6 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 3 | 10 | 3 | 8
+INPUTS | 10 | reureg/LengthWritten_15_and0000  | N_PZ_949  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 0 | 13 | 13 | 8 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 3 | 
+   N_PZ_823 = !reureg/LengthWritten_15_and0000 & !N_PZ_949
+	# nDMA & !nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2;	// (2 pt, 10 inp)
+
+MACROCELL | 0 | 13 | reureg/LengthWritten_15_and0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 25 | 3 | 9 | 5 | 6 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 6 | 10 | 4 | 4 | 6 | 9 | 4 | 6 | 4 | 3 | 4 | 7 | 4 | 0 | 4 | 8 | 4 | 15 | 4 | 9 | 5 | 13 | 4 | 11 | 6 | 8 | 4 | 13 | 6 | 7 | 4 | 10
+INPUTS | 8 | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 1 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 2 | 
+   reureg/LengthWritten_15_and0000 = nDMA & !nWE.PIN & !A<4>.PIN & A<3>.PIN & 
+	!A<2>.PIN & !A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 8 inp)
+
+MACROCELL | 13 | 8 | N_PZ_949_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 16 | 3 | 9 | 5 | 6 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 3 | 6 | 15 | 5 | 15 | 7 | 15 | 6 | 10 | 7 | 9 | 9 | 10 | 8
+INPUTS | 3 | nDMA  | dmaseq/XferEnd8  | reureg/AutoloadEN
+INPUTMC | 3 | 13 | 4 | 13 | 11 | 2 | 14
+EQ | 1 | 
+   N_PZ_949 = !nDMA & dmaseq/XferEnd8 & reureg/AutoloadEN;	// (1 pt, 3 inp)
+
+MACROCELL | 2 | 14 | reureg/AutoloadEN_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 2 | 14 | 13 | 8 | 2 | 2
+INPUTS | 11 | RegReset  | reureg/AutoloadEN  | nDMA  | D<5>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 2 | 14 | 13 | 4
+INPUTP | 8 | 277 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/AutoloadEN.T := RegReset & reureg/AutoloadEN
+	# nDMA & !D<5>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/AutoloadEN
+	# !RegReset & nDMA & D<5>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/AutoloadEN;	// (3 pt, 11 inp)
+   reureg/AutoloadEN.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 13 | 13 | N_PZ_816_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 26 | 5 | 6 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 13 | 2 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 13 | 10
+INPUTS | 8 | nDMA  | BA  | XferType<0>  | XferType<1>  | RAMWR  | dmaseq/DMAr  | dmaseq/BAr  | dmaseq/Equalr
+INPUTMC | 7 | 13 | 4 | 8 | 10 | 9 | 11 | 13 | 14 | 0 | 7 | 0 | 12 | 8 | 7
+INPUTP | 1 | 283
+EQ | 5 | 
+   N_PZ_816 = nDMA
+	# !BA
+	# XferType<0> & !XferType<1> & !RAMWR
+	# dmaseq/DMAr & dmaseq/BAr & !dmaseq/Equalr & 
+	!XferType<0> & !XferType<1>;	// (4 pt, 8 inp)
+
+MACROCELL | 5 | 7 | reureg/Length<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 17 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 0 | 3
+INPUTS | 18 | RegReset  | reureg/Length<1>  | N_PZ_823  | reureg/LengthWritten<1>  | Length1  | reureg/Length<0>  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | nDMA  | D<1>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 10 | 13 | 9 | 5 | 7 | 3 | 9 | 5 | 4 | 4 | 5 | 5 | 6 | 0 | 13 | 13 | 8 | 13 | 13 | 13 | 4
+INPUTP | 8 | 287 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 14 | 
+   reureg/Length<1>.T := RegReset & !reureg/Length<1>
+	# !N_PZ_823 & !reureg/Length<1> & 
+	reureg/LengthWritten<1>
+	# !RegReset & !N_PZ_823 & reureg/Length<1> & 
+	!reureg/LengthWritten<1>
+	# !RegReset & !Length1 & !reureg/Length<0> & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816
+	# nDMA & D<1>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<1>
+	# !RegReset & nDMA & !D<1>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<1>;	// (6 pt, 18 inp)
+   reureg/Length<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 4 | reureg/LengthWritten<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 5 | 4 | 5 | 7
+INPUTS | 11 | RegReset  | reureg/LengthWritten<1>  | nDMA  | D<1>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 5 | 4 | 13 | 4
+INPUTP | 8 | 287 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<1>.T := RegReset & !reureg/LengthWritten<1>
+	# nDMA & D<1>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<1>
+	# !RegReset & nDMA & !D<1>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<1>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 8 | reureg/Length<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 16 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 0 | 11
+INPUTS | 19 | RegReset  | reureg/Length<2>  | N_PZ_823  | reureg/LengthWritten<2>  | Length1  | reureg/Length<0>  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | reureg/Length<1>  | nDMA  | D<2>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 11 | 13 | 9 | 5 | 8 | 3 | 9 | 5 | 0 | 4 | 5 | 5 | 6 | 0 | 13 | 13 | 8 | 13 | 13 | 5 | 7 | 13 | 4
+INPUTP | 8 | 284 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 14 | 
+   reureg/Length<2>.T := RegReset & !reureg/Length<2>
+	# !N_PZ_823 & !reureg/Length<2> & 
+	reureg/LengthWritten<2>
+	# !RegReset & !N_PZ_823 & reureg/Length<2> & 
+	!reureg/LengthWritten<2>
+	# !RegReset & !Length1 & !reureg/Length<0> & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816 & !reureg/Length<1>
+	# nDMA & D<2>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<2>
+	# !RegReset & nDMA & !D<2>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<2>;	// (6 pt, 19 inp)
+   reureg/Length<2>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 0 | reureg/LengthWritten<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 5 | 0 | 5 | 8
+INPUTS | 11 | RegReset  | reureg/LengthWritten<2>  | nDMA  | D<2>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 5 | 0 | 13 | 4
+INPUTP | 8 | 284 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<2>.T := RegReset & !reureg/LengthWritten<2>
+	# nDMA & D<2>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<2>
+	# !RegReset & nDMA & !D<2>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<2>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<2>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 9 | reureg/Length<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 15 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 1 | 3
+INPUTS | 20 | RegReset  | reureg/Length<3>  | N_PZ_823  | reureg/LengthWritten<3>  | Length1  | reureg/Length<0>  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | nDMA  | D<3>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 12 | 13 | 9 | 5 | 9 | 3 | 9 | 1 | 11 | 4 | 5 | 5 | 6 | 0 | 13 | 13 | 8 | 13 | 13 | 5 | 7 | 5 | 8 | 13 | 4
+INPUTP | 8 | 8 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 15 | 
+   reureg/Length<3>.T := RegReset & !reureg/Length<3>
+	# !N_PZ_823 & !reureg/Length<3> & 
+	reureg/LengthWritten<3>
+	# !RegReset & !N_PZ_823 & reureg/Length<3> & 
+	!reureg/LengthWritten<3>
+	# !RegReset & !Length1 & !reureg/Length<0> & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816 & !reureg/Length<1> & 
+	!reureg/Length<2>
+	# nDMA & D<3>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<3>
+	# !RegReset & nDMA & !D<3>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<3>;	// (6 pt, 20 inp)
+   reureg/Length<3>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 11 | reureg/LengthWritten<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 1 | 11 | 5 | 9
+INPUTS | 11 | RegReset  | reureg/LengthWritten<3>  | nDMA  | D<3>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 1 | 11 | 13 | 4
+INPUTP | 8 | 8 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<3>.T := RegReset & !reureg/LengthWritten<3>
+	# nDMA & D<3>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<3>
+	# !RegReset & nDMA & !D<3>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<3>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<3>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 10 | reureg/Length<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 14 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 1 | 4
+INPUTS | 21 | RegReset  | reureg/Length<4>  | N_PZ_823  | reureg/LengthWritten<4>  | Length1  | reureg/Length<0>  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | nDMA  | D<4>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 13 | 13 | 9 | 5 | 10 | 3 | 9 | 1 | 8 | 4 | 5 | 5 | 6 | 0 | 13 | 13 | 8 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 13 | 4
+INPUTP | 8 | 9 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 15 | 
+   reureg/Length<4>.T := RegReset & !reureg/Length<4>
+	# !N_PZ_823 & !reureg/Length<4> & 
+	reureg/LengthWritten<4>
+	# !RegReset & !N_PZ_823 & reureg/Length<4> & 
+	!reureg/LengthWritten<4>
+	# !RegReset & !Length1 & !reureg/Length<0> & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816 & !reureg/Length<1> & 
+	!reureg/Length<2> & !reureg/Length<3>
+	# nDMA & D<4>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<4>
+	# !RegReset & nDMA & !D<4>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<4>;	// (6 pt, 21 inp)
+   reureg/Length<4>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 8 | reureg/LengthWritten<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 1 | 8 | 5 | 10
+INPUTS | 11 | RegReset  | reureg/LengthWritten<4>  | nDMA  | D<4>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 1 | 8 | 13 | 4
+INPUTP | 8 | 9 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<4>.T := RegReset & !reureg/LengthWritten<4>
+	# nDMA & D<4>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<4>
+	# !RegReset & nDMA & !D<4>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<4>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<4>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 11 | reureg/Length<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 13 | 5 | 11 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 2 | 2
+INPUTS | 22 | RegReset  | reureg/Length<5>  | N_PZ_823  | reureg/LengthWritten<5>  | Length1  | reureg/Length<0>  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | nDMA  | D<5>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 14 | 13 | 9 | 5 | 11 | 3 | 9 | 2 | 5 | 4 | 5 | 5 | 6 | 0 | 13 | 13 | 8 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 13 | 4
+INPUTP | 8 | 277 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 15 | 
+   reureg/Length<5>.T := RegReset & !reureg/Length<5>
+	# !N_PZ_823 & !reureg/Length<5> & 
+	reureg/LengthWritten<5>
+	# !RegReset & !N_PZ_823 & reureg/Length<5> & 
+	!reureg/LengthWritten<5>
+	# !RegReset & !Length1 & !reureg/Length<0> & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816 & !reureg/Length<1> & 
+	!reureg/Length<2> & !reureg/Length<3> & !reureg/Length<4>
+	# nDMA & D<5>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<5>
+	# !RegReset & nDMA & !D<5>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<5>;	// (6 pt, 22 inp)
+   reureg/Length<5>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 5 | reureg/LengthWritten<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 2 | 5 | 5 | 11
+INPUTS | 11 | RegReset  | reureg/LengthWritten<5>  | nDMA  | D<5>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 2 | 5 | 13 | 4
+INPUTP | 8 | 277 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<5>.T := RegReset & !reureg/LengthWritten<5>
+	# nDMA & D<5>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<5>
+	# !RegReset & nDMA & !D<5>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<5>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<5>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 14 | reureg/Length<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 12 | 5 | 14 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 2 | 3
+INPUTS | 23 | RegReset  | reureg/Length<6>  | N_PZ_823  | reureg/LengthWritten<6>  | nDMA  | D<6>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2  | Length1  | reureg/Length<0>  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>
+INPUTMC | 15 | 13 | 9 | 5 | 14 | 3 | 9 | 2 | 1 | 13 | 4 | 4 | 5 | 5 | 6 | 0 | 13 | 13 | 8 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11
+INPUTP | 8 | 276 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 16 | 
+   reureg/Length<6>.T := RegReset & !reureg/Length<6>
+	# !N_PZ_823 & !reureg/Length<6> & 
+	reureg/LengthWritten<6>
+	# !RegReset & !N_PZ_823 & reureg/Length<6> & 
+	!reureg/LengthWritten<6>
+	# nDMA & D<6>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<6>
+	# !RegReset & nDMA & !D<6>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<6>
+	# !RegReset & !Length1 & !reureg/Length<0> & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816 & !reureg/Length<1> & 
+	!reureg/Length<2> & !reureg/Length<3> & !reureg/Length<4> & 
+	!reureg/Length<5>;	// (6 pt, 23 inp)
+   reureg/Length<6>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 1 | reureg/LengthWritten<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 2 | 1 | 5 | 14
+INPUTS | 11 | RegReset  | reureg/LengthWritten<6>  | nDMA  | D<6>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 2 | 1 | 13 | 4
+INPUTP | 8 | 276 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<6>.T := RegReset & !reureg/LengthWritten<6>
+	# nDMA & D<6>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<6>
+	# !RegReset & nDMA & !D<6>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<6>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<6>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 4 | reureg/Length<8>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 0 | 2
+INPUTS | 17 | RegReset  | reureg/Length<8>  | D<0>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<8>  | N_PZ_955  | Length1  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<7>  | N_PZ_1017
+INPUTMC | 16 | 13 | 9 | 4 | 4 | 0 | 13 | 6 | 10 | 3 | 8 | 4 | 5 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 3 | 12 | 3 | 10
+INPUTP | 1 | 288
+EQ | 14 | 
+   reureg/Length<8>.T := RegReset & !reureg/Length<8>
+	# D<0>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<8>
+	# !D<0>.PIN & !RegReset & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<8>
+	# !reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<8> & reureg/LengthWritten<8> & N_PZ_955
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	reureg/Length<8> & !reureg/LengthWritten<8> & N_PZ_955
+	# !Length1 & !reureg/Length<0> & !N_PZ_816 & 
+	!reureg/Length<1> & !reureg/Length<2> & !reureg/Length<3> & 
+	!reureg/Length<4> & !reureg/Length<5> & !reureg/Length<6> & 
+	!reureg/Length<7> & N_PZ_1017;	// (6 pt, 17 inp)
+   reureg/Length<8>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 12 | reureg/Length<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 11 | 3 | 12 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 3 | 0
+INPUTS | 24 | RegReset  | reureg/Length<7>  | N_PZ_823  | reureg/LengthWritten<7>  | nDMA  | D<7>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2  | Length1  | reureg/Length<0>  | reureg/LengthWritten_15_and0000  | N_PZ_949  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>
+INPUTMC | 16 | 13 | 9 | 3 | 12 | 3 | 9 | 3 | 11 | 13 | 4 | 4 | 5 | 5 | 6 | 0 | 13 | 13 | 8 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14
+INPUTP | 8 | 16 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 16 | 
+   reureg/Length<7>.T := RegReset & !reureg/Length<7>
+	# !N_PZ_823 & !reureg/Length<7> & 
+	reureg/LengthWritten<7>
+	# !RegReset & !N_PZ_823 & reureg/Length<7> & 
+	!reureg/LengthWritten<7>
+	# nDMA & D<7>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/Length<7>
+	# !RegReset & nDMA & !D<7>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/Length<7>
+	# !RegReset & !Length1 & !reureg/Length<0> & 
+	!reureg/LengthWritten_15_and0000 & !N_PZ_949 & !N_PZ_816 & !reureg/Length<1> & 
+	!reureg/Length<2> & !reureg/Length<3> & !reureg/Length<4> & 
+	!reureg/Length<5> & !reureg/Length<6>;	// (6 pt, 24 inp)
+   reureg/Length<7>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 11 | reureg/LengthWritten<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 3 | 11 | 3 | 12
+INPUTS | 11 | RegReset  | reureg/LengthWritten<7>  | nDMA  | D<7>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 3 | 11 | 13 | 4
+INPUTP | 8 | 16 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/LengthWritten<7>.T := RegReset & !reureg/LengthWritten<7>
+	# nDMA & D<7>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & 
+	!reureg/LengthWritten<7>
+	# !RegReset & nDMA & !D<7>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & A<2>.PIN & A<1>.PIN & A<0>.PIN & 
+	!nIO2 & reureg/LengthWritten<7>;	// (3 pt, 11 inp)
+   reureg/LengthWritten<7>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 10 | N_PZ_1017_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10
+INPUTS | 10 | RegReset  | N_PZ_823  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2  | N_PZ_1010
+INPUTMC | 4 | 13 | 9 | 3 | 9 | 13 | 4 | 0 | 15
+INPUTP | 6 | 214 | 98 | 99 | 102 | 215 | 69
+EQ | 4 | 
+   N_PZ_1017 = !RegReset & N_PZ_823
+	$ !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & A<1>.PIN & A<0>.PIN & !nIO2 & N_PZ_823 & 
+	!N_PZ_1010;	// (2 pt, 10 inp)
+
+MACROCELL | 0 | 15 | N_PZ_1010_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 19 | 3 | 10 | 3 | 6 | 6 | 15 | 15 | 5 | 13 | 1 | 6 | 12 | 13 | 0 | 0 | 11 | 7 | 15 | 1 | 3 | 7 | 14 | 1 | 4 | 7 | 13 | 2 | 2 | 7 | 12 | 2 | 3 | 7 | 4 | 3 | 0 | 7 | 1
+INPUTS | 8 | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 1 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 2 | 
+   N_PZ_1010 = nDMA & !nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	!A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2;	// (1 pt, 8 inp)
+
+MACROCELL | 6 | 10 | reureg/LengthWritten<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 6 | 10 | 4 | 4
+INPUTS | 4 | D<0>.PIN  | RegReset  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<8>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 6 | 10
+INPUTP | 1 | 288
+EQ | 5 | 
+   !reureg/LengthWritten<8> := !D<0>.PIN & !RegReset & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<8>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<8>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 8 | N_PZ_955_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 4 | 4 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10
+INPUTS | 9 | N_PZ_823  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 3 | 9 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 3 | 
+   N_PZ_955 = !N_PZ_823
+	# nDMA & !nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	A<2>.PIN & A<1>.PIN & A<0>.PIN & !nIO2;	// (2 pt, 9 inp)
+
+MACROCELL | 4 | 7 | reureg/Length<10>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 0 | 11
+INPUTS | 19 | RegReset  | reureg/Length<10>  | D<2>.PIN  | reureg/LengthWritten_15_and0000  | N_PZ_955  | reureg/LengthWritten<10>  | Length1  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | N_PZ_1017  | reureg/Length<9>
+INPUTMC | 18 | 13 | 9 | 4 | 7 | 0 | 13 | 3 | 8 | 4 | 3 | 4 | 5 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 3 | 10 | 4 | 6
+INPUTP | 1 | 284
+EQ | 14 | 
+   reureg/Length<10>.T := RegReset & !reureg/Length<10>
+	# D<2>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<10>
+	# !RegReset & !D<2>.PIN & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<10>
+	# !reureg/LengthWritten_15_and0000 & N_PZ_955 & 
+	!reureg/Length<10> & reureg/LengthWritten<10>
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	N_PZ_955 & reureg/Length<10> & !reureg/LengthWritten<10>
+	# !Length1 & !reureg/Length<0> & !N_PZ_816 & 
+	!reureg/Length<1> & !reureg/Length<2> & !reureg/Length<3> & 
+	!reureg/Length<4> & !reureg/Length<5> & !reureg/Length<6> & 
+	!reureg/Length<8> & !reureg/Length<7> & N_PZ_1017 & !reureg/Length<9>;	// (6 pt, 19 inp)
+   reureg/Length<10>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 6 | reureg/Length<9>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 4 | 6 | 4 | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 0 | 3
+INPUTS | 18 | RegReset  | reureg/Length<9>  | D<1>.PIN  | reureg/LengthWritten_15_and0000  | N_PZ_955  | reureg/LengthWritten<9>  | Length1  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | N_PZ_1017
+INPUTMC | 17 | 13 | 9 | 4 | 6 | 0 | 13 | 3 | 8 | 6 | 9 | 4 | 5 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 3 | 10
+INPUTP | 1 | 287
+EQ | 14 | 
+   reureg/Length<9>.T := RegReset & !reureg/Length<9>
+	# D<1>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<9>
+	# !RegReset & !D<1>.PIN & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<9>
+	# !reureg/LengthWritten_15_and0000 & N_PZ_955 & 
+	!reureg/Length<9> & reureg/LengthWritten<9>
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	N_PZ_955 & reureg/Length<9> & !reureg/LengthWritten<9>
+	# !Length1 & !reureg/Length<0> & !N_PZ_816 & 
+	!reureg/Length<1> & !reureg/Length<2> & !reureg/Length<3> & 
+	!reureg/Length<4> & !reureg/Length<5> & !reureg/Length<6> & 
+	!reureg/Length<8> & !reureg/Length<7> & N_PZ_1017;	// (6 pt, 18 inp)
+   reureg/Length<9>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 9 | reureg/LengthWritten<9>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 6 | 9 | 4 | 6
+INPUTS | 4 | RegReset  | D<1>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<9>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 6 | 9
+INPUTP | 1 | 287
+EQ | 5 | 
+   !reureg/LengthWritten<9> := !RegReset & !D<1>.PIN & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<9>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<9>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 3 | reureg/LengthWritten<10>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 4 | 3 | 4 | 7
+INPUTS | 4 | RegReset  | D<2>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<10>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 4 | 3
+INPUTP | 1 | 284
+EQ | 5 | 
+   !reureg/LengthWritten<10> := !RegReset & !D<2>.PIN & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<10>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<10>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 8 | reureg/Length<11>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 1 | 3
+INPUTS | 20 | RegReset  | reureg/Length<11>  | D<3>.PIN  | reureg/LengthWritten_15_and0000  | N_PZ_955  | reureg/LengthWritten<11>  | Length1  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | N_PZ_1017  | reureg/Length<10>  | reureg/Length<9>
+INPUTMC | 19 | 13 | 9 | 4 | 8 | 0 | 13 | 3 | 8 | 4 | 0 | 4 | 5 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 3 | 10 | 4 | 7 | 4 | 6
+INPUTP | 1 | 8
+EQ | 15 | 
+   reureg/Length<11>.T := RegReset & !reureg/Length<11>
+	# D<3>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<11>
+	# !RegReset & !D<3>.PIN & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<11>
+	# !reureg/LengthWritten_15_and0000 & N_PZ_955 & 
+	!reureg/Length<11> & reureg/LengthWritten<11>
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	N_PZ_955 & reureg/Length<11> & !reureg/LengthWritten<11>
+	# !Length1 & !reureg/Length<0> & !N_PZ_816 & 
+	!reureg/Length<1> & !reureg/Length<2> & !reureg/Length<3> & 
+	!reureg/Length<4> & !reureg/Length<5> & !reureg/Length<6> & 
+	!reureg/Length<8> & !reureg/Length<7> & N_PZ_1017 & !reureg/Length<10> & 
+	!reureg/Length<9>;	// (6 pt, 20 inp)
+   reureg/Length<11>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 0 | reureg/LengthWritten<11>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 4 | 0 | 4 | 8
+INPUTS | 4 | RegReset  | D<3>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<11>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 4 | 0
+INPUTP | 1 | 8
+EQ | 5 | 
+   !reureg/LengthWritten<11> := !RegReset & !D<3>.PIN & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<11>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<11>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 9 | reureg/Length<12>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 1 | 4
+INPUTS | 21 | RegReset  | reureg/Length<12>  | D<4>.PIN  | reureg/LengthWritten_15_and0000  | N_PZ_955  | reureg/LengthWritten<12>  | Length1  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | N_PZ_1017  | reureg/Length<10>  | reureg/Length<9>  | reureg/Length<11>
+INPUTMC | 20 | 13 | 9 | 4 | 9 | 0 | 13 | 3 | 8 | 4 | 15 | 4 | 5 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 3 | 10 | 4 | 7 | 4 | 6 | 4 | 8
+INPUTP | 1 | 9
+EQ | 15 | 
+   reureg/Length<12>.T := RegReset & !reureg/Length<12>
+	# D<4>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<12>
+	# !RegReset & !D<4>.PIN & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<12>
+	# !reureg/LengthWritten_15_and0000 & N_PZ_955 & 
+	!reureg/Length<12> & reureg/LengthWritten<12>
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	N_PZ_955 & reureg/Length<12> & !reureg/LengthWritten<12>
+	# !Length1 & !reureg/Length<0> & !N_PZ_816 & 
+	!reureg/Length<1> & !reureg/Length<2> & !reureg/Length<3> & 
+	!reureg/Length<4> & !reureg/Length<5> & !reureg/Length<6> & 
+	!reureg/Length<8> & !reureg/Length<7> & N_PZ_1017 & !reureg/Length<10> & 
+	!reureg/Length<9> & !reureg/Length<11>;	// (6 pt, 21 inp)
+   reureg/Length<12>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 15 | reureg/LengthWritten<12>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 4 | 15 | 4 | 9
+INPUTS | 4 | RegReset  | D<4>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<12>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 4 | 15
+INPUTP | 1 | 9
+EQ | 5 | 
+   !reureg/LengthWritten<12> := !RegReset & !D<4>.PIN & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<12>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<12>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 11 | reureg/Length<13>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 4 | 11 | 4 | 13 | 4 | 10 | 4 | 5 | 2 | 2
+INPUTS | 22 | RegReset  | reureg/Length<13>  | D<5>.PIN  | reureg/LengthWritten_15_and0000  | N_PZ_955  | reureg/LengthWritten<13>  | Length1  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | N_PZ_1017  | reureg/Length<10>  | reureg/Length<9>  | reureg/Length<11>  | reureg/Length<12>
+INPUTMC | 21 | 13 | 9 | 4 | 11 | 0 | 13 | 3 | 8 | 5 | 13 | 4 | 5 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 3 | 10 | 4 | 7 | 4 | 6 | 4 | 8 | 4 | 9
+INPUTP | 1 | 277
+EQ | 15 | 
+   reureg/Length<13>.T := RegReset & !reureg/Length<13>
+	# D<5>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<13>
+	# !RegReset & !D<5>.PIN & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<13>
+	# !reureg/LengthWritten_15_and0000 & N_PZ_955 & 
+	!reureg/Length<13> & reureg/LengthWritten<13>
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	N_PZ_955 & reureg/Length<13> & !reureg/LengthWritten<13>
+	# !Length1 & !reureg/Length<0> & !N_PZ_816 & 
+	!reureg/Length<1> & !reureg/Length<2> & !reureg/Length<3> & 
+	!reureg/Length<4> & !reureg/Length<5> & !reureg/Length<6> & 
+	!reureg/Length<8> & !reureg/Length<7> & N_PZ_1017 & !reureg/Length<10> & 
+	!reureg/Length<9> & !reureg/Length<11> & !reureg/Length<12>;	// (6 pt, 22 inp)
+   reureg/Length<13>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 5 | 13 | reureg/LengthWritten<13>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 5 | 13 | 4 | 11
+INPUTS | 4 | RegReset  | D<5>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<13>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 5 | 13
+INPUTP | 1 | 277
+EQ | 5 | 
+   !reureg/LengthWritten<13> := !RegReset & !D<5>.PIN & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<13>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<13>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 13 | reureg/Length<14>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 4 | 4 | 13 | 4 | 10 | 4 | 5 | 2 | 3
+INPUTS | 23 | RegReset  | reureg/Length<14>  | D<6>.PIN  | reureg/LengthWritten_15_and0000  | N_PZ_955  | reureg/LengthWritten<14>  | Length1  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | N_PZ_1017  | reureg/Length<10>  | reureg/Length<9>  | reureg/Length<11>  | reureg/Length<12>  | reureg/Length<13>
+INPUTMC | 22 | 13 | 9 | 4 | 13 | 0 | 13 | 3 | 8 | 6 | 8 | 4 | 5 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 3 | 10 | 4 | 7 | 4 | 6 | 4 | 8 | 4 | 9 | 4 | 11
+INPUTP | 1 | 276
+EQ | 16 | 
+   reureg/Length<14>.T := RegReset & !reureg/Length<14>
+	# D<6>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<14>
+	# !RegReset & !D<6>.PIN & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<14>
+	# !reureg/LengthWritten_15_and0000 & N_PZ_955 & 
+	!reureg/Length<14> & reureg/LengthWritten<14>
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	N_PZ_955 & reureg/Length<14> & !reureg/LengthWritten<14>
+	# !Length1 & !reureg/Length<0> & !N_PZ_816 & 
+	!reureg/Length<1> & !reureg/Length<2> & !reureg/Length<3> & 
+	!reureg/Length<4> & !reureg/Length<5> & !reureg/Length<6> & 
+	!reureg/Length<8> & !reureg/Length<7> & N_PZ_1017 & !reureg/Length<10> & 
+	!reureg/Length<9> & !reureg/Length<11> & !reureg/Length<12> & 
+	!reureg/Length<13>;	// (6 pt, 23 inp)
+   reureg/Length<14>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 8 | reureg/LengthWritten<14>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 6 | 8 | 4 | 13
+INPUTS | 4 | RegReset  | D<6>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<14>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 6 | 8
+INPUTP | 1 | 276
+EQ | 5 | 
+   !reureg/LengthWritten<14> := !RegReset & !D<6>.PIN & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<14>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<14>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 4 | 10 | reureg/Length<15>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 4 | 10 | 4 | 5 | 3 | 0
+INPUTS | 23 | RegReset  | reureg/Length<15>  | D<7>.PIN  | reureg/LengthWritten_15_and0000  | N_PZ_955  | reureg/LengthWritten<15>  | reureg/Length<0>  | N_PZ_816  | reureg/Length<1>  | reureg/Length<2>  | reureg/Length<3>  | reureg/Length<4>  | reureg/Length<5>  | reureg/Length<6>  | reureg/Length<8>  | reureg/Length<7>  | N_PZ_1017  | reureg/Length<10>  | reureg/Length<9>  | reureg/Length<11>  | reureg/Length<12>  | reureg/Length<13>  | reureg/Length<14>
+INPUTMC | 22 | 13 | 9 | 4 | 10 | 0 | 13 | 3 | 8 | 6 | 7 | 5 | 6 | 13 | 13 | 5 | 7 | 5 | 8 | 5 | 9 | 5 | 10 | 5 | 11 | 5 | 14 | 4 | 4 | 3 | 12 | 3 | 10 | 4 | 7 | 4 | 6 | 4 | 8 | 4 | 9 | 4 | 11 | 4 | 13
+INPUTP | 1 | 16
+EQ | 16 | 
+   reureg/Length<15>.T := RegReset & !reureg/Length<15>
+	# D<7>.PIN & reureg/LengthWritten_15_and0000 & 
+	!reureg/Length<15>
+	# !RegReset & !D<7>.PIN & 
+	reureg/LengthWritten_15_and0000 & reureg/Length<15>
+	# !reureg/LengthWritten_15_and0000 & N_PZ_955 & 
+	!reureg/Length<15> & reureg/LengthWritten<15>
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	N_PZ_955 & reureg/Length<15> & !reureg/LengthWritten<15>
+	# !reureg/Length<0> & !N_PZ_816 & !reureg/Length<1> & 
+	!reureg/Length<2> & !reureg/Length<3> & !reureg/Length<4> & 
+	!reureg/Length<5> & !reureg/Length<6> & !reureg/Length<8> & 
+	!reureg/Length<7> & N_PZ_1017 & !reureg/Length<10> & !reureg/Length<9> & 
+	!reureg/Length<11> & !reureg/Length<12> & !reureg/Length<13> & 
+	!reureg/Length<14>;	// (6 pt, 23 inp)
+   reureg/Length<15>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 7 | reureg/LengthWritten<15>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 6 | 7 | 4 | 10
+INPUTS | 4 | RegReset  | D<7>.PIN  | reureg/LengthWritten_15_and0000  | reureg/LengthWritten<15>
+INPUTMC | 3 | 13 | 9 | 0 | 13 | 6 | 7
+INPUTP | 1 | 16
+EQ | 5 | 
+   !reureg/LengthWritten<15> := !RegReset & !D<7>.PIN & 
+	reureg/LengthWritten_15_and0000
+	# !RegReset & !reureg/LengthWritten_15_and0000 & 
+	!reureg/LengthWritten<15>;	// (2 pt, 4 inp)
+   reureg/LengthWritten<15>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 7 | reureg/Execute8_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 13 | 4 | 13 | 3 | 13 | 15
+INPUTS | 10 | nDMA  | D<4>.PIN  | D<7>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 1 | 13 | 4
+INPUTP | 9 | 9 | 16 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 3 | 
+   reureg/Execute8 = nDMA & D<4>.PIN & D<7>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2;	// (1 pt, 10 inp)
+
+MACROCELL | 9 | 12 | reureg/Execute1_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 13 | 4 | 13 | 3 | 13 | 15
+INPUTS | 19 | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | A<9>.PIN  | A<8>.PIN  | A<15>.PIN  | A<14>.PIN  | A<13>.PIN  | A<12>.PIN  | A<11>.PIN  | A<10>.PIN  | A<6>.PIN  | A<5>.PIN  | A<7>.PIN  | reureg/ExecuteEN  | reureg/FF00DecodeEN
+INPUTMC | 2 | 3 | 13 | 1 | 10
+INPUTP | 17 | 214 | 98 | 99 | 100 | 102 | 215 | 219 | 218 | 77 | 80 | 83 | 84 | 85 | 86 | 51 | 50 | 60
+EQ | 5 | 
+   reureg/Execute1 = !nWE.PIN & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & A<9>.PIN & A<8>.PIN & A<15>.PIN & 
+	A<14>.PIN & A<13>.PIN & A<12>.PIN & A<11>.PIN & A<10>.PIN & 
+	!A<6>.PIN & !A<5>.PIN & !A<7>.PIN & reureg/ExecuteEN & 
+	reureg/FF00DecodeEN;	// (1 pt, 19 inp)
+
+MACROCELL | 3 | 13 | reureg/ExecuteEN_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 3 | 13 | 9 | 12 | 3 | 0
+INPUTS | 12 | RegReset  | reureg/ExecuteEN  | nDMA  | dmaseq/XferEnd8  | D<7>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 4 | 13 | 9 | 3 | 13 | 13 | 4 | 13 | 11
+INPUTP | 8 | 16 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 9 | 
+   reureg/ExecuteEN.T := RegReset & reureg/ExecuteEN
+	# !nDMA & dmaseq/XferEnd8 & reureg/ExecuteEN
+	# nDMA & !D<7>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/ExecuteEN
+	# !RegReset & nDMA & D<7>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/ExecuteEN;	// (4 pt, 12 inp)
+   reureg/ExecuteEN.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 10 | reureg/FF00DecodeEN_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 1 | 10 | 9 | 12 | 1 | 4
+INPUTS | 12 | RegReset  | reureg/FF00DecodeEN  | nDMA  | dmaseq/XferEnd8  | D<4>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 4 | 13 | 9 | 1 | 10 | 13 | 4 | 13 | 11
+INPUTP | 8 | 9 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 9 | 
+   reureg/FF00DecodeEN.T := RegReset & reureg/FF00DecodeEN
+	# !nDMA & dmaseq/XferEnd8 & reureg/FF00DecodeEN
+	# nDMA & D<4>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/FF00DecodeEN
+	# !RegReset & nDMA & !D<4>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/FF00DecodeEN;	// (4 pt, 12 inp)
+   reureg/FF00DecodeEN.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 6 | dmaseq/nRESETr<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 1 | 13 | 9
+INPUTS | 1 | dmaseq/nRESETr_0
+INPUTMC | 1 | 1 | 14
+EQ | 2 | 
+   dmaseq/nRESETr<1> := dmaseq/nRESETr_0;	// (1 pt, 1 inp)
+   dmaseq/nRESETr<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 0 | 14 | reureg/CA_7_and0001_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 17 | 13 | 2 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 15 | 5 | 13 | 1 | 13 | 0 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1
+INPUTS | 8 | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 1 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 2 | 
+   reureg/CA_7_and0001 = nDMA & !nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	!A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 8 inp)
+
+MACROCELL | 3 | 15 | reureg/IncMode<1>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 11 | 3 | 15 | 13 | 2 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 3 | 0
+INPUTS | 11 | RegReset  | reureg/IncMode<1>  | nDMA  | D<7>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 3 | 15 | 13 | 4
+INPUTP | 8 | 16 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/IncMode<1>.T := RegReset & reureg/IncMode<1>
+	# nDMA & !D<7>.PIN & !nWE.PIN & !A<4>.PIN & 
+	A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2 & 
+	reureg/IncMode<1>
+	# !RegReset & nDMA & D<7>.PIN & !nWE.PIN & 
+	!A<4>.PIN & A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & 
+	!nIO2 & !reureg/IncMode<1>;	// (3 pt, 11 inp)
+   reureg/IncMode<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 6 | N_PZ_954_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 16 | 13 | 2 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 13 | 1 | 13 | 0 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1
+INPUTS | 2 | N_PZ_949  | N_PZ_1010
+INPUTMC | 2 | 13 | 8 | 0 | 15
+EQ | 1 | 
+   N_PZ_954 = !N_PZ_949 & !N_PZ_1010;	// (1 pt, 2 inp)
+
+MACROCELL | 0 | 2 | reureg/CAWritten<0>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 13 | 2
+INPUTS | 18 | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2  | ram/RDD<0>  | reureg/XferType<0>  | A<0>  | REUA<0>  | reureg/Length<8>  | reureg/Length<0>  | REUA<16>  | REUA<8>  | A<8>
+INPUTMC | 11 | 13 | 9 | 13 | 4 | 14 | 13 | 8 | 9 | 13 | 2 | 6 | 2 | 4 | 4 | 5 | 6 | 10 | 7 | 10 | 6 | 13 | 1
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 25 | 
+   !D<0> =  !nDMA & !ram/RDD<0>
+	# nDMA & !reureg/XferType<0> & !A<4>.PIN & !A<3>.PIN & 
+	!A<2>.PIN & !A<1>.PIN
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<0>.PIN & !A<0>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !REUA<0>
+	# nDMA & !A<4>.PIN & !A<2>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !reureg/Length<8>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<0>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !REUA<16>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<8>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<8>;	// (10 pt, 15 inp)
+   D<0>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<0> := D<0>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<0>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 1 | 2 | DOE_MC
+ATTRIBUTES | 768 | 0
+OUTPUTMC | 8 | 0 | 2 | 0 | 3 | 0 | 11 | 1 | 3 | 1 | 4 | 2 | 2 | 2 | 3 | 3 | 0
+INPUTS | 6 | nDMA  | nWE.PIN  | nIO2  | PHI2  | BA  | nWE
+INPUTMC | 2 | 13 | 4 | 13 | 3
+INPUTP | 4 | 214 | 69 | 67 | 283
+EQ | 2 | 
+   DOE_MC.GLB = nDMA & nWE.PIN & !nIO2 & PHI2
+	# !nDMA & BA & PHI2 & !nWE;	// (2 pt, 6 inp)
+
+MACROCELL | 13 | 3 | nWE_MC
+ATTRIBUTES | 2223276802 | 2
+OUTPUTMC | 2 | 13 | 3 | 1 | 2
+INPUTS | 9 | nDMA  | dmaseq/XferEnd8  | XferType<0>  | XferType<1>  | reureg/Execute8  | reureg/Execute1  | BA  | nWE  | dmaseq/nRESETr_0
+INPUTMC | 8 | 13 | 4 | 13 | 11 | 8 | 10 | 9 | 11 | 3 | 7 | 9 | 12 | 13 | 3 | 1 | 14
+INPUTP | 1 | 283
+LCT | 1 | 5 | Internal_Name
+EQ | 12 | 
+   !nWE := !nDMA & dmaseq/XferEnd8
+	$ nDMA & !XferType<0> & XferType<1>
+	# nDMA & !reureg/Execute8 & !reureg/Execute1
+	# !dmaseq/XferEnd8 & !XferType<0> & XferType<1>
+	# !nDMA & !dmaseq/XferEnd8 & XferType<0> & 
+	!XferType<1> & BA & nWE
+	# !nDMA & dmaseq/XferEnd8 & dmaseq/nRESETr_0 & 
+	XferType<0> & !XferType<1> & !BA & nWE
+	# !nDMA & !dmaseq/XferEnd8 & dmaseq/nRESETr_0 & 
+	XferType<0> & !XferType<1> & !BA & !nWE;	// (7 pt, 9 inp)
+    nWE.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   nWE.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 7 | 15 | A<10>_MC
+ATTRIBUTES | 2223276802 | 2
+OUTPUTMC | 7 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1 | 0 | 11
+INPUTS | 11 | RegReset  | D<2>.PIN  | N_PZ_1010  | N_PZ_990  | reureg/CAWritten<10>  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CA_15_and0000  | A<10>  | A<8>  | A<9>
+INPUTMC | 10 | 13 | 9 | 0 | 15 | 15 | 5 | 0 | 11 | 0 | 14 | 3 | 6 | 8 | 13 | 7 | 15 | 13 | 1 | 13 | 0
+INPUTP | 1 | 284
+LCT | 1 | 5 | Internal_Name
+EQ | 12 | 
+   A<10> := !RegReset & D<2>.PIN & N_PZ_1010
+	# !RegReset & N_PZ_990 & reureg/CAWritten<10>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	!reureg/CA_15_and0000 & A<10>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	!A<8> & reureg/CA_15_and0000 & A<10>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	reureg/CA_15_and0000 & A<10> & !A<9>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & reureg/CA_15_and0000 & !A<10> & A<9>;	// (6 pt, 11 inp)
+    A<10>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<10>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 13 | 1 | A<8>_MC
+ATTRIBUTES | 2223276802 | 2
+OUTPUTMC | 9 | 13 | 1 | 13 | 0 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1 | 0 | 2
+INPUTS | 9 | D<0>.PIN  | RegReset  | N_PZ_1010  | reureg/CAWritten<8>  | N_PZ_990  | reureg/CA_7_and0001  | N_PZ_954  | A<8>  | reureg/CA_15_and0000
+INPUTMC | 8 | 13 | 9 | 0 | 15 | 6 | 15 | 15 | 5 | 0 | 14 | 3 | 6 | 13 | 1 | 8 | 13
+INPUTP | 1 | 288
+LCT | 1 | 5 | Internal_Name
+EQ | 8 | 
+   A<8> := D<0>.PIN & !RegReset & N_PZ_1010
+	# !RegReset & reureg/CAWritten<8> & N_PZ_990
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & !reureg/CA_15_and0000
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	!A<8> & reureg/CA_15_and0000;	// (4 pt, 9 inp)
+    A<8>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<8>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 13 | reureg/CA_15_and0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 13 | 1 | 13 | 0 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1
+INPUTS | 10 | N_PZ_816  | A<0>  | reureg/IncMode<1>  | A<1>  | A<2>  | A<3>  | A<4>  | A<5>  | A<6>  | A<7>
+INPUTMC | 10 | 13 | 13 | 13 | 2 | 3 | 15 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1
+EQ | 2 | 
+   reureg/CA_15_and0000 = !N_PZ_816 & A<0> & !reureg/IncMode<1> & A<1> & 
+	A<2> & A<3> & A<4> & A<5> & A<6> & A<7>;	// (1 pt, 10 inp)
+
+MACROCELL | 11 | 4 | A<1>_MC
+ATTRIBUTES | 2223276802 | 2
+OUTPUTMC | 9 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 0 | 3
+INPUTS | 9 | RegReset  | D<1>.PIN  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<1>  | N_PZ_816  | A<1>  | reureg/IncMode<1>  | A<0>
+INPUTMC | 8 | 13 | 9 | 0 | 14 | 3 | 6 | 0 | 3 | 13 | 13 | 11 | 4 | 3 | 15 | 13 | 2
+INPUTP | 1 | 287
+LCT | 1 | 5 | Internal_Name
+EQ | 13 | 
+   A<1> := !RegReset & D<1>.PIN & reureg/CA_7_and0001
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	reureg/CAWritten<1>
+	# !RegReset & N_PZ_816 & !reureg/CA_7_and0001 & 
+	N_PZ_954 & A<1>
+	# !RegReset & !reureg/CA_7_and0001 & 
+	reureg/IncMode<1> & N_PZ_954 & A<1>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & !reureg/IncMode<1> & N_PZ_954 & !A<1>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	!A<0> & !reureg/IncMode<1> & N_PZ_954 & A<1>;	// (6 pt, 9 inp)
+    A<1>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 0 | 3 | reureg/CAWritten<1>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 11 | 4
+INPUTS | 18 | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2  | ram/RDD<1>  | reureg/XferType<1>  | A<1>  | REUA<1>  | reureg/Length<9>  | reureg/Length<1>  | REUA<17>  | REUA<9>  | A<9>
+INPUTMC | 11 | 13 | 9 | 13 | 4 | 14 | 11 | 8 | 8 | 11 | 4 | 6 | 1 | 4 | 6 | 5 | 7 | 9 | 9 | 11 | 13 | 13 | 0
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 25 | 
+   !D<1> =  !nDMA & !ram/RDD<1>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !reureg/XferType<1>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<0>.PIN & !A<1>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !REUA<1>
+	# nDMA & !A<4>.PIN & !A<2>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !reureg/Length<9>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<1>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !REUA<17>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<9>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<9>;	// (10 pt, 15 inp)
+   D<1>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<1> := D<1>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<1>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 11 | 2 | A<2>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 8 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 0 | 11
+INPUTS | 10 | RegReset  | A<2>  | D<2>.PIN  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<2>  | N_PZ_816  | A<0>  | reureg/IncMode<1>  | A<1>
+INPUTMC | 9 | 13 | 9 | 11 | 2 | 0 | 14 | 3 | 6 | 1 | 7 | 13 | 13 | 13 | 2 | 3 | 15 | 11 | 4
+INPUTP | 1 | 284
+LCT | 1 | 5 | Internal_Name
+EQ | 12 | 
+   A<2>.T := RegReset & A<2>
+	# !D<2>.PIN & reureg/CA_7_and0001 & A<2>
+	# !RegReset & D<2>.PIN & reureg/CA_7_and0001 & 
+	!A<2>
+	# !reureg/CA_7_and0001 & !N_PZ_954 & A<2> & 
+	!reureg/CAWritten<2>
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	!A<2> & reureg/CAWritten<2>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & !reureg/IncMode<1> & N_PZ_954 & A<1>;	// (6 pt, 10 inp)
+    A<2>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<2>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 7 | reureg/CAWritten<2>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 11 | 2
+INPUTS | 10 | D<2>.PIN  | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 13 | 9 | 13 | 4
+INPUTP | 8 | 284 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 4 | 
+   reureg/CAWritten<2> := D<2>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<2>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<2>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 11 | 1 | A<3>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 7 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 1 | 3
+INPUTS | 11 | RegReset  | A<3>  | D<3>.PIN  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<3>  | N_PZ_816  | A<0>  | reureg/IncMode<1>  | A<1>  | A<2>
+INPUTMC | 10 | 13 | 9 | 11 | 1 | 0 | 14 | 3 | 6 | 1 | 12 | 13 | 13 | 13 | 2 | 3 | 15 | 11 | 4 | 11 | 2
+INPUTP | 1 | 8
+LCT | 1 | 5 | Internal_Name
+EQ | 12 | 
+   A<3>.T := RegReset & A<3>
+	# !D<3>.PIN & reureg/CA_7_and0001 & A<3>
+	# !RegReset & D<3>.PIN & reureg/CA_7_and0001 & 
+	!A<3>
+	# !reureg/CA_7_and0001 & !N_PZ_954 & A<3> & 
+	!reureg/CAWritten<3>
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	!A<3> & reureg/CAWritten<3>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & !reureg/IncMode<1> & N_PZ_954 & A<1> & A<2>;	// (6 pt, 11 inp)
+    A<3>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<3>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 12 | reureg/CAWritten<3>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 11 | 1
+INPUTS | 10 | D<3>.PIN  | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 13 | 9 | 13 | 4
+INPUTP | 8 | 8 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 4 | 
+   reureg/CAWritten<3> := D<3>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<3>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<3>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 11 | 0 | A<4>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 6 | 11 | 0 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 1 | 4
+INPUTS | 12 | RegReset  | A<4>  | D<4>.PIN  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<4>  | N_PZ_816  | A<0>  | reureg/IncMode<1>  | A<1>  | A<2>  | A<3>
+INPUTMC | 11 | 13 | 9 | 11 | 0 | 0 | 14 | 3 | 6 | 1 | 9 | 13 | 13 | 13 | 2 | 3 | 15 | 11 | 4 | 11 | 2 | 11 | 1
+INPUTP | 1 | 9
+LCT | 1 | 5 | Internal_Name
+EQ | 13 | 
+   A<4>.T := RegReset & A<4>
+	# !D<4>.PIN & reureg/CA_7_and0001 & A<4>
+	# !RegReset & D<4>.PIN & reureg/CA_7_and0001 & 
+	!A<4>
+	# !reureg/CA_7_and0001 & !N_PZ_954 & A<4> & 
+	!reureg/CAWritten<4>
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	!A<4> & reureg/CAWritten<4>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & !reureg/IncMode<1> & N_PZ_954 & A<1> & A<2> & 
+	A<3>;	// (6 pt, 12 inp)
+    A<4>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<4>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 9 | reureg/CAWritten<4>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 11 | 0
+INPUTS | 10 | D<4>.PIN  | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 13 | 9 | 13 | 4
+INPUTP | 8 | 9 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 4 | 
+   reureg/CAWritten<4> := D<4>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<4>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<4>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 15 | A<5>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 5 | 8 | 15 | 8 | 14 | 8 | 1 | 8 | 13 | 2 | 2
+INPUTS | 13 | RegReset  | A<5>  | D<5>.PIN  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<5>  | N_PZ_816  | A<0>  | reureg/IncMode<1>  | A<1>  | A<2>  | A<3>  | A<4>
+INPUTMC | 12 | 13 | 9 | 8 | 15 | 0 | 14 | 3 | 6 | 2 | 12 | 13 | 13 | 13 | 2 | 3 | 15 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0
+INPUTP | 1 | 277
+LCT | 1 | 5 | Internal_Name
+EQ | 13 | 
+   A<5>.T := RegReset & A<5>
+	# !D<5>.PIN & reureg/CA_7_and0001 & A<5>
+	# !RegReset & D<5>.PIN & reureg/CA_7_and0001 & 
+	!A<5>
+	# !reureg/CA_7_and0001 & !N_PZ_954 & A<5> & 
+	!reureg/CAWritten<5>
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	!A<5> & reureg/CAWritten<5>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & !reureg/IncMode<1> & N_PZ_954 & A<1> & A<2> & 
+	A<3> & A<4>;	// (6 pt, 13 inp)
+    A<5>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<5>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 12 | reureg/CAWritten<5>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 8 | 15
+INPUTS | 10 | D<5>.PIN  | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 13 | 9 | 13 | 4
+INPUTP | 8 | 277 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 4 | 
+   reureg/CAWritten<5> := D<5>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<5>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<5>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 14 | A<6>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 4 | 8 | 14 | 8 | 1 | 8 | 13 | 2 | 3
+INPUTS | 14 | RegReset  | A<6>  | D<6>.PIN  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<6>  | N_PZ_816  | A<0>  | reureg/IncMode<1>  | A<1>  | A<2>  | A<3>  | A<4>  | A<5>
+INPUTMC | 13 | 13 | 9 | 8 | 14 | 0 | 14 | 3 | 6 | 2 | 7 | 13 | 13 | 13 | 2 | 3 | 15 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15
+INPUTP | 1 | 276
+LCT | 1 | 5 | Internal_Name
+EQ | 13 | 
+   A<6>.T := RegReset & A<6>
+	# !D<6>.PIN & reureg/CA_7_and0001 & A<6>
+	# !RegReset & D<6>.PIN & reureg/CA_7_and0001 & 
+	!A<6>
+	# !reureg/CA_7_and0001 & !N_PZ_954 & A<6> & 
+	!reureg/CAWritten<6>
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	!A<6> & reureg/CAWritten<6>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & !reureg/IncMode<1> & N_PZ_954 & A<1> & A<2> & 
+	A<3> & A<4> & A<5>;	// (6 pt, 14 inp)
+    A<6>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<6>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 7 | reureg/CAWritten<6>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 8 | 14
+INPUTS | 10 | D<6>.PIN  | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 13 | 9 | 13 | 4
+INPUTP | 8 | 276 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 4 | 
+   reureg/CAWritten<6> := D<6>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<6>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<6>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 1 | A<7>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 3 | 8 | 1 | 8 | 13 | 3 | 0
+INPUTS | 15 | RegReset  | A<7>  | D<7>.PIN  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CAWritten<7>  | N_PZ_816  | A<0>  | reureg/IncMode<1>  | A<1>  | A<2>  | A<3>  | A<4>  | A<5>  | A<6>
+INPUTMC | 14 | 13 | 9 | 8 | 1 | 0 | 14 | 3 | 6 | 2 | 0 | 13 | 13 | 13 | 2 | 3 | 15 | 11 | 4 | 11 | 2 | 11 | 1 | 11 | 0 | 8 | 15 | 8 | 14
+INPUTP | 1 | 16
+LCT | 1 | 5 | Internal_Name
+EQ | 13 | 
+   A<7>.T := RegReset & A<7>
+	# !D<7>.PIN & reureg/CA_7_and0001 & A<7>
+	# !RegReset & D<7>.PIN & reureg/CA_7_and0001 & 
+	!A<7>
+	# !reureg/CA_7_and0001 & !N_PZ_954 & A<7> & 
+	!reureg/CAWritten<7>
+	# !RegReset & !reureg/CA_7_and0001 & !N_PZ_954 & 
+	!A<7> & reureg/CAWritten<7>
+	# !RegReset & !N_PZ_816 & !reureg/CA_7_and0001 & 
+	A<0> & !reureg/IncMode<1> & N_PZ_954 & A<1> & A<2> & 
+	A<3> & A<4> & A<5> & A<6>;	// (6 pt, 15 inp)
+    A<7>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<7>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 0 | reureg/CAWritten<7>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 8 | 1
+INPUTS | 10 | D<7>.PIN  | RegReset  | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 2 | 13 | 9 | 13 | 4
+INPUTP | 8 | 16 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 4 | 
+   reureg/CAWritten<7> := D<7>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<7>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<7>.CE = !RegReset & nDMA & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 9 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 15 | reureg/CAWritten<8>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 13 | 1
+INPUTS | 3 | D<0>.PIN  | RegReset  | N_PZ_1010
+INPUTMC | 2 | 13 | 9 | 0 | 15
+INPUTP | 1 | 288
+EQ | 3 | 
+   reureg/CAWritten<8> := D<0>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<8>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<8>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 5 | N_PZ_990_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 13 | 1 | 13 | 0 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1
+INPUTS | 3 | N_PZ_949  | N_PZ_1010  | reureg/CA_7_and0001
+INPUTMC | 3 | 13 | 8 | 0 | 15 | 0 | 14
+EQ | 2 | 
+   N_PZ_990 = N_PZ_949 & !N_PZ_1010
+	# !N_PZ_1010 & reureg/CA_7_and0001;	// (2 pt, 3 inp)
+
+MACROCELL | 13 | 0 | A<9>_MC
+ATTRIBUTES | 2223276802 | 2
+OUTPUTMC | 8 | 13 | 0 | 7 | 15 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1 | 0 | 3
+INPUTS | 10 | RegReset  | D<1>.PIN  | N_PZ_1010  | N_PZ_990  | reureg/CAWritten<9>  | reureg/CA_7_and0001  | N_PZ_954  | reureg/CA_15_and0000  | A<9>  | A<8>
+INPUTMC | 9 | 13 | 9 | 0 | 15 | 15 | 5 | 6 | 12 | 0 | 14 | 3 | 6 | 8 | 13 | 13 | 0 | 13 | 1
+INPUTP | 1 | 287
+LCT | 1 | 5 | Internal_Name
+EQ | 10 | 
+   A<9> := !RegReset & D<1>.PIN & N_PZ_1010
+	# !RegReset & N_PZ_990 & reureg/CAWritten<9>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	!reureg/CA_15_and0000 & A<9>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & reureg/CA_15_and0000 & !A<9>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	!A<8> & reureg/CA_15_and0000 & A<9>;	// (5 pt, 10 inp)
+    A<9>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<9>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 12 | reureg/CAWritten<9>_MC
+ATTRIBUTES | 2155905856 | 0
+OUTPUTMC | 1 | 13 | 0
+INPUTS | 3 | D<1>.PIN  | RegReset  | N_PZ_1010
+INPUTMC | 2 | 13 | 9 | 0 | 15
+INPUTP | 1 | 287
+EQ | 3 | 
+   reureg/CAWritten<9> := D<1>.PIN;	// (1 pt, 1 inp)
+   reureg/CAWritten<9>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<9>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 0 | 11 | reureg/CAWritten<10>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 7 | 15
+INPUTS | 17 | RegReset  | N_PZ_1010  | nDMA  | ram/RDD<2>  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | reureg/DF01Reserved32_0  | A<2>  | REUA<2>  | reureg/Length<10>  | reureg/Length<2>  | REUA<18>  | REUA<10>  | A<10>
+INPUTMC | 12 | 13 | 9 | 0 | 15 | 13 | 4 | 14 | 10 | 5 | 15 | 11 | 2 | 6 | 14 | 4 | 7 | 5 | 8 | 10 | 8 | 7 | 10 | 7 | 15
+INPUTP | 5 | 98 | 99 | 100 | 102 | 215
+EQ | 24 | 
+   !D<2> =  !nDMA & !ram/RDD<2>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !reureg/DF01Reserved32_0
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<0>.PIN & !A<2>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !REUA<2>
+	# nDMA & !A<4>.PIN & !A<2>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !reureg/Length<10>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<2>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !REUA<18>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<10>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<10>;	// (10 pt, 15 inp)
+   D<2>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<10> := D<2>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<10>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<10>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 7 | 14 | A<11>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 6 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1 | 1 | 3
+INPUTS | 12 | RegReset  | A<11>  | D<3>.PIN  | N_PZ_1010  | N_PZ_990  | reureg/CAWritten<11>  | reureg/CA_7_and0001  | N_PZ_954  | A<8>  | reureg/CA_15_and0000  | A<10>  | A<9>
+INPUTMC | 11 | 13 | 9 | 7 | 14 | 0 | 15 | 15 | 5 | 1 | 3 | 0 | 14 | 3 | 6 | 13 | 1 | 8 | 13 | 7 | 15 | 13 | 0
+INPUTP | 1 | 8
+LCT | 1 | 5 | Internal_Name
+EQ | 10 | 
+   A<11>.T := RegReset & A<11>
+	# !D<3>.PIN & N_PZ_1010 & A<11>
+	# N_PZ_990 & A<11> & !reureg/CAWritten<11>
+	# !RegReset & D<3>.PIN & N_PZ_1010 & !A<11>
+	# !RegReset & N_PZ_990 & !A<11> & 
+	reureg/CAWritten<11>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & reureg/CA_15_and0000 & A<10> & A<9>;	// (6 pt, 12 inp)
+    A<11>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<11>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 3 | reureg/CAWritten<11>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 7 | 14
+INPUTS | 16 | RegReset  | N_PZ_1010  | nDMA  | ram/RDD<3>  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | reureg/DF01Reserved32_1  | A<3>  | REUA<3>  | reureg/Length<11>  | reureg/Length<3>  | REUA<11>  | A<11>
+INPUTMC | 11 | 13 | 9 | 0 | 15 | 13 | 4 | 14 | 9 | 1 | 13 | 11 | 1 | 6 | 13 | 4 | 8 | 5 | 9 | 10 | 14 | 7 | 14
+INPUTP | 5 | 98 | 99 | 100 | 102 | 215
+EQ | 22 | 
+   !D<3> =  !nDMA & !ram/RDD<3>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !reureg/DF01Reserved32_1
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<0>.PIN & !A<3>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !REUA<3>
+	# nDMA & !A<4>.PIN & !A<2>.PIN & !A<1>.PIN & 
+	!A<0>.PIN & !reureg/Length<11>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<3>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<11>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<11>;	// (9 pt, 14 inp)
+   D<3>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<11> := D<3>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<11>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<11>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 7 | 13 | A<12>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 5 | 7 | 13 | 7 | 12 | 7 | 4 | 7 | 1 | 1 | 4
+INPUTS | 13 | RegReset  | A<12>  | D<4>.PIN  | N_PZ_1010  | N_PZ_990  | reureg/CAWritten<12>  | reureg/CA_7_and0001  | N_PZ_954  | A<8>  | reureg/CA_15_and0000  | A<10>  | A<9>  | A<11>
+INPUTMC | 12 | 13 | 9 | 7 | 13 | 0 | 15 | 15 | 5 | 1 | 4 | 0 | 14 | 3 | 6 | 13 | 1 | 8 | 13 | 7 | 15 | 13 | 0 | 7 | 14
+INPUTP | 1 | 9
+LCT | 1 | 5 | Internal_Name
+EQ | 10 | 
+   A<12>.T := RegReset & A<12>
+	# !D<4>.PIN & N_PZ_1010 & A<12>
+	# N_PZ_990 & A<12> & !reureg/CAWritten<12>
+	# !RegReset & D<4>.PIN & N_PZ_1010 & !A<12>
+	# !RegReset & N_PZ_990 & !A<12> & 
+	reureg/CAWritten<12>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & reureg/CA_15_and0000 & A<10> & A<9> & A<11>;	// (6 pt, 13 inp)
+    A<12>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<12>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 4 | reureg/CAWritten<12>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 7 | 13
+INPUTS | 16 | RegReset  | N_PZ_1010  | nDMA  | ram/RDD<4>  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | reureg/Length<12>  | reureg/Length<4>  | REUA<12>  | REUA<4>  | A<12>  | A<4>  | reureg/FF00DecodeEN
+INPUTMC | 11 | 13 | 9 | 0 | 15 | 13 | 4 | 14 | 8 | 4 | 9 | 5 | 10 | 10 | 13 | 11 | 12 | 7 | 13 | 11 | 0 | 1 | 10
+INPUTP | 5 | 98 | 99 | 100 | 102 | 215
+EQ | 20 | 
+   !D<4> =  !nDMA & !ram/RDD<4>
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !reureg/Length<12>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<4>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<12>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !REUA<4>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<12>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !A<4>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & reureg/FF00DecodeEN;	// (8 pt, 14 inp)
+   D<4>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<12> := D<4>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<12>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<12>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 7 | 12 | A<13>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 4 | 7 | 12 | 7 | 4 | 7 | 1 | 2 | 2
+INPUTS | 14 | RegReset  | A<13>  | D<5>.PIN  | N_PZ_1010  | N_PZ_990  | reureg/CAWritten<13>  | reureg/CA_7_and0001  | N_PZ_954  | A<8>  | reureg/CA_15_and0000  | A<10>  | A<9>  | A<11>  | A<12>
+INPUTMC | 13 | 13 | 9 | 7 | 12 | 0 | 15 | 15 | 5 | 2 | 2 | 0 | 14 | 3 | 6 | 13 | 1 | 8 | 13 | 7 | 15 | 13 | 0 | 7 | 14 | 7 | 13
+INPUTP | 1 | 277
+LCT | 1 | 5 | Internal_Name
+EQ | 11 | 
+   A<13>.T := RegReset & A<13>
+	# !D<5>.PIN & N_PZ_1010 & A<13>
+	# N_PZ_990 & A<13> & !reureg/CAWritten<13>
+	# !RegReset & D<5>.PIN & N_PZ_1010 & !A<13>
+	# !RegReset & N_PZ_990 & !A<13> & 
+	reureg/CAWritten<13>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & reureg/CA_15_and0000 & A<10> & A<9> & A<11> & 
+	A<12>;	// (6 pt, 14 inp)
+    A<13>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<13>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 2 | reureg/CAWritten<13>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 7 | 12
+INPUTS | 18 | RegReset  | N_PZ_1010  | nDMA  | ram/RDD<5>  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | reureg/VerifyErrMask  | reureg/Length<13>  | reureg/Length<5>  | REUA<13>  | REUA<5>  | A<13>  | A<5>  | reureg/AutoloadEN  | reureg/Fault
+INPUTMC | 13 | 13 | 9 | 0 | 15 | 13 | 4 | 14 | 7 | 2 | 13 | 4 | 11 | 5 | 11 | 10 | 12 | 12 | 15 | 7 | 12 | 8 | 15 | 2 | 14 | 8 | 12
+INPUTP | 5 | 98 | 99 | 100 | 102 | 215
+EQ | 24 | 
+   !D<5> =  !nDMA & !ram/RDD<5>
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !reureg/VerifyErrMask
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !reureg/Length<13>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<5>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<13>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !REUA<5>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<13>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !A<5>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !reureg/AutoloadEN
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !reureg/Fault;	// (10 pt, 16 inp)
+   D<5>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<13> := D<5>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<13>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<13>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 7 | 4 | A<14>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 3 | 7 | 4 | 7 | 1 | 2 | 3
+INPUTS | 15 | RegReset  | A<14>  | D<6>.PIN  | N_PZ_1010  | N_PZ_990  | reureg/CAWritten<14>  | reureg/CA_7_and0001  | N_PZ_954  | A<8>  | reureg/CA_15_and0000  | A<10>  | A<9>  | A<11>  | A<12>  | A<13>
+INPUTMC | 14 | 13 | 9 | 7 | 4 | 0 | 15 | 15 | 5 | 2 | 3 | 0 | 14 | 3 | 6 | 13 | 1 | 8 | 13 | 7 | 15 | 13 | 0 | 7 | 14 | 7 | 13 | 7 | 12
+INPUTP | 1 | 276
+LCT | 1 | 5 | Internal_Name
+EQ | 11 | 
+   A<14>.T := RegReset & A<14>
+	# !D<6>.PIN & N_PZ_1010 & A<14>
+	# N_PZ_990 & A<14> & !reureg/CAWritten<14>
+	# !RegReset & D<6>.PIN & N_PZ_1010 & !A<14>
+	# !RegReset & N_PZ_990 & !A<14> & 
+	reureg/CAWritten<14>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & reureg/CA_15_and0000 & A<10> & A<9> & A<11> & 
+	A<12> & A<13>;	// (6 pt, 15 inp)
+    A<14>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<14>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 3 | reureg/CAWritten<14>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 7 | 4
+INPUTS | 19 | RegReset  | N_PZ_1010  | nDMA  | ram/RDD<6>  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | reureg/IncMode<0>  | reureg/EndOfBlockMask  | reureg/Length<14>  | reureg/Length<6>  | REUA<14>  | REUA<6>  | A<14>  | A<6>  | reureg/DF01Reserved6  | reureg/EndOfBlock
+INPUTMC | 14 | 13 | 9 | 0 | 15 | 13 | 4 | 14 | 6 | 2 | 8 | 2 | 9 | 4 | 13 | 5 | 14 | 10 | 10 | 12 | 14 | 7 | 4 | 8 | 14 | 2 | 10 | 2 | 6
+INPUTP | 5 | 98 | 99 | 100 | 102 | 215
+EQ | 26 | 
+   !D<6> =  !nDMA & !ram/RDD<6>
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !reureg/IncMode<0>
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !reureg/EndOfBlockMask
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !reureg/Length<14>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<6>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<14>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !REUA<6>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<14>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !A<6>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !reureg/DF01Reserved6
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !reureg/EndOfBlock;	// (11 pt, 17 inp)
+   D<6>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<14> := D<6>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<14>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<14>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 7 | 1 | A<15>_MC
+ATTRIBUTES | 2219082498 | 2
+OUTPUTMC | 2 | 7 | 1 | 3 | 0
+INPUTS | 16 | RegReset  | A<15>  | D<7>.PIN  | N_PZ_1010  | N_PZ_990  | reureg/CAWritten<15>  | reureg/CA_7_and0001  | N_PZ_954  | A<8>  | reureg/CA_15_and0000  | A<10>  | A<9>  | A<11>  | A<12>  | A<13>  | A<14>
+INPUTMC | 15 | 13 | 9 | 7 | 1 | 0 | 15 | 15 | 5 | 3 | 0 | 0 | 14 | 3 | 6 | 13 | 1 | 8 | 13 | 7 | 15 | 13 | 0 | 7 | 14 | 7 | 13 | 7 | 12 | 7 | 4
+INPUTP | 1 | 16
+LCT | 1 | 5 | Internal_Name
+EQ | 11 | 
+   A<15>.T := RegReset & A<15>
+	# !D<7>.PIN & N_PZ_1010 & A<15>
+	# N_PZ_990 & A<15> & !reureg/CAWritten<15>
+	# !RegReset & D<7>.PIN & N_PZ_1010 & !A<15>
+	# !RegReset & N_PZ_990 & !A<15> & 
+	reureg/CAWritten<15>
+	# !RegReset & !reureg/CA_7_and0001 & N_PZ_954 & 
+	A<8> & reureg/CA_15_and0000 & A<10> & A<9> & A<11> & 
+	A<12> & A<13> & A<14>;	// (6 pt, 16 inp)
+    A<15>.OE = !nDMA & BA & PHI2;	// CTE	(1 pt, 3 inp)
+   A<15>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 0 | reureg/CAWritten<15>_MC
+ATTRIBUTES | 3297018690 | 6
+OUTPUTMC | 1 | 7 | 1
+INPUTS | 19 | RegReset  | N_PZ_1010  | nDMA  | ram/RDD<7>  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | reureg/IncMode<1>  | reureg/IntEnable  | reureg/Length<15>  | reureg/Length<7>  | REUA<15>  | REUA<7>  | A<15>  | A<7>  | reureg/ExecuteEN  | reureg/IntPending
+INPUTMC | 14 | 13 | 9 | 0 | 15 | 13 | 4 | 14 | 5 | 3 | 15 | 3 | 14 | 4 | 10 | 3 | 12 | 10 | 9 | 12 | 13 | 7 | 1 | 8 | 1 | 3 | 13 | 8 | 11
+INPUTP | 5 | 98 | 99 | 100 | 102 | 215
+EQ | 26 | 
+   !D<7> =  !nDMA & !ram/RDD<7>
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !reureg/IncMode<1>
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !reureg/IntEnable
+	# nDMA & !A<4>.PIN & A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !reureg/Length<15>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !reureg/Length<7>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !REUA<15>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !REUA<7>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & A<0>.PIN & !A<15>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	A<1>.PIN & !A<0>.PIN & !A<7>
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & A<0>.PIN & !reureg/ExecuteEN
+	# nDMA & !A<4>.PIN & !A<3>.PIN & !A<2>.PIN & 
+	!A<1>.PIN & !A<0>.PIN & !reureg/IntPending;	// (11 pt, 17 inp)
+   D<7>.OE  =  DOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+// Direct Input Register
+reureg/CAWritten<15> := D<7>.PIN;	// (0 pt, 0 inp)
+   reureg/CAWritten<15>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+    reureg/CAWritten<15>.CE = !RegReset & N_PZ_1010;	// (1 pt, 2 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | DOE_MC.GLB
+
+MACROCELL | 12 | 2 | RA<0>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<0>  | REUA<9>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 6 | 2 | 11 | 13
+EQ | 3 | 
+   RA<0> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<0>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<9>;	// (2 pt, 5 inp)
+   RA<0>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 6 | 2 | REUA<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 11 | 6 | 2 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10 | 12 | 2 | 0 | 2
+INPUTS | 8 | D<0>.PIN  | RegReset  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<0>  | REUA<0>  | reureg/IncMode<0>  | N_PZ_833
+INPUTMC | 7 | 13 | 9 | 0 | 8 | 15 | 7 | 6 | 5 | 6 | 2 | 2 | 8 | 13 | 10
+INPUTP | 1 | 288
+EQ | 11 | 
+   REUA<0> := D<0>.PIN & !RegReset & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & reureg/REUAWritten<0>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & reureg/IncMode<0> & N_PZ_953
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & N_PZ_953 & !N_PZ_833
+	# !RegReset & !REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833;	// (5 pt, 8 inp)
+   REUA<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 0 | 8 | reureg/REUAWritten_7_and0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 25 | 6 | 5 | 6 | 2 | 15 | 6 | 6 | 4 | 6 | 1 | 15 | 9 | 6 | 14 | 15 | 8 | 6 | 13 | 11 | 11 | 11 | 12 | 12 | 9 | 12 | 15 | 12 | 8 | 12 | 14 | 12 | 7 | 12 | 13 | 10 | 6 | 11 | 13 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9
+INPUTS | 8 | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 1 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 2 | 
+   reureg/REUAWritten_7_and0000 = nDMA & !nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	A<2>.PIN & !A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 8 inp)
+
+MACROCELL | 2 | 8 | reureg/IncMode<0>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 11 | 2 | 8 | 6 | 2 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10 | 2 | 3
+INPUTS | 11 | RegReset  | reureg/IncMode<0>  | nDMA  | D<6>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 2 | 8 | 13 | 4
+INPUTP | 8 | 276 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/IncMode<0>.T := RegReset & reureg/IncMode<0>
+	# nDMA & !D<6>.PIN & !nWE.PIN & !A<4>.PIN & 
+	A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2 & 
+	reureg/IncMode<0>
+	# !RegReset & nDMA & D<6>.PIN & !nWE.PIN & 
+	!A<4>.PIN & A<3>.PIN & !A<2>.PIN & A<1>.PIN & !A<0>.PIN & 
+	!nIO2 & !reureg/IncMode<0>;	// (3 pt, 11 inp)
+   reureg/IncMode<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 7 | N_PZ_953_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 16 | 6 | 2 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 10 | 6 | 11 | 13 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9
+INPUTS | 2 | N_PZ_949  | reureg/REUAWritten_15_and0000
+INPUTMC | 2 | 13 | 8 | 0 | 10
+EQ | 1 | 
+   N_PZ_953 = !N_PZ_949 & !reureg/REUAWritten_15_and0000;	// (1 pt, 2 inp)
+
+MACROCELL | 0 | 10 | reureg/REUAWritten_15_and0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 17 | 15 | 7 | 11 | 14 | 10 | 5 | 10 | 6 | 11 | 13 | 7 | 11 | 7 | 10 | 10 | 15 | 10 | 14 | 11 | 15 | 10 | 13 | 12 | 0 | 10 | 12 | 15 | 14 | 10 | 10 | 15 | 12 | 10 | 9
+INPUTS | 8 | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 1 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 2 | 
+   reureg/REUAWritten_15_and0000 = nDMA & !nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2;	// (1 pt, 8 inp)
+
+MACROCELL | 13 | 10 | N_PZ_833_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 9 | 6 | 2 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10
+INPUTS | 5 | XferType<0>  | N_PZ_816  | XferType<1>  | dmaseq/DMAr  | dmaseq/BAr
+INPUTMC | 5 | 8 | 10 | 13 | 13 | 9 | 11 | 0 | 7 | 0 | 12
+EQ | 4 | 
+   N_PZ_833 = !XferType<0> & !N_PZ_816
+	# !XferType<1> & !N_PZ_816
+	# dmaseq/DMAr & dmaseq/BAr & XferType<0> & 
+	XferType<1>;	// (3 pt, 5 inp)
+
+MACROCELL | 6 | 5 | reureg/REUAWritten<0>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 6 | 5 | 6 | 2
+INPUTS | 4 | D<0>.PIN  | RegReset  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<0>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 6 | 5
+INPUTP | 1 | 288
+EQ | 5 | 
+   reureg/REUAWritten<0> := D<0>.PIN & !RegReset & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<0>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 11 | 13 | REUA<9>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 12 | 11 | 13 | 12 | 2 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9 | 10 | 8 | 0 | 3
+INPUTS | 10 | RegReset  | D<1>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<9>  | N_PZ_958  | reureg/REUAWritten_7_and0000  | N_PZ_953  | REUA<9>  | N_PZ_1099  | REUA<8>
+INPUTMC | 9 | 13 | 9 | 0 | 10 | 11 | 14 | 15 | 6 | 0 | 8 | 15 | 7 | 11 | 13 | 12 | 10 | 10 | 6
+INPUTP | 1 | 287
+EQ | 11 | 
+   REUA<9> := !RegReset & D<1>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<9> & !N_PZ_958
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & !N_PZ_1099
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & !REUA<8> & N_PZ_1099
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & !REUA<9> & REUA<8> & N_PZ_1099;	// (5 pt, 10 inp)
+   REUA<9>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 11 | 14 | reureg/REUAWritten<9>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 11 | 14 | 11 | 13
+INPUTS | 4 | RegReset  | D<1>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<9>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 11 | 14
+INPUTP | 1 | 287
+EQ | 5 | 
+   reureg/REUAWritten<9> := !RegReset & D<1>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<9>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<9>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 6 | N_PZ_958_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 8 | 10 | 6 | 11 | 13 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9
+INPUTS | 2 | N_PZ_949  | reureg/REUAWritten_7_and0000
+INPUTMC | 2 | 13 | 8 | 0 | 8
+EQ | 1 | 
+   N_PZ_958 = !N_PZ_949 & !reureg/REUAWritten_7_and0000;	// (1 pt, 2 inp)
+
+MACROCELL | 10 | 6 | REUA<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 13 | 10 | 6 | 11 | 13 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9 | 15 | 13 | 10 | 8 | 0 | 2
+INPUTS | 9 | D<0>.PIN  | RegReset  | reureg/REUAWritten_15_and0000  | N_PZ_958  | reureg/REUAWritten<8>  | reureg/REUAWritten_7_and0000  | N_PZ_953  | REUA<8>  | N_PZ_1099
+INPUTMC | 8 | 13 | 9 | 0 | 10 | 15 | 6 | 10 | 5 | 0 | 8 | 15 | 7 | 10 | 6 | 12 | 10
+INPUTP | 1 | 288
+EQ | 9 | 
+   REUA<8> := D<0>.PIN & !RegReset & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	!N_PZ_958 & reureg/REUAWritten<8>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<8> & !N_PZ_1099
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & !REUA<8> & N_PZ_1099;	// (4 pt, 9 inp)
+   REUA<8>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 10 | 5 | reureg/REUAWritten<8>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 10 | 5 | 10 | 6
+INPUTS | 4 | D<0>.PIN  | RegReset  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<8>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 10 | 5
+INPUTP | 1 | 288
+EQ | 5 | 
+   reureg/REUAWritten<8> := D<0>.PIN & !RegReset & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<8>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<8>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 10 | N_PZ_1099_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 11 | 10 | 6 | 11 | 13 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9 | 10 | 8
+INPUTS | 10 | REUA<0>  | reureg/IncMode<0>  | N_PZ_833  | REUA<1>  | REUA<2>  | REUA<3>  | REUA<4>  | REUA<5>  | REUA<6>  | REUA<7>
+INPUTMC | 10 | 6 | 2 | 2 | 8 | 13 | 10 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13
+EQ | 3 | 
+   N_PZ_1099 = REUA<0> & !reureg/IncMode<0> & N_PZ_833 & 
+	REUA<1> & REUA<2> & REUA<3> & REUA<4> & REUA<5> & 
+	REUA<6> & REUA<7>;	// (1 pt, 10 inp)
+
+MACROCELL | 6 | 1 | REUA<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 10 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10 | 12 | 3 | 0 | 3
+INPUTS | 9 | RegReset  | D<1>.PIN  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<1>  | REUA<0>  | REUA<1>  | reureg/IncMode<0>  | N_PZ_833
+INPUTMC | 8 | 13 | 9 | 0 | 8 | 15 | 7 | 6 | 4 | 6 | 2 | 6 | 1 | 2 | 8 | 13 | 10
+INPUTP | 1 | 287
+EQ | 14 | 
+   REUA<1> := !RegReset & D<1>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & reureg/REUAWritten<1>
+	# !RegReset & !REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & N_PZ_953 & REUA<1>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/IncMode<0> & N_PZ_953 & REUA<1>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & !N_PZ_833 & REUA<1>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833 & 
+	!REUA<1>;	// (6 pt, 9 inp)
+   REUA<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 4 | reureg/REUAWritten<1>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 6 | 4 | 6 | 1
+INPUTS | 4 | RegReset  | D<1>.PIN  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<1>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 6 | 4
+INPUTP | 1 | 287
+EQ | 5 | 
+   reureg/REUAWritten<1> := !RegReset & D<1>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<1>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 14 | REUA<2>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10 | 12 | 11 | 0 | 11
+INPUTS | 10 | RegReset  | REUA<2>  | D<2>.PIN  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<2>  | REUA<0>  | reureg/IncMode<0>  | N_PZ_833  | REUA<1>
+INPUTMC | 9 | 13 | 9 | 6 | 14 | 0 | 8 | 15 | 7 | 15 | 9 | 6 | 2 | 2 | 8 | 13 | 10 | 6 | 1
+INPUTP | 1 | 284
+EQ | 13 | 
+   REUA<2>.T := RegReset & REUA<2>
+	# !D<2>.PIN & reureg/REUAWritten_7_and0000 & 
+	REUA<2>
+	# !RegReset & D<2>.PIN & 
+	reureg/REUAWritten_7_and0000 & !REUA<2>
+	# !reureg/REUAWritten_7_and0000 & !N_PZ_953 & 
+	REUA<2> & !reureg/REUAWritten<2>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & !REUA<2> & reureg/REUAWritten<2>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833 & 
+	REUA<1>;	// (6 pt, 10 inp)
+   REUA<2>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 9 | reureg/REUAWritten<2>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 15 | 9 | 6 | 14
+INPUTS | 4 | RegReset  | D<2>.PIN  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<2>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 15 | 9
+INPUTP | 1 | 284
+EQ | 5 | 
+   reureg/REUAWritten<2> := !RegReset & D<2>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<2>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<2>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 13 | REUA<3>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10 | 12 | 12 | 1 | 3
+INPUTS | 11 | RegReset  | REUA<3>  | D<3>.PIN  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<3>  | REUA<0>  | reureg/IncMode<0>  | N_PZ_833  | REUA<1>  | REUA<2>
+INPUTMC | 10 | 13 | 9 | 6 | 13 | 0 | 8 | 15 | 7 | 15 | 8 | 6 | 2 | 2 | 8 | 13 | 10 | 6 | 1 | 6 | 14
+INPUTP | 1 | 8
+EQ | 13 | 
+   REUA<3>.T := RegReset & REUA<3>
+	# !D<3>.PIN & reureg/REUAWritten_7_and0000 & 
+	REUA<3>
+	# !RegReset & D<3>.PIN & 
+	reureg/REUAWritten_7_and0000 & !REUA<3>
+	# !reureg/REUAWritten_7_and0000 & !N_PZ_953 & 
+	REUA<3> & !reureg/REUAWritten<3>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & !REUA<3> & reureg/REUAWritten<3>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833 & 
+	REUA<1> & REUA<2>;	// (6 pt, 11 inp)
+   REUA<3>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 8 | reureg/REUAWritten<3>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 15 | 8 | 6 | 13
+INPUTS | 4 | RegReset  | D<3>.PIN  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<3>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 15 | 8
+INPUTP | 1 | 8
+EQ | 5 | 
+   reureg/REUAWritten<3> := !RegReset & D<3>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<3>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<3>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 11 | 12 | REUA<4>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 11 | 12 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10 | 14 | 14 | 1 | 4
+INPUTS | 12 | RegReset  | REUA<4>  | D<4>.PIN  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<4>  | REUA<0>  | reureg/IncMode<0>  | N_PZ_833  | REUA<1>  | REUA<2>  | REUA<3>
+INPUTMC | 11 | 13 | 9 | 11 | 12 | 0 | 8 | 15 | 7 | 11 | 11 | 6 | 2 | 2 | 8 | 13 | 10 | 6 | 1 | 6 | 14 | 6 | 13
+INPUTP | 1 | 9
+EQ | 13 | 
+   REUA<4>.T := RegReset & REUA<4>
+	# !D<4>.PIN & reureg/REUAWritten_7_and0000 & 
+	REUA<4>
+	# !RegReset & D<4>.PIN & 
+	reureg/REUAWritten_7_and0000 & !REUA<4>
+	# !reureg/REUAWritten_7_and0000 & !N_PZ_953 & 
+	REUA<4> & !reureg/REUAWritten<4>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & !REUA<4> & reureg/REUAWritten<4>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833 & 
+	REUA<1> & REUA<2> & REUA<3>;	// (6 pt, 12 inp)
+   REUA<4>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 11 | 11 | reureg/REUAWritten<4>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 11 | 11 | 11 | 12
+INPUTS | 4 | RegReset  | D<4>.PIN  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<4>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 11 | 11
+INPUTP | 1 | 9
+EQ | 5 | 
+   reureg/REUAWritten<4> := !RegReset & D<4>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<4>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<4>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 15 | REUA<5>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 12 | 15 | 12 | 14 | 12 | 13 | 12 | 10 | 14 | 15 | 2 | 2
+INPUTS | 13 | RegReset  | REUA<5>  | D<5>.PIN  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<5>  | REUA<0>  | reureg/IncMode<0>  | N_PZ_833  | REUA<1>  | REUA<2>  | REUA<3>  | REUA<4>
+INPUTMC | 12 | 13 | 9 | 12 | 15 | 0 | 8 | 15 | 7 | 12 | 9 | 6 | 2 | 2 | 8 | 13 | 10 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12
+INPUTP | 1 | 277
+EQ | 13 | 
+   REUA<5>.T := RegReset & REUA<5>
+	# !D<5>.PIN & reureg/REUAWritten_7_and0000 & 
+	REUA<5>
+	# !RegReset & D<5>.PIN & 
+	reureg/REUAWritten_7_and0000 & !REUA<5>
+	# !reureg/REUAWritten_7_and0000 & !N_PZ_953 & 
+	REUA<5> & !reureg/REUAWritten<5>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & !REUA<5> & reureg/REUAWritten<5>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833 & 
+	REUA<1> & REUA<2> & REUA<3> & REUA<4>;	// (6 pt, 13 inp)
+   REUA<5>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 9 | reureg/REUAWritten<5>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 12 | 9 | 12 | 15
+INPUTS | 4 | RegReset  | D<5>.PIN  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<5>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 12 | 9
+INPUTP | 1 | 277
+EQ | 5 | 
+   reureg/REUAWritten<5> := !RegReset & D<5>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<5>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<5>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 14 | REUA<6>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 12 | 14 | 12 | 13 | 12 | 10 | 15 | 0 | 2 | 3
+INPUTS | 14 | RegReset  | REUA<6>  | D<6>.PIN  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<6>  | REUA<0>  | reureg/IncMode<0>  | N_PZ_833  | REUA<1>  | REUA<2>  | REUA<3>  | REUA<4>  | REUA<5>
+INPUTMC | 13 | 13 | 9 | 12 | 14 | 0 | 8 | 15 | 7 | 12 | 8 | 6 | 2 | 2 | 8 | 13 | 10 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15
+INPUTP | 1 | 276
+EQ | 13 | 
+   REUA<6>.T := RegReset & REUA<6>
+	# !D<6>.PIN & reureg/REUAWritten_7_and0000 & 
+	REUA<6>
+	# !RegReset & D<6>.PIN & 
+	reureg/REUAWritten_7_and0000 & !REUA<6>
+	# !reureg/REUAWritten_7_and0000 & !N_PZ_953 & 
+	REUA<6> & !reureg/REUAWritten<6>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & !REUA<6> & reureg/REUAWritten<6>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833 & 
+	REUA<1> & REUA<2> & REUA<3> & REUA<4> & REUA<5>;	// (6 pt, 14 inp)
+   REUA<6>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 8 | reureg/REUAWritten<6>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 12 | 8 | 12 | 14
+INPUTS | 4 | RegReset  | D<6>.PIN  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<6>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 12 | 8
+INPUTP | 1 | 276
+EQ | 5 | 
+   reureg/REUAWritten<6> := !RegReset & D<6>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<6>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<6>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 13 | REUA<7>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 4 | 12 | 13 | 12 | 10 | 15 | 2 | 3 | 0
+INPUTS | 15 | RegReset  | REUA<7>  | D<7>.PIN  | reureg/REUAWritten_7_and0000  | N_PZ_953  | reureg/REUAWritten<7>  | REUA<0>  | reureg/IncMode<0>  | N_PZ_833  | REUA<1>  | REUA<2>  | REUA<3>  | REUA<4>  | REUA<5>  | REUA<6>
+INPUTMC | 14 | 13 | 9 | 12 | 13 | 0 | 8 | 15 | 7 | 12 | 7 | 6 | 2 | 2 | 8 | 13 | 10 | 6 | 1 | 6 | 14 | 6 | 13 | 11 | 12 | 12 | 15 | 12 | 14
+INPUTP | 1 | 16
+EQ | 14 | 
+   REUA<7>.T := RegReset & REUA<7>
+	# !D<7>.PIN & reureg/REUAWritten_7_and0000 & 
+	REUA<7>
+	# !RegReset & D<7>.PIN & 
+	reureg/REUAWritten_7_and0000 & !REUA<7>
+	# !reureg/REUAWritten_7_and0000 & !N_PZ_953 & 
+	REUA<7> & !reureg/REUAWritten<7>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	!N_PZ_953 & !REUA<7> & reureg/REUAWritten<7>
+	# !RegReset & REUA<0> & 
+	!reureg/REUAWritten_7_and0000 & !reureg/IncMode<0> & N_PZ_953 & N_PZ_833 & 
+	REUA<1> & REUA<2> & REUA<3> & REUA<4> & REUA<5> & 
+	REUA<6>;	// (6 pt, 15 inp)
+   REUA<7>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 7 | reureg/REUAWritten<7>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 12 | 7 | 12 | 13
+INPUTS | 4 | RegReset  | D<7>.PIN  | reureg/REUAWritten_7_and0000  | reureg/REUAWritten<7>
+INPUTMC | 3 | 13 | 9 | 0 | 8 | 12 | 7
+INPUTP | 1 | 16
+EQ | 5 | 
+   reureg/REUAWritten<7> := !RegReset & D<7>.PIN & 
+	reureg/REUAWritten_7_and0000
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	reureg/REUAWritten<7>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<7>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 3 | RA<1>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<1>  | REUA<10>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 6 | 1 | 7 | 10
+EQ | 3 | 
+   RA<1> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<1>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<10>;	// (2 pt, 5 inp)
+   RA<1>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 7 | 10 | REUA<10>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 11 | 7 | 10 | 12 | 3 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9 | 10 | 8 | 0 | 11
+INPUTS | 11 | RegReset  | D<2>.PIN  | reureg/REUAWritten_15_and0000  | N_PZ_958  | reureg/REUAWritten<10>  | reureg/REUAWritten_7_and0000  | N_PZ_953  | N_PZ_1099  | REUA<10>  | REUA<9>  | REUA<8>
+INPUTMC | 10 | 13 | 9 | 0 | 10 | 15 | 6 | 7 | 11 | 0 | 8 | 15 | 7 | 12 | 10 | 7 | 10 | 11 | 13 | 10 | 6
+INPUTP | 1 | 284
+EQ | 13 | 
+   REUA<10> := !RegReset & D<2>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	!N_PZ_958 & reureg/REUAWritten<10>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & !N_PZ_1099 & REUA<10>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & !REUA<9> & N_PZ_1099 & REUA<10>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & !REUA<8> & N_PZ_1099 & REUA<10>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & REUA<8> & N_PZ_1099 & !REUA<10>;	// (6 pt, 11 inp)
+   REUA<10>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 7 | 11 | reureg/REUAWritten<10>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 7 | 11 | 7 | 10
+INPUTS | 4 | RegReset  | D<2>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<10>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 7 | 11
+INPUTP | 1 | 284
+EQ | 5 | 
+   reureg/REUAWritten<10> := !RegReset & D<2>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<10>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<10>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 11 | RA<2>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<2>  | REUA<11>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 6 | 14 | 10 | 14
+EQ | 3 | 
+   RA<2> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<2>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<11>;	// (2 pt, 5 inp)
+   RA<2>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 10 | 14 | REUA<11>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 10 | 10 | 14 | 12 | 11 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9 | 10 | 8 | 1 | 3
+INPUTS | 12 | RegReset  | REUA<11>  | D<3>.PIN  | reureg/REUAWritten_15_and0000  | N_PZ_958  | reureg/REUAWritten<11>  | reureg/REUAWritten_7_and0000  | N_PZ_953  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>
+INPUTMC | 11 | 13 | 9 | 10 | 14 | 0 | 10 | 15 | 6 | 10 | 15 | 0 | 8 | 15 | 7 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10
+INPUTP | 1 | 8
+EQ | 12 | 
+   REUA<11>.T := RegReset & REUA<11>
+	# !D<3>.PIN & reureg/REUAWritten_15_and0000 & 
+	REUA<11>
+	# !RegReset & D<3>.PIN & 
+	reureg/REUAWritten_15_and0000 & !REUA<11>
+	# !reureg/REUAWritten_15_and0000 & !N_PZ_958 & 
+	REUA<11> & !reureg/REUAWritten<11>
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	!N_PZ_958 & !REUA<11> & reureg/REUAWritten<11>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & REUA<8> & N_PZ_1099 & REUA<10>;	// (6 pt, 12 inp)
+   REUA<11>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 10 | 15 | reureg/REUAWritten<11>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 10 | 15 | 10 | 14
+INPUTS | 4 | RegReset  | D<3>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<11>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 10 | 15
+INPUTP | 1 | 8
+EQ | 5 | 
+   reureg/REUAWritten<11> := !RegReset & D<3>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<11>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<11>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 12 | RA<3>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<3>  | REUA<12>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 6 | 13 | 10 | 13
+EQ | 3 | 
+   RA<3> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<3>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<12>;	// (2 pt, 5 inp)
+   RA<3>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 10 | 13 | REUA<12>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 9 | 10 | 13 | 12 | 12 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9 | 10 | 8 | 1 | 4
+INPUTS | 13 | RegReset  | REUA<12>  | D<4>.PIN  | reureg/REUAWritten_15_and0000  | N_PZ_958  | reureg/REUAWritten<12>  | reureg/REUAWritten_7_and0000  | N_PZ_953  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>  | REUA<11>
+INPUTMC | 12 | 13 | 9 | 10 | 13 | 0 | 10 | 15 | 6 | 11 | 15 | 0 | 8 | 15 | 7 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10 | 10 | 14
+INPUTP | 1 | 9
+EQ | 13 | 
+   REUA<12>.T := RegReset & REUA<12>
+	# !D<4>.PIN & reureg/REUAWritten_15_and0000 & 
+	REUA<12>
+	# !RegReset & D<4>.PIN & 
+	reureg/REUAWritten_15_and0000 & !REUA<12>
+	# !reureg/REUAWritten_15_and0000 & !N_PZ_958 & 
+	REUA<12> & !reureg/REUAWritten<12>
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	!N_PZ_958 & !REUA<12> & reureg/REUAWritten<12>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & REUA<8> & N_PZ_1099 & REUA<10> & 
+	REUA<11>;	// (6 pt, 13 inp)
+   REUA<12>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 11 | 15 | reureg/REUAWritten<12>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 11 | 15 | 10 | 13
+INPUTS | 4 | RegReset  | D<4>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<12>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 11 | 15
+INPUTP | 1 | 9
+EQ | 5 | 
+   reureg/REUAWritten<12> := !RegReset & D<4>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<12>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<12>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 14 | 14 | RA<4>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<4>  | REUA<13>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 11 | 12 | 10 | 12
+EQ | 3 | 
+   RA<4> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<4>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<13>;	// (2 pt, 5 inp)
+   RA<4>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 10 | 12 | REUA<13>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 8 | 10 | 12 | 14 | 14 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9 | 10 | 8 | 2 | 2
+INPUTS | 14 | RegReset  | REUA<13>  | D<5>.PIN  | reureg/REUAWritten_15_and0000  | N_PZ_958  | reureg/REUAWritten<13>  | reureg/REUAWritten_7_and0000  | N_PZ_953  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>  | REUA<11>  | REUA<12>
+INPUTMC | 13 | 13 | 9 | 10 | 12 | 0 | 10 | 15 | 6 | 12 | 0 | 0 | 8 | 15 | 7 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10 | 10 | 14 | 10 | 13
+INPUTP | 1 | 277
+EQ | 13 | 
+   REUA<13>.T := RegReset & REUA<13>
+	# !D<5>.PIN & reureg/REUAWritten_15_and0000 & 
+	REUA<13>
+	# !RegReset & D<5>.PIN & 
+	reureg/REUAWritten_15_and0000 & !REUA<13>
+	# !reureg/REUAWritten_15_and0000 & !N_PZ_958 & 
+	REUA<13> & !reureg/REUAWritten<13>
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	!N_PZ_958 & !REUA<13> & reureg/REUAWritten<13>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & REUA<8> & N_PZ_1099 & REUA<10> & 
+	REUA<11> & REUA<12>;	// (6 pt, 14 inp)
+   REUA<13>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 12 | 0 | reureg/REUAWritten<13>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 12 | 0 | 10 | 12
+INPUTS | 4 | RegReset  | D<5>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<13>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 12 | 0
+INPUTP | 1 | 277
+EQ | 5 | 
+   reureg/REUAWritten<13> := !RegReset & D<5>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<13>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<13>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 14 | 15 | RA<5>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<5>  | REUA<14>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 12 | 15 | 10 | 10
+EQ | 3 | 
+   !RA<5> := !ram/S<2> & ram/S<0> & !ram/S<1> & !REUA<5>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & !REUA<14>;	// (2 pt, 5 inp)
+   RA<5>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 10 | 10 | REUA<14>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 7 | 10 | 10 | 14 | 15 | 10 | 9 | 10 | 7 | 9 | 9 | 10 | 8 | 2 | 3
+INPUTS | 15 | RegReset  | REUA<14>  | D<6>.PIN  | reureg/REUAWritten_15_and0000  | N_PZ_958  | reureg/REUAWritten<14>  | reureg/REUAWritten_7_and0000  | N_PZ_953  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>  | REUA<11>  | REUA<12>  | REUA<13>
+INPUTMC | 14 | 13 | 9 | 10 | 10 | 0 | 10 | 15 | 6 | 15 | 14 | 0 | 8 | 15 | 7 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12
+INPUTP | 1 | 276
+EQ | 13 | 
+   REUA<14>.T := RegReset & REUA<14>
+	# !D<6>.PIN & reureg/REUAWritten_15_and0000 & 
+	REUA<14>
+	# !RegReset & D<6>.PIN & 
+	reureg/REUAWritten_15_and0000 & !REUA<14>
+	# !reureg/REUAWritten_15_and0000 & !N_PZ_958 & 
+	REUA<14> & !reureg/REUAWritten<14>
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	!N_PZ_958 & !REUA<14> & reureg/REUAWritten<14>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & REUA<8> & N_PZ_1099 & REUA<10> & 
+	REUA<11> & REUA<12> & REUA<13>;	// (6 pt, 15 inp)
+   REUA<14>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 14 | reureg/REUAWritten<14>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 15 | 14 | 10 | 10
+INPUTS | 4 | RegReset  | D<6>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<14>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 15 | 14
+INPUTP | 1 | 276
+EQ | 5 | 
+   reureg/REUAWritten<14> := !RegReset & D<6>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<14>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<14>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 0 | RA<6>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<6>  | REUA<15>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 12 | 14 | 10 | 9
+EQ | 3 | 
+   RA<6> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<6>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<15>;	// (2 pt, 5 inp)
+   RA<6>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 10 | 9 | REUA<15>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 6 | 10 | 9 | 15 | 0 | 10 | 7 | 9 | 9 | 10 | 8 | 3 | 0
+INPUTS | 16 | RegReset  | REUA<15>  | D<7>.PIN  | reureg/REUAWritten_15_and0000  | N_PZ_958  | reureg/REUAWritten<15>  | reureg/REUAWritten_7_and0000  | N_PZ_953  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>  | REUA<11>  | REUA<12>  | REUA<13>  | REUA<14>
+INPUTMC | 15 | 13 | 9 | 10 | 9 | 0 | 10 | 15 | 6 | 15 | 12 | 0 | 8 | 15 | 7 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10
+INPUTP | 1 | 16
+EQ | 13 | 
+   REUA<15>.T := RegReset & REUA<15>
+	# !D<7>.PIN & reureg/REUAWritten_15_and0000 & 
+	REUA<15>
+	# !RegReset & D<7>.PIN & 
+	reureg/REUAWritten_15_and0000 & !REUA<15>
+	# !reureg/REUAWritten_15_and0000 & !N_PZ_958 & 
+	REUA<15> & !reureg/REUAWritten<15>
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	!N_PZ_958 & !REUA<15> & reureg/REUAWritten<15>
+	# !RegReset & !reureg/REUAWritten_7_and0000 & 
+	N_PZ_953 & REUA<9> & REUA<8> & N_PZ_1099 & REUA<10> & 
+	REUA<11> & REUA<12> & REUA<13> & REUA<14>;	// (6 pt, 16 inp)
+   REUA<15>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 12 | reureg/REUAWritten<15>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 15 | 12 | 10 | 9
+INPUTS | 4 | RegReset  | D<7>.PIN  | reureg/REUAWritten_15_and0000  | reureg/REUAWritten<15>
+INPUTMC | 3 | 13 | 9 | 0 | 10 | 15 | 12
+INPUTP | 1 | 16
+EQ | 5 | 
+   reureg/REUAWritten<15> := !RegReset & D<7>.PIN & 
+	reureg/REUAWritten_15_and0000
+	# !RegReset & !reureg/REUAWritten_15_and0000 & 
+	reureg/REUAWritten<15>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<15>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 2 | RA<7>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<7>  | REUA<16>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 12 | 13 | 10 | 7
+EQ | 3 | 
+   RA<7> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<7>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<16>;	// (2 pt, 5 inp)
+   RA<7>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 10 | 7 | REUA<16>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 5 | 10 | 7 | 15 | 2 | 9 | 9 | 10 | 8 | 0 | 2
+INPUTS | 15 | RegReset  | REUA<16>  | D<0>.PIN  | reureg/REUAWritten_18_and0000  | N_PZ_949  | reureg/REUAWritten<16>  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>  | REUA<11>  | REUA<12>  | REUA<13>  | REUA<14>  | REUA<15>
+INPUTMC | 14 | 13 | 9 | 10 | 7 | 0 | 9 | 13 | 8 | 15 | 11 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9
+INPUTP | 1 | 288
+EQ | 13 | 
+   REUA<16>.T := RegReset & REUA<16>
+	# !D<0>.PIN & REUA<16> & 
+	reureg/REUAWritten_18_and0000
+	# D<0>.PIN & !RegReset & !REUA<16> & 
+	reureg/REUAWritten_18_and0000
+	# N_PZ_949 & REUA<16> & 
+	!reureg/REUAWritten_18_and0000 & !reureg/REUAWritten<16>
+	# !RegReset & N_PZ_949 & !REUA<16> & 
+	!reureg/REUAWritten_18_and0000 & reureg/REUAWritten<16>
+	# !RegReset & !N_PZ_949 & REUA<9> & REUA<8> & 
+	N_PZ_1099 & REUA<10> & REUA<11> & REUA<12> & REUA<13> & 
+	REUA<14> & REUA<15> & !reureg/REUAWritten_18_and0000;	// (6 pt, 15 inp)
+   REUA<16>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 0 | 9 | reureg/REUAWritten_18_and0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 6 | 15 | 11 | 10 | 7 | 9 | 10 | 9 | 9 | 15 | 10 | 10 | 8
+INPUTS | 8 | nDMA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 1 | 13 | 4
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 2 | 
+   reureg/REUAWritten_18_and0000 = nDMA & !nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	A<2>.PIN & A<1>.PIN & !A<0>.PIN & !nIO2;	// (1 pt, 8 inp)
+
+MACROCELL | 15 | 11 | reureg/REUAWritten<16>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 15 | 11 | 10 | 7
+INPUTS | 4 | D<0>.PIN  | RegReset  | reureg/REUAWritten_18_and0000  | reureg/REUAWritten<16>
+INPUTMC | 3 | 13 | 9 | 0 | 9 | 15 | 11
+INPUTP | 1 | 288
+EQ | 5 | 
+   reureg/REUAWritten<16> := D<0>.PIN & !RegReset & 
+	reureg/REUAWritten_18_and0000
+	# !RegReset & !reureg/REUAWritten_18_and0000 & 
+	reureg/REUAWritten<16>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<16>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 13 | RA<8>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<8>  | REUA<17>
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 10 | 6 | 9 | 9
+EQ | 3 | 
+   RA<8> := !ram/S<2> & ram/S<0> & !ram/S<1> & REUA<8>
+	# !ram/S<2> & !ram/S<0> & !ram/S<1> & REUA<17>;	// (2 pt, 5 inp)
+   RA<8>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 9 | 9 | REUA<17>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 4 | 9 | 9 | 15 | 13 | 10 | 8 | 0 | 3
+INPUTS | 16 | RegReset  | REUA<17>  | D<1>.PIN  | reureg/REUAWritten_18_and0000  | N_PZ_949  | reureg/REUAWritten<17>  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>  | REUA<11>  | REUA<12>  | REUA<13>  | REUA<14>  | REUA<15>  | REUA<16>
+INPUTMC | 15 | 13 | 9 | 9 | 9 | 0 | 9 | 13 | 8 | 9 | 10 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7
+INPUTP | 1 | 287
+EQ | 14 | 
+   REUA<17>.T := RegReset & REUA<17>
+	# !D<1>.PIN & reureg/REUAWritten_18_and0000 & 
+	REUA<17>
+	# !RegReset & D<1>.PIN & 
+	reureg/REUAWritten_18_and0000 & !REUA<17>
+	# N_PZ_949 & !reureg/REUAWritten_18_and0000 & 
+	REUA<17> & !reureg/REUAWritten<17>
+	# !RegReset & N_PZ_949 & 
+	!reureg/REUAWritten_18_and0000 & !REUA<17> & reureg/REUAWritten<17>
+	# !RegReset & !N_PZ_949 & REUA<9> & REUA<8> & 
+	N_PZ_1099 & REUA<10> & REUA<11> & REUA<12> & REUA<13> & 
+	REUA<14> & REUA<15> & REUA<16> & 
+	!reureg/REUAWritten_18_and0000;	// (6 pt, 16 inp)
+   REUA<17>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 9 | 10 | reureg/REUAWritten<17>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 9 | 10 | 9 | 9
+INPUTS | 4 | RegReset  | D<1>.PIN  | reureg/REUAWritten_18_and0000  | reureg/REUAWritten<17>
+INPUTMC | 3 | 13 | 9 | 0 | 9 | 9 | 10
+INPUTP | 1 | 287
+EQ | 5 | 
+   reureg/REUAWritten<17> := !RegReset & D<1>.PIN & 
+	reureg/REUAWritten_18_and0000
+	# !RegReset & !reureg/REUAWritten_18_and0000 & 
+	reureg/REUAWritten<17>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<17>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 14 | 12 | RA<9>_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 4 | ram/S<2>  | ram/S<0>  | ram/S<1>  | REUA<18>
+INPUTMC | 4 | 12 | 5 | 12 | 4 | 12 | 1 | 10 | 8
+EQ | 3 | 
+   !RA<9> := !ram/S<2> & ram/S<0> & !ram/S<1>
+	# !ram/S<2> & !ram/S<1> & !REUA<18>;	// (2 pt, 4 inp)
+   RA<9>.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 10 | 8 | REUA<18>_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 10 | 8 | 14 | 12 | 0 | 11
+INPUTS | 17 | RegReset  | REUA<18>  | D<2>.PIN  | reureg/REUAWritten_18_and0000  | N_PZ_949  | reureg/REUAWritten<18>  | REUA<9>  | REUA<8>  | N_PZ_1099  | REUA<10>  | REUA<11>  | REUA<12>  | REUA<13>  | REUA<14>  | REUA<15>  | REUA<16>  | REUA<17>
+INPUTMC | 16 | 13 | 9 | 10 | 8 | 0 | 9 | 13 | 8 | 15 | 10 | 11 | 13 | 10 | 6 | 12 | 10 | 7 | 10 | 10 | 14 | 10 | 13 | 10 | 12 | 10 | 10 | 10 | 9 | 10 | 7 | 9 | 9
+INPUTP | 1 | 284
+EQ | 14 | 
+   REUA<18>.T := RegReset & REUA<18>
+	# !D<2>.PIN & reureg/REUAWritten_18_and0000 & 
+	REUA<18>
+	# !RegReset & D<2>.PIN & 
+	reureg/REUAWritten_18_and0000 & !REUA<18>
+	# N_PZ_949 & !reureg/REUAWritten_18_and0000 & 
+	REUA<18> & !reureg/REUAWritten<18>
+	# !RegReset & N_PZ_949 & 
+	!reureg/REUAWritten_18_and0000 & !REUA<18> & reureg/REUAWritten<18>
+	# !RegReset & !N_PZ_949 & REUA<9> & REUA<8> & 
+	N_PZ_1099 & REUA<10> & REUA<11> & REUA<12> & REUA<13> & 
+	REUA<14> & REUA<15> & REUA<16> & 
+	!reureg/REUAWritten_18_and0000 & REUA<17>;	// (6 pt, 17 inp)
+   REUA<18>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 15 | 10 | reureg/REUAWritten<18>_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 15 | 10 | 10 | 8
+INPUTS | 4 | RegReset  | D<2>.PIN  | reureg/REUAWritten_18_and0000  | reureg/REUAWritten<18>
+INPUTMC | 3 | 13 | 9 | 0 | 9 | 15 | 10
+INPUTP | 1 | 284
+EQ | 5 | 
+   reureg/REUAWritten<18> := !RegReset & D<2>.PIN & 
+	reureg/REUAWritten_18_and0000
+	# !RegReset & !reureg/REUAWritten_18_and0000 & 
+	reureg/REUAWritten<18>;	// (2 pt, 4 inp)
+   reureg/REUAWritten<18>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 6 | 0 | RD<0>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<0>.PIN
+INPUTP | 1 | 288
+EQ | 3 | 
+   RD<0> := D<0>.PIN;	// (1 pt, 1 inp)
+   RD<0>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<0>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 1 | 0 | ram/RDOE_MC
+ATTRIBUTES | 8422144 | 0
+OUTPUTMC | 8 | 6 | 0 | 6 | 3 | 10 | 0 | 10 | 1 | 10 | 2 | 10 | 3 | 10 | 4 | 10 | 11
+INPUTS | 2 | ram/S<2>  | ram/S<1>
+INPUTMC | 2 | 12 | 5 | 12 | 1
+EQ | 2 | 
+   ram/RDOE_MC.GLB := !ram/S<2> & !ram/S<1>;	// (1 pt, 2 inp)
+   ram/RDOE_MC.GLB.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 6 | 3 | RD<1>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<1>.PIN
+INPUTP | 1 | 287
+EQ | 3 | 
+   RD<1> := D<1>.PIN;	// (1 pt, 1 inp)
+   RD<1>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<1>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 10 | 0 | RD<2>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<2>.PIN
+INPUTP | 1 | 284
+EQ | 3 | 
+   RD<2> := D<2>.PIN;	// (1 pt, 1 inp)
+   RD<2>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<2>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 10 | 1 | RD<3>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<3>.PIN
+INPUTP | 1 | 8
+EQ | 3 | 
+   RD<3> := D<3>.PIN;	// (1 pt, 1 inp)
+   RD<3>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<3>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 10 | 2 | RD<4>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<4>.PIN
+INPUTP | 1 | 9
+EQ | 3 | 
+   RD<4> := D<4>.PIN;	// (1 pt, 1 inp)
+   RD<4>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<4>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 10 | 3 | RD<5>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<5>.PIN
+INPUTP | 1 | 277
+EQ | 3 | 
+   RD<5> := D<5>.PIN;	// (1 pt, 1 inp)
+   RD<5>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<5>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 10 | 4 | RD<6>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<6>.PIN
+INPUTP | 1 | 276
+EQ | 3 | 
+   RD<6> := D<6>.PIN;	// (1 pt, 1 inp)
+   RD<6>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<6>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 10 | 11 | RD<7>_MC
+ATTRIBUTES | 75793154 | 2
+INPUTS | 1 | D<7>.PIN
+INPUTP | 1 | 16
+EQ | 3 | 
+   RD<7> := D<7>.PIN;	// (1 pt, 1 inp)
+   RD<7>.OE  =  ram/RDOE_MC.GLB;	// GTS	(0 pt, 0 inp)
+   RD<7>.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 2 | 2 | PHI2 | 0 | ram/RDOE_MC.GLB
+
+MACROCELL | 14 | 4 | nCAS_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 3 | ram/S<2>  | ram/S<0>  | ram/S<1>
+INPUTMC | 3 | 12 | 5 | 12 | 4 | 12 | 1
+EQ | 3 | 
+   !nCAS := ram/S<2> & !ram/S<0> & !ram/S<1>
+	# !ram/S<2> & ram/S<0> & !ram/S<1>;	// (2 pt, 3 inp)
+   nCAS.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 15 | 15 | nIRQ_MC
+ATTRIBUTES | 1074004738 | 0
+INPUTS | 5 | reureg/EndOfBlock  | reureg/EndOfBlockMask  | reureg/IntEnable  | reureg/Fault  | reureg/VerifyErrMask
+INPUTMC | 5 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13
+EQ | 4 | 
+   !nIRQ = reureg/EndOfBlock & reureg/EndOfBlockMask & 
+	reureg/IntEnable
+	# reureg/IntEnable & reureg/Fault & 
+	reureg/VerifyErrMask;	// (2 pt, 5 inp)
+
+MACROCELL | 2 | 6 | reureg/EndOfBlock_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 2 | 6 | 15 | 15 | 2 | 3
+INPUTS | 11 | RegReset  | reureg/EndOfBlock  | nDMA  | Length1  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 4 | 13 | 9 | 2 | 6 | 13 | 4 | 4 | 5
+INPUTP | 7 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 5 | 
+   reureg/EndOfBlock.T := RegReset & reureg/EndOfBlock
+	# !RegReset & !nDMA & Length1 & !reureg/EndOfBlock
+	# nDMA & nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	!A<2>.PIN & !A<1>.PIN & !A<0>.PIN & !nIO2 & reureg/EndOfBlock;	// (3 pt, 11 inp)
+   reureg/EndOfBlock.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 9 | reureg/EndOfBlockMask_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 2 | 9 | 15 | 15 | 2 | 3
+INPUTS | 11 | RegReset  | reureg/EndOfBlockMask  | nDMA  | D<6>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 2 | 9 | 13 | 4
+INPUTP | 8 | 276 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/EndOfBlockMask.T := RegReset & reureg/EndOfBlockMask
+	# nDMA & !D<6>.PIN & !nWE.PIN & !A<4>.PIN & 
+	A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/EndOfBlockMask
+	# !RegReset & nDMA & D<6>.PIN & !nWE.PIN & 
+	!A<4>.PIN & A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/EndOfBlockMask;	// (3 pt, 11 inp)
+   reureg/EndOfBlockMask.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 3 | 14 | reureg/IntEnable_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 3 | 14 | 15 | 15 | 3 | 0
+INPUTS | 11 | RegReset  | reureg/IntEnable  | nDMA  | D<7>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 3 | 14 | 13 | 4
+INPUTP | 8 | 16 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/IntEnable.T := RegReset & reureg/IntEnable
+	# nDMA & !D<7>.PIN & !nWE.PIN & !A<4>.PIN & 
+	A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/IntEnable
+	# !RegReset & nDMA & D<7>.PIN & !nWE.PIN & 
+	!A<4>.PIN & A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/IntEnable;	// (3 pt, 11 inp)
+   reureg/IntEnable.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 12 | reureg/Fault_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 8 | 12 | 15 | 15 | 2 | 2
+INPUTS | 14 | RegReset  | reureg/Fault  | nDMA  | _cmp_eq0000  | XferType<0>  | XferType<1>  | BA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 6 | 13 | 9 | 8 | 12 | 13 | 4 | 6 | 6 | 8 | 10 | 9 | 11
+INPUTP | 8 | 283 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 6 | 
+   reureg/Fault.T := RegReset & reureg/Fault
+	# !RegReset & !nDMA & _cmp_eq0000 & !XferType<0> & 
+	!XferType<1> & BA & !reureg/Fault
+	# nDMA & nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	!A<2>.PIN & !A<1>.PIN & !A<0>.PIN & !nIO2 & reureg/Fault;	// (3 pt, 14 inp)
+   reureg/Fault.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 13 | reureg/VerifyErrMask_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 2 | 13 | 15 | 15 | 2 | 2
+INPUTS | 11 | RegReset  | reureg/VerifyErrMask  | nDMA  | D<5>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 2 | 13 | 13 | 4
+INPUTP | 8 | 277 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/VerifyErrMask.T := RegReset & reureg/VerifyErrMask
+	# nDMA & !D<5>.PIN & !nWE.PIN & !A<4>.PIN & 
+	A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/VerifyErrMask
+	# !RegReset & nDMA & D<5>.PIN & !nWE.PIN & 
+	!A<4>.PIN & A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/VerifyErrMask;	// (3 pt, 11 inp)
+   reureg/VerifyErrMask.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 13 | 12 | nRAS_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 6 | ram/S<2>  | ram/S<0>  | ram/S<1>  | RAMWR  | ram/InitDone  | RAMRD
+INPUTMC | 6 | 12 | 5 | 12 | 4 | 12 | 1 | 13 | 14 | 12 | 6 | 13 | 15
+EQ | 5 | 
+   !nRAS := ram/S<2> & !ram/S<0> & !ram/S<1>
+	# !ram/S<2> & ram/S<0> & ram/S<1>
+	# !ram/S<0> & !ram/S<1> & RAMWR & ram/InitDone
+	# !ram/S<0> & !ram/S<1> & ram/InitDone & RAMRD;	// (4 pt, 6 inp)
+   nRAS.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 12 | 6 | ram/InitDone_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 3 | 12 | 6 | 13 | 12 | 14 | 1
+INPUTS | 4 | ram/S<2>  | ram/S<0>  | ram/S<1>  | ram/InitDone
+INPUTMC | 4 | 12 | 5 | 12 | 4 | 12 | 1 | 12 | 6
+EQ | 2 | 
+   ram/InitDone.T := ram/S<2> & ram/S<0> & ram/S<1> & !ram/InitDone;	// (1 pt, 4 inp)
+   ram/InitDone.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 13 | 15 | RAMRD_MC
+ATTRIBUTES | 2155905792 | 0
+OUTPUTMC | 2 | 13 | 15 | 13 | 12
+INPUTS | 9 | XferType<0>  | XferType<1>  | nDMA  | reureg/Execute8  | reureg/Execute1  | dmaseq/XferEnd8  | dmaseq/nRESETr_0  | BA  | RAMRD
+INPUTMC | 8 | 8 | 10 | 9 | 11 | 13 | 4 | 3 | 7 | 9 | 12 | 13 | 11 | 1 | 14 | 13 | 15
+INPUTP | 1 | 283
+EQ | 9 | 
+   !RAMRD := XferType<0> & XferType<1>
+	# nDMA & !reureg/Execute8 & !reureg/Execute1
+	# !nDMA & dmaseq/XferEnd8 & !dmaseq/nRESETr_0
+	# !nDMA & dmaseq/XferEnd8 & !XferType<0>
+	# !nDMA & dmaseq/XferEnd8 & BA
+	# !nDMA & XferType<0> & BA & RAMRD
+	# !nDMA & dmaseq/nRESETr_0 & XferType<0> & !BA & 
+	!RAMRD;	// (7 pt, 9 inp)
+   RAMRD.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 14 | 1 | nRWE_MC
+ATTRIBUTES | 8684290 | 0
+INPUTS | 5 | ram/S<2>  | ram/S<0>  | ram/S<1>  | ram/InitDone  | RAMWR
+INPUTMC | 5 | 12 | 5 | 12 | 4 | 12 | 1 | 12 | 6 | 13 | 14
+EQ | 4 | 
+   !nRWE := !ram/S<2> & ram/S<0> & ram/S<1>
+	# ram/S<2> & !ram/S<0> & !ram/S<1> & !ram/InitDone
+	# !ram/S<2> & ram/S<0> & RAMWR & ram/InitDone;	// (3 pt, 5 inp)
+   nRWE.CLK  =  C8M;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | C8M
+
+MACROCELL | 5 | 15 | reureg/DF01Reserved32_0_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 5 | 15 | 0 | 11
+INPUTS | 11 | RegReset  | reureg/DF01Reserved32_0  | nDMA  | D<2>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 5 | 15 | 13 | 4
+INPUTP | 8 | 284 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/DF01Reserved32_0.T := RegReset & reureg/DF01Reserved32_0
+	# nDMA & !D<2>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/DF01Reserved32_0
+	# !RegReset & nDMA & D<2>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/DF01Reserved32_0;	// (3 pt, 11 inp)
+   reureg/DF01Reserved32_0.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 1 | 13 | reureg/DF01Reserved32_1_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 1 | 13 | 1 | 3
+INPUTS | 11 | RegReset  | reureg/DF01Reserved32_1  | nDMA  | D<3>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 1 | 13 | 13 | 4
+INPUTP | 8 | 8 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/DF01Reserved32_1.T := RegReset & reureg/DF01Reserved32_1
+	# nDMA & !D<3>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/DF01Reserved32_1
+	# !RegReset & nDMA & D<3>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/DF01Reserved32_1;	// (3 pt, 11 inp)
+   reureg/DF01Reserved32_1.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 2 | 10 | reureg/DF01Reserved6_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 2 | 10 | 2 | 3
+INPUTS | 11 | RegReset  | reureg/DF01Reserved6  | nDMA  | D<6>.PIN  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 3 | 13 | 9 | 2 | 10 | 13 | 4
+INPUTP | 8 | 276 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 8 | 
+   reureg/DF01Reserved6.T := RegReset & reureg/DF01Reserved6
+	# nDMA & !D<6>.PIN & !nWE.PIN & !A<4>.PIN & 
+	!A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & !nIO2 & 
+	reureg/DF01Reserved6
+	# !RegReset & nDMA & D<6>.PIN & !nWE.PIN & 
+	!A<4>.PIN & !A<3>.PIN & !A<2>.PIN & !A<1>.PIN & A<0>.PIN & 
+	!nIO2 & !reureg/DF01Reserved6;	// (3 pt, 11 inp)
+   reureg/DF01Reserved6.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+MACROCELL | 8 | 11 | reureg/IntPending_MC
+ATTRIBUTES | 2151711488 | 0
+OUTPUTMC | 2 | 8 | 11 | 3 | 0
+INPUTS | 15 | RegReset  | reureg/IntPending  | nDMA  | Length1  | _cmp_eq0000  | XferType<0>  | XferType<1>  | BA  | nWE.PIN  | A<4>.PIN  | A<3>.PIN  | A<2>.PIN  | A<1>.PIN  | A<0>.PIN  | nIO2
+INPUTMC | 7 | 13 | 9 | 8 | 11 | 13 | 4 | 4 | 5 | 6 | 6 | 8 | 10 | 9 | 11
+INPUTP | 8 | 283 | 214 | 98 | 99 | 100 | 102 | 215 | 69
+EQ | 7 | 
+   reureg/IntPending.T := RegReset & reureg/IntPending
+	# !RegReset & !nDMA & Length1 & !reureg/IntPending
+	# !RegReset & !nDMA & _cmp_eq0000 & !XferType<0> & 
+	!XferType<1> & BA & !reureg/IntPending
+	# nDMA & nWE.PIN & !A<4>.PIN & !A<3>.PIN & 
+	!A<2>.PIN & !A<1>.PIN & !A<0>.PIN & !nIO2 & reureg/IntPending;	// (4 pt, 15 inp)
+   reureg/IntPending.CLK  =  !PHI2;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | PHI2
+
+PIN | PHI2 | 8256 | 16 | LVCMOS18 | 67 | 137 | 1 | 2 | 1 | 14 | 0 | 7 | 0 | 12 | 8 | 7 | 8 | 9 | 8 | 8 | 13 | 14 | 5 | 5 | 2 | 14 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 6 | 10 | 4 | 4 | 6 | 9 | 4 | 6 | 4 | 3 | 4 | 7 | 4 | 0 | 4 | 8 | 4 | 15 | 4 | 9 | 5 | 13 | 4 | 11 | 6 | 8 | 4 | 13 | 6 | 7 | 4 | 10 | 3 | 13 | 1 | 10 | 13 | 4 | 8 | 6 | 3 | 15 | 0 | 2 | 13 | 3 | 13 | 2 | 0 | 3 | 11 | 4 | 1 | 7 | 11 | 2 | 1 | 12 | 11 | 1 | 1 | 9 | 11 | 0 | 2 | 12 | 8 | 15 | 2 | 7 | 8 | 14 | 2 | 0 | 8 | 1 | 6 | 15 | 13 | 1 | 6 | 12 | 13 | 0 | 0 | 11 | 7 | 15 | 1 | 3 | 7 | 14 | 1 | 4 | 7 | 13 | 2 | 2 | 7 | 12 | 2 | 3 | 7 | 4 | 3 | 0 | 7 | 1 | 2 | 8 | 6 | 5 | 6 | 2 | 11 | 14 | 10 | 5 | 6 | 4 | 6 | 1 | 15 | 9 | 6 | 14 | 15 | 8 | 6 | 13 | 11 | 11 | 11 | 12 | 12 | 9 | 12 | 15 | 12 | 8 | 12 | 14 | 12 | 7 | 12 | 13 | 10 | 6 | 11 | 13 | 7 | 11 | 7 | 10 | 10 | 15 | 10 | 14 | 11 | 15 | 10 | 13 | 12 | 0 | 10 | 12 | 15 | 14 | 10 | 10 | 15 | 12 | 10 | 9 | 15 | 11 | 10 | 7 | 9 | 10 | 9 | 9 | 15 | 10 | 10 | 8 | 6 | 0 | 6 | 3 | 10 | 0 | 10 | 1 | 10 | 2 | 10 | 3 | 10 | 4 | 10 | 11 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 13 | 15 | 5 | 15 | 1 | 13 | 2 | 10 | 8 | 11 | 6 | 11
+PIN | nRESET | 64 | 16 | LVCMOS18 | 13 | 2 | 14 | 2 | 1 | 14
+PIN | C8M | 4096 | 16 | LVCMOS18 | 64 | 30 | 14 | 2 | 14 | 0 | 12 | 1 | 6 | 11 | 14 | 3 | 12 | 4 | 12 | 5 | 14 | 13 | 14 | 11 | 14 | 10 | 14 | 9 | 14 | 8 | 14 | 7 | 14 | 6 | 14 | 5 | 12 | 2 | 12 | 3 | 12 | 11 | 12 | 12 | 14 | 14 | 14 | 15 | 15 | 0 | 15 | 2 | 15 | 13 | 14 | 12 | 1 | 0 | 14 | 4 | 12 | 6 | 13 | 12 | 14 | 1
+PIN | nIO2 | 64 | 16 | LVCMOS18 | 69 | 51 | 8 | 10 | 9 | 11 | 5 | 5 | 0 | 13 | 2 | 14 | 3 | 9 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 10 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 0 | 14 | 3 | 15 | 0 | 2 | 1 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 1 | 13 | 2 | 10 | 8 | 11
+PIN | BA | 64 | 16 | LVCMOS18 | 283 | 9 | 13 | 14 | 13 | 13 | 13 | 11 | 13 | 3 | 1 | 2 | 8 | 12 | 13 | 15 | 8 | 11 | 0 | 12
+PIN | RA<0> | 536871040 | 0 | LVCMOS18 | 222
+PIN | RA<1> | 536871040 | 0 | LVCMOS18 | 223
+PIN | RA<2> | 536871040 | 0 | LVCMOS18 | 225
+PIN | RA<3> | 536871040 | 0 | LVCMOS18 | 229
+PIN | RA<4> | 536871040 | 0 | LVCMOS18 | 241
+PIN | RA<5> | 536871040 | 0 | LVCMOS18 | 242
+PIN | RA<6> | 536871040 | 0 | LVCMOS18 | 205
+PIN | RA<7> | 536871040 | 0 | LVCMOS18 | 203
+PIN | RA<8> | 536871040 | 0 | LVCMOS18 | 198
+PIN | RA<9> | 536871040 | 0 | LVCMOS18 | 239
+PIN | nCAS | 536871040 | 0 | LVCMOS18 | 237
+PIN | nDMA | 536871040 | 0 | LVCMOS18 | 213
+PIN | nIRQ | 536871040 | 0 | LVCMOS18 | 196
+PIN | nRAS | 536871040 | 0 | LVCMOS18 | 211
+PIN | nRWE | 536871040 | 0 | LVCMOS18 | 234
+PIN | A<0> | 536870976 | 16 | LVCMOS18 | 215 | 57 | 8 | 10 | 9 | 11 | 5 | 5 | 0 | 13 | 2 | 14 | 3 | 9 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 10 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 9 | 12 | 0 | 14 | 3 | 15 | 0 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 0 | 11 | 1 | 13 | 1 | 3 | 1 | 4 | 2 | 2 | 2 | 10 | 2 | 3 | 8 | 11 | 3 | 0
+PIN | A<10> | 536870976 | 16 | LVCMOS18 | 86 | 1 | 9 | 12
+PIN | A<11> | 536870976 | 16 | LVCMOS18 | 85 | 1 | 9 | 12
+PIN | A<12> | 536870976 | 16 | LVCMOS18 | 84 | 1 | 9 | 12
+PIN | A<13> | 536870976 | 16 | LVCMOS18 | 83 | 1 | 9 | 12
+PIN | A<14> | 536870976 | 16 | LVCMOS18 | 80 | 1 | 9 | 12
+PIN | A<15> | 536870976 | 16 | LVCMOS18 | 77 | 1 | 9 | 12
+PIN | A<1> | 536870976 | 16 | LVCMOS18 | 102 | 57 | 8 | 10 | 9 | 11 | 5 | 5 | 0 | 13 | 2 | 14 | 3 | 9 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 10 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 9 | 12 | 0 | 14 | 3 | 15 | 0 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 0 | 11 | 1 | 13 | 1 | 3 | 1 | 4 | 2 | 2 | 2 | 10 | 2 | 3 | 8 | 11 | 3 | 0
+PIN | A<2> | 536870976 | 16 | LVCMOS18 | 100 | 56 | 8 | 10 | 9 | 11 | 5 | 5 | 0 | 13 | 2 | 14 | 3 | 9 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 9 | 12 | 0 | 14 | 3 | 15 | 0 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 0 | 11 | 1 | 13 | 1 | 3 | 1 | 4 | 2 | 2 | 2 | 10 | 2 | 3 | 8 | 11 | 3 | 0
+PIN | A<3> | 536870976 | 16 | LVCMOS18 | 99 | 57 | 8 | 10 | 9 | 11 | 5 | 5 | 0 | 13 | 2 | 14 | 3 | 9 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 10 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 9 | 12 | 0 | 14 | 3 | 15 | 0 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 0 | 11 | 1 | 13 | 1 | 3 | 1 | 4 | 2 | 2 | 2 | 10 | 2 | 3 | 8 | 11 | 3 | 0
+PIN | A<4> | 536870976 | 16 | LVCMOS18 | 98 | 57 | 8 | 10 | 9 | 11 | 5 | 5 | 0 | 13 | 2 | 14 | 3 | 9 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 10 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 9 | 12 | 0 | 14 | 3 | 15 | 0 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 0 | 11 | 1 | 13 | 1 | 3 | 1 | 4 | 2 | 2 | 2 | 10 | 2 | 3 | 8 | 11 | 3 | 0
+PIN | A<5> | 536870976 | 16 | LVCMOS18 | 50 | 1 | 9 | 12
+PIN | A<6> | 536870976 | 16 | LVCMOS18 | 51 | 1 | 9 | 12
+PIN | A<7> | 536870976 | 16 | LVCMOS18 | 60 | 1 | 9 | 12
+PIN | A<8> | 536870976 | 16 | LVCMOS18 | 218 | 1 | 9 | 12
+PIN | A<9> | 536870976 | 16 | LVCMOS18 | 219 | 1 | 9 | 12
+PIN | RD<0> | 536870976 | 16 | LVCMOS18 | 73 | 1 | 14 | 13
+PIN | RD<1> | 536870976 | 16 | LVCMOS18 | 70 | 1 | 14 | 11
+PIN | RD<2> | 536870976 | 16 | LVCMOS18 | 49 | 1 | 14 | 10
+PIN | RD<3> | 536870976 | 16 | LVCMOS18 | 48 | 1 | 14 | 9
+PIN | RD<4> | 536870976 | 16 | LVCMOS18 | 47 | 1 | 14 | 8
+PIN | RD<5> | 536870976 | 16 | LVCMOS18 | 46 | 1 | 14 | 7
+PIN | RD<6> | 536870976 | 16 | LVCMOS18 | 45 | 1 | 14 | 6
+PIN | RD<7> | 536870976 | 16 | LVCMOS18 | 44 | 1 | 14 | 5
+PIN | nWE | 536870976 | 16 | LVCMOS18 | 214 | 52 | 8 | 10 | 9 | 11 | 5 | 5 | 0 | 13 | 2 | 14 | 3 | 9 | 5 | 6 | 5 | 4 | 5 | 7 | 5 | 0 | 5 | 8 | 1 | 11 | 5 | 9 | 1 | 8 | 5 | 10 | 2 | 5 | 5 | 11 | 2 | 1 | 5 | 14 | 3 | 11 | 3 | 12 | 0 | 15 | 3 | 10 | 3 | 8 | 3 | 7 | 3 | 13 | 1 | 10 | 9 | 12 | 0 | 14 | 3 | 15 | 0 | 2 | 1 | 2 | 0 | 3 | 1 | 7 | 1 | 12 | 1 | 9 | 2 | 12 | 2 | 7 | 2 | 0 | 0 | 8 | 2 | 8 | 0 | 10 | 0 | 9 | 2 | 6 | 2 | 9 | 3 | 14 | 8 | 12 | 2 | 13 | 5 | 15 | 1 | 13 | 2 | 10 | 8 | 11
+PIN | D<0> | 536870976 | 16 | LVCMOS18 | 288 | 17 | 6 | 6 | 8 | 10 | 5 | 5 | 5 | 6 | 6 | 10 | 4 | 4 | 13 | 2 | 6 | 15 | 13 | 1 | 6 | 5 | 6 | 2 | 10 | 5 | 10 | 6 | 15 | 11 | 10 | 7 | 6 | 0 | 0 | 2
+PIN | D<2> | 536870976 | 16 | LVCMOS18 | 284 | 17 | 6 | 6 | 5 | 0 | 5 | 8 | 4 | 3 | 4 | 7 | 1 | 7 | 11 | 2 | 7 | 15 | 15 | 9 | 6 | 14 | 7 | 11 | 7 | 10 | 15 | 10 | 10 | 8 | 10 | 0 | 5 | 15 | 0 | 11
+PIN | D<3> | 536870976 | 16 | LVCMOS18 | 8 | 15 | 6 | 6 | 1 | 11 | 5 | 9 | 4 | 0 | 4 | 8 | 1 | 12 | 11 | 1 | 7 | 14 | 15 | 8 | 6 | 13 | 10 | 15 | 10 | 14 | 10 | 1 | 1 | 13 | 1 | 3
+PIN | D<4> | 536870976 | 16 | LVCMOS18 | 9 | 16 | 6 | 6 | 1 | 8 | 5 | 10 | 4 | 15 | 4 | 9 | 3 | 7 | 1 | 10 | 1 | 9 | 11 | 0 | 7 | 13 | 11 | 11 | 11 | 12 | 11 | 15 | 10 | 13 | 10 | 2 | 1 | 4
+PIN | D<5> | 536870976 | 16 | LVCMOS18 | 277 | 16 | 6 | 6 | 2 | 14 | 2 | 5 | 5 | 11 | 5 | 13 | 4 | 11 | 2 | 12 | 8 | 15 | 7 | 12 | 12 | 9 | 12 | 15 | 12 | 0 | 10 | 12 | 10 | 3 | 2 | 13 | 2 | 2
+PIN | D<6> | 536870976 | 16 | LVCMOS18 | 276 | 17 | 6 | 6 | 2 | 1 | 5 | 14 | 6 | 8 | 4 | 13 | 2 | 7 | 8 | 14 | 7 | 4 | 2 | 8 | 12 | 8 | 12 | 14 | 15 | 14 | 10 | 10 | 10 | 4 | 2 | 9 | 2 | 10 | 2 | 3
+PIN | D<7> | 536870976 | 16 | LVCMOS18 | 16 | 18 | 6 | 6 | 3 | 11 | 3 | 12 | 6 | 7 | 4 | 10 | 3 | 7 | 3 | 13 | 3 | 15 | 2 | 0 | 8 | 1 | 7 | 1 | 12 | 7 | 12 | 13 | 15 | 12 | 10 | 9 | 10 | 11 | 3 | 14 | 3 | 0
+PIN | D<1> | 536870976 | 16 | LVCMOS18 | 287 | 17 | 6 | 6 | 9 | 11 | 5 | 4 | 5 | 7 | 6 | 9 | 4 | 6 | 11 | 4 | 6 | 12 | 13 | 0 | 11 | 14 | 6 | 4 | 6 | 1 | 11 | 13 | 9 | 10 | 9 | 9 | 6 | 3 | 0 | 3
