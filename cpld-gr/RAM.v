@@ -34,8 +34,7 @@ ODDRXE rclk_oddr(.D0(1'b0), .D1(1'b1),
 /* Reset synchronization */
 reg [5:0] nRESETr = 0; // Reset synchronizer
 reg PORDone = 0; // Power-on reset complete
-always @(negedge FCLK) nRESETr[0] <= nRESET;
-always @(posedge FCLK) nRESETr[5:1] <= nRESETr[4:0];
+always @(posedge FCLK) nRESETr[5:0] <= {nRESETr[4:0], nRESET};
 always @(posedge FCLK) begin
 	if (nRESETr[5] && nRESETr[4] && nRESETr[3] && nRESETr[2]) PORDone <= 1;
 end
@@ -78,7 +77,7 @@ always @(posedge FCLK) begin
 				nRAS <= 1;
 				nCAS <= 1;
 				nRWE <= 1;
-				CKE <= 1;
+				CKE <= 0;
 			end
 		end 3'h1: begin
 			if (RAMSEL) begin
@@ -88,13 +87,12 @@ always @(posedge FCLK) begin
 				nCAS <= 1;
 				nRWE <= 1;
 				CKE <= 1;
-			end else begin // NOP CKD
-				// Otherwise issue NOP CKD
+			end else begin // Otherwise NOP CKD
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
 				nRWE <= 1;
-				CKE <= 1;
+				CKE <= 0;
 			end
 		end 3'h2: begin
 			if (RAMSEL) begin
@@ -104,8 +102,7 @@ always @(posedge FCLK) begin
 				nCAS <= 1;
 				nRWE <= 1;
 				CKE <= 1;
-			end else begin // NOP CKD
-				// Otherwise issue NOP CKD
+			end else begin // Otherwise NOP CKD
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
@@ -142,8 +139,7 @@ always @(posedge FCLK) begin
 			nCAS <= 1;
 			nRWE <= 1;
 			CKE <= 1;
-		end 3'h5: begin
-			// Issue PC ALL
+		end 3'h5: begin // Issue PC ALL
 			nCS <= 1;
 			nRAS <= 0;
 			nCAS <= 1;
@@ -165,8 +161,7 @@ always @(posedge FCLK) begin
 				nRWE <= 0;
 				CKE <= 1;
 			end
-		end 3'h7: begin
-			// Issue NOP CKE
+		end 3'h7: begin // Issue NOP CKE
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
@@ -238,7 +233,7 @@ end
 
 /* Read data registration */
 // Register read data during S6 of a read cycle
-always @(negedge FCLK) if(RAMSEL && nWE && S[2:0]==3'h6) RDD[7:0] <= RD[7:0];
+always @(negedge FCLK) if(S[2:0]==3'h6) RDD[7:0] <= RD[7:0];
 
 /* SDRAM data bus */
 reg RDOE = 0; // Output enable for SDRAM data bus

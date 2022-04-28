@@ -12,24 +12,24 @@ module GeoReg(
 	output reg [5:0] Window);
 
 /* Select signals */
-wire BlockWR = RegSEL && A[7] && A[6] && A[0] && ~nWE;
+wire BlockWR =  RegSEL && A[7] && A[6] &&  A[0] && ~nWE;
 wire WindowWR = RegSEL && A[7] && A[6] && ~A[0] && ~nWE;
 
 /* Reset synchronization */
-reg nRESETr;
+//reg nRESETr;
 always @(posedge PHI2) begin
-	nRESETr <= nRESET;
+	//nRESETr <= nRESET;
 end
 
 /* Registers */
 always @(negedge PHI2) begin
-	if (~nRESETr) begin
+	//if (~nRESETr) begin
 		//Block <= 0;
 		//Window <= 0;
-	end else begin
+	//end else begin
 		if (BlockWR) Block[7:0] <= WRD[7:0];
 		if (WindowWR) Window[5:0] <= WRD[5:0];
-	end
+	//end
 end
 
 endmodule

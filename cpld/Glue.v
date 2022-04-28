@@ -2,8 +2,6 @@ module Glue(
 	/* 6502 Bus */
 	input PHI2,
 	input BA,
-	input [7:7] D,
-	input [15:0] A,
 	input nIO2,
 	input nWE,
 	/* Address buffer control */
@@ -22,27 +20,29 @@ module Glue(
 	output RegCS,
 	output RegRD,
 	output RegWR,
-	/* Register inputs */
+	/* IRQ and DMA comamnd inputs */
 	input IRQ,
-	/* DMA command inputs */
 	input DMA,
-	input DMARW);
+	input nWEDMA);
 	
-assign AOE = DMA; // Output address from FPGA during DMA
-assign ADIR = !DMA; // Address buffer direction -- out during DMA, in otherwise
-// Address buffer output enable -- enabled during PHI2 except except during 
-assign nAOE = !(PHI2 && (!DMA || BA));
-// DMA R/W signal output enable -- 
-assign nRWOE = !(DMA && BA);
+/* Address bus control */
+// Output address during DMA when bus available
+assign AOE = PHI2 && DMA && BA; 
+assign ADIR = !AOE; // Address buffer direction
+assign nRWOE = !AOE; // R/W buffer direction
+assign nAOE = 1'b0;
 
-assign DOE = DMA ? !DMARW : (RegRD);
-assign DDIR = DMA ? DMARW : !nWE;
-assign nDOE = !(PHI2 && (DMA ? BA : RegCS));
+/* Data bus control */
+// Output data during reg. read during DMA when and writing
+assign DOE = (PHI2 && RegRD) || (AOE && !nWEDMA);
+assign DDIR = !DOE;
+assign nDOE = 1'b0;
 
+/* /DMA and /IRQ active-low outputs */
 assign nDMA = !DMA;
-
 assign nIRQ = !IRQ;
 
+/* REU register select, read, write signals */
 assign RegCS = !DMA && !nIO2;
 assign RegRD = RegCS && nWE;
 assign RegWR = RegCS && !nWE;

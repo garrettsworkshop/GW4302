@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Map">
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>nIO1</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>nIO1</Dynamic>
+        </Message>
+    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -12,25 +25,17 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reu.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/reu.v(1): </Dynamic>
             <Dynamic>REU</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/reu.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/reu.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/reg.v(1): </Dynamic>
-            <Dynamic>REUReg</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/reg.v</Navigation>
-            <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/ram.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/ram.v(1): </Dynamic>
             <Dynamic>RAM</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/ram.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/ram.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
@@ -44,24 +49,60 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/dmaseq.v(1): </Dynamic>
-            <Dynamic>DMASeq</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/dmaseq.v</Navigation>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/reg.v(1): </Dynamic>
+            <Dynamic>REUReg</Dynamic>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/reg.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld/glue.v(1): </Dynamic>
-            <Dynamic>Glue</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld/glue.v</Navigation>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/dmaseq.v(1): </Dynamic>
+            <Dynamic>DMASeq</Dynamic>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/dmaseq.v</Navigation>
             <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/glue.v(1): </Dynamic>
+            <Dynamic>Glue</Dynamic>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/glue.v</Navigation>
+            <Navigation>1</Navigation>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>nIO1</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>0</Dynamic>
+            <Dynamic>12</Dynamic>
             <Dynamic>\ram/RA</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>nIO1</Dynamic>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>nIO1</Dynamic>
+            <Navigation>nIO1</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>nIO1</Dynamic>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
         </Message>
     </Task>
 </BaliMessageLog>

@@ -6,10 +6,12 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
-DRC complete with no errors or warnings
+WARNING - synthesis: logical net 'nIO1' has no load.
+WARNING - synthesis: input pad net 'nIO1' has no legal load.
+WARNING - synthesis: DRC complete with 2 warnings.
 
 Design Results:
-    616 blocks expanded
+    638 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.

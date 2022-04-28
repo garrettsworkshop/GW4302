@@ -1,16 +1,16 @@
 
 synthesis -f "REU_impl1_lattice.synproj"
-synthesis:  version Diamond (64-bit) 3.12.0.240.2
+synthesis:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Apr 27 05:11:20 2022
+Thu Apr 28 11:56:33 2022
 
 
-Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
+Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml 
 
     <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
 Synthesis options:
@@ -64,17 +64,17 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p C:/Users/garre/Repos/GW4302/cpld (searchpath added)
+-p //Mac/iCloud/Repos/GW4302/cpld (searchpath added)
 -p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p C:/Users/garre/Repos/GW4302/cpld/impl1 (searchpath added)
--p C:/Users/garre/Repos/GW4302/cpld (searchpath added)
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld/RAM.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld/Reg.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld/DMASeq.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld/Glue.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld/REU.v
+-p //Mac/iCloud/Repos/GW4302/cpld/impl1 (searchpath added)
+-p //Mac/iCloud/Repos/GW4302/cpld (searchpath added)
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/RAM.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Reg.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/DMASeq.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Glue.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/REU.v
 NGD file = REU_impl1.ngd
--sdc option: SDC file input is C:/Users/garre/Repos/GW4302/cpld/REU.ldc.
+-sdc option: SDC file input is //Mac/iCloud/Repos/GW4302/cpld/REU.ldc.
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -83,19 +83,19 @@ Technology check ok...
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/ram.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/reg.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/dmaseq.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/glue.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/reu.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/ram.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reg.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/dmaseq.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/glue.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reu.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): REU
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld/reu.v(1): " arg1="REU" arg2="c:/users/garre/repos/gw4302/cpld/reu.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld/reg.v(1): " arg1="REUReg" arg2="c:/users/garre/repos/gw4302/cpld/reg.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld/ram.v(1): " arg1="RAM" arg2="c:/users/garre/repos/gw4302/cpld/ram.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/reu.v(1): " arg1="REU" arg2="//mac/icloud/repos/gw4302/cpld/reu.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/ram.v(1): " arg1="RAM" arg2="//mac/icloud/repos/gw4302/cpld/ram.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1601): " arg1="ODDRXE" arg2="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v" arg3="1601"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld/dmaseq.v(1): " arg1="DMASeq" arg2="c:/users/garre/repos/gw4302/cpld/dmaseq.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld/glue.v(1): " arg1="Glue" arg2="c:/users/garre/repos/gw4302/cpld/glue.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/reg.v(1): " arg1="REUReg" arg2="//mac/icloud/repos/gw4302/cpld/reg.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/dmaseq.v(1): " arg1="DMASeq" arg2="//mac/icloud/repos/gw4302/cpld/dmaseq.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/glue.v(1): " arg1="Glue" arg2="//mac/icloud/repos/gw4302/cpld/glue.v" arg3="1"  />
 Last elaborated design is REU()
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -103,10 +103,12 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\ram/RA"  />
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="nIO1"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\ram/RA"  />
 
 
 
+    <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="nIO1"  />
 GSR will not be inferred because no asynchronous signal was found in the netlist.
 Writing LPF file REU_impl1.lpf.
 Results of NGD DRC are available in REU_drc.log.
@@ -117,32 +119,34 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 
 Running DRC...
 
-DRC complete with no errors or warnings
+    <postMsg mid="1166052" type="Warning" dynamic="2" navigation="1" arg0="logical" arg1="nIO1" arg2="nIO1"  />
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="nIO1"  />
+    <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="2"  />
 
 Design Results:
-    616 blocks expanded
+    638 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.
 
 ################### Begin Area Report (REU)######################
-Number of register bits => 184 of 877 (20 % )
+Number of register bits => 186 of 877 (21 % )
 BB => 32
 CCU2D => 33
-FD1P3AX => 44
-FD1P3IX => 39
+FD1P3AX => 47
+FD1P3IX => 41
 FD1P3JX => 16
-FD1S3AX => 29
-FD1S3IX => 52
+FD1S3AX => 28
+FD1S3IX => 50
 FD1S3JX => 4
 GSR => 1
 IB => 6
 INV => 2
 L6MUX21 => 3
-LUT4 => 300
+LUT4 => 317
 OB => 31
 ODDRXE => 1
-PFUMX => 20
+PFUMX => 23
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -152,33 +156,33 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : C8M_c, loads : 43
+  Net : C8M_c, loads : 46
   Net : PHI2_c, loads : 4
 Clock Enable Nets
-Number of Clock Enables: 21
+Number of Clock Enables: 22
 Top 10 highest fanout Clock Enables:
-  Net : ram/S_2, loads : 20
-  Net : reureg/PHI2_N_548_enable_56, loads : 9
-  Net : reureg/PHI2_N_548_enable_24, loads : 8
-  Net : reureg/PHI2_N_548_enable_53, loads : 8
-  Net : reureg/PHI2_N_548_enable_75, loads : 8
-  Net : reureg/PHI2_N_548_enable_77, loads : 8
-  Net : reureg/PHI2_N_548_enable_72, loads : 8
-  Net : reureg/PHI2_N_548_enable_71, loads : 8
-  Net : reureg/PHI2_N_548_enable_85, loads : 8
-  Net : reureg/PHI2_N_548_enable_82, loads : 8
+  Net : reureg/PHI2_N_565_enable_61, loads : 9
+  Net : reureg/PHI2_N_565_enable_54, loads : 8
+  Net : reureg/PHI2_N_565_enable_69, loads : 8
+  Net : reureg/PHI2_N_565_enable_68, loads : 8
+  Net : ram/RDD_7__N_54, loads : 8
+  Net : reureg/PHI2_N_565_enable_55, loads : 8
+  Net : reureg/PHI2_N_565_enable_70, loads : 8
+  Net : reureg/PHI2_N_565_enable_87, loads : 8
+  Net : reureg/PHI2_N_565_enable_67, loads : 8
+  Net : reureg/PHI2_N_565_enable_81, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_548, loads : 141
-  Net : dmaseq/n3811, loads : 49
-  Net : A_out_0, loads : 47
-  Net : dmaseq/DMA, loads : 39
-  Net : A_out_1, loads : 37
+  Net : PHI2_N_565, loads : 140
+  Net : dmaseq/n4163, loads : 49
+  Net : A_out_0, loads : 48
+  Net : A_out_1, loads : 38
   Net : dmaseq/RegReset, loads : 35
-  Net : A_out_3, loads : 28
-  Net : ram/S_0, loads : 27
-  Net : dmaseq/n3559, loads : 21
-  Net : dmaseq/n3810, loads : 21
+  Net : dmaseq/DMA, loads : 33
+  Net : ram/S_0, loads : 30
+  Net : reureg/n3869, loads : 30
+  Net : A_out_3, loads : 24
+  Net : reureg/n3870, loads : 24
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -189,7 +193,7 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   51.419 MHz|    13  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   50.888 MHz|    13  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
@@ -201,14 +205,14 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|  100.261 MHz|     3
 All constraints were met.
 
 
-Peak Memory Usage: 61.988  MB
+Peak Memory Usage: 72.227  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.797  secs
+Elapsed CPU time for LSE flow : 2.125  secs
 --------------------------------------------------------------
 
-map -a "MachXO2" -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial   "REU_impl1.ngd" -o "REU_impl1_map.ncd" -pr "REU_impl1.prf" -mp "REU_impl1.mrp" -lpf "C:/Users/garre/Repos/GW4302/cpld/impl1/REU_impl1.lpf" -lpf "C:/Users/garre/Repos/GW4302/cpld/REU.lpf"  -c 0           
-map:  version Diamond (64-bit) 3.12.0.240.2
+map -a "MachXO2" -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial   "REU_impl1.ngd" -o "REU_impl1_map.ncd" -pr "REU_impl1.prf" -mp "REU_impl1.mrp" -lpf "//Mac/iCloud/Repos/GW4302/cpld/impl1/REU_impl1.lpf" -lpf "//Mac/iCloud/Repos/GW4302/cpld/REU.lpf"  -c 0           
+map:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -233,23 +237,25 @@ Package Status:                     Final          Version 1.39.
 
 Running general design DRC...
 
+    <postMsg mid="1166064" type="Warning" dynamic="2" navigation="0" arg0="input" arg1="nIO1"  />
 Removing unused logic...
 
 Optimizing...
 
+    <postMsg mid="51001046" type="Warning" dynamic="1" navigation="0" arg0="nIO1"  />
 
 
 
 Design Summary:
-   Number of registers:    184 out of   877 (21%)
-      PFU registers:          184 out of   640 (29%)
+   Number of registers:    186 out of   877 (21%)
+      PFU registers:          186 out of   640 (29%)
       PIO registers:            0 out of   237 (0%)
-   Number of SLICEs:       192 out of   320 (60%)
-      SLICEs as Logic/ROM:    192 out of   320 (60%)
+   Number of SLICEs:       201 out of   320 (63%)
+      SLICEs as Logic/ROM:    201 out of   320 (63%)
       SLICEs as RAM:            0 out of   240 (0%)
       SLICEs as Carry:         33 out of   320 (10%)
-   Number of LUT4s:        368 out of   640 (58%)
-      Number used as logic LUTs:        302
+   Number of LUT4s:        387 out of   640 (60%)
+      Number used as logic LUTs:        321
       Number used as distributed RAM:     0
       Number used as ripple logic:       66
       Number used as shift registers:     0
@@ -284,65 +290,63 @@ Design Summary:
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  2
      Net C8M_c: 30 loads, 28 rising, 2 falling (Driver: PIO C8M )
-     Net PHI2_c: 90 loads, 0 rising, 90 falling (Driver: PIO PHI2 )
-   Number of Clock Enables:  21
+     Net PHI2_c: 85 loads, 0 rising, 85 falling (Driver: PIO PHI2 )
+   Number of Clock Enables:  22
+     Net PHI2_N_565_enable_76: 1 loads, 1 LSLICEs
+     Net dmaseq/PHI2_N_565_enable_71: 3 loads, 3 LSLICEs
      Net SetEndOfBlock: 1 loads, 1 LSLICEs
-     Net IntPending_N_448: 1 loads, 1 LSLICEs
-     Net dmaseq/PHI2_N_548_enable_83: 1 loads, 1 LSLICEs
-     Net PHI2_N_548_enable_19: 1 loads, 1 LSLICEs
-     Net reureg/PHI2_N_548_enable_85: 6 loads, 6 LSLICEs
-     Net reureg/PHI2_N_548_enable_20: 2 loads, 2 LSLICEs
-     Net reureg/PHI2_N_548_enable_72: 5 loads, 5 LSLICEs
-     Net reureg/PHI2_N_548_enable_75: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_548_enable_56: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_548_enable_24: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_548_enable_38: 3 loads, 3 LSLICEs
-     Net reureg/PHI2_N_548_enable_78: 1 loads, 1 LSLICEs
-     Net reureg/PHI2_N_548_enable_71: 5 loads, 5 LSLICEs
-     Net reureg/PHI2_N_548_enable_53: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_548_enable_77: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_548_enable_79: 3 loads, 3 LSLICEs
-     Net reureg/PHI2_N_548_enable_82: 5 loads, 5 LSLICEs
-     Net ram/S_2: 1 loads, 1 LSLICEs
-     Net ram/PORDone_N_512: 1 loads, 1 LSLICEs
-     Net ram/RDD_7__N_515: 4 loads, 4 LSLICEs
-     Net ram/C8M_c_enable_2: 1 loads, 1 LSLICEs
-   Number of LSRs:  13
-     Net DMA: 1 loads, 1 LSLICEs
-     Net RegReset: 25 loads, 25 LSLICEs
-     Net dmaseq/n1494: 1 loads, 1 LSLICEs
-     Net n3811: 33 loads, 33 LSLICEs
+     Net IntPending_N_535: 1 loads, 1 LSLICEs
+     Net PHI2_N_565_enable_23: 1 loads, 1 LSLICEs
+     Net reureg/PHI2_N_565_enable_69: 5 loads, 5 LSLICEs
+     Net reureg/PHI2_N_565_enable_68: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_565_enable_24: 2 loads, 2 LSLICEs
+     Net reureg/PHI2_N_565_enable_75: 3 loads, 3 LSLICEs
+     Net reureg/PHI2_N_565_enable_67: 5 loads, 5 LSLICEs
+     Net reureg/PHI2_N_565_enable_70: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_565_enable_54: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_565_enable_61: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_565_enable_55: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_565_enable_32: 2 loads, 2 LSLICEs
+     Net reureg/PHI2_N_565_enable_87: 5 loads, 5 LSLICEs
+     Net reureg/PHI2_N_565_enable_81: 4 loads, 4 LSLICEs
+     Net ram/C8M_c_enable_1: 1 loads, 1 LSLICEs
+     Net ram/RefCnt_2__N_52: 2 loads, 2 LSLICEs
+     Net ram/C8M_c_enable_3: 1 loads, 1 LSLICEs
+     Net ram/RDD_7__N_54: 4 loads, 4 LSLICEs
+     Net ram/PORDone_N_46: 1 loads, 1 LSLICEs
+   Number of LSRs:  10
+     Net n3884: 6 loads, 6 LSLICEs
+     Net n4163: 32 loads, 32 LSLICEs
+     Net RegReset: 21 loads, 21 LSLICEs
      Net reureg/n1134: 3 loads, 3 LSLICEs
-     Net reureg/REUA_20: 1 loads, 1 LSLICEs
-     Net ram/S_2: 2 loads, 2 LSLICEs
-     Net ram/WRCMDg_N_535: 1 loads, 1 LSLICEs
+     Net ram/n1468: 1 loads, 1 LSLICEs
+     Net ram/S_2: 1 loads, 1 LSLICEs
+     Net ram/C8M_c_enable_3: 1 loads, 1 LSLICEs
      Net ram/PORDone: 1 loads, 1 LSLICEs
-     Net ram/n1203: 1 loads, 1 LSLICEs
-     Net ram/n317: 1 loads, 1 LSLICEs
-     Net ram/n3587: 5 loads, 5 LSLICEs
-     Net ram/n1492: 1 loads, 1 LSLICEs
+     Net ram/n1219: 1 loads, 1 LSLICEs
+     Net ram/n1871: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net DMA: 57 loads
-     Net A_out_0: 47 loads
-     Net A_out_1: 37 loads
-     Net n3811: 33 loads
-     Net A_out_3: 28 loads
-     Net S_0: 28 loads
-     Net RegReset: 25 loads
-     Net n3559: 22 loads
-     Net n3810: 22 loads
-     Net n3584: 21 loads
+     Net A_out_0: 48 loads
+     Net A_out_1: 38 loads
+     Net DMA: 34 loads
+     Net n4163: 32 loads
+     Net S_0: 31 loads
+     Net reureg/n3869: 30 loads
+     Net A_out_3: 24 loads
+     Net n3842: 24 loads
+     Net reureg/n3870: 24 loads
+     Net n4162: 23 loads
  
 
-   Number of warnings:  0
+   Number of warnings:  2
    Number of errors:    0
 
 
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 38 MB
+Peak Memory Usage: 46 MB
 
 Dumping design to file REU_impl1_map.ncd.
 
@@ -357,10 +361,10 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "REU_impl1_map.ncd"
-Wed Apr 27 05:11:24 2022
+Thu Apr 28 11:56:37 2022
 
-PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 REU_impl1_map.ncd REU_impl1.dir/5_1.ncd REU_impl1.prf
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 REU_impl1_map.ncd REU_impl1.dir/5_1.ncd REU_impl1.prf
 Preference file: REU_impl1.prf.
 Placement level-cost: 5-1.
 Routing Iterations: 6
@@ -385,24 +389,24 @@ Device utilization summary:
                   69+4(JTAG)/79      92% bonded
    IOLOGIC            1/80            1% used
 
-   SLICE            192/320          60% used
+   SLICE            201/320          62% used
 
 
 
-Number of Signals: 583
-Number of Connections: 1744
+Number of Signals: 601
+Number of Connections: 1808
 
 Pin Constraint Summary:
    69 out of 69 pins locked (100% locked).
 
 The following 2 signals are selected to use the primary clock routing resources:
     C8M_c (driver: C8M, clk load #: 30)
-    PHI2_c (driver: PHI2, clk load #: 90)
+    PHI2_c (driver: PHI2, clk load #: 85)
 
 
 The following 2 signals are selected to use the secondary clock routing resources:
-    n3811 (driver: dmaseq/SLICE_217, clk load #: 0, sr load #: 33, ce load #: 0)
-    RegReset (driver: dmaseq/SLICE_217, clk load #: 0, sr load #: 25, ce load #: 0)
+    n4163 (driver: dmaseq/SLICE_220, clk load #: 0, sr load #: 32, ce load #: 0)
+    RegReset (driver: dmaseq/SLICE_220, clk load #: 0, sr load #: 21, ce load #: 0)
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
@@ -410,13 +414,13 @@ Starting Placer Phase 0.
 Finished Placer Phase 0.  REAL time: 0 secs 
 
 Starting Placer Phase 1.
-.....................
-Placer score = 109597.
-Finished Placer Phase 1.  REAL time: 9 secs 
+...................
+Placer score = 111003.
+Finished Placer Phase 1.  REAL time: 8 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  108961
+Placer score =  110831
 Finished Placer Phase 2.  REAL time: 9 secs 
 
 
@@ -429,9 +433,9 @@ Global Clock Resources:
 
 Global Clocks:
   PRIMARY "C8M_c" from comp "C8M" on CLK_PIN site "34 (PB6C)", clk load = 30
-  PRIMARY "PHI2_c" from comp "PHI2" on CLK_PIN site "38 (PB10C)", clk load = 90
-  SECONDARY "n3811" from F1 on comp "dmaseq/SLICE_217" on site "R5C2C", clk load = 0, ce load = 0, sr load = 33
-  SECONDARY "RegReset" from F0 on comp "dmaseq/SLICE_217" on site "R5C2C", clk load = 0, ce load = 0, sr load = 25
+  PRIMARY "PHI2_c" from comp "PHI2" on CLK_PIN site "38 (PB10C)", clk load = 85
+  SECONDARY "n4163" from F0 on comp "dmaseq/SLICE_220" on site "R2C9B", clk load = 0, ce load = 0, sr load = 32
+  SECONDARY "RegReset" from F1 on comp "dmaseq/SLICE_220" on site "R2C9B", clk load = 0, ce load = 0, sr load = 21
 
   PRIMARY  : 2 out of 8 (25%)
   SECONDARY: 2 out of 8 (25%)
@@ -455,16 +459,16 @@ I/O Bank Usage Summary:
 | 3        | 18 / 20 ( 90%) | 3.3V       | -         |
 +----------+----------------+------------+-----------+
 
-Total placer CPU time: 9 secs 
+Total placer CPU time: 8 secs 
 
 Dumping design to file REU_impl1.dir/5_1.ncd.
 
-0 connections routed; 1744 unrouted.
+0 connections routed; 1808 unrouted.
 Starting router resource preassignment
 
 Completed router resource preassignment. Real time: 12 secs 
 
-Start NBR router at 05:11:36 04/27/22
+Start NBR router at 11:56:49 04/28/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -479,38 +483,44 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 05:11:36 04/27/22
+Start NBR special constraint process at 11:56:49 04/28/22
 
-Start NBR section for initial routing at 05:11:36 04/27/22
+Start NBR section for initial routing at 11:56:50 04/28/22
 Level 4, iteration 1
-37(0.08%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 114.412ns/0.000ns; real time: 12 secs 
+54(0.12%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 05:11:36 04/27/22
+Start NBR section for normal routing at 11:56:50 04/28/22
 Level 4, iteration 1
-16(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 114.412ns/0.000ns; real time: 13 secs 
+17(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
 Level 4, iteration 2
-8(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 114.412ns/0.000ns; real time: 13 secs 
+6(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
 Level 4, iteration 3
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 114.412ns/0.000ns; real time: 13 secs 
+4(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
 Level 4, iteration 4
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
+Level 4, iteration 5
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
+Level 4, iteration 6
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 114.412ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 05:11:37 04/27/22
+Start NBR section for setup/hold timing optimization with effort level 3 at 11:56:50 04/28/22
 
-Start NBR section for re-routing at 05:11:37 04/27/22
+Start NBR section for re-routing at 11:56:51 04/28/22
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 114.412ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 14 secs 
 
-Start NBR section for post-routing at 05:11:37 04/27/22
+Start NBR section for post-routing at 11:56:51 04/28/22
 
 End NBR router with 0 unrouted connection
 
@@ -518,7 +528,7 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 114.412ns
+  Estimated worst slack<setup> : 112.880ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
@@ -526,9 +536,9 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 
 
 Total CPU time 14 secs 
-Total REAL time: 14 secs 
+Total REAL time: 15 secs 
 Completely routed.
-End of route.  1744 routed (100.00%); 0 unrouted.
+End of route.  1808 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -539,14 +549,14 @@ Dumping design to file REU_impl1.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 114.412
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 112.880
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.304
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.306
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
 Total CPU  time to completion: 14 secs 
-Total REAL time to completion: 14 secs 
+Total REAL time to completion: 15 secs 
 
 par done!
 
@@ -561,7 +571,7 @@ Exiting par with exit code 0
 Exiting mpartrce with exit code 0
 
 trce -f "REU_impl1.pt" -o "REU_impl1.twr" "REU_impl1.ncd" "REU_impl1.prf"
-trce:  version Diamond (64-bit) 3.12.0.240.2
+trce:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -582,8 +592,8 @@ Performance Hardware Data Status:   Final          Version 34.4.
 Setup and Hold Report
 
 --------------------------------------------------------------------------------
-Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
-Wed Apr 27 05:11:39 2022
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 11:56:52 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -593,7 +603,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o REU_impl1.twr -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml REU_impl1.ncd REU_impl1.prf 
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o REU_impl1.twr -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml REU_impl1.ncd REU_impl1.prf 
 Design file:     reu_impl1.ncd
 Preference file: reu_impl1.prf
 Device,speed:    LCMXO2-640HC,4
@@ -627,11 +637,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 11628 paths, 2 nets, and 1100 connections (63.07% coverage)
+Constraints cover 11442 paths, 2 nets, and 1167 connections (64.55% coverage)
 
 --------------------------------------------------------------------------------
-Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
-Wed Apr 27 05:11:39 2022
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 11:56:53 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -641,7 +651,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o REU_impl1.twr -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml REU_impl1.ncd REU_impl1.prf 
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o REU_impl1.twr -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml REU_impl1.ncd REU_impl1.prf 
 Design file:     reu_impl1.ncd
 Preference file: reu_impl1.prf
 Device,speed:    LCMXO2-640HC,m
@@ -675,7 +685,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 11628 paths, 2 nets, and 1100 connections (63.07% coverage)
+Constraints cover 11442 paths, 2 nets, and 1167 connections (64.55% coverage)
 
 
 
@@ -691,12 +701,12 @@ Cumulative negative slack: 0 (0+0)
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 42 MB
+Peak Memory Usage: 49 MB
 
 
 iotiming  "REU_impl1.ncd" "REU_impl1.prf"
 I/O Timing Report:
-:  version Diamond (64-bit) 3.12.0.240.2
+:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -768,10 +778,89 @@ Done.
 
 tmcheck -par "REU_impl1.par" 
 
+bitgen -f "REU_impl1.t2b" -w "REU_impl1.ncd"  "REU_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.1.454
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file REU_impl1.ncd.
+Design name: REU
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application Bitgen from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from REU_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "REU_impl1.bit".
+Total CPU Time: 2 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 253 MB
+
+tmcheck -par "REU_impl1.par" 
+
 bitgen -f "REU_impl1.t2b" -w "REU_impl1.ncd"  -jedec "REU_impl1.prf"
 
 
-BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.1.454
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
@@ -852,5 +941,5 @@ Available General Purpose Flash Memory:  191 Pages (Page 0 to Page 190).
 Initialized UFM Pages:                     0 Page.
  
 Total CPU Time: 2 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 246 MB
+Total REAL Time: 3 secs 
+Peak Memory Usage: 253 MB
