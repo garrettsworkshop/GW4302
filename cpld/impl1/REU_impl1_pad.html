@@ -14,13 +14,13 @@ Performance Grade:      4
 PACKAGE:          TQFP100
 Package Status:                     Final          Version 1.39
 
-Thu Apr 28 11:56:46 2022
+Thu Apr 28 16:42:33 2022
 
 Pinout by Port Name:
 +-----------+----------+---------------+-------+-----------+-----------+------------------------------------------------------------+
 | Port Name | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                                 |
 +-----------+----------+---------------+-------+-----------+-----------+------------------------------------------------------------+
-| ADIR      | 31/2     | LVCMOS33_OUT  | PB6A  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
+| ADIR      | 31/2     | LVCMOS33_OUT  | PB6A  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | A[0]      | 51/1     | LVCMOS33_BIDI | PR7D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | A[10]     | 39/2     | LVCMOS33_BIDI | PB10D |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | A[11]     | 37/2     | LVCMOS33_BIDI | PB10B |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
@@ -39,8 +39,8 @@ Pinout by Port Name:
 | A[9]      | 41/2     | LVCMOS33_BIDI | PB12B |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | BA        | 30/2     | LVCMOS33_IN   | PB4D  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
 | C8M       | 34/2     | LVCMOS33_IN   | PB6C  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
-| CKE       | 67/1     | LVCMOS33_OUT  | PR3C  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
-| DDIR      | 15/3     | LVCMOS33_OUT  | PL5D  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
+| CKE       | 67/1     | LVCMOS33_OUT  | PR3C  |           |           | DRIVE:4mA SLEW:SLOW                                        |
+| DDIR      | 15/3     | LVCMOS33_OUT  | PL5D  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | DQMH      | 83/0     | LVCMOS33_OUT  | PT10B |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | DQML      | 84/0     | LVCMOS33_OUT  | PT10A |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | D[0]      | 4/3      | LVCMOS33_BIDI | PL2D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
@@ -76,17 +76,17 @@ Pinout by Port Name:
 | RD[5]     | 64/1     | LVCMOS33_BIDI | PR5B  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | RD[6]     | 65/1     | LVCMOS33_BIDI | PR5A  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | RD[7]     | 66/1     | LVCMOS33_BIDI | PR3D  |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| nAOE      | 32/2     | LVCMOS33_OUT  | PB6B  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
+| nAOE      | 32/2     | LVCMOS33_OUT  | PB6B  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | nCAS      | 86/0     | LVCMOS33_OUT  | PT9C  |           |           | DRIVE:4mA SLEW:SLOW                                        |
-| nCS       | 88/0     | LVCMOS33_OUT  | PT9A  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
-| nDMA      | 25/3     | LVCMOS33_OUT  | PL7D  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
-| nDOE      | 16/3     | LVCMOS33_OUT  | PL6A  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
+| nCS       | 88/0     | LVCMOS33_OUT  | PT9A  |           |           | DRIVE:4mA SLEW:SLOW                                        |
+| nDMA      | 25/3     | LVCMOS33_OUT  | PL7D  |           |           | DRIVE:4mA SLEW:SLOW                                        |
+| nDOE      | 16/3     | LVCMOS33_OUT  | PL6A  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | nIO2      | 29/2     | LVCMOS33_IN   | PB4C  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
-| nIRQ      | 18/3     | LVCMOS33_OUT  | PL6C  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
+| nIRQ      | 18/3     | LVCMOS33_OUT  | PL6C  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | nRAS      | 87/0     | LVCMOS33_OUT  | PT9B  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | nRESET    | 28/2     | LVCMOS33_IN   | PB4B  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
 | nRWE      | 85/0     | LVCMOS33_OUT  | PT9D  |           |           | DRIVE:4mA SLEW:SLOW                                        |
-| nRWOE     | 20/3     | LVCMOS33_OUT  | PL7A  |           |           | DRIVE:4mA PULL:UP SLEW:SLOW                                |
+| nRWOE     | 20/3     | LVCMOS33_OUT  | PL7A  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | nWE       | 21/3     | LVCMOS33_IN   | PL7B  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
 | nWEDMA    | 17/3     | LVCMOS33_OUT  | PL6B  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 +-----------+----------+---------------+-------+-----------+-----------+------------------------------------------------------------+
@@ -290,7 +290,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 11:56:49 2022
+Thu Apr 28 16:42:36 2022
 
 
 

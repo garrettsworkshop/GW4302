@@ -23,6 +23,14 @@
             <Severity>Info</Severity>
         </Message>
         <Message>
+            <ID>35901875</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/dmaseq.v(105): </Dynamic>
+            <Dynamic>nRESETr</Dynamic>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/dmaseq.v</Navigation>
+            <Navigation>105</Navigation>
+        </Message>
+        <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>//mac/icloud/repos/gw4302/cpld/reu.v(1): </Dynamic>
@@ -34,7 +42,7 @@
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>//mac/icloud/repos/gw4302/cpld/ram.v(1): </Dynamic>
-            <Dynamic>RAM</Dynamic>
+            <Dynamic>RAMctrl</Dynamic>
             <Navigation>//mac/icloud/repos/gw4302/cpld/ram.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -63,12 +71,12 @@
             <Navigation>1</Navigation>
         </Message>
         <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld/glue.v(1): </Dynamic>
-            <Dynamic>Glue</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld/glue.v</Navigation>
-            <Navigation>1</Navigation>
+            <ID>35931002</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld/dmaseq.v(98): </Dynamic>
+            <Dynamic>DMAr</Dynamic>
+            <Navigation>//mac/icloud/repos/gw4302/cpld/dmaseq.v</Navigation>
+            <Navigation>98</Navigation>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -79,7 +87,7 @@
             <ID>35001747</ID>
             <Severity>Warning</Severity>
             <Dynamic>12</Dynamic>
-            <Dynamic>\ram/RA</Dynamic>
+            <Dynamic>\ramctrl/RA</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>

@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 11:56:33 2022
+Thu Apr 28 16:42:20 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml 
@@ -71,7 +71,6 @@ The -syn option is FALSE.
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/RAM.v
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Reg.v
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/DMASeq.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Glue.v
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/REU.v
 NGD file = REU_impl1.ngd
 -sdc option: SDC file input is //Mac/iCloud/Repos/GW4302/cpld/REU.ldc.
@@ -86,16 +85,16 @@ Compile Design Begin
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/ram.v. VERI-1482
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reg.v. VERI-1482
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/dmaseq.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/glue.v. VERI-1482
+    <postMsg mid="35901875" type="Warning" dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/dmaseq.v(105): " arg1="nRESETr" arg2="//mac/icloud/repos/gw4302/cpld/dmaseq.v" arg3="105"  />
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reu.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): REU
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/reu.v(1): " arg1="REU" arg2="//mac/icloud/repos/gw4302/cpld/reu.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/ram.v(1): " arg1="RAM" arg2="//mac/icloud/repos/gw4302/cpld/ram.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/ram.v(1): " arg1="RAMctrl" arg2="//mac/icloud/repos/gw4302/cpld/ram.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1601): " arg1="ODDRXE" arg2="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v" arg3="1601"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/reg.v(1): " arg1="REUReg" arg2="//mac/icloud/repos/gw4302/cpld/reg.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/dmaseq.v(1): " arg1="DMASeq" arg2="//mac/icloud/repos/gw4302/cpld/dmaseq.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/glue.v(1): " arg1="Glue" arg2="//mac/icloud/repos/gw4302/cpld/glue.v" arg3="1"  />
+    <postMsg mid="35931002" type="Warning" dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld/dmaseq.v(98): " arg1="DMAr" arg2="//mac/icloud/repos/gw4302/cpld/dmaseq.v" arg3="98"  />
 Last elaborated design is REU()
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -104,7 +103,8 @@ Loading device for application map from file 'xo2c640.nph' in environment: C:/ls
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="nIO1"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\ram/RA"  />
+######## Missing driver on net \dmaseq/DMAr. Patching with GND.
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\ramctrl/RA"  />
 
 
 
@@ -124,29 +124,29 @@ Running DRC...
     <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="2"  />
 
 Design Results:
-    638 blocks expanded
+    610 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.
 
 ################### Begin Area Report (REU)######################
-Number of register bits => 186 of 877 (21 % )
+Number of register bits => 177 of 877 (20 % )
 BB => 32
 CCU2D => 33
-FD1P3AX => 47
-FD1P3IX => 41
+FD1P3AX => 31
+FD1P3IX => 56
 FD1P3JX => 16
-FD1S3AX => 28
-FD1S3IX => 50
-FD1S3JX => 4
+FD1S3AX => 17
+FD1S3IX => 52
+FD1S3JX => 5
 GSR => 1
 IB => 6
 INV => 2
 L6MUX21 => 3
-LUT4 => 317
+LUT4 => 299
 OB => 31
 ODDRXE => 1
-PFUMX => 23
+PFUMX => 22
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -156,33 +156,33 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : C8M_c, loads : 46
+  Net : C8M_c, loads : 42
   Net : PHI2_c, loads : 4
 Clock Enable Nets
-Number of Clock Enables: 22
+Number of Clock Enables: 21
 Top 10 highest fanout Clock Enables:
-  Net : reureg/PHI2_N_565_enable_61, loads : 9
-  Net : reureg/PHI2_N_565_enable_54, loads : 8
-  Net : reureg/PHI2_N_565_enable_69, loads : 8
-  Net : reureg/PHI2_N_565_enable_68, loads : 8
-  Net : ram/RDD_7__N_54, loads : 8
-  Net : reureg/PHI2_N_565_enable_55, loads : 8
-  Net : reureg/PHI2_N_565_enable_70, loads : 8
-  Net : reureg/PHI2_N_565_enable_87, loads : 8
-  Net : reureg/PHI2_N_565_enable_67, loads : 8
-  Net : reureg/PHI2_N_565_enable_81, loads : 8
+  Net : reureg/PHI2_N_570_enable_74, loads : 9
+  Net : reureg/PHI2_N_570_enable_24, loads : 8
+  Net : reureg/PHI2_N_570_enable_75, loads : 8
+  Net : reureg/PHI2_N_570_enable_86, loads : 8
+  Net : reureg/PHI2_N_570_enable_72, loads : 8
+  Net : reureg/PHI2_N_570_enable_68, loads : 8
+  Net : ramctrl/RDD_7__N_62, loads : 8
+  Net : reureg/PHI2_N_570_enable_63, loads : 8
+  Net : reureg/PHI2_N_570_enable_62, loads : 8
+  Net : reureg/PHI2_N_570_enable_35, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_565, loads : 140
-  Net : dmaseq/n4163, loads : 49
-  Net : A_out_0, loads : 48
-  Net : A_out_1, loads : 38
-  Net : dmaseq/RegReset, loads : 35
-  Net : dmaseq/DMA, loads : 33
-  Net : ram/S_0, loads : 30
-  Net : reureg/n3869, loads : 30
-  Net : A_out_3, loads : 24
-  Net : reureg/n3870, loads : 24
+  Net : PHI2_N_570, loads : 136
+  Net : reureg/n4341, loads : 113
+  Net : A_out_0, loads : 42
+  Net : dmaseq/DMA, loads : 41
+  Net : A_out_1, loads : 31
+  Net : ramctrl/S_0, loads : 27
+  Net : n4112, loads : 27
+  Net : A_out_2, loads : 26
+  Net : dmaseq/n4095, loads : 22
+  Net : A_out_3, loads : 22
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -193,11 +193,11 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   50.888 MHz|    13  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   47.714 MHz|    12  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
-C8M [ get_ports { C8M } ]               |    8.196 MHz|  100.261 MHz|     3  
+C8M [ get_ports { C8M } ]               |    8.196 MHz|   95.997 MHz|     6  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -205,10 +205,10 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|  100.261 MHz|     3
 All constraints were met.
 
 
-Peak Memory Usage: 72.227  MB
+Peak Memory Usage: 73.164  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.125  secs
+Elapsed CPU time for LSE flow : 2.109  secs
 --------------------------------------------------------------
 
 map -a "MachXO2" -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial   "REU_impl1.ngd" -o "REU_impl1_map.ncd" -pr "REU_impl1.prf" -mp "REU_impl1.mrp" -lpf "//Mac/iCloud/Repos/GW4302/cpld/impl1/REU_impl1.lpf" -lpf "//Mac/iCloud/Repos/GW4302/cpld/REU.lpf"  -c 0           
@@ -247,15 +247,15 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:    186 out of   877 (21%)
-      PFU registers:          186 out of   640 (29%)
+   Number of registers:    177 out of   877 (20%)
+      PFU registers:          177 out of   640 (28%)
       PIO registers:            0 out of   237 (0%)
-   Number of SLICEs:       201 out of   320 (63%)
-      SLICEs as Logic/ROM:    201 out of   320 (63%)
+   Number of SLICEs:       187 out of   320 (58%)
+      SLICEs as Logic/ROM:    187 out of   320 (58%)
       SLICEs as RAM:            0 out of   240 (0%)
       SLICEs as Carry:         33 out of   320 (10%)
-   Number of LUT4s:        387 out of   640 (60%)
-      Number used as logic LUTs:        321
+   Number of LUT4s:        368 out of   640 (58%)
+      Number used as logic LUTs:        302
       Number used as distributed RAM:     0
       Number used as ripple logic:       66
       Number used as shift registers:     0
@@ -289,54 +289,55 @@ Design Summary:
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  2
-     Net C8M_c: 30 loads, 28 rising, 2 falling (Driver: PIO C8M )
-     Net PHI2_c: 85 loads, 0 rising, 85 falling (Driver: PIO PHI2 )
-   Number of Clock Enables:  22
-     Net PHI2_N_565_enable_76: 1 loads, 1 LSLICEs
-     Net dmaseq/PHI2_N_565_enable_71: 3 loads, 3 LSLICEs
-     Net SetEndOfBlock: 1 loads, 1 LSLICEs
-     Net IntPending_N_535: 1 loads, 1 LSLICEs
-     Net PHI2_N_565_enable_23: 1 loads, 1 LSLICEs
-     Net reureg/PHI2_N_565_enable_69: 5 loads, 5 LSLICEs
-     Net reureg/PHI2_N_565_enable_68: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_565_enable_24: 2 loads, 2 LSLICEs
-     Net reureg/PHI2_N_565_enable_75: 3 loads, 3 LSLICEs
-     Net reureg/PHI2_N_565_enable_67: 5 loads, 5 LSLICEs
-     Net reureg/PHI2_N_565_enable_70: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_565_enable_54: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_565_enable_61: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_565_enable_55: 4 loads, 4 LSLICEs
-     Net reureg/PHI2_N_565_enable_32: 2 loads, 2 LSLICEs
-     Net reureg/PHI2_N_565_enable_87: 5 loads, 5 LSLICEs
-     Net reureg/PHI2_N_565_enable_81: 4 loads, 4 LSLICEs
-     Net ram/C8M_c_enable_1: 1 loads, 1 LSLICEs
-     Net ram/RefCnt_2__N_52: 2 loads, 2 LSLICEs
-     Net ram/C8M_c_enable_3: 1 loads, 1 LSLICEs
-     Net ram/RDD_7__N_54: 4 loads, 4 LSLICEs
-     Net ram/PORDone_N_46: 1 loads, 1 LSLICEs
-   Number of LSRs:  10
-     Net n3884: 6 loads, 6 LSLICEs
-     Net n4163: 32 loads, 32 LSLICEs
-     Net RegReset: 21 loads, 21 LSLICEs
-     Net reureg/n1134: 3 loads, 3 LSLICEs
-     Net ram/n1468: 1 loads, 1 LSLICEs
-     Net ram/S_2: 1 loads, 1 LSLICEs
-     Net ram/C8M_c_enable_3: 1 loads, 1 LSLICEs
-     Net ram/PORDone: 1 loads, 1 LSLICEs
-     Net ram/n1219: 1 loads, 1 LSLICEs
-     Net ram/n1871: 2 loads, 2 LSLICEs
+     Net C8M_c: 28 loads, 27 rising, 1 falling (Driver: PIO C8M )
+     Net PHI2_c: 78 loads, 0 rising, 78 falling (Driver: PIO PHI2 )
+   Number of Clock Enables:  21
+     Net dmaseq/PHI2_N_570_enable_79: 3 loads, 3 LSLICEs
+     Net SetFault: 1 loads, 1 LSLICEs
+     Net IncCA_N_630: 1 loads, 1 LSLICEs
+     Net ramctrl/C8M_c_enable_1: 1 loads, 1 LSLICEs
+     Net ramctrl/RefCnt_2__N_60: 2 loads, 2 LSLICEs
+     Net ramctrl/RDD_7__N_62: 4 loads, 4 LSLICEs
+     Net ramctrl/nRESETr: 1 loads, 1 LSLICEs
+     Net ramctrl/C8M_c_enable_3: 1 loads, 1 LSLICEs
+     Net reureg/PHI2_N_570_enable_72: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_570_enable_68: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_570_enable_77: 3 loads, 3 LSLICEs
+     Net reureg/PHI2_N_570_enable_75: 5 loads, 5 LSLICEs
+     Net reureg/PHI2_N_570_enable_24: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_570_enable_76: 2 loads, 2 LSLICEs
+     Net reureg/PHI2_N_570_enable_63: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_570_enable_78: 1 loads, 1 LSLICEs
+     Net reureg/PHI2_N_570_enable_35: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_570_enable_42: 2 loads, 2 LSLICEs
+     Net reureg/PHI2_N_570_enable_74: 4 loads, 4 LSLICEs
+     Net reureg/PHI2_N_570_enable_62: 5 loads, 5 LSLICEs
+     Net reureg/PHI2_N_570_enable_86: 4 loads, 4 LSLICEs
+   Number of LSRs:  12
+     Net DMA: 1 loads, 1 LSLICEs
+     Net ramctrl/S_1: 1 loads, 1 LSLICEs
+     Net ramctrl/S_2: 1 loads, 1 LSLICEs
+     Net ramctrl/n3550: 1 loads, 1 LSLICEs
+     Net ramctrl/n1172: 6 loads, 6 LSLICEs
+     Net ramctrl/n1535: 1 loads, 1 LSLICEs
+     Net ramctrl/n1556: 2 loads, 2 LSLICEs
+     Net ramctrl/PORDone: 1 loads, 1 LSLICEs
+     Net ramctrl/n1321: 1 loads, 1 LSLICEs
+     Net ramctrl/n1287: 1 loads, 1 LSLICEs
+     Net reureg/n4341: 56 loads, 56 LSLICEs
+     Net reureg/n1170: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net A_out_0: 48 loads
-     Net A_out_1: 38 loads
-     Net DMA: 34 loads
-     Net n4163: 32 loads
-     Net S_0: 31 loads
-     Net reureg/n3869: 30 loads
-     Net A_out_3: 24 loads
-     Net n3842: 24 loads
-     Net reureg/n3870: 24 loads
-     Net n4162: 23 loads
+     Net reureg/n4341: 67 loads
+     Net DMA: 43 loads
+     Net A_out_0: 42 loads
+     Net A_out_1: 31 loads
+     Net S_0: 28 loads
+     Net n4112: 27 loads
+     Net A_out_2: 26 loads
+     Net n4095: 23 loads
+     Net A_out_3: 22 loads
+     Net reureg/n2438: 21 loads
  
 
    Number of warnings:  2
@@ -361,7 +362,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "REU_impl1_map.ncd"
-Thu Apr 28 11:56:37 2022
+Thu Apr 28 16:42:24 2022
 
 PAR: Place And Route Diamond (64-bit) 3.12.1.454.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 REU_impl1_map.ncd REU_impl1.dir/5_1.ncd REU_impl1.prf
@@ -389,24 +390,23 @@ Device utilization summary:
                   69+4(JTAG)/79      92% bonded
    IOLOGIC            1/80            1% used
 
-   SLICE            201/320          62% used
+   SLICE            187/320          58% used
 
 
 
-Number of Signals: 601
-Number of Connections: 1808
+Number of Signals: 575
+Number of Connections: 1735
 
 Pin Constraint Summary:
    69 out of 69 pins locked (100% locked).
 
 The following 2 signals are selected to use the primary clock routing resources:
-    C8M_c (driver: C8M, clk load #: 30)
-    PHI2_c (driver: PHI2, clk load #: 85)
+    C8M_c (driver: C8M, clk load #: 28)
+    PHI2_c (driver: PHI2, clk load #: 78)
 
 
-The following 2 signals are selected to use the secondary clock routing resources:
-    n4163 (driver: dmaseq/SLICE_220, clk load #: 0, sr load #: 32, ce load #: 0)
-    RegReset (driver: dmaseq/SLICE_220, clk load #: 0, sr load #: 21, ce load #: 0)
+The following 1 signal is selected to use the secondary clock routing resources:
+    reureg/n4341 (driver: reureg/SLICE_192, clk load #: 0, sr load #: 56, ce load #: 0)
 
 No signal is selected as Global Set/Reset.
 Starting Placer Phase 0.
@@ -414,13 +414,13 @@ Starting Placer Phase 0.
 Finished Placer Phase 0.  REAL time: 0 secs 
 
 Starting Placer Phase 1.
-...................
-Placer score = 111003.
-Finished Placer Phase 1.  REAL time: 8 secs 
+.....................
+Placer score = 105258.
+Finished Placer Phase 1.  REAL time: 9 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  110831
+Placer score =  105179
 Finished Placer Phase 2.  REAL time: 9 secs 
 
 
@@ -432,13 +432,12 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "C8M_c" from comp "C8M" on CLK_PIN site "34 (PB6C)", clk load = 30
-  PRIMARY "PHI2_c" from comp "PHI2" on CLK_PIN site "38 (PB10C)", clk load = 85
-  SECONDARY "n4163" from F0 on comp "dmaseq/SLICE_220" on site "R2C9B", clk load = 0, ce load = 0, sr load = 32
-  SECONDARY "RegReset" from F1 on comp "dmaseq/SLICE_220" on site "R2C9B", clk load = 0, ce load = 0, sr load = 21
+  PRIMARY "C8M_c" from comp "C8M" on CLK_PIN site "34 (PB6C)", clk load = 28
+  PRIMARY "PHI2_c" from comp "PHI2" on CLK_PIN site "38 (PB10C)", clk load = 78
+  SECONDARY "reureg/n4341" from F1 on comp "reureg/SLICE_192" on site "R6C8A", clk load = 0, ce load = 0, sr load = 56
 
   PRIMARY  : 2 out of 8 (25%)
-  SECONDARY: 2 out of 8 (25%)
+  SECONDARY: 1 out of 8 (12%)
 
 --------------- End of Clock Report ---------------
 
@@ -459,16 +458,16 @@ I/O Bank Usage Summary:
 | 3        | 18 / 20 ( 90%) | 3.3V       | -         |
 +----------+----------------+------------+-----------+
 
-Total placer CPU time: 8 secs 
+Total placer CPU time: 9 secs 
 
 Dumping design to file REU_impl1.dir/5_1.ncd.
 
-0 connections routed; 1808 unrouted.
+0 connections routed; 1735 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 12 secs 
+Completed router resource preassignment. Real time: 13 secs 
 
-Start NBR router at 11:56:49 04/28/22
+Start NBR router at 16:42:37 04/28/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -483,44 +482,38 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 11:56:49 04/28/22
+Start NBR special constraint process at 16:42:37 04/28/22
 
-Start NBR section for initial routing at 11:56:50 04/28/22
+Start NBR section for initial routing at 16:42:37 04/28/22
 Level 4, iteration 1
 54(0.12%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<setup>: 114.219ns/0.000ns; real time: 14 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 11:56:50 04/28/22
+Start NBR section for normal routing at 16:42:38 04/28/22
 Level 4, iteration 1
-17(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
+24(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 114.219ns/0.000ns; real time: 14 secs 
 Level 4, iteration 2
-6(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
+7(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 114.219ns/0.000ns; real time: 14 secs 
 Level 4, iteration 3
-4(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 114.219ns/0.000ns; real time: 14 secs 
 Level 4, iteration 4
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
-Level 4, iteration 5
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
-Level 4, iteration 6
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 13 secs 
+Estimated worst slack/total negative slack<setup>: 114.219ns/0.000ns; real time: 14 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 11:56:50 04/28/22
+Start NBR section for setup/hold timing optimization with effort level 3 at 16:42:38 04/28/22
 
-Start NBR section for re-routing at 11:56:51 04/28/22
+Start NBR section for re-routing at 16:42:38 04/28/22
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 112.880ns/0.000ns; real time: 14 secs 
+Estimated worst slack/total negative slack<setup>: 114.219ns/0.000ns; real time: 14 secs 
 
-Start NBR section for post-routing at 11:56:51 04/28/22
+Start NBR section for post-routing at 16:42:38 04/28/22
 
 End NBR router with 0 unrouted connection
 
@@ -528,17 +521,17 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 112.880ns
+  Estimated worst slack<setup> : 114.219ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 14 secs 
+Total CPU time 15 secs 
 Total REAL time: 15 secs 
 Completely routed.
-End of route.  1808 routed (100.00%); 0 unrouted.
+End of route.  1735 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -549,14 +542,14 @@ Dumping design to file REU_impl1.dir/5_1.ncd.
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 112.880
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 114.219
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.306
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.379
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 14 secs 
-Total REAL time to completion: 15 secs 
+Total CPU  time to completion: 15 secs 
+Total REAL time to completion: 16 secs 
 
 par done!
 
@@ -593,7 +586,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Thu Apr 28 11:56:52 2022
+Thu Apr 28 16:42:40 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -637,11 +630,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 11442 paths, 2 nets, and 1167 connections (64.55% coverage)
+Constraints cover 15414 paths, 2 nets, and 1103 connections (63.57% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Thu Apr 28 11:56:53 2022
+Thu Apr 28 16:42:40 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -685,7 +678,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 11442 paths, 2 nets, and 1167 connections (64.55% coverage)
+Constraints cover 15414 paths, 2 nets, and 1103 connections (63.57% coverage)
 
 
 

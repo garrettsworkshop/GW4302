@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 11:56:58 2022
+Thu Apr 28 16:42:46 2022
 
 
 Command: bitgen -g RamCfg:Reset -path //Mac/iCloud/Repos/GW4302/cpld -w -jedec -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml REU_impl1.ncd REU_impl1.prf 

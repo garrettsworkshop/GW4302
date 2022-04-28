@@ -12,9 +12,6 @@
         <Source name="DMASeq.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="Glue.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
         <Source name="REU.v" type="Verilog" type_short="Verilog">
             <Options top_module="REU"/>
         </Source>

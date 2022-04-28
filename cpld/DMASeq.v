@@ -8,21 +8,20 @@
 	/* DMA command outputs */
 	output reg DMA,			// DMA signal to C64 bus
 	output reg nWEDMA,		// DMA read/write indication to C64 bus
-	/* Reset Output to Registers */
-	output RegReset,		// Gated reset signal output to registers
 	/* Transfer inputs */
 	input Execute,			// Execute signal (starts transfer) from registers
 	input [1:0] XferType,	// REU transfer type (bypassed) from registers
 	input BA,				// C64 BA signal
-	input Equal,			// Indicates data read from RAM equals C64 data bus
+	input Equal,			// Indicates RAM data equals C64 data bus
 	input Length1,			// Transfer length == 1 indication from registers
 	/* Register control outputs */
+	output RegReset,		// Gated reset signal output to registers
 	output IncCA,			// Increment C64 address signal to registers
 	output DecLen,			// Decrement transfer length signal to registers
 	output IncREUA,			// Increment REU address signal to registers
 	output XferEnd,			// Transfer end signal to registers
-	output SetEndOfBlock,	// Set end of block signal to registers
-	output SetVerifyErr);	// Set fault/verify error signal to registers
+	output SetEndBlock,		// Set end of block signal to registers
+	output reg SetFault);	// Set fault/verify error signal to registers
 
 // Transfer type "macros"
 wire XferC64REU = XferType[1:0]==2'b00;
@@ -94,49 +93,36 @@ always @(negedge PHI2) begin
 	end
 end
 
-/* DMA, BA, Equal registation */
+/* DMA, BA registation */
 // Keep these for reference on subsequent cycle
-reg DMAr, BAr, Equalr;
-reg [2:1] nRESETr;
-always @(negedge PHI2) begin
-	DMAr <= DMA;
-	BAr <= BA;
-	Equalr <= Equal;
-	nRESETr[2:1] <= {nRESETr[1], nRESET};
-end
+reg BAr, DMAr;
+always @(negedge PHI2) BAr <= BA;
+always @(negedge PHI2) DMAr <= DMAr;
 
 /* Transfer end control */
-// Transfer can only end during DMA.
-// Any in-progress transfer is aborted if reset becomes active.
-assign XferEnd = DMA && ((!nRESETr[1]) || 
+assign XferEnd = 
+	DMA && // Transfer can only end during DMA 
+	((!nRESETr[1]) || // Any in-progress transfer is aborted if reset
 	// Most transfer types finished when bus active and length is 1
-	(XferC64REU ?  BA && Length1 : 
-	 XferREUC64 ?  BA && Length1 : 
+	((XferC64REU || XferREUC64) ?  BA && Length1 : 
 	// Swap transfer needs to write before completing
-	 XferSwap ?    BA && Length1 && RAMWR : 
+	  XferSwap ?    BA && Length1 && RAMWR : 
 	// For verify operation, finish when length is 1
 	// or when a mismatch was obtained last cyle.
-	 XferVerify ? (BA && Length1) || (DMAr && BAr && !Equalr): 1'b0));
+	  XferVerify ?  BA && (Length1 || SetFault) : 1'b0));
 
 /* C64 address increment control */
 assign IncCA =
-	// DMA must be active and bus must be available.
-	DMA && BA && 
-	// During swap transfer, only increment after writing 
-	(!XferSwap || RAMWR) && 
-	// During verify, don't increment when halting due to mismatch last cycle
-	(!XferVerify || !(DMAr && BAr && !Equalr));
+	DMA && BA && // DMA must be active and bus must be available.
+	(!XferSwap || RAMWR) && // During swap, only increment after write
+	!SetFault; // During verify, don't increment when halting due to mismatch
 	
 /* Transfer length decrement control */
 assign DecLen =
-	// DMA must be active and bus must be available.
-	DMA && BA &&
-	// Don't decrement length from 1 to 0
-	!Length1 && 
-	// During swap transfer, only decrement after writing 
-	(!XferSwap || RAMWR) &&
-	// During verify, don't increment when halting due to mismatch last cycle
-	(!XferVerify || !(DMAr && BAr && !Equalr));
+	DMA && BA && // DMA must be active and bus must be available.
+	!Length1 && // Don't decrement length from 1 to 0
+	(!XferSwap || RAMWR) && // During swap, only decrement after write
+	!SetFault; // During verify, don't increment when halting due to mismatch
 	
 /* REU increment control */
 assign IncREUA = 
@@ -147,24 +133,28 @@ assign IncREUA =
 	XferC64REU ? DMAr && BAr :
 	// During swap transfer, only increment after writing
 	XferSwap ?   DMA && BA && RAMWR :
-	// During verify, don't increment when halting due to mismatch last cycle
-	XferVerify ? DMA && BA && !(DMAr && BAr && !Equalr) : 1'b0;
+	// During verify, don't increment when halting due to mismatch
+	XferVerify ? DMA && BA && !SetFault : 1'b0;
 
-/* Set end of block and set fault/verify error flags to registers */
-// Set end of block when DMA active and length==1
-assign SetEndOfBlock = DMA && Length1;
-// Set fault during verify cycles where BA and data mismatch
-assign SetVerifyErr = XferVerify && DMA && BA && !Equal;
+/* Set end of block and fault signals to registers */
+// Set end of block when DMA active and length==1 except in verify.
+// During verify, if 2nd last byte mismatch, EOB only set if last byte matches
+assign SetEndBlock = DMA && BA && Length1 && (!SetFault || Equal);
+// Set fault during verify transfer when bus available and data mismatch
+always @(negedge PHI2) begin
+	if (!DMA) SetFault <= 0;
+	else SetFault <= XferVerify && BA && !Equal;
+end
 
 /* Gated reset to REU registers */
+reg [2:1] nRESETr;
+always @(negedge PHI2) nRESETr[2:1] <= {nRESETr[1], nRESET};
 assign RegReset = 
 	// Only reset registers when not doing DMA.
-	!DMA && 
 	// Reset aborts the current DMA cycle but there is a delay.
-	((!nRESETr[1] && !DMA) || 
 	// If a reset pulse is short and ends before DMA ends,
 	// register reset nevertheless occurs immediately 
 	// after DMA abort even if external reset is no longer active.
-	 (!nRESETr[2] && DMAr));
+	!DMA && ((!nRESETr[1] && !DMA) || (!nRESETr[2] && DMAr));
 		
 endmodule

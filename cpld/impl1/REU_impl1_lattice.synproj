@@ -35,7 +35,6 @@
 -ver "//Mac/iCloud/Repos/GW4302/cpld/RAM.v"
 "//Mac/iCloud/Repos/GW4302/cpld/Reg.v"
 "//Mac/iCloud/Repos/GW4302/cpld/DMASeq.v"
-"//Mac/iCloud/Repos/GW4302/cpld/Glue.v"
 "//Mac/iCloud/Repos/GW4302/cpld/REU.v"
 -top REU
 

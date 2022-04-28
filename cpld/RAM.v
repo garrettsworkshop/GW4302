@@ -1,15 +1,15 @@
-module RAM(
+module RAMctrl(
 	/* Clocks */
 	input C8M,				// aka C64 dot clock
 	input PHI2,				// C64 PHI2
-	/* R/W Interface */
+	input nRESET,			// C64 reset input
+	/* R/W interface */
 	input RDCMD,			// From DMA sequencer
 	input WRCMD,			// From DMA sequencer
 	input [23:0] A,			// REU address from registers
 	input [7:0] WRD,		// write data input is C64 data bus
 	output reg [7:0] RDD,	// read data registers to C64 data bus mux
-	input nRESET,			// C64 reset input
-	/* SDRAM Bus */
+	/* SDRAM bus */
 	output RCLK,			// SDRAM clock
 	output reg nCS,			// SDRAM chip select
 	output reg nRAS,		// SDRAM /RAS
@@ -27,13 +27,10 @@ ODDRXE rclk_oddr(.D0(1'b0), .D1(1'b1),
 	.SCLK(C8M), .RST(1'b0), .Q(RCLK));
 
 /* Reset synchronization */
-reg [5:0] nRESETr = 0; // Reset synchronizer
+reg nRESETr = 0; // Reset synchronizer
 reg PORDone = 0; // Power-on reset complete
-always @(negedge C8M) nRESETr[0] <= nRESET;
-always @(posedge C8M) nRESETr[5:1] <= {nRESETr[4:0]};
-always @(posedge C8M) begin
-	if (nRESETr[5] && nRESETr[4] && nRESETr[3] && nRESETr[2]) PORDone <= 1;
-end
+always @(posedge C8M) nRESETr <= nRESET;
+always @(posedge C8M) if (nRESETr) PORDone <= 1;
 
 /* PHI2 edge detector */
 reg [1:0] PHI2r = 0;
@@ -63,18 +60,15 @@ always @(posedge C8M) if (S[2:0]==3'h7) InitDone <= 1'b1;
 reg [2:0] RefCnt; // Refresh counter counts from 0-6
 always @(posedge C8M) begin
 	if (S==3'h7 && InitDone) begin
-		if (RefCnt[2:0]==3'h6) RefCnt[2:0] <= 3'h0
-		else RefCnt[1:0] <= RefCnt[1:0]+2'h1;
+		if (RefCnt[2:0]==3'h6) RefCnt[2:0] <= 3'h0;
+		else RefCnt[2:0] <= RefCnt[2:0]+3'h1;
 	end
 end
-reg nFastRef = 0; // Fast refresh period until first time RefCnt == 6
-wire FastRef = !nFastRef;
-always @(posedge C8M) begin if (RefCnt[1:0]==3'h6) nFastRef <= 1;
-// Refresh requested during fast refresh or when RefCnt == 0
-wire RefReq = FastRef || RefCnt[1:0]==2'b00;
+// Refresh requested when RefCnt==0
+wire RefReq = RefCnt[1:0]==2'b00;
 
 /* SDRAM command issue */
-// Command issue is a function of S, InitDone, RDCMD, WRCMD, RefReq
+// Command issue is a function of S, InitDone, RDCMD, WRCMD, RefCnt
 always @(posedge C8M) begin
 	case (S[2:0])
 		3'h0: begin
@@ -123,7 +117,7 @@ always @(posedge C8M) begin
 				CKE <= 0;
 			end
 		end 3'h2: begin
-			if (!InitDone || RefReq || RDCMDg || WRCMDg)
+			if (!InitDone || RefReq || RDCMDg || WRCMDg) begin
 				// Issue NOP CKE in preparation to precharge
 				// before initializing/refreshing or after reading/writing
 				nCS <= 1;
@@ -139,7 +133,7 @@ always @(posedge C8M) begin
 				CKE <= 0;
 			end
 		end 3'h3: begin 
-			if (!InitDone || RefReq || RDCMDg || WRCMDg)
+			if (!InitDone || RefReq || RDCMDg || WRCMDg) begin
 				// Issue PC ALL before LDM/AREF or after RD/WR
 				nCS <= 0;
 				nRAS <= 0;
@@ -197,6 +191,8 @@ always @(posedge C8M) begin
 	endcase
 end
 
+/* SDRAM address bus control */
+// Address is a function of S[2:0] and A[23:0]
 always @(posedge C8M) begin
 	case (S[2:0])
 		3'h0: begin // ACT/NOP
@@ -214,41 +210,24 @@ always @(posedge C8M) begin
 			// RA[10] low to disable auto-precharge.
 			RA[11] <=	1'b0;
 			RA[10] <=	1'b0; // don't auto-precharge
-			RA[9] <=	1'b0;
+			RA[9] <=	1'b1;
 			// Output column address on RA[8:0]
 			RA[8:0] <=	{A[23], A[8:1]};
 			// Unmask only one byte based on A[0]
 			DQMH <= 	 A[0];
 			DQML <=		!A[0];
-		end 3'h2: begin // NOP
-			// RAM address is don't care
-			RBA[1:0] <=	2'b00;
-			RA[11:0] <=	12'h000;
-			// Mask both bytes
-			DQMH <= 1;
-			DQML <= 1;
-		end 3'h3: begin // PC all
-			// Bank address is don't care
-			RBA[1:0] <= A[22:21];
-			// RA[11] is don't care
-			RA[11] <=	1'b0;
-			// RA[10] high to indicate "precharge all"
-			RA[10] <=	1'b1; // "all"
-			// RA[9:0] is don't care
-			RA[9:0] <=	10'h000;
-			// Mask both bytes
-			DQMH <= 1;
-			DQML <= 1;
-		end 3'h4, 3'h5, 3'h6, 3'h7: begin // AREF/LDM, NOP, NOP, NOP
+		end 3'h2, 3'h3, 3'h4, 3'h5, 3'h6, 3'h7: begin // NOP/PC/AREF/LDM/NOP
 			// Mode register contents for LDM, don't care for AREF and NOP
-			RBA[1:0] <=	2'b00;	// Reserved in mode register
-			RA[11:10] <=	2'b00;	// Reserved in mode register
-			RA[9] <=		1'b1;	// "1" for single write mode
-			RA[8] <=		1'b0;	// Reserved in mode register
-			RA[7] <=		1'b0;	// "0" for not test mode
-			RA[6:4] <=		3'b010;	// "2" for CAS latency 2
-			RA[3] <= 		1'b0;	// "0" for sequential burst (not used)
-			RA[2:0] <=		3'b000;	// "0" for burst length 1 (no burst)
+			RBA[1:0] <=					2'b00;	// Reserved in mode register
+			RA[11] <=					1'b0;	// Reserved in mode register
+			if (!S[2]) RA[10] <=		1'b1;	// "precharge all"
+			else RA[10] <=				1'b0;	// Reserved in mode register
+			RA[9] <=					1'b1;	// "1" for single write mode
+			RA[8] <=					1'b0;	// Reserved in mode register
+			RA[7] <=					1'b0;	// "0" for not test mode
+			RA[6:4] <=					3'b010;	// "2" for CAS latency 2
+			RA[3] <= 					1'b0;	// "0" for sequential burst
+			RA[2:0] <=					3'b000;	// "0" for burst length 1
 			// Mask both bytes
 			DQMH <= 1;
 			DQML <= 1;
@@ -257,12 +236,10 @@ always @(posedge C8M) begin
 	RA[12] <= 0; // RA[12] always 0 because we don't need 32 MB capacity.
 end
 
-/* Read data registration */
+/* Read/write data registration */
+reg [7:0] WRDr; // Write data
 // Register read data during S3 when RDCMD active
 always @(posedge C8M) if(RDCMD && S[2:0]==3'h3) RDD[7:0] <= RD[7:0];
-
-/* Write data registration */
-reg [7:0] WRDr;
 // Register write data from C64 bus at PHI2 falling edge
 always @(negedge PHI2) WRDr[7:0] <= WRD[7:0];
 

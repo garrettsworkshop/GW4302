@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 11:56:33 2022
+Thu Apr 28 16:42:20 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml 
@@ -68,7 +68,6 @@ The -syn option is FALSE.
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/RAM.v
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Reg.v
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/DMASeq.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Glue.v
 Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/REU.v
 NGD file = REU_impl1.ngd
 -sdc option: SDC file input is //Mac/iCloud/Repos/GW4302/cpld/REU.ldc.
@@ -83,16 +82,16 @@ Compile Design Begin
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/ram.v. VERI-1482
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reg.v. VERI-1482
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/dmaseq.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/glue.v. VERI-1482
+WARNING - synthesis: //mac/icloud/repos/gw4302/cpld/dmaseq.v(105): identifier nRESETr is used before its declaration. VERI-1875
 Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reu.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): REU
 INFO - synthesis: //mac/icloud/repos/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/ram.v(1): compiling module RAM. VERI-1018
+INFO - synthesis: //mac/icloud/repos/gw4302/cpld/ram.v(1): compiling module RAMctrl. VERI-1018
 INFO - synthesis: C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1601): compiling module ODDRXE. VERI-1018
 INFO - synthesis: //mac/icloud/repos/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
 INFO - synthesis: //mac/icloud/repos/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/glue.v(1): compiling module Glue. VERI-1018
+WARNING - synthesis: //mac/icloud/repos/gw4302/cpld/dmaseq.v(98): net DMAr does not have a driver. VDB-1002
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
@@ -100,7 +99,8 @@ Loading device for application map from file 'xo2c640.nph' in environment: C:/ls
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
 WARNING - synthesis: I/O Port nIO1 's net has no driver and is unused.
-WARNING - synthesis: Bit 12 of Register \ram/RA is stuck at Zero
+######## Missing driver on net \dmaseq/DMAr. Patching with GND.
+WARNING - synthesis: Bit 12 of Register \ramctrl/RA is stuck at Zero
 
 
 
@@ -118,23 +118,23 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.
 
 ################### Begin Area Report (REU)######################
-Number of register bits => 186 of 877 (21 % )
+Number of register bits => 177 of 877 (20 % )
 BB => 32
 CCU2D => 33
-FD1P3AX => 47
-FD1P3IX => 41
+FD1P3AX => 31
+FD1P3IX => 56
 FD1P3JX => 16
-FD1S3AX => 28
-FD1S3IX => 50
-FD1S3JX => 4
+FD1S3AX => 17
+FD1S3IX => 52
+FD1S3JX => 5
 GSR => 1
 IB => 6
 INV => 2
 L6MUX21 => 3
-LUT4 => 317
+LUT4 => 299
 OB => 31
 ODDRXE => 1
-PFUMX => 23
+PFUMX => 22
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -144,33 +144,33 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : C8M_c, loads : 46
+  Net : C8M_c, loads : 42
   Net : PHI2_c, loads : 4
 Clock Enable Nets
-Number of Clock Enables: 22
+Number of Clock Enables: 21
 Top 10 highest fanout Clock Enables:
-  Net : reureg/PHI2_N_565_enable_61, loads : 9
-  Net : reureg/PHI2_N_565_enable_54, loads : 8
-  Net : reureg/PHI2_N_565_enable_69, loads : 8
-  Net : reureg/PHI2_N_565_enable_68, loads : 8
-  Net : ram/RDD_7__N_54, loads : 8
-  Net : reureg/PHI2_N_565_enable_55, loads : 8
-  Net : reureg/PHI2_N_565_enable_70, loads : 8
-  Net : reureg/PHI2_N_565_enable_87, loads : 8
-  Net : reureg/PHI2_N_565_enable_67, loads : 8
-  Net : reureg/PHI2_N_565_enable_81, loads : 8
+  Net : reureg/PHI2_N_570_enable_74, loads : 9
+  Net : reureg/PHI2_N_570_enable_24, loads : 8
+  Net : reureg/PHI2_N_570_enable_75, loads : 8
+  Net : reureg/PHI2_N_570_enable_86, loads : 8
+  Net : reureg/PHI2_N_570_enable_72, loads : 8
+  Net : reureg/PHI2_N_570_enable_68, loads : 8
+  Net : ramctrl/RDD_7__N_62, loads : 8
+  Net : reureg/PHI2_N_570_enable_63, loads : 8
+  Net : reureg/PHI2_N_570_enable_62, loads : 8
+  Net : reureg/PHI2_N_570_enable_35, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_565, loads : 140
-  Net : dmaseq/n4163, loads : 49
-  Net : A_out_0, loads : 48
-  Net : A_out_1, loads : 38
-  Net : dmaseq/RegReset, loads : 35
-  Net : dmaseq/DMA, loads : 33
-  Net : ram/S_0, loads : 30
-  Net : reureg/n3869, loads : 30
-  Net : A_out_3, loads : 24
-  Net : reureg/n3870, loads : 24
+  Net : PHI2_N_570, loads : 136
+  Net : reureg/n4341, loads : 113
+  Net : A_out_0, loads : 42
+  Net : dmaseq/DMA, loads : 41
+  Net : A_out_1, loads : 31
+  Net : ramctrl/S_0, loads : 27
+  Net : n4112, loads : 27
+  Net : A_out_2, loads : 26
+  Net : dmaseq/n4095, loads : 22
+  Net : A_out_3, loads : 22
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -181,11 +181,11 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   50.888 MHz|    13  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   47.714 MHz|    12  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
-C8M [ get_ports { C8M } ]               |    8.196 MHz|  100.261 MHz|     3  
+C8M [ get_ports { C8M } ]               |    8.196 MHz|   95.997 MHz|     6  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -193,8 +193,8 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|  100.261 MHz|     3
 All constraints were met.
 
 
-Peak Memory Usage: 72.227  MB
+Peak Memory Usage: 73.164  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.125  secs
+Elapsed CPU time for LSE flow : 2.109  secs
 --------------------------------------------------------------
