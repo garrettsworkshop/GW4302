@@ -124,25 +124,25 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld-gr/reu.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld-gr/reu.v(1): </Dynamic>
             <Dynamic>REU</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld-gr/reu.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld-gr/reu.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld-gr/reg.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld-gr/reg.v(1): </Dynamic>
             <Dynamic>GeoReg</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld-gr/reg.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld-gr/reg.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>//mac/icloud/repos/gw4302/cpld-gr/ram.v(1): </Dynamic>
+            <Dynamic>c:/users/garre/repos/gw4302/cpld-gr/ram.v(1): </Dynamic>
             <Dynamic>RAM</Dynamic>
-            <Navigation>//mac/icloud/repos/gw4302/cpld-gr/ram.v</Navigation>
+            <Navigation>c:/users/garre/repos/gw4302/cpld-gr/ram.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
@@ -164,12 +164,12 @@
         <Message>
             <ID>35001723</ID>
             <Severity>Warning</Severity>
-            <Dynamic>//Mac/iCloud/Repos/GW4302/cpld-gr/REU.ldc</Dynamic>
+            <Dynamic>C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc</Dynamic>
         </Message>
         <Message>
             <ID>35001723</ID>
             <Severity>Warning</Severity>
-            <Dynamic>//Mac/iCloud/Repos/GW4302/cpld-gr/REU.ldc</Dynamic>
+            <Dynamic>C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc</Dynamic>
         </Message>
         <Message>
             <ID>35002005</ID>
@@ -182,20 +182,15 @@
             <Dynamic>BA</Dynamic>
         </Message>
         <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>RCLK</Dynamic>
-        </Message>
-        <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>12</Dynamic>
+            <Dynamic>0</Dynamic>
             <Dynamic>\ram/RA</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>11</Dynamic>
+            <Dynamic>1</Dynamic>
             <Dynamic>\ram/RA</Dynamic>
         </Message>
         <Message>

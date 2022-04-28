@@ -57,13 +57,13 @@ module REU(
 		{Block[7:0], Window[5:0], A[7:0]},
 		D[7:0], RAMRDD[7:0],
 		/* SDRAM Bus */
-		FCLK,
+		RCLK,
 		nCS, nRAS, nCAS, nRWE, CKE,
 		RBA, RA, DQMH, DQML, RD[7:0]);
 
-	assign DOE = PHI2 && nIO1 && nWE;
-	assign DDIR = !nWE;
-	assign nDOE = PHI2 && nIO1;
+	assign DOE = PHI2 && !nIO1 && nWE;
+	assign DDIR = !(PHI2 && !nIO1 && nWE);
+	assign nDOE = 1'b0;
 	
 	assign D[7:0] = DOE ? RAMRDD[7:0] : 8'bZ;
 	

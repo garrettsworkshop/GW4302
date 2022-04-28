@@ -97,24 +97,45 @@
     </pins>
 
     <!--
-        Instances in netlist: 104
+        Instances in netlist: 100
     -->
 
-    <instance  name = "ram/nRESETr_5__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "ram/S"  library = "work"  arch = ""  type = "reg">
         <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
         </pins>
 
         <nets>
-        <nitem  name = "ram/nRESETr[5]"  />
-        <nitem  name = "ram/nRESETr[4]"  />
-        <nitem  name = "ram/PORDone_N_82"  />
+        <nitem  name = "ram/n147"  />
+        <nitem  name = "ram/FCLK"  />
+        <nitem  name = "ram/S[3]"  />
+        <nitem  name = "ram/S[2]"  />
+        <nitem  name = "ram/S[1]"  />
+        <nitem  name = "ram/S[0]"  />
+        <nitem  name = "ram/S_3__N_54[3]"  />
+        <nitem  name = "ram/S_3__N_54[2]"  />
+        <nitem  name = "ram/S_3__N_54[1]"  />
+        <nitem  name = "ram/S_3__N_54[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "ram/PORDone_120"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "ram/PHI2r[1]_123"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -126,8 +147,8 @@
         <nets>
         <nitem  name = "ram/n147"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/PORDone"  />
-        <nitem  name = "ram/PORDone_N_79"  />
+        <nitem  name = "ram/PHI2r[1]"  />
+        <nitem  name = "ram/PHI2r[0]"  />
         </nets>
     </instance>
 
@@ -164,12 +185,12 @@
 
         <nets>
         <nitem  name = "PHI2"  />
-        <nitem  name = "nIO1"  />
-        <nitem  name = "nDOE"  />
+        <nitem  name = "nIO1_N_2"  />
+        <nitem  name = "DOE_N_6"  />
         </nets>
     </instance>
 
-    <instance  name = "nDOE_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "DOE_I_0_39"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -177,21 +198,172 @@
         </pins>
 
         <nets>
-        <nitem  name = "nDOE"  />
+        <nitem  name = "DOE_N_6"  />
         <nitem  name = "nWE"  />
         <nitem  name = "DOE"  />
         </nets>
     </instance>
 
-    <instance  name = "nWE_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "georeg/BlockWR_I_1"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "A[0]"  />
+        <nitem  name = "georeg/BlockWR_N_24"  />
+        <nitem  name = "georeg/BlockWR_N_23"  />
+        </nets>
+    </instance>
+
+    <instance  name = "georeg/BlockWR_I_2"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "A[6]"  />
+        <nitem  name = "georeg/BlockWR_N_25"  />
+        <nitem  name = "georeg/BlockWR_N_24"  />
+        </nets>
+    </instance>
+
+    <instance  name = "georeg/RegSEL_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "nIO2_N_4"  />
+        <nitem  name = "A[7]"  />
+        <nitem  name = "georeg/BlockWR_N_25"  />
+        </nets>
+    </instance>
+
+    <instance  name = "DOE_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "nWE"  />
-        <nitem  name = "nWE_N_5"  />
+        <nitem  name = "DOE"  />
+        <nitem  name = "DOE_N_5"  />
+        </nets>
+    </instance>
+
+    <instance  name = "ram/PHI2r[2]_122"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ram/n147"  />
+        <nitem  name = "ram/FCLK"  />
+        <nitem  name = "ram/PHI2r[2]"  />
+        <nitem  name = "ram/PHI2r[1]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "ram/PHI2r[0]_121"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ram/n147"  />
+        <nitem  name = "PHI2"  />
+        <nitem  name = "ram/PHI2r[0]"  />
+        <nitem  name = "ram/FCLK_N_40"  />
+        </nets>
+    </instance>
+
+    <instance  name = "ram/PORDone_I_0_148"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ram/pwr"  />
+        <nitem  name = "ram/PORDone"  />
+        <nitem  name = "ram/PORDone_N_65"  />
+        <nitem  name = "ram/PORDone_N_64"  />
+        </nets>
+    </instance>
+
+    <instance  name = "ram/PORDone_I_3"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ram/nRESETr[2]"  />
+        <nitem  name = "ram/PORDone_N_66"  />
+        <nitem  name = "ram/PORDone_N_65"  />
+        </nets>
+    </instance>
+
+    <instance  name = "ram/PORDone_I_4"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ram/nRESETr[3]"  />
+        <nitem  name = "ram/PORDone_N_67"  />
+        <nitem  name = "ram/PORDone_N_66"  />
+        </nets>
+    </instance>
+
+    <instance  name = "ram/nRESETr_5__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ram/nRESETr[5]"  />
+        <nitem  name = "ram/nRESETr[4]"  />
+        <nitem  name = "ram/PORDone_N_67"  />
+        </nets>
+    </instance>
+
+    <instance  name = "ram/PORDone_120"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "ram/n147"  />
+        <nitem  name = "ram/FCLK"  />
+        <nitem  name = "ram/PORDone"  />
+        <nitem  name = "ram/PORDone_N_64"  />
         </nets>
     </instance>
 
@@ -292,7 +464,7 @@
         <nets>
         <nitem  name = "ram/n147"  />
         <nitem  name = "ram/pwr"  />
-        <nitem  name = "ram/RCLK"  />
+        <nitem  name = "RCLK"  />
         <nitem  name = "ram/FCLK"  />
         </nets>
     </instance>
@@ -306,23 +478,6 @@
         <nets>
         <nitem  name = "ram/n147"  />
         <nitem  name = "ram/FCLK"  />
-        </nets>
-    </instance>
-
-    <instance  name = "georeg/nRESETr_24"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "georeg/gnd"  />
-        <nitem  name = "PHI2"  />
-        <nitem  name = "nRESET"  />
-        <nitem  name = "georeg/nRESETr"  />
         </nets>
     </instance>
 
@@ -363,109 +518,17 @@
         <nitem  name = "Window[2]"  />
         <nitem  name = "Window[1]"  />
         <nitem  name = "Window[0]"  />
-        <nitem  name = "georeg/PHI2_N_15"  />
-        <nitem  name = "georeg/Window_5__N_16[5]"  />
-        <nitem  name = "georeg/Window_5__N_16[4]"  />
-        <nitem  name = "georeg/Window_5__N_16[3]"  />
-        <nitem  name = "georeg/Window_5__N_16[2]"  />
-        <nitem  name = "georeg/Window_5__N_16[1]"  />
-        <nitem  name = "georeg/Window_5__N_16[0]"  />
+        <nitem  name = "georeg/PHI2_N_16"  />
+        <nitem  name = "georeg/Window_5__N_17[5]"  />
+        <nitem  name = "georeg/Window_5__N_17[4]"  />
+        <nitem  name = "georeg/Window_5__N_17[3]"  />
+        <nitem  name = "georeg/Window_5__N_17[2]"  />
+        <nitem  name = "georeg/Window_5__N_17[1]"  />
+        <nitem  name = "georeg/Window_5__N_17[0]"  />
         </nets>
     </instance>
 
     <instance  name = "georeg/Window_5__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "georeg/gnd"  />
-        <nitem  name = "georeg/nRESETr_N_31"  />
-        <nitem  name = "georeg/Window_5__N_32[5]"  />
-        <nitem  name = "georeg/Window_5__N_32[4]"  />
-        <nitem  name = "georeg/Window_5__N_32[3]"  />
-        <nitem  name = "georeg/Window_5__N_32[2]"  />
-        <nitem  name = "georeg/Window_5__N_32[1]"  />
-        <nitem  name = "georeg/Window_5__N_32[0]"  />
-        <nitem  name = "georeg/Window_5__N_16[5]"  />
-        <nitem  name = "georeg/Window_5__N_16[4]"  />
-        <nitem  name = "georeg/Window_5__N_16[3]"  />
-        <nitem  name = "georeg/Window_5__N_16[2]"  />
-        <nitem  name = "georeg/Window_5__N_16[1]"  />
-        <nitem  name = "georeg/Window_5__N_16[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "georeg/Block_7__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "georeg/gnd"  />
-        <nitem  name = "georeg/nRESETr_N_31"  />
-        <nitem  name = "georeg/Block_7__N_22[7]"  />
-        <nitem  name = "georeg/Block_7__N_22[6]"  />
-        <nitem  name = "georeg/Block_7__N_22[5]"  />
-        <nitem  name = "georeg/Block_7__N_22[4]"  />
-        <nitem  name = "georeg/Block_7__N_22[3]"  />
-        <nitem  name = "georeg/Block_7__N_22[2]"  />
-        <nitem  name = "georeg/Block_7__N_22[1]"  />
-        <nitem  name = "georeg/Block_7__N_22[0]"  />
-        <nitem  name = "georeg/Block_7__N_6[7]"  />
-        <nitem  name = "georeg/Block_7__N_6[6]"  />
-        <nitem  name = "georeg/Block_7__N_6[5]"  />
-        <nitem  name = "georeg/Block_7__N_6[4]"  />
-        <nitem  name = "georeg/Block_7__N_6[3]"  />
-        <nitem  name = "georeg/Block_7__N_6[2]"  />
-        <nitem  name = "georeg/Block_7__N_6[1]"  />
-        <nitem  name = "georeg/Block_7__N_6[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "georeg/mux_18"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[5]"  direction = "in"  />
         <pitem  name = "d1[4]"  direction = "in"  />
@@ -502,16 +565,16 @@
         <nitem  name = "Window[1]"  />
         <nitem  name = "Window[0]"  />
         <nitem  name = "georeg/WindowWR"  />
-        <nitem  name = "georeg/Window_5__N_32[5]"  />
-        <nitem  name = "georeg/Window_5__N_32[4]"  />
-        <nitem  name = "georeg/Window_5__N_32[3]"  />
-        <nitem  name = "georeg/Window_5__N_32[2]"  />
-        <nitem  name = "georeg/Window_5__N_32[1]"  />
-        <nitem  name = "georeg/Window_5__N_32[0]"  />
+        <nitem  name = "georeg/Window_5__N_17[5]"  />
+        <nitem  name = "georeg/Window_5__N_17[4]"  />
+        <nitem  name = "georeg/Window_5__N_17[3]"  />
+        <nitem  name = "georeg/Window_5__N_17[2]"  />
+        <nitem  name = "georeg/Window_5__N_17[1]"  />
+        <nitem  name = "georeg/Window_5__N_17[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "georeg/mux_17"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "georeg/Block_7__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
@@ -558,26 +621,14 @@
         <nitem  name = "Block[1]"  />
         <nitem  name = "Block[0]"  />
         <nitem  name = "georeg/BlockWR"  />
-        <nitem  name = "georeg/Block_7__N_22[7]"  />
-        <nitem  name = "georeg/Block_7__N_22[6]"  />
-        <nitem  name = "georeg/Block_7__N_22[5]"  />
-        <nitem  name = "georeg/Block_7__N_22[4]"  />
-        <nitem  name = "georeg/Block_7__N_22[3]"  />
-        <nitem  name = "georeg/Block_7__N_22[2]"  />
-        <nitem  name = "georeg/Block_7__N_22[1]"  />
-        <nitem  name = "georeg/Block_7__N_22[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "georeg/nRESETr_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "georeg/nRESETr"  />
-        <nitem  name = "georeg/nRESETr_N_31"  />
+        <nitem  name = "georeg/Block_7__N_7[7]"  />
+        <nitem  name = "georeg/Block_7__N_7[6]"  />
+        <nitem  name = "georeg/Block_7__N_7[5]"  />
+        <nitem  name = "georeg/Block_7__N_7[4]"  />
+        <nitem  name = "georeg/Block_7__N_7[3]"  />
+        <nitem  name = "georeg/Block_7__N_7[2]"  />
+        <nitem  name = "georeg/Block_7__N_7[1]"  />
+        <nitem  name = "georeg/Block_7__N_7[0]"  />
         </nets>
     </instance>
 
@@ -589,7 +640,7 @@
 
         <nets>
         <nitem  name = "PHI2"  />
-        <nitem  name = "georeg/PHI2_N_15"  />
+        <nitem  name = "georeg/PHI2_N_16"  />
         </nets>
     </instance>
 
@@ -640,15 +691,15 @@
         <nitem  name = "Block[2]"  />
         <nitem  name = "Block[1]"  />
         <nitem  name = "Block[0]"  />
-        <nitem  name = "georeg/PHI2_N_15"  />
-        <nitem  name = "georeg/Block_7__N_6[7]"  />
-        <nitem  name = "georeg/Block_7__N_6[6]"  />
-        <nitem  name = "georeg/Block_7__N_6[5]"  />
-        <nitem  name = "georeg/Block_7__N_6[4]"  />
-        <nitem  name = "georeg/Block_7__N_6[3]"  />
-        <nitem  name = "georeg/Block_7__N_6[2]"  />
-        <nitem  name = "georeg/Block_7__N_6[1]"  />
-        <nitem  name = "georeg/Block_7__N_6[0]"  />
+        <nitem  name = "georeg/PHI2_N_16"  />
+        <nitem  name = "georeg/Block_7__N_7[7]"  />
+        <nitem  name = "georeg/Block_7__N_7[6]"  />
+        <nitem  name = "georeg/Block_7__N_7[5]"  />
+        <nitem  name = "georeg/Block_7__N_7[4]"  />
+        <nitem  name = "georeg/Block_7__N_7[3]"  />
+        <nitem  name = "georeg/Block_7__N_7[2]"  />
+        <nitem  name = "georeg/Block_7__N_7[1]"  />
+        <nitem  name = "georeg/Block_7__N_7[0]"  />
         </nets>
     </instance>
 
@@ -661,12 +712,12 @@
 
         <nets>
         <nitem  name = "georeg/WindowWR"  />
-        <nitem  name = "georeg/nWE_N_42"  />
-        <nitem  name = "georeg/WindowWR_N_43"  />
+        <nitem  name = "georeg/nWE_N_27"  />
+        <nitem  name = "georeg/WindowWR_N_28"  />
         </nets>
     </instance>
 
-    <instance  name = "georeg/BlockWR_N_39_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "georeg/BlockWR_N_24_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -674,9 +725,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "georeg/BlockWR_N_39"  />
-        <nitem  name = "georeg/A_0__N_45"  />
-        <nitem  name = "georeg/WindowWR_N_43"  />
+        <nitem  name = "georeg/BlockWR_N_24"  />
+        <nitem  name = "georeg/A_0__N_30"  />
+        <nitem  name = "georeg/WindowWR_N_28"  />
         </nets>
     </instance>
 
@@ -688,7 +739,7 @@
 
         <nets>
         <nitem  name = "A[0]"  />
-        <nitem  name = "georeg/A_0__N_45"  />
+        <nitem  name = "georeg/A_0__N_30"  />
         </nets>
     </instance>
 
@@ -701,8 +752,8 @@
 
         <nets>
         <nitem  name = "georeg/BlockWR"  />
-        <nitem  name = "georeg/BlockWR_N_38"  />
-        <nitem  name = "georeg/nWE_N_42"  />
+        <nitem  name = "georeg/BlockWR_N_23"  />
+        <nitem  name = "georeg/nWE_N_27"  />
         </nets>
     </instance>
 
@@ -714,49 +765,7 @@
 
         <nets>
         <nitem  name = "nWE"  />
-        <nitem  name = "georeg/nWE_N_42"  />
-        </nets>
-    </instance>
-
-    <instance  name = "georeg/BlockWR_I_1"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "A[0]"  />
-        <nitem  name = "georeg/BlockWR_N_39"  />
-        <nitem  name = "georeg/BlockWR_N_38"  />
-        </nets>
-    </instance>
-
-    <instance  name = "georeg/BlockWR_I_2"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "A[6]"  />
-        <nitem  name = "georeg/BlockWR_N_40"  />
-        <nitem  name = "georeg/BlockWR_N_39"  />
-        </nets>
-    </instance>
-
-    <instance  name = "georeg/RegSEL_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "nIO2_N_4"  />
-        <nitem  name = "A[7]"  />
-        <nitem  name = "georeg/BlockWR_N_40"  />
+        <nitem  name = "georeg/nWE_N_27"  />
         </nets>
     </instance>
 
@@ -802,136 +811,6 @@
         </nets>
     </instance>
 
-    <instance  name = "ram/PORDone_I_4"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "ram/nRESETr[3]"  />
-        <nitem  name = "ram/PORDone_N_82"  />
-        <nitem  name = "ram/PORDone_N_81"  />
-        </nets>
-    </instance>
-
-    <instance  name = "ram/PORDone_I_3"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "ram/nRESETr[2]"  />
-        <nitem  name = "ram/PORDone_N_81"  />
-        <nitem  name = "ram/PORDone_N_80"  />
-        </nets>
-    </instance>
-
-    <instance  name = "ram/PORDone_I_0_148"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "ram/pwr"  />
-        <nitem  name = "ram/PORDone"  />
-        <nitem  name = "ram/PORDone_N_80"  />
-        <nitem  name = "ram/PORDone_N_79"  />
-        </nets>
-    </instance>
-
-    <instance  name = "ram/PHI2r[0]_121"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "clk"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "ram/n147"  />
-        <nitem  name = "PHI2"  />
-        <nitem  name = "ram/PHI2r[0]"  />
-        <nitem  name = "ram/FCLK_N_55"  />
-        </nets>
-    </instance>
-
-    <instance  name = "ram/PHI2r[2]_122"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "d"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "ram/n147"  />
-        <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/PHI2r[2]"  />
-        <nitem  name = "ram/PHI2r[1]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "ram/PHI2r[1]_123"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "d"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "ram/n147"  />
-        <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/PHI2r[1]"  />
-        <nitem  name = "ram/PHI2r[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "ram/S"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "set[3]"  direction = "in"  />
-        <pitem  name = "set[2]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "reset[3]"  direction = "in"  />
-        <pitem  name = "reset[2]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "q[3]"  direction = "out"  />
-        <pitem  name = "q[2]"  direction = "out"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "d[3]"  direction = "in"  />
-        <pitem  name = "d[2]"  direction = "in"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "ram/n147"  />
-        <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/S[3]"  />
-        <nitem  name = "ram/S[2]"  />
-        <nitem  name = "ram/S[1]"  />
-        <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/S_3__N_69[3]"  />
-        <nitem  name = "ram/S_3__N_69[2]"  />
-        <nitem  name = "ram/S_3__N_69[1]"  />
-        <nitem  name = "ram/S_3__N_69[0]"  />
-        </nets>
-    </instance>
-
     <instance  name = "ram/PHI2r_2__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
@@ -940,7 +819,7 @@
 
         <nets>
         <nitem  name = "ram/PHI2r[2]"  />
-        <nitem  name = "ram/PHI2r_2__N_107"  />
+        <nitem  name = "ram/PHI2r_2__N_92"  />
         </nets>
     </instance>
 
@@ -954,7 +833,7 @@
         <nets>
         <nitem  name = "ram/PHI2r[1]"  />
         <nitem  name = "ram/PHI2Rise"  />
-        <nitem  name = "ram/PHI2r_2__N_107"  />
+        <nitem  name = "ram/PHI2r_2__N_92"  />
         </nets>
     </instance>
 
@@ -966,7 +845,7 @@
 
         <nets>
         <nitem  name = "ram/PORDone"  />
-        <nitem  name = "ram/PORDone_N_78"  />
+        <nitem  name = "ram/PORDone_N_63"  />
         </nets>
     </instance>
 
@@ -1123,10 +1002,10 @@
         <nitem  name = "ram/n31"  />
         <nitem  name = "ram/n32"  />
         <nitem  name = "ram/n33"  />
-        <nitem  name = "ram/S_3__N_73[3]"  />
-        <nitem  name = "ram/S_3__N_73[2]"  />
-        <nitem  name = "ram/S_3__N_73[1]"  />
-        <nitem  name = "ram/S_3__N_73[0]"  />
+        <nitem  name = "ram/S_3__N_58[3]"  />
+        <nitem  name = "ram/S_3__N_58[2]"  />
+        <nitem  name = "ram/S_3__N_58[1]"  />
+        <nitem  name = "ram/S_3__N_58[0]"  />
         </nets>
     </instance>
 
@@ -1149,15 +1028,15 @@
 
         <nets>
         <nitem  name = "ram/n147"  />
-        <nitem  name = "ram/PORDone_N_78"  />
-        <nitem  name = "ram/S_3__N_73[3]"  />
-        <nitem  name = "ram/S_3__N_73[2]"  />
-        <nitem  name = "ram/S_3__N_73[1]"  />
-        <nitem  name = "ram/S_3__N_73[0]"  />
-        <nitem  name = "ram/S_3__N_69[3]"  />
-        <nitem  name = "ram/S_3__N_69[2]"  />
-        <nitem  name = "ram/S_3__N_69[1]"  />
-        <nitem  name = "ram/S_3__N_69[0]"  />
+        <nitem  name = "ram/PORDone_N_63"  />
+        <nitem  name = "ram/S_3__N_58[3]"  />
+        <nitem  name = "ram/S_3__N_58[2]"  />
+        <nitem  name = "ram/S_3__N_58[1]"  />
+        <nitem  name = "ram/S_3__N_58[0]"  />
+        <nitem  name = "ram/S_3__N_54[3]"  />
+        <nitem  name = "ram/S_3__N_54[2]"  />
+        <nitem  name = "ram/S_3__N_54[1]"  />
+        <nitem  name = "ram/S_3__N_54[0]"  />
         </nets>
     </instance>
 
@@ -1174,7 +1053,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "ram/FCLK"  />
         <nitem  name = "ram/InitDone"  />
-        <nitem  name = "ram/InitDone_N_108"  />
+        <nitem  name = "ram/InitDone_N_93"  />
         </nets>
     </instance>
 
@@ -1194,7 +1073,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/InitDone_N_109"  />
+        <nitem  name = "ram/InitDone_N_94"  />
         </nets>
     </instance>
 
@@ -1209,8 +1088,8 @@
         <nets>
         <nitem  name = "ram/pwr"  />
         <nitem  name = "ram/InitDone"  />
-        <nitem  name = "ram/InitDone_N_109"  />
-        <nitem  name = "ram/InitDone_N_108"  />
+        <nitem  name = "ram/InitDone_N_94"  />
+        <nitem  name = "ram/InitDone_N_93"  />
         </nets>
     </instance>
 
@@ -1227,7 +1106,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "nCS"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/nCS_N_86"  />
+        <nitem  name = "ram/nCS_N_71"  />
         </nets>
     </instance>
 
@@ -1239,7 +1118,7 @@
 
         <nets>
         <nitem  name = "nIO1_N_2"  />
-        <nitem  name = "ram/RAMSEL_N_94"  />
+        <nitem  name = "ram/RAMSEL_N_79"  />
         </nets>
     </instance>
 
@@ -1251,7 +1130,7 @@
 
         <nets>
         <nitem  name = "nWE"  />
-        <nitem  name = "ram/nWE_N_92"  />
+        <nitem  name = "ram/nWE_N_77"  />
         </nets>
     </instance>
 
@@ -1264,20 +1143,20 @@
 
         <nets>
         <nitem  name = "nIO1_N_2"  />
-        <nitem  name = "ram/nWE_N_92"  />
-        <nitem  name = "ram/nCS_N_90"  />
+        <nitem  name = "ram/nWE_N_77"  />
+        <nitem  name = "ram/nCS_N_75"  />
         </nets>
     </instance>
 
-    <instance  name = "ram/RDD_7__N_84_I_0_158"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "ram/RDD_7__N_69_I_0_158"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "ram/RDD_7__N_84"  />
-        <nitem  name = "ram/RDD_7__N_89"  />
+        <nitem  name = "ram/RDD_7__N_69"  />
+        <nitem  name = "ram/RDD_7__N_74"  />
         </nets>
     </instance>
 
@@ -1291,25 +1170,25 @@
 
         <nets>
         <nitem  name = "ram/n147"  />
-        <nitem  name = "ram/nCS_N_90"  />
-        <nitem  name = "ram/RDD_7__N_89"  />
-        <nitem  name = "ram/nCS_N_87"  />
+        <nitem  name = "ram/nCS_N_75"  />
+        <nitem  name = "ram/RDD_7__N_74"  />
+        <nitem  name = "ram/nCS_N_72"  />
         </nets>
     </instance>
 
-    <instance  name = "ram/nCS_N_90_I_0_162"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "ram/nCS_N_75_I_0_162"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "ram/nCS_N_90"  />
-        <nitem  name = "ram/nCS_N_99"  />
+        <nitem  name = "ram/nCS_N_75"  />
+        <nitem  name = "ram/nCS_N_84"  />
         </nets>
     </instance>
 
-    <instance  name = "ram/RDD_7__N_84_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "ram/RDD_7__N_69_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "c"  direction = "in"  />
@@ -1319,9 +1198,9 @@
 
         <nets>
         <nitem  name = "ram/pwr"  />
-        <nitem  name = "ram/nCS_N_90"  />
-        <nitem  name = "ram/RDD_7__N_84"  />
-        <nitem  name = "ram/CKE_N_101"  />
+        <nitem  name = "ram/nCS_N_75"  />
+        <nitem  name = "ram/RDD_7__N_69"  />
+        <nitem  name = "ram/CKE_N_86"  />
         </nets>
     </instance>
 
@@ -1347,9 +1226,9 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RAMSEL_N_94"  />
-        <nitem  name = "ram/nCS_N_87"  />
-        <nitem  name = "ram/nCS_N_86"  />
+        <nitem  name = "ram/RAMSEL_N_79"  />
+        <nitem  name = "ram/nCS_N_72"  />
+        <nitem  name = "ram/nCS_N_71"  />
         </nets>
     </instance>
 
@@ -1375,8 +1254,8 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RAMSEL_N_94"  />
-        <nitem  name = "ram/nRAS_N_95"  />
+        <nitem  name = "ram/RAMSEL_N_79"  />
+        <nitem  name = "ram/nRAS_N_80"  />
         </nets>
     </instance>
 
@@ -1402,8 +1281,8 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/nCS_N_87"  />
-        <nitem  name = "ram/nCAS_N_96"  />
+        <nitem  name = "ram/nCS_N_72"  />
+        <nitem  name = "ram/nCAS_N_81"  />
         </nets>
     </instance>
 
@@ -1430,8 +1309,8 @@
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
         <nitem  name = "ram/InitDone"  />
-        <nitem  name = "ram/nCS_N_99"  />
-        <nitem  name = "ram/nRWE_N_97"  />
+        <nitem  name = "ram/nCS_N_84"  />
+        <nitem  name = "ram/nRWE_N_82"  />
         </nets>
     </instance>
 
@@ -1457,8 +1336,8 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/CKE_N_101"  />
-        <nitem  name = "ram/CKE_N_100"  />
+        <nitem  name = "ram/CKE_N_86"  />
+        <nitem  name = "ram/CKE_N_85"  />
         </nets>
     </instance>
 
@@ -1475,7 +1354,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "nRAS"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/nRAS_N_95"  />
+        <nitem  name = "ram/nRAS_N_80"  />
         </nets>
     </instance>
 
@@ -1492,7 +1371,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "nCAS"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/nCAS_N_96"  />
+        <nitem  name = "ram/nCAS_N_81"  />
         </nets>
     </instance>
 
@@ -1509,7 +1388,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "nRWE"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/nRWE_N_97"  />
+        <nitem  name = "ram/nRWE_N_82"  />
         </nets>
     </instance>
 
@@ -1526,7 +1405,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "CKE"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/CKE_N_100"  />
+        <nitem  name = "ram/CKE_N_85"  />
         </nets>
     </instance>
 
@@ -1548,8 +1427,8 @@
         <nitem  name = "RBA[1]"  />
         <nitem  name = "RBA[0]"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/RBA_1__N_56[1]"  />
-        <nitem  name = "ram/RBA_1__N_56[0]"  />
+        <nitem  name = "ram/RBA_1__N_41[1]"  />
+        <nitem  name = "ram/RBA_1__N_41[0]"  />
         </nets>
     </instance>
 
@@ -1561,7 +1440,7 @@
 
         <nets>
         <nitem  name = "A[0]"  />
-        <nitem  name = "ram/A_0__N_105"  />
+        <nitem  name = "ram/A_0__N_90"  />
         </nets>
     </instance>
 
@@ -1597,8 +1476,8 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RBA_1__N_56[1]"  />
-        <nitem  name = "ram/RBA_1__N_56[0]"  />
+        <nitem  name = "ram/RBA_1__N_41[1]"  />
+        <nitem  name = "ram/RBA_1__N_41[0]"  />
         </nets>
     </instance>
 
@@ -1625,7 +1504,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_58"  />
+        <nitem  name = "ram/RA_12__N_43"  />
         </nets>
     </instance>
 
@@ -1652,7 +1531,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_59"  />
+        <nitem  name = "ram/RA_12__N_44"  />
         </nets>
     </instance>
 
@@ -1679,7 +1558,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_60"  />
+        <nitem  name = "ram/RA_12__N_45"  />
         </nets>
     </instance>
 
@@ -1706,7 +1585,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_61"  />
+        <nitem  name = "ram/RA_12__N_46"  />
         </nets>
     </instance>
 
@@ -1733,7 +1612,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_62"  />
+        <nitem  name = "ram/RA_12__N_47"  />
         </nets>
     </instance>
 
@@ -1761,7 +1640,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_63"  />
+        <nitem  name = "ram/RA_12__N_48"  />
         </nets>
     </instance>
 
@@ -1788,7 +1667,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_64"  />
+        <nitem  name = "ram/RA_12__N_49"  />
         </nets>
     </instance>
 
@@ -1815,7 +1694,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_65"  />
+        <nitem  name = "ram/RA_12__N_50"  />
         </nets>
     </instance>
 
@@ -1842,7 +1721,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_66"  />
+        <nitem  name = "ram/RA_12__N_51"  />
         </nets>
     </instance>
 
@@ -1869,7 +1748,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_67"  />
+        <nitem  name = "ram/RA_12__N_52"  />
         </nets>
     </instance>
 
@@ -1896,7 +1775,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RA_12__N_68"  />
+        <nitem  name = "ram/RA_12__N_53"  />
         </nets>
     </instance>
 
@@ -1922,7 +1801,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/DQMH_N_102"  />
+        <nitem  name = "ram/DQMH_N_87"  />
         </nets>
     </instance>
 
@@ -1947,8 +1826,8 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/A_0__N_105"  />
-        <nitem  name = "ram/DQML_N_103"  />
+        <nitem  name = "ram/A_0__N_90"  />
+        <nitem  name = "ram/DQML_N_88"  />
         </nets>
     </instance>
 
@@ -2025,17 +1904,17 @@
         <nitem  name = "RA[1]"  />
         <nitem  name = "RA[0]"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/RA_12__N_58"  />
-        <nitem  name = "ram/RA_12__N_59"  />
-        <nitem  name = "ram/RA_12__N_60"  />
-        <nitem  name = "ram/RA_12__N_61"  />
-        <nitem  name = "ram/RA_12__N_62"  />
-        <nitem  name = "ram/RA_12__N_63"  />
-        <nitem  name = "ram/RA_12__N_64"  />
-        <nitem  name = "ram/RA_12__N_65"  />
-        <nitem  name = "ram/RA_12__N_66"  />
-        <nitem  name = "ram/RA_12__N_67"  />
-        <nitem  name = "ram/RA_12__N_68"  />
+        <nitem  name = "ram/RA_12__N_43"  />
+        <nitem  name = "ram/RA_12__N_44"  />
+        <nitem  name = "ram/RA_12__N_45"  />
+        <nitem  name = "ram/RA_12__N_46"  />
+        <nitem  name = "ram/RA_12__N_47"  />
+        <nitem  name = "ram/RA_12__N_48"  />
+        <nitem  name = "ram/RA_12__N_49"  />
+        <nitem  name = "ram/RA_12__N_50"  />
+        <nitem  name = "ram/RA_12__N_51"  />
+        <nitem  name = "ram/RA_12__N_52"  />
+        <nitem  name = "ram/RA_12__N_53"  />
         </nets>
     </instance>
 
@@ -2052,7 +1931,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "DQMH"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/DQMH_N_102"  />
+        <nitem  name = "ram/DQMH_N_87"  />
         </nets>
     </instance>
 
@@ -2069,7 +1948,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "DQML"  />
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/DQML_N_103"  />
+        <nitem  name = "ram/DQML_N_88"  />
         </nets>
     </instance>
 
@@ -2120,15 +1999,15 @@
         <nitem  name = "RAMRDD[2]"  />
         <nitem  name = "RAMRDD[1]"  />
         <nitem  name = "RAMRDD[0]"  />
-        <nitem  name = "ram/FCLK_N_55"  />
-        <nitem  name = "ram/RDD_7__N_46[7]"  />
-        <nitem  name = "ram/RDD_7__N_46[6]"  />
-        <nitem  name = "ram/RDD_7__N_46[5]"  />
-        <nitem  name = "ram/RDD_7__N_46[4]"  />
-        <nitem  name = "ram/RDD_7__N_46[3]"  />
-        <nitem  name = "ram/RDD_7__N_46[2]"  />
-        <nitem  name = "ram/RDD_7__N_46[1]"  />
-        <nitem  name = "ram/RDD_7__N_46[0]"  />
+        <nitem  name = "ram/FCLK_N_40"  />
+        <nitem  name = "ram/RDD_7__N_31[7]"  />
+        <nitem  name = "ram/RDD_7__N_31[6]"  />
+        <nitem  name = "ram/RDD_7__N_31[5]"  />
+        <nitem  name = "ram/RDD_7__N_31[4]"  />
+        <nitem  name = "ram/RDD_7__N_31[3]"  />
+        <nitem  name = "ram/RDD_7__N_31[2]"  />
+        <nitem  name = "ram/RDD_7__N_31[1]"  />
+        <nitem  name = "ram/RDD_7__N_31[0]"  />
         </nets>
     </instance>
 
@@ -2140,7 +2019,7 @@
 
         <nets>
         <nitem  name = "ram/FCLK"  />
-        <nitem  name = "ram/FCLK_N_55"  />
+        <nitem  name = "ram/FCLK_N_40"  />
         </nets>
     </instance>
 
@@ -2154,7 +2033,7 @@
         <nets>
         <nitem  name = "nIO1_N_2"  />
         <nitem  name = "nWE"  />
-        <nitem  name = "ram/RDD_7__N_84"  />
+        <nitem  name = "ram/RDD_7__N_69"  />
         </nets>
     </instance>
 
@@ -2175,7 +2054,7 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RDD_7__N_85"  />
+        <nitem  name = "ram/RDD_7__N_70"  />
         </nets>
     </instance>
 
@@ -2187,9 +2066,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "ram/RDD_7__N_84"  />
-        <nitem  name = "ram/RDD_7__N_85"  />
-        <nitem  name = "ram/RDD_7__N_83"  />
+        <nitem  name = "ram/RDD_7__N_69"  />
+        <nitem  name = "ram/RDD_7__N_70"  />
+        <nitem  name = "ram/RDD_7__N_68"  />
         </nets>
     </instance>
 
@@ -2239,15 +2118,15 @@
         <nitem  name = "RD[2]"  />
         <nitem  name = "RD[1]"  />
         <nitem  name = "RD[0]"  />
-        <nitem  name = "ram/RDD_7__N_83"  />
-        <nitem  name = "ram/RDD_7__N_46[7]"  />
-        <nitem  name = "ram/RDD_7__N_46[6]"  />
-        <nitem  name = "ram/RDD_7__N_46[5]"  />
-        <nitem  name = "ram/RDD_7__N_46[4]"  />
-        <nitem  name = "ram/RDD_7__N_46[3]"  />
-        <nitem  name = "ram/RDD_7__N_46[2]"  />
-        <nitem  name = "ram/RDD_7__N_46[1]"  />
-        <nitem  name = "ram/RDD_7__N_46[0]"  />
+        <nitem  name = "ram/RDD_7__N_68"  />
+        <nitem  name = "ram/RDD_7__N_31[7]"  />
+        <nitem  name = "ram/RDD_7__N_31[6]"  />
+        <nitem  name = "ram/RDD_7__N_31[5]"  />
+        <nitem  name = "ram/RDD_7__N_31[4]"  />
+        <nitem  name = "ram/RDD_7__N_31[3]"  />
+        <nitem  name = "ram/RDD_7__N_31[2]"  />
+        <nitem  name = "ram/RDD_7__N_31[1]"  />
+        <nitem  name = "ram/RDD_7__N_31[0]"  />
         </nets>
     </instance>
 
@@ -2264,7 +2143,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "ram/FCLK"  />
         <nitem  name = "ram/RDOE"  />
-        <nitem  name = "ram/RDOE_N_110"  />
+        <nitem  name = "ram/RDOE_N_95"  />
         </nets>
     </instance>
 
@@ -2285,11 +2164,11 @@
         <nitem  name = "ram/S[2]"  />
         <nitem  name = "ram/S[1]"  />
         <nitem  name = "ram/S[0]"  />
-        <nitem  name = "ram/RDOE_N_111"  />
+        <nitem  name = "ram/RDOE_N_96"  />
         </nets>
     </instance>
 
-    <instance  name = "ram/nCS_N_90_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "ram/nCS_N_75_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -2297,9 +2176,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "ram/nCS_N_90"  />
-        <nitem  name = "ram/RDOE_N_111"  />
-        <nitem  name = "ram/RDOE_N_110"  />
+        <nitem  name = "ram/nCS_N_75"  />
+        <nitem  name = "ram/RDOE_N_96"  />
+        <nitem  name = "ram/RDOE_N_95"  />
         </nets>
     </instance>
 
@@ -2358,7 +2237,7 @@
         <nitem  name = "ram/n147"  />
         <nitem  name = "nRESET"  />
         <nitem  name = "ram/nRESETr[0]"  />
-        <nitem  name = "ram/FCLK_N_55"  />
+        <nitem  name = "ram/FCLK_N_40"  />
         </nets>
     </instance>
 
@@ -2366,23 +2245,22 @@
     <instance  name = "georeg"  />
     <instance  name = "ram"  />
     <!--
-        REG instances in netlist: 26
+        REG instances in netlist: 25
     -->
 
     <regs>
+        <reg  name = "ram/S"  />
+        <reg  name = "ram/PHI2r[1]_123"  />
+        <reg  name = "ram/PHI2r[2]_122"  />
+        <reg  name = "ram/PHI2r[0]_121"  />
         <reg  name = "ram/PORDone_120"  />
         <reg  name = "ram/nRESETr[1]_119"  />
         <reg  name = "ram/nRESETr[2]_118"  />
         <reg  name = "ram/nRESETr[3]_117"  />
         <reg  name = "ram/nRESETr[4]_116"  />
         <reg  name = "ram/nRESETr[5]_115"  />
-        <reg  name = "georeg/nRESETr_24"  />
         <reg  name = "georeg/Window"  />
         <reg  name = "georeg/Block"  />
-        <reg  name = "ram/PHI2r[0]_121"  />
-        <reg  name = "ram/PHI2r[2]_122"  />
-        <reg  name = "ram/PHI2r[1]_123"  />
-        <reg  name = "ram/S"  />
         <reg  name = "ram/InitDone_125"  />
         <reg  name = "ram/nCS_126"  />
         <reg  name = "ram/nRAS_127"  />

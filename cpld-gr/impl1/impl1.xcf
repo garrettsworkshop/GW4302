@@ -19,9 +19,9 @@
 				<BScanLen>1</BScanLen>
 				<BScanVal>0</BScanVal>
 			</Bypass>
-			<File>C:/Users/garre/Repos/GW4302/cpld/impl1/REU_impl1.jed</File>
-			<FileTime>04/27/22 05:11:44</FileTime>
-			<JedecChecksum>0x7BAB</JedecChecksum>
+			<File>C:/Users/garre/Repos/GW4302/cpld-gr/impl1/REU_impl1.jed</File>
+			<FileTime>04/28/22 07:00:16</FileTime>
+			<JedecChecksum>0x49FE</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
