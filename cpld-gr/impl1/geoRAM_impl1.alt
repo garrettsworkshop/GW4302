@@ -1,0 +1,68 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu Apr 28 09:02:59 2022 *
+NOTE DESIGN NAME: geoRAM *
+NOTE DEVICE NAME: LCMXO2-640HC-4TQFP100 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS D[2] : 8 : inout *
+NOTE PINS D[7] : 13 : inout *
+NOTE PINS D[5] : 12 : inout *
+NOTE PINS D[3] : 10 : inout *
+NOTE PINS D[6] : 14 : inout *
+NOTE PINS D[4] : 9 : inout *
+NOTE PINS D[0] : 4 : inout *
+NOTE PINS D[1] : 7 : inout *
+NOTE PINS RD[7] : 66 : inout *
+NOTE PINS RD[6] : 65 : inout *
+NOTE PINS RD[5] : 64 : inout *
+NOTE PINS RD[4] : 62 : inout *
+NOTE PINS RD[3] : 60 : inout *
+NOTE PINS RD[2] : 59 : inout *
+NOTE PINS RD[1] : 58 : inout *
+NOTE PINS RD[0] : 57 : inout *
+NOTE PINS nWEDMA : 17 : out *
+NOTE PINS nDMA : 25 : out *
+NOTE PINS nAOE : 32 : out *
+NOTE PINS ADIR : 31 : out *
+NOTE PINS nRWOE : 20 : out *
+NOTE PINS nDOE : 16 : out *
+NOTE PINS DDIR : 15 : out *
+NOTE PINS nIRQ : 18 : out *
+NOTE PINS RCLK : 63 : out *
+NOTE PINS nCS : 88 : out *
+NOTE PINS nRAS : 87 : out *
+NOTE PINS nCAS : 86 : out *
+NOTE PINS nRWE : 85 : out *
+NOTE PINS CKE : 67 : out *
+NOTE PINS RBA[1] : 97 : out *
+NOTE PINS RBA[0] : 96 : out *
+NOTE PINS RA[12] : 68 : out *
+NOTE PINS RA[11] : 69 : out *
+NOTE PINS RA[10] : 98 : out *
+NOTE PINS RA[9] : 70 : out *
+NOTE PINS RA[8] : 71 : out *
+NOTE PINS RA[7] : 74 : out *
+NOTE PINS RA[6] : 75 : out *
+NOTE PINS RA[5] : 78 : out *
+NOTE PINS RA[4] : 82 : out *
+NOTE PINS RA[3] : 3 : out *
+NOTE PINS RA[2] : 2 : out *
+NOTE PINS RA[1] : 1 : out *
+NOTE PINS RA[0] : 99 : out *
+NOTE PINS DQMH : 83 : out *
+NOTE PINS DQML : 84 : out *
+NOTE PINS PHI2 : 38 : in *
+NOTE PINS nRESET : 28 : in *
+NOTE PINS A[7] : 48 : in *
+NOTE PINS A[6] : 47 : in *
+NOTE PINS A[5] : 49 : in *
+NOTE PINS A[4] : 45 : in *
+NOTE PINS A[3] : 53 : in *
+NOTE PINS A[2] : 54 : in *
+NOTE PINS A[1] : 52 : in *
+NOTE PINS A[0] : 51 : in *
+NOTE PINS nWE : 21 : in *
+NOTE PINS nIO1 : 27 : in *
+NOTE PINS nIO2 : 29 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

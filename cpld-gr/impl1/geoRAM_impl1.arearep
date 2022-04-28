@@ -1,0 +1,49 @@
+----------------------------------------------------------------------
+Report for cell geoRAM.TECH
+Register bits:  58 of 877 (6.613%)
+I/O cells:      60
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB        16          100.0
+                            FD1P3AX        24          100.0
+                            FD1P3IX         1          100.0
+                            FD1S3AX        16          100.0
+                            FD1S3IX        13          100.0
+                            FD1S3JX         4          100.0
+                                GSR         1          100.0
+                                 IB        13          100.0
+                                INV         2          100.0
+                               LUT4        43          100.0
+                                 OB        31          100.0
+                             ODDRXE         1          100.0
+                               OSCH         1          100.0
+                              PFUMX         1          100.0
+SUB MODULES
+                             GeoReg         1
+                                RAM         1
+                              TOTAL       169
+----------------------------------------------------------------------
+Report for cell GeoReg.v1
+Instance Path : georeg
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        14           58.3
+                            FD1S3AX         1            6.3
+                               LUT4         5           11.6
+                              TOTAL        20
+----------------------------------------------------------------------
+Report for cell RAM.v1
+Instance Path : ram
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        10           41.7
+                            FD1P3IX         1          100.0
+                            FD1S3AX        15           93.8
+                            FD1S3IX        13          100.0
+                            FD1S3JX         4          100.0
+                                INV         1           50.0
+                               LUT4        36           83.7
+                             ODDRXE         1          100.0
+                               OSCH         1          100.0
+                              PFUMX         1          100.0
+                              TOTAL        83

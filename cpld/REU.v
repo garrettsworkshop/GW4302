@@ -79,7 +79,7 @@ module REU(
 		RCLK,
 		nCS, nRAS, nCAS, nRWE, CKE,
 		RBA, RA, DQMH, DQML, RD[7:0]);
-		
+	
 	DMASeq dmaseq(
 		/* Clock & Reset */
 		PHI2, nRESET,
@@ -95,7 +95,7 @@ module REU(
 		RAMRDD[7:0]==D[7:0], Execute, XferType[1:0], Length1,
 		/* Register Control Outputs */
 		IncCA, DecLen, IncREUA, XferEnd, SetEndOfBlock, SetVerifyErr);
-		
+	
 	Glue glue(
 		/* 6502 Bus */
 		PHI2, BA,

@@ -1,0 +1,7 @@
+#Start recording tcl command: 4/28/2022 09:01:15
+#Project Location: //Mac/iCloud/Repos/GW4302/cpld-gr; Project name: geoRAM
+prj_project new -name "geoRAM" -impl "impl1" -dev LCMXO2-640HC-4TG100C -synthesis "lse"
+prj_src add "//Mac/iCloud/Repos/GW4302/cpld-gr/geoRAM.v" "//Mac/iCloud/Repos/GW4302/cpld-gr/RAM.v" "//Mac/iCloud/Repos/GW4302/cpld-gr/Reg.v"
+prj_project save
+prj_run Export -impl impl1
+#Stop recording: 4/28/2022 09:03:23

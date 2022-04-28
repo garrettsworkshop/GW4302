@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "geoRAM_impl1.log"
+-o "geoRAM_impl1.csv"
+-pr "geoRAM_impl1.prf"

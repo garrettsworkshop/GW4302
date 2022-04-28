@@ -59,8 +59,22 @@ wire RDCMDg = RDCMD && !WRCMD && InitDone; // Read command (lower priority)
 // Initialization complete after S7 reached for the first time
 always @(posedge C8M) if (S[2:0]==3'h7) InitDone <= 1'b1;
 
+/* Refresh Counter */
+reg [2:0] RefCnt; // Refresh counter counts from 0-6
+always @(posedge C8M) begin
+	if (S==3'h7 && InitDone) begin
+		if (RefCnt[2:0]==3'h6) RefCnt[2:0] <= 3'h0
+		else RefCnt[1:0] <= RefCnt[1:0]+2'h1;
+	end
+end
+reg nFastRef = 0; // Fast refresh period until first time RefCnt == 6
+wire FastRef = !nFastRef;
+always @(posedge C8M) begin if (RefCnt[1:0]==3'h6) nFastRef <= 1;
+// Refresh requested during fast refresh or when RefCnt == 0
+wire RefReq = FastRef || RefCnt[1:0]==2'b00;
+
 /* SDRAM command issue */
-// Command issue is a function of S[2:0], InitDone, RDCMD, WRCMD
+// Command issue is a function of S, InitDone, RDCMD, WRCMD, RefReq
 always @(posedge C8M) begin
 	case (S[2:0])
 		3'h0: begin
@@ -101,55 +115,79 @@ always @(posedge C8M) begin
 				nCAS <= 0;
 				nRWE <= 1;
 				CKE <= 1;
-			end else begin
-				// Otherwise idle so issue NOP CKD
+			end else begin // Otherwise NOP CKD
 				nCS <= 1;
 				nRAS <= 1;
 				nCAS <= 1;
 				nRWE <= 1;
 				CKE <= 0;
 			end
-		end 3'h2: begin // Issue NOP CKE in preparation to precharge
-			nCS <= 1;
-			nRAS <= 1;
-			nCAS <= 1;
-			nRWE <= 1;
-			CKE <= 1;
-		end 3'h3: begin // Issue PC all
-			nCS <= 0;
-			nRAS <= 0;
-			nCAS <= 1;
-			nRWE <= 0;
-			CKE <= 1;
-		end 3'h4: begin
-			if (InitDone) begin
-				// If init done, issue AREF to refresh
-				nCS <= 0;
-				nRAS <= 0;
-				nCAS <= 0;
+		end 3'h2: begin
+			if (!InitDone || RefReq || RDCMDg || WRCMDg)
+				// Issue NOP CKE in preparation to precharge
+				// before initializing/refreshing or after reading/writing
+				nCS <= 1;
+				nRAS <= 1;
+				nCAS <= 1;
 				nRWE <= 1;
 				CKE <= 1;
-			end else begin
-				// Otherwise issue LDM to load mode register
+			end else begin // Otherwise NOP CKD
+				nCS <= 1;
+				nRAS <= 1;
+				nCAS <= 1;
+				nRWE <= 1;
+				CKE <= 0;
+			end
+		end 3'h3: begin 
+			if (!InitDone || RefReq || RDCMDg || WRCMDg)
+				// Issue PC ALL before LDM/AREF or after RD/WR
+				nCS <= 0;
+				nRAS <= 0;
+				nCAS <= 1;
+				nRWE <= 0;
+				CKE <= 1;
+			end else begin // Otherwise NOP CKD
+				nCS <= 1;
+				nRAS <= 1;
+				nCAS <= 1;
+				nRWE <= 1;
+				CKE <= 0;
+			end
+		end 3'h4: begin
+			if (!InitDone) begin
+				// If initializing, issue LDM to load mode register
 				nCS <= 0;
 				nRAS <= 0;
 				nCAS <= 0;
 				nRWE <= 0;
 				CKE <= 1;
+			end else if (RefReq) begin
+				// If init done and refresh request, issue AREF
+				nCS <= 0;
+				nRAS <= 0;
+				nCAS <= 0;
+				nRWE <= 1;
+				CKE <= 1;
+			end else begin // Otherwise NOP CKD
+				nCS <= 1;
+				nRAS <= 1;
+				nCAS <= 1;
+				nRWE <= 1;
+				CKE <= 0;
 			end
-		end 3'h5: begin // Issue NOP CKE (consider changing to CKD)
-			nCS <= 1;
-			nRAS <= 1;
-			nCAS <= 1;
-			nRWE <= 1;
-			CKE <= 1;
-		end 3'h6: begin // Issue NOP CKD
+		end 3'h5: begin // NOP CKD
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;
 			nRWE <= 1;
 			CKE <= 0;
-		end 3'h7: begin // Issue NOP CKE
+		end 3'h6: begin // NOP CKD
+			nCS <= 1;
+			nRAS <= 1;
+			nCAS <= 1;
+			nRWE <= 1;
+			CKE <= 0;
+		end 3'h7: begin // NOP CKE before possible ACT issued next S0
 			nCS <= 1;
 			nRAS <= 1;
 			nCAS <= 1;

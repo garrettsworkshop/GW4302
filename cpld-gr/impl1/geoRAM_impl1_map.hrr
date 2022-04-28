@@ -1,0 +1,29 @@
+---------------------------------------------------
+Report for cell geoRAM
+   Instance path: geoRAM
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      34.00        100.0
+                                  LUT4	      42.00        100.0
+                                 IOBUF	         60        100.0
+                                PFUREG	         58        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                   RAM	          1        74.3
+                                GeoReg	          1        21.6
+---------------------------------------------------
+Report for cell GeoReg
+   Instance path: geoRAM/georeg
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.33        21.6
+                                  LUT4	       5.00        11.9
+                                PFUREG	         15        25.9
+---------------------------------------------------
+Report for cell RAM
+   Instance path: geoRAM/ram
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      25.25        74.3
+                                  LUT4	      32.00        76.2
+                                PFUREG	         43        74.1

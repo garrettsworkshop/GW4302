@@ -124,25 +124,25 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld-gr/reu.v(1): </Dynamic>
-            <Dynamic>REU</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld-gr/reu.v</Navigation>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld-gr/georam.v(1): </Dynamic>
+            <Dynamic>geoRAM</Dynamic>
+            <Navigation>//mac/icloud/repos/gw4302/cpld-gr/georam.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld-gr/reg.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld-gr/reg.v(1): </Dynamic>
             <Dynamic>GeoReg</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld-gr/reg.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld-gr/reg.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/users/garre/repos/gw4302/cpld-gr/ram.v(1): </Dynamic>
+            <Dynamic>//mac/icloud/repos/gw4302/cpld-gr/ram.v(1): </Dynamic>
             <Dynamic>RAM</Dynamic>
-            <Navigation>c:/users/garre/repos/gw4302/cpld-gr/ram.v</Navigation>
+            <Navigation>//mac/icloud/repos/gw4302/cpld-gr/ram.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
         <Message>
@@ -162,16 +162,6 @@
             <Navigation>1601</Navigation>
         </Message>
         <Message>
-            <ID>35001723</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001723</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc</Dynamic>
-        </Message>
-        <Message>
             <ID>35002005</ID>
             <Severity>Warning</Severity>
             <Dynamic>C8M</Dynamic>
@@ -184,13 +174,13 @@
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>0</Dynamic>
+            <Dynamic>12</Dynamic>
             <Dynamic>\ram/RA</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>1</Dynamic>
+            <Dynamic>11</Dynamic>
             <Dynamic>\ram/RA</Dynamic>
         </Message>
         <Message>
@@ -244,9 +234,8 @@
             <Dynamic>A[8]</Dynamic>
         </Message>
         <Message>
-            <ID>35001723</ID>
+            <ID>35001611</ID>
             <Severity>Warning</Severity>
-            <Dynamic>REU_for_lpf.sdc</Dynamic>
         </Message>
         <Message>
             <ID>1166052</ID>

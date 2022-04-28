@@ -7,17 +7,17 @@
 </STYLE>
 </HEAD>
 <PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
-synthesis:  version Diamond (64-bit) 3.12.0.240.2
+synthesis:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 07:00:03 2022
+Thu Apr 28 09:02:42 2022
 
 
-Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld-gr/promote.xml 
+Command Line:  synthesis -f geoRAM_impl1_lattice.synproj -gui 
 
 Synthesis options:
 The -a option is MachXO2.
@@ -44,7 +44,7 @@ Using performance grade 4.
 
 INFO - synthesis: User-Selected Strategy Settings
 Optimization goal = Balanced
-Top-level module name = REU.
+Top-level module name = geoRAM.
 Target frequency = 200.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -70,15 +70,15 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p C:/Users/garre/Repos/GW4302/cpld-gr (searchpath added)
+-p //Mac/iCloud/Repos/GW4302/cpld-gr (searchpath added)
 -p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p C:/Users/garre/Repos/GW4302/cpld-gr/impl1 (searchpath added)
--p C:/Users/garre/Repos/GW4302/cpld-gr (searchpath added)
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld-gr/RAM.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld-gr/Reg.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld-gr/REU.v
-NGD file = REU_impl1.ngd
--sdc option: SDC file input is C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc.
+-p //Mac/iCloud/Repos/GW4302/cpld-gr/impl1 (searchpath added)
+-p //Mac/iCloud/Repos/GW4302/cpld-gr (searchpath added)
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld-gr/geoRAM.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld-gr/RAM.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld-gr/Reg.v
+NGD file = geoRAM_impl1.ngd
+-sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -87,14 +87,14 @@ Technology check ok...
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld-gr/ram.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld-gr/reg.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld-gr/reu.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld-gr/georam.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld-gr/ram.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld-gr/reg.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
-Top module name (Verilog): REU
-INFO - synthesis: c:/users/garre/repos/gw4302/cpld-gr/reu.v(1): compiling module REU. VERI-1018
-INFO - synthesis: c:/users/garre/repos/gw4302/cpld-gr/reg.v(1): compiling module GeoReg. VERI-1018
-INFO - synthesis: c:/users/garre/repos/gw4302/cpld-gr/ram.v(1): compiling module RAM. VERI-1018
+Top module name (Verilog): geoRAM
+INFO - synthesis: //mac/icloud/repos/gw4302/cpld-gr/georam.v(1): compiling module geoRAM. VERI-1018
+INFO - synthesis: //mac/icloud/repos/gw4302/cpld-gr/reg.v(1): compiling module GeoReg. VERI-1018
+INFO - synthesis: //mac/icloud/repos/gw4302/cpld-gr/ram.v(1): compiling module RAM. VERI-1018
 INFO - synthesis: C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): compiling module OSCH(NOM_FREQ="26.60"). VERI-1018
 INFO - synthesis: C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1601): compiling module ODDRXE. VERI-1018
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
@@ -102,9 +102,7 @@ Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
-WARNING - synthesis: There are no design constraints in the file C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc
-Top-level module name = REU.
-WARNING - synthesis: There are no design constraints in the file C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc
+Top-level module name = geoRAM.
 WARNING - synthesis: I/O Port C8M 's net has no driver and is unused.
 WARNING - synthesis: I/O Port BA 's net has no driver and is unused.
 ######## Converting I/O port A[15] to input.
@@ -123,8 +121,8 @@ WARNING - synthesis: I/O Port BA 's net has no driver and is unused.
 ######## Converting I/O port A[2] to input.
 ######## Converting I/O port A[1] to input.
 ######## Converting I/O port A[0] to input.
-WARNING - synthesis: Bit 0 of Register \ram/RA is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \ram/RA is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ram/RA is stuck at Zero
+WARNING - synthesis: Bit 11 of Register \ram/RA is stuck at Zero
 
 
 
@@ -139,9 +137,10 @@ WARNING - synthesis: I/O Port A[10] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port A[9] 's net has no driver and is unused.
 WARNING - synthesis: I/O Port A[8] 's net has no driver and is unused.
 GSR will not be inferred because no asynchronous signal was found in the netlist.
-WARNING - synthesis: There are no design constraints in the file REU_for_lpf.sdc
-Writing LPF file REU_impl1.lpf.
-Results of NGD DRC are available in REU_drc.log.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in geoRAM_drc.log.
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
@@ -167,20 +166,20 @@ WARNING - synthesis: logical net 'A[8]' has no load.
 WARNING - synthesis: input pad net 'A[8]' has no legal load.
 WARNING - synthesis: DRC complete with 20 warnings.
 All blocks are expanded and NGD expansion is successful.
-Writing NGD file REU_impl1.ngd.
+Writing NGD file geoRAM_impl1.ngd.
 
-################### Begin Area Report (REU)######################
-Number of register bits => 57 of 877 (6 % )
+################### Begin Area Report (geoRAM)######################
+Number of register bits => 58 of 877 (6 % )
 BB => 16
 FD1P3AX => 24
 FD1P3IX => 1
-FD1S3AX => 15
+FD1S3AX => 16
 FD1S3IX => 13
 FD1S3JX => 4
 GSR => 1
 IB => 13
 INV => 2
-LUT4 => 41
+LUT4 => 43
 OB => 31
 ODDRXE => 1
 OSCH => 1
@@ -195,27 +194,28 @@ TSALL => 1
 Clock Nets
 Number of Clocks: 2
   Net : ram/FCLK, loads : 35
-  Net : PHI2_c, loads : 3
+  Net : PHI2_c, loads : 4
 Clock Enable Nets
 Number of Clock Enables: 6
 Top 6 highest fanout Clock Enables:
-  Net : ram/RDD_7__N_68, loads : 8
-  Net : georeg/WindowWR, loads : 6
+  Net : georeg/PHI2_N_16_enable_8, loads : 8
+  Net : ram/RDD_7__N_84, loads : 8
+  Net : georeg/PHI2_N_16_enable_14, loads : 6
+  Net : ram/PORDone_N_81, loads : 1
   Net : ram/FCLK_enable_1, loads : 1
-  Net : ram/PORDone_N_65, loads : 1
   Net : ram/FCLK_enable_2, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : ram/S_0, loads : 22
-  Net : ram/S_1, loads : 16
+  Net : ram/S_0, loads : 24
+  Net : ram/S_1, loads : 17
   Net : ram/S_2, loads : 15
   Net : PHI2_N_16, loads : 14
-  Net : ram/FCLK_N_40, loads : 10
-  Net : ram/n552, loads : 9
+  Net : ram/FCLK_N_56, loads : 10
+  Net : DOE, loads : 9
+  Net : ram/n307, loads : 9
   Net : nIO1_c, loads : 8
-  Net : ram/DDIR_c, loads : 8
-  Net : ram/RDD_7__N_68, loads : 8
-  Net : ram/BlockWR, loads : 7
+  Net : georeg/PHI2_N_16_enable_8, loads : 8
+  Net : ram/RDD_7__N_84, loads : 8
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -225,21 +225,21 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk501 [get_nets \ram/FCLK]             |  200.000 MHz|   82.142 MHz|     3 *
+clk1 [get_nets PHI2_c]                  |  200.000 MHz|   93.686 MHz|     3 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk500 [get_nets PHI2_c]                |            -|            -|     0  
+clk0 [get_nets \ram/FCLK]               |  200.000 MHz|   82.075 MHz|     3 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+2 constraints not met.
 
 
-Peak Memory Usage: 51.410  MB
+Peak Memory Usage: 60.828  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.438  secs
+Elapsed CPU time for LSE flow : 0.547  secs
 --------------------------------------------------------------
 
 

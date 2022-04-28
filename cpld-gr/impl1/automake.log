@@ -1,16 +1,16 @@
 
-synthesis -f "REU_impl1_lattice.synproj"
-synthesis:  version Diamond (64-bit) 3.12.0.240.2
+synthesis -f "geoRAM_impl1_lattice.synproj"
+synthesis:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 07:00:03 2022
+Thu Apr 28 09:02:42 2022
 
 
-Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld-gr/promote.xml 
+Command Line:  synthesis -f geoRAM_impl1_lattice.synproj -gui 
 
     <postMsg mid="35002000" type="Info"    dynamic="0" navigation="0"  />
 Synthesis options:
@@ -38,7 +38,7 @@ Using performance grade 4.
 
     <postMsg mid="35001781" type="Info"    dynamic="0" navigation="0"  />
 Optimization goal = Balanced
-Top-level module name = REU.
+Top-level module name = geoRAM.
 Target frequency = 200.000000 MHz.
 Maximum fanout = 1000.
 Timing path count = 3
@@ -64,15 +64,15 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p C:/Users/garre/Repos/GW4302/cpld-gr (searchpath added)
+-p //Mac/iCloud/Repos/GW4302/cpld-gr (searchpath added)
 -p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p C:/Users/garre/Repos/GW4302/cpld-gr/impl1 (searchpath added)
--p C:/Users/garre/Repos/GW4302/cpld-gr (searchpath added)
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld-gr/RAM.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld-gr/Reg.v
-Verilog design file = C:/Users/garre/Repos/GW4302/cpld-gr/REU.v
-NGD file = REU_impl1.ngd
--sdc option: SDC file input is C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc.
+-p //Mac/iCloud/Repos/GW4302/cpld-gr/impl1 (searchpath added)
+-p //Mac/iCloud/Repos/GW4302/cpld-gr (searchpath added)
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld-gr/geoRAM.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld-gr/RAM.v
+Verilog design file = //Mac/iCloud/Repos/GW4302/cpld-gr/Reg.v
+NGD file = geoRAM_impl1.ngd
+-sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -81,25 +81,23 @@ Technology check ok...
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld-gr/ram.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld-gr/reg.v. VERI-1482
-Analyzing Verilog file c:/users/garre/repos/gw4302/cpld-gr/reu.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld-gr/georam.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld-gr/ram.v. VERI-1482
+Analyzing Verilog file //mac/icloud/repos/gw4302/cpld-gr/reg.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
-Top module name (Verilog): REU
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld-gr/reu.v(1): " arg1="REU" arg2="c:/users/garre/repos/gw4302/cpld-gr/reu.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld-gr/reg.v(1): " arg1="GeoReg" arg2="c:/users/garre/repos/gw4302/cpld-gr/reg.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/users/garre/repos/gw4302/cpld-gr/ram.v(1): " arg1="RAM" arg2="c:/users/garre/repos/gw4302/cpld-gr/ram.v" arg3="1"  />
+Top module name (Verilog): geoRAM
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld-gr/georam.v(1): " arg1="geoRAM" arg2="//mac/icloud/repos/gw4302/cpld-gr/georam.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld-gr/reg.v(1): " arg1="GeoReg" arg2="//mac/icloud/repos/gw4302/cpld-gr/reg.v" arg3="1"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="//mac/icloud/repos/gw4302/cpld-gr/ram.v(1): " arg1="RAM" arg2="//mac/icloud/repos/gw4302/cpld-gr/ram.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1793): " arg1="OSCH(NOM_FREQ=&quot;26.60&quot;)" arg2="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v" arg3="1793"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1601): " arg1="ODDRXE" arg2="C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v" arg3="1601"  />
-Last elaborated design is REU()
+Last elaborated design is geoRAM()
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 Package Status:                     Final          Version 1.39.
-    <postMsg mid="35001723" type="Warning" dynamic="1" navigation="0" arg0="C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc"  />
-Top-level module name = REU.
-    <postMsg mid="35001723" type="Warning" dynamic="1" navigation="0" arg0="C:/Users/garre/Repos/GW4302/cpld-gr/REU.ldc"  />
+Top-level module name = geoRAM.
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="C8M"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="BA"  />
 ######## Converting I/O port A[15] to input.
@@ -118,8 +116,8 @@ Top-level module name = REU.
 ######## Converting I/O port A[2] to input.
 ######## Converting I/O port A[1] to input.
 ######## Converting I/O port A[0] to input.
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\ram/RA"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\ram/RA"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="12" arg1="\ram/RA"  />
+    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="11" arg1="\ram/RA"  />
 
 
 
@@ -134,9 +132,10 @@ Top-level module name = REU.
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="A[9]"  />
     <postMsg mid="35002005" type="Warning" dynamic="1" navigation="0" arg0="A[8]"  />
 GSR will not be inferred because no asynchronous signal was found in the netlist.
-    <postMsg mid="35001723" type="Warning" dynamic="1" navigation="0" arg0="REU_for_lpf.sdc"  />
-Writing LPF file REU_impl1.lpf.
-Results of NGD DRC are available in REU_drc.log.
+Applying 200.000000 MHz constraint to all clocks
+
+    <postMsg mid="35001611" type="Warning" dynamic="0" navigation="0"  />
+Results of NGD DRC are available in geoRAM_drc.log.
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
@@ -167,23 +166,23 @@ Running DRC...
     <postMsg mid="1163101" type="Warning" dynamic="1" navigation="0" arg0="20"  />
 
 Design Results:
-    167 blocks expanded
+    170 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
-Writing NGD file REU_impl1.ngd.
+Writing NGD file geoRAM_impl1.ngd.
 
-################### Begin Area Report (REU)######################
-Number of register bits => 57 of 877 (6 % )
+################### Begin Area Report (geoRAM)######################
+Number of register bits => 58 of 877 (6 % )
 BB => 16
 FD1P3AX => 24
 FD1P3IX => 1
-FD1S3AX => 15
+FD1S3AX => 16
 FD1S3IX => 13
 FD1S3JX => 4
 GSR => 1
 IB => 13
 INV => 2
-LUT4 => 41
+LUT4 => 43
 OB => 31
 ODDRXE => 1
 OSCH => 1
@@ -198,27 +197,28 @@ TSALL => 1
 Clock Nets
 Number of Clocks: 2
   Net : ram/FCLK, loads : 35
-  Net : PHI2_c, loads : 3
+  Net : PHI2_c, loads : 4
 Clock Enable Nets
 Number of Clock Enables: 6
 Top 6 highest fanout Clock Enables:
-  Net : ram/RDD_7__N_68, loads : 8
-  Net : georeg/WindowWR, loads : 6
+  Net : georeg/PHI2_N_16_enable_8, loads : 8
+  Net : ram/RDD_7__N_84, loads : 8
+  Net : georeg/PHI2_N_16_enable_14, loads : 6
+  Net : ram/PORDone_N_81, loads : 1
   Net : ram/FCLK_enable_1, loads : 1
-  Net : ram/PORDone_N_65, loads : 1
   Net : ram/FCLK_enable_2, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : ram/S_0, loads : 22
-  Net : ram/S_1, loads : 16
+  Net : ram/S_0, loads : 24
+  Net : ram/S_1, loads : 17
   Net : ram/S_2, loads : 15
   Net : PHI2_N_16, loads : 14
-  Net : ram/FCLK_N_40, loads : 10
-  Net : ram/n552, loads : 9
+  Net : ram/FCLK_N_56, loads : 10
+  Net : DOE, loads : 9
+  Net : ram/n307, loads : 9
   Net : nIO1_c, loads : 8
-  Net : ram/DDIR_c, loads : 8
-  Net : ram/RDD_7__N_68, loads : 8
-  Net : ram/BlockWR, loads : 7
+  Net : georeg/PHI2_N_16_enable_8, loads : 8
+  Net : ram/RDD_7__N_84, loads : 8
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -228,32 +228,32 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk501 [get_nets \ram/FCLK]             |  200.000 MHz|   82.142 MHz|     3 *
+clk1 [get_nets PHI2_c]                  |  200.000 MHz|   93.686 MHz|     3 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk500 [get_nets PHI2_c]                |            -|            -|     0  
+clk0 [get_nets \ram/FCLK]               |  200.000 MHz|   82.075 MHz|     3 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-1 constraints not met.
+2 constraints not met.
 
 
-Peak Memory Usage: 51.410  MB
+Peak Memory Usage: 60.828  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.438  secs
+Elapsed CPU time for LSE flow : 0.547  secs
 --------------------------------------------------------------
 
-map -a "MachXO2" -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial   "REU_impl1.ngd" -o "REU_impl1_map.ncd" -pr "REU_impl1.prf" -mp "REU_impl1.mrp" -lpf "C:/Users/garre/Repos/GW4302/cpld-gr/impl1/REU_impl1.lpf" -lpf "C:/Users/garre/Repos/GW4302/cpld-gr/REU.lpf"  -c 0           
-map:  version Diamond (64-bit) 3.12.0.240.2
+map -a "MachXO2" -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial   "geoRAM_impl1.ngd" -o "geoRAM_impl1_map.ncd" -pr "geoRAM_impl1.prf" -mp "geoRAM_impl1.mrp" -lpf "//Mac/iCloud/Repos/GW4302/cpld-gr/impl1/geoRAM_impl1.lpf" -lpf "//Mac/iCloud/Repos/GW4302/cpld-gr/geoRAM.lpf"  -c 0           
+map:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-   Process the file: REU_impl1.ngd
+   Process the file: geoRAM_impl1.ngd
    Picdevice="LCMXO2-640HC"
 
    Pictype="TQFP100"
@@ -299,15 +299,15 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:     57 out of   877 (6%)
-      PFU registers:           57 out of   640 (9%)
+   Number of registers:     58 out of   877 (7%)
+      PFU registers:           58 out of   640 (9%)
       PIO registers:            0 out of   237 (0%)
-   Number of SLICEs:        33 out of   320 (10%)
-      SLICEs as Logic/ROM:     33 out of   320 (10%)
+   Number of SLICEs:        34 out of   320 (11%)
+      SLICEs as Logic/ROM:     34 out of   320 (11%)
       SLICEs as RAM:            0 out of   240 (0%)
       SLICEs as Carry:          0 out of   320 (0%)
-   Number of LUT4s:         40 out of   640 (6%)
-      Number used as logic LUTs:         40
+   Number of LUT4s:         42 out of   640 (7%)
+      Number used as logic LUTs:         42
       Number used as distributed RAM:     0
       Number used as ripple logic:        0
       Number used as shift registers:     0
@@ -341,31 +341,32 @@ Design Summary:
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
    Number of clocks:  2
-     Net PHI2_c: 7 loads, 0 rising, 7 falling (Driver: PIO PHI2 )
+     Net PHI2_c: 8 loads, 1 rising, 7 falling (Driver: PIO PHI2 )
      Net ram/FCLK: 27 loads, 22 rising, 5 falling (Driver: ram/fclk_OSCH )
    Number of Clock Enables:  6
+     Net georeg/PHI2_N_16_enable_8: 4 loads, 4 LSLICEs
+     Net georeg/PHI2_N_16_enable_14: 3 loads, 3 LSLICEs
      Net ram/S_0: 1 loads, 1 LSLICEs
-     Net BlockWR: 4 loads, 4 LSLICEs
-     Net ram/PORDone_N_65: 1 loads, 1 LSLICEs
-     Net ram/RDD_7__N_68: 4 loads, 4 LSLICEs
+     Net ram/PORDone_N_81: 1 loads, 1 LSLICEs
+     Net ram/RDD_7__N_84: 4 loads, 4 LSLICEs
      Net ram/FCLK_enable_1: 1 loads, 1 LSLICEs
-     Net georeg/WindowWR: 3 loads, 3 LSLICEs
-   Number of LSRs:  6
+   Number of LSRs:  7
      Net ram/S_1: 1 loads, 1 LSLICEs
-     Net ram/n338: 2 loads, 2 LSLICEs
-     Net ram/n552: 6 loads, 6 LSLICEs
-     Net ram/n33: 1 loads, 1 LSLICEs
+     Net ram/n435: 1 loads, 1 LSLICEs
+     Net ram/n307: 6 loads, 6 LSLICEs
+     Net ram/n430: 1 loads, 1 LSLICEs
+     Net ram/n304: 1 loads, 1 LSLICEs
      Net ram/PORDone: 1 loads, 1 LSLICEs
-     Net ram/n38: 1 loads, 1 LSLICEs
+     Net ram/n228: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net ram/S_0: 22 loads
-     Net ram/S_1: 16 loads
+     Net ram/S_0: 24 loads
+     Net ram/S_1: 17 loads
      Net ram/S_2: 15 loads
-     Net DDIR_c: 9 loads
+     Net DOE: 9 loads
      Net nIO1_c: 8 loads
      Net ram/RDOE: 8 loads
-     Net ram/n552: 6 loads
+     Net ram/n307: 6 loads
      Net VCC_net: 6 loads
      Net nWE_c: 5 loads
      Net A_c_0: 4 loads
@@ -378,31 +379,165 @@ Design Summary:
 
 Total CPU Time: 0 secs  
 Total REAL Time: 0 secs  
-Peak Memory Usage: 35 MB
+Peak Memory Usage: 43 MB
 
-Dumping design to file REU_impl1_map.ncd.
+Dumping design to file geoRAM_impl1_map.ncd.
 
-ncd2vdb "REU_impl1_map.ncd" ".vdbs/REU_impl1_map.vdb"
+ncd2vdb "geoRAM_impl1_map.ncd" ".vdbs/geoRAM_impl1_map.vdb"
 
 Loading device for application ncd2vdb from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
 
-mpartrce -p "REU_impl1.p2t" -f "REU_impl1.p3t" -tf "REU_impl1.pt" "REU_impl1_map.ncd" "REU_impl1.ncd"
+trce -f "geoRAM_impl1.mt" -o "geoRAM_impl1.tw1" "geoRAM_impl1_map.ncd" "geoRAM_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.1.454
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file georam_impl1_map.ncd.
+Design name: geoRAM
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 09:02:45 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o geoRAM_impl1.tw1 -gui geoRAM_impl1_map.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1_map.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 09:02:45 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o geoRAM_impl1.tw1 -gui geoRAM_impl1_map.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1_map.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 46 MB
+
+
+mpartrce -p "geoRAM_impl1.p2t" -f "geoRAM_impl1.p3t" -tf "geoRAM_impl1.pt" "geoRAM_impl1_map.ncd" "geoRAM_impl1.ncd"
 
 ---- MParTrce Tool ----
 Removing old design directory at request of -rem command line option to this program.
 Running par. Please wait . . .
 
-Lattice Place and Route Report for Design "REU_impl1_map.ncd"
-Thu Apr 28 07:00:05 2022
+Lattice Place and Route Report for Design "geoRAM_impl1_map.ncd"
+Thu Apr 28 09:02:45 2022
 
-PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/garre/Repos/GW4302/cpld-gr/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 REU_impl1_map.ncd REU_impl1.dir/5_1.ncd REU_impl1.prf
-Preference file: REU_impl1.prf.
+PAR: Place And Route Diamond (64-bit) 3.12.1.454.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 geoRAM_impl1_map.ncd geoRAM_impl1.dir/5_1.ncd geoRAM_impl1.prf
+Preference file: geoRAM_impl1.prf.
 Placement level-cost: 5-1.
 Routing Iterations: 6
 
-Loading design for application par from file REU_impl1_map.ncd.
-Design name: REU
+Loading design for application par from file geoRAM_impl1_map.ncd.
+Design name: geoRAM
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-640HC
@@ -421,19 +556,19 @@ Device utilization summary:
                   60+4(JTAG)/79      81% bonded
    IOLOGIC            1/80            1% used
 
-   SLICE             33/320          10% used
+   SLICE             34/320          10% used
 
    OSC                1/1           100% used
 
 
-Number of Signals: 127
-Number of Connections: 288
+Number of Signals: 130
+Number of Connections: 295
 
 Pin Constraint Summary:
    60 out of 60 pins locked (100% locked).
 
 The following 2 signals are selected to use the primary clock routing resources:
-    PHI2_c (driver: PHI2, clk load #: 7)
+    PHI2_c (driver: PHI2, clk load #: 8)
     ram/FCLK (driver: ram/fclk_OSCH, clk load #: 27)
 
 
@@ -446,13 +581,13 @@ Finished Placer Phase 0.  REAL time: 0 secs
 
 Starting Placer Phase 1.
 ....................
-Placer score = 35228.
-Finished Placer Phase 1.  REAL time: 3 secs 
+Placer score = 35315.
+Finished Placer Phase 1.  REAL time: 4 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  35205
-Finished Placer Phase 2.  REAL time: 3 secs 
+Placer score =  35315
+Finished Placer Phase 2.  REAL time: 4 secs 
 
 
 ------------------ Clock Report ------------------
@@ -463,7 +598,7 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY "PHI2_c" from comp "PHI2" on CLK_PIN site "38 (PB10C)", clk load = 7
+  PRIMARY "PHI2_c" from comp "PHI2" on CLK_PIN site "38 (PB10C)", clk load = 8
   PRIMARY "ram/FCLK" from OSC on comp "ram/fclk_OSCH" on site "OSC", clk load = 27
 
   PRIMARY  : 2 out of 8 (25%)
@@ -490,14 +625,14 @@ I/O Bank Usage Summary:
 
 Total placer CPU time: 3 secs 
 
-Dumping design to file REU_impl1.dir/5_1.ncd.
+Dumping design to file geoRAM_impl1.dir/5_1.ncd.
 
-0 connections routed; 288 unrouted.
+0 connections routed; 295 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 5 secs 
+Completed router resource preassignment. Real time: 7 secs 
 
-Start NBR router at 07:00:10 04/28/22
+Start NBR router at 09:02:52 04/28/22
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -512,32 +647,35 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 07:00:10 04/28/22
+Start NBR special constraint process at 09:02:52 04/28/22
 
-Start NBR section for initial routing at 07:00:10 04/28/22
+Start NBR section for initial routing at 09:02:52 04/28/22
 Level 4, iteration 1
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 28.210ns/0.000ns; real time: 5 secs 
+5(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.730ns/0.000ns; real time: 7 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 07:00:10 04/28/22
+Start NBR section for normal routing at 09:02:52 04/28/22
 Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 28.210ns/0.000ns; real time: 5 secs 
+2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.730ns/0.000ns; real time: 7 secs 
 Level 4, iteration 2
+1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 28.730ns/0.000ns; real time: 7 secs 
+Level 4, iteration 3
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 28.210ns/0.000ns; real time: 5 secs 
+Estimated worst slack/total negative slack<setup>: 28.730ns/0.000ns; real time: 7 secs 
 
-Start NBR section for setup/hold timing optimization with effort level 3 at 07:00:10 04/28/22
+Start NBR section for setup/hold timing optimization with effort level 3 at 09:02:52 04/28/22
 
-Start NBR section for re-routing at 07:00:11 04/28/22
+Start NBR section for re-routing at 09:02:52 04/28/22
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: 28.210ns/0.000ns; real time: 6 secs 
+Estimated worst slack/total negative slack<setup>: 28.730ns/0.000ns; real time: 7 secs 
 
-Start NBR section for post-routing at 07:00:11 04/28/22
+Start NBR section for post-routing at 09:02:52 04/28/22
 
 End NBR router with 0 unrouted connection
 
@@ -545,35 +683,35 @@ NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
   Number of connections with timing violations : 0 (0.00%)
-  Estimated worst slack<setup> : 28.210ns
+  Estimated worst slack<setup> : 28.730ns
   Timing score<setup> : 0
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 5 secs 
-Total REAL time: 6 secs 
+Total CPU time 6 secs 
+Total REAL time: 7 secs 
 Completely routed.
-End of route.  288 routed (100.00%); 0 unrouted.
+End of route.  295 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
 Timing score: 0 
 
-Dumping design to file REU_impl1.dir/5_1.ncd.
+Dumping design to file geoRAM_impl1.dir/5_1.ncd.
 
 
 PAR_SUMMARY::Run status = Completed
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = 28.210
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 28.730
 PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.306
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.309
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 5 secs 
-Total REAL time to completion: 6 secs 
+Total CPU  time to completion: 7 secs 
+Total REAL time to completion: 7 secs 
 
 par done!
 
@@ -587,12 +725,146 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 Exiting par with exit code 0
 Exiting mpartrce with exit code 0
 
-tmcheck -par "REU_impl1.par" 
+trce -f "geoRAM_impl1.pt" -o "geoRAM_impl1.twr" "geoRAM_impl1.ncd" "geoRAM_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.1.454
 
-bitgen -f "REU_impl1.t2b" -w "REU_impl1.ncd"  "REU_impl1.prf"
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file georam_impl1.ncd.
+Design name: geoRAM
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 09:02:53 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o geoRAM_impl1.twr -gui geoRAM_impl1.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
 
 
-BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 09:02:53 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o geoRAM_impl1.twr -gui geoRAM_impl1.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 46 MB
+
+
+tmcheck -par "geoRAM_impl1.par" 
+
+bitgen -f "geoRAM_impl1.t2b" -w "geoRAM_impl1.ncd"  "geoRAM_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.1.454
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
@@ -600,8 +872,8 @@ Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 
-Loading design for application Bitgen from file REU_impl1.ncd.
-Design name: REU
+Loading design for application Bitgen from file geoRAM_impl1.ncd.
+Design name: geoRAM
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-640HC
@@ -613,7 +885,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 
 Running DRC.
 DRC detected 0 errors and 0 warnings.
-Reading Preference File from REU_impl1.prf.
+Reading Preference File from geoRAM_impl1.prf.
 
 Preference Summary:
 +---------------------------------+---------------------------------+
@@ -661,17 +933,17 @@ Creating bit map...
  
 Bitstream Status: Final           Version 1.95.
  
-Saving bit stream in "REU_impl1.bit".
+Saving bit stream in "geoRAM_impl1.bit".
 Total CPU Time: 2 secs 
 Total REAL Time: 3 secs 
-Peak Memory Usage: 245 MB
+Peak Memory Usage: 252 MB
 
-tmcheck -par "REU_impl1.par" 
+tmcheck -par "geoRAM_impl1.par" 
 
-bitgen -f "REU_impl1.t2b" -w "REU_impl1.ncd"  -jedec "REU_impl1.prf"
+bitgen -f "geoRAM_impl1.t2b" -w "geoRAM_impl1.ncd"  -jedec "geoRAM_impl1.prf"
 
 
-BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.1.454
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
@@ -679,8 +951,8 @@ Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 
-Loading design for application Bitgen from file REU_impl1.ncd.
-Design name: REU
+Loading design for application Bitgen from file geoRAM_impl1.ncd.
+Design name: geoRAM
 NCD version: 3.3
 Vendor:      LATTICE
 Device:      LCMXO2-640HC
@@ -692,7 +964,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 
 Running DRC.
 DRC detected 0 errors and 0 warnings.
-Reading Preference File from REU_impl1.prf.
+Reading Preference File from geoRAM_impl1.prf.
 
 Preference Summary:
 +---------------------------------+---------------------------------+
@@ -740,7 +1012,7 @@ Creating bit map...
  
 Bitstream Status: Final           Version 1.95.
  
-Saving bit stream in "REU_impl1.jed".
+Saving bit stream in "geoRAM_impl1.jed".
  
 ===========
 UFM Summary.
@@ -752,5 +1024,5 @@ Available General Purpose Flash Memory:  191 Pages (Page 0 to Page 190).
 Initialized UFM Pages:                     0 Page.
  
 Total CPU Time: 2 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 245 MB
+Total REAL Time: 3 secs 
+Peak Memory Usage: 252 MB

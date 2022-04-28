@@ -1,0 +1,1201 @@
+<HTML>
+<HEAD><TITLE>Lattice TRACE Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par_Twr"></A><B><U><big>Place & Route TRACE Report</big></U></B>
+
+Loading design for application trce from file georam_impl1.ncd.
+Design name: geoRAM
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454</big></U></B>
+Thu Apr 28 09:02:53 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_set_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o geoRAM_impl1.twr -gui geoRAM_impl1.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "ram/FCLK" 26.600000 MHz (0 errors)</A></LI>            95 items scored, 0 timing errors detected.
+Report:  104.015MHz is the maximum frequency for this preference.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+================================================================================
+<A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+            95 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 27.980ns
+         The internal maximum frequency of the following component is 104.015 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    IOLOGIC    CLK            RCLK_MGIOL
+
+   Delay:               9.614ns -- based on Minimum Pulse Width
+
+
+Passed: The following path meets requirements by 14.365ns (weighted slack = 28.730ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i2  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i2  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i3
+
+   Delay:               4.125ns  (35.0% logic, 65.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.125ns physical path delay ram/SLICE_33 to ram/SLICE_47 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.365ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_47:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R2C10D.CLK to      R2C10D.Q1 ram/SLICE_33 (from ram/FCLK)
+ROUTE        15     1.135      R2C10D.Q1 to       R3C9C.D1 ram/S_2
+CTOF_DEL    ---     0.495       R3C9C.D1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9C.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.125   (35.0% logic, 65.0% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_47:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9C.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.365ns (weighted slack = 28.730ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i2  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i6  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i7
+
+   Delay:               4.125ns  (35.0% logic, 65.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.125ns physical path delay ram/SLICE_33 to ram/SLICE_49 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.365ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R2C10D.CLK to      R2C10D.Q1 ram/SLICE_33 (from ram/FCLK)
+ROUTE        15     1.135      R2C10D.Q1 to       R3C9C.D1 ram/S_2
+CTOF_DEL    ---     0.495       R3C9C.D1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9D.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.125   (35.0% logic, 65.0% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.365ns (weighted slack = 28.730ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i2  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i4  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i5
+
+   Delay:               4.125ns  (35.0% logic, 65.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.125ns physical path delay ram/SLICE_33 to ram/SLICE_48 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.365ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_48:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R2C10D.CLK to      R2C10D.Q1 ram/SLICE_33 (from ram/FCLK)
+ROUTE        15     1.135      R2C10D.Q1 to       R3C9C.D1 ram/S_2
+CTOF_DEL    ---     0.495       R3C9C.D1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9A.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.125   (35.0% logic, 65.0% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_48:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9A.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.365ns (weighted slack = 28.730ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i2  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i0  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i1
+
+   Delay:               4.125ns  (35.0% logic, 65.0% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.125ns physical path delay ram/SLICE_33 to ram/SLICE_46 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.365ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R2C10D.CLK to      R2C10D.Q1 ram/SLICE_33 (from ram/FCLK)
+ROUTE        15     1.135      R2C10D.Q1 to       R3C9C.D1 ram/S_2
+CTOF_DEL    ---     0.495       R3C9C.D1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9B.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.125   (35.0% logic, 65.0% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9B.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.447ns (weighted slack = 28.894ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i0  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i2  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i3
+
+   Delay:               4.043ns  (35.7% logic, 64.3% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.043ns physical path delay ram/SLICE_32 to ram/SLICE_47 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.447ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_32 to ram/SLICE_47:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C10D.CLK to      R3C10D.Q0 ram/SLICE_32 (from ram/FCLK)
+ROUTE        24     1.053      R3C10D.Q0 to       R3C9C.B1 ram/S_0
+CTOF_DEL    ---     0.495       R3C9C.B1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9C.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.043   (35.7% logic, 64.3% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_47:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9C.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.447ns (weighted slack = 28.894ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i0  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i6  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i7
+
+   Delay:               4.043ns  (35.7% logic, 64.3% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.043ns physical path delay ram/SLICE_32 to ram/SLICE_49 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.447ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_32 to ram/SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C10D.CLK to      R3C10D.Q0 ram/SLICE_32 (from ram/FCLK)
+ROUTE        24     1.053      R3C10D.Q0 to       R3C9C.B1 ram/S_0
+CTOF_DEL    ---     0.495       R3C9C.B1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9D.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.043   (35.7% logic, 64.3% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_49:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.447ns (weighted slack = 28.894ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i0  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i0  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i1
+
+   Delay:               4.043ns  (35.7% logic, 64.3% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.043ns physical path delay ram/SLICE_32 to ram/SLICE_46 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.447ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_32 to ram/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C10D.CLK to      R3C10D.Q0 ram/SLICE_32 (from ram/FCLK)
+ROUTE        24     1.053      R3C10D.Q0 to       R3C9C.B1 ram/S_0
+CTOF_DEL    ---     0.495       R3C9C.B1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9B.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.043   (35.7% logic, 64.3% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9B.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.447ns (weighted slack = 28.894ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i0  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i4  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i5
+
+   Delay:               4.043ns  (35.7% logic, 64.3% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.043ns physical path delay ram/SLICE_32 to ram/SLICE_48 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.447ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_32 to ram/SLICE_48:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R3C10D.CLK to      R3C10D.Q0 ram/SLICE_32 (from ram/FCLK)
+ROUTE        24     1.053      R3C10D.Q0 to       R3C9C.B1 ram/S_0
+CTOF_DEL    ---     0.495       R3C9C.B1 to       R3C9C.F1 SLICE_39
+ROUTE         1     0.436       R3C9C.F1 to       R3C9C.C0 ram/n6
+CTOF_DEL    ---     0.495       R3C9C.C0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9A.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.043   (35.7% logic, 64.3% route), 3 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_48:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9A.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.525ns (weighted slack = 29.050ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i1  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i0  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i1
+
+   Delay:               3.965ns  (23.9% logic, 76.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.965ns physical path delay ram/SLICE_33 to ram/SLICE_46 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.525ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R2C10D.CLK to      R2C10D.Q0 ram/SLICE_33 (from ram/FCLK)
+ROUTE        17     1.906      R2C10D.Q0 to       R3C9C.A0 ram/S_1
+CTOF_DEL    ---     0.495       R3C9C.A0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9B.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    3.965   (23.9% logic, 76.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_46:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9B.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 14.525ns (weighted slack = 29.050ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i1  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i4  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i5
+
+   Delay:               3.965ns  (23.9% logic, 76.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      3.965ns physical path delay ram/SLICE_33 to ram/SLICE_48 meets
+     18.797ns delay constraint less
+      0.000ns skew and
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.525ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_48:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452     R2C10D.CLK to      R2C10D.Q0 ram/SLICE_33 (from ram/FCLK)
+ROUTE        17     1.906      R2C10D.Q0 to       R3C9C.A0 ram/S_1
+CTOF_DEL    ---     0.495       R3C9C.A0 to       R3C9C.F0 SLICE_39
+ROUTE         4     1.112       R3C9C.F0 to       R5C9A.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    3.965   (23.9% logic, 76.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_48:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     2.996        OSC.OSC to      R5C9A.CLK ram/FCLK
+                  --------
+                    2.996   (0.0% logic, 100.0% route), 0 logic levels.
+
+Report:  104.015MHz is the maximum frequency for this preference.
+
+<A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ram/FCLK" 26.600000 MHz  |             |             |
+;                                       |   26.600 MHz|  104.015 MHz|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_set_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: ram/FCLK   Source: ram/fclk_OSCH.OSC   Loads: 27
+   Covered under: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PHI2_c   Source: PHI2.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 10
+   No transfer within this clock domain is found
+
+
+<A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+--------------------------------------------------------------------------------
+<A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454</big></U></B>
+Thu Apr 28 09:02:53 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+<A name="ptwr_hold_ri"></A><B><U><big>Report Information</big></U></B>
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o geoRAM_impl1.twr -gui geoRAM_impl1.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+<A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
+
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "ram/FCLK" 26.600000 MHz (0 errors)</A></LI>            95 items scored, 0 timing errors detected.
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+================================================================================
+<A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+            95 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.309ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/nRESETr_3__117  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/nRESETr_4__116  (to ram/FCLK +)
+
+   Delay:               0.290ns  (45.9% logic, 54.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.290ns physical path delay SLICE_36 to SLICE_36 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.309ns
+
+ Physical Path Details:
+
+      Data path SLICE_36 to SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R4C9A.CLK to       R4C9A.Q0 SLICE_36 (from ram/FCLK)
+ROUTE         2     0.157       R4C9A.Q0 to       R4C9A.M1 ram/nRESETr_3 (to ram/FCLK)
+                  --------
+                    0.290   (45.9% logic, 54.1% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to      R4C9A.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to      R4C9A.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.309ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/nRESETr_4__116  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/nRESETr_5__115  (to ram/FCLK +)
+
+   Delay:               0.290ns  (45.9% logic, 54.1% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.290ns physical path delay SLICE_36 to SLICE_37 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.309ns
+
+ Physical Path Details:
+
+      Data path SLICE_36 to SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R4C9A.CLK to       R4C9A.Q1 SLICE_36 (from ram/FCLK)
+ROUTE         2     0.157       R4C9A.Q1 to       R4C9D.M0 ram/nRESETr_4 (to ram/FCLK)
+                  --------
+                    0.290   (45.9% logic, 54.1% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to      R4C9A.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to SLICE_37:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to      R4C9D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.382ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i0  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/S__i0  (to ram/FCLK +)
+
+   Delay:               0.369ns  (63.4% logic, 36.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.369ns physical path delay ram/SLICE_32 to ram/SLICE_32 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.382ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_32 to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R3C10D.CLK to      R3C10D.Q0 ram/SLICE_32 (from ram/FCLK)
+ROUTE        24     0.135      R3C10D.Q0 to      R3C10D.A0 ram/S_0
+CTOF_DEL    ---     0.101      R3C10D.A0 to      R3C10D.F0 ram/SLICE_32
+ROUTE         1     0.000      R3C10D.F0 to     R3C10D.DI0 ram/S_3_N_74_0 (to ram/FCLK)
+                  --------
+                    0.369   (63.4% logic, 36.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.382ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i2  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/S__i2  (to ram/FCLK +)
+
+   Delay:               0.369ns  (63.4% logic, 36.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.369ns physical path delay ram/SLICE_33 to ram/SLICE_33 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.382ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C10D.CLK to      R2C10D.Q1 ram/SLICE_33 (from ram/FCLK)
+ROUTE        15     0.135      R2C10D.Q1 to      R2C10D.A1 ram/S_2
+CTOF_DEL    ---     0.101      R2C10D.A1 to      R2C10D.F1 ram/SLICE_33
+ROUTE         1     0.000      R2C10D.F1 to     R2C10D.DI1 ram/n28 (to ram/FCLK)
+                  --------
+                    0.369   (63.4% logic, 36.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.382ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i1  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/S__i1  (to ram/FCLK +)
+
+   Delay:               0.369ns  (63.4% logic, 36.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.369ns physical path delay ram/SLICE_33 to ram/SLICE_33 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.382ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C10D.CLK to      R2C10D.Q0 ram/SLICE_33 (from ram/FCLK)
+ROUTE        17     0.135      R2C10D.Q0 to      R2C10D.A0 ram/S_1
+CTOF_DEL    ---     0.101      R2C10D.A0 to      R2C10D.F0 ram/SLICE_33
+ROUTE         1     0.000      R2C10D.F0 to     R2C10D.DI0 ram/n29 (to ram/FCLK)
+                  --------
+                    0.369   (63.4% logic, 36.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.387ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/PHI2r_1__123  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/S__i0  (to ram/FCLK +)
+
+   Delay:               0.374ns  (62.6% logic, 37.4% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.374ns physical path delay ram/SLICE_14 to ram/SLICE_32 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.387ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_14 to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R3C10C.CLK to      R3C10C.Q1 ram/SLICE_14 (from ram/FCLK)
+ROUTE         3     0.140      R3C10C.Q1 to      R3C10D.D0 ram/PHI2r_1
+CTOF_DEL    ---     0.101      R3C10D.D0 to      R3C10D.F0 ram/SLICE_32
+ROUTE         1     0.000      R3C10D.F0 to     R3C10D.DI0 ram/S_3_N_74_0 (to ram/FCLK)
+                  --------
+                    0.374   (62.6% logic, 37.4% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C10C.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.392ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i2  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RA_i6  (to ram/FCLK +)
+
+   Delay:               0.379ns  (61.7% logic, 38.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.379ns physical path delay ram/SLICE_33 to ram/SLICE_14 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.392ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C10D.CLK to      R2C10D.Q1 ram/SLICE_33 (from ram/FCLK)
+ROUTE        15     0.145      R2C10D.Q1 to      R3C10C.D0 ram/S_2
+CTOF_DEL    ---     0.101      R3C10C.D0 to      R3C10C.F0 ram/SLICE_14
+ROUTE         1     0.000      R3C10C.F0 to     R3C10C.DI0 ram/RA_12__N_64 (to ram/FCLK)
+                  --------
+                    0.379   (61.7% logic, 38.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C10C.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.394ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i1  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/S__i2  (to ram/FCLK +)
+
+   Delay:               0.381ns  (61.4% logic, 38.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.381ns physical path delay ram/SLICE_33 to ram/SLICE_33 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.394ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R2C10D.CLK to      R2C10D.Q0 ram/SLICE_33 (from ram/FCLK)
+ROUTE        17     0.147      R2C10D.Q0 to      R2C10D.D1 ram/S_1
+CTOF_DEL    ---     0.101      R2C10D.D1 to      R2C10D.F1 ram/SLICE_33
+ROUTE         1     0.000      R2C10D.F1 to     R2C10D.DI1 ram/n28 (to ram/FCLK)
+                  --------
+                    0.381   (61.4% logic, 38.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_33:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R2C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.394ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i0  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RA_i1  (to ram/FCLK +)
+
+   Delay:               0.381ns  (61.4% logic, 38.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.381ns physical path delay ram/SLICE_32 to ram/SLICE_11 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.394ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_32 to ram/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R3C10D.CLK to      R3C10D.Q0 ram/SLICE_32 (from ram/FCLK)
+ROUTE        24     0.147      R3C10D.Q0 to      R3C11A.C0 ram/S_0
+CTOF_DEL    ---     0.101      R3C11A.C0 to      R3C11A.F0 ram/SLICE_11
+ROUTE         1     0.000      R3C11A.F0 to     R3C11A.DI0 ram/n2_adj_113 (to ram/FCLK)
+                  --------
+                    0.381   (61.4% logic, 38.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C11A.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.394ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i0  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RA_i2  (to ram/FCLK +)
+
+   Delay:               0.381ns  (61.4% logic, 38.6% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.381ns physical path delay ram/SLICE_32 to ram/SLICE_11 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.394ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_32 to ram/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R3C10D.CLK to      R3C10D.Q0 ram/SLICE_32 (from ram/FCLK)
+ROUTE        24     0.147      R3C10D.Q0 to      R3C11A.C1 ram/S_0
+CTOF_DEL    ---     0.101      R3C11A.C1 to      R3C11A.F1 ram/SLICE_11
+ROUTE         1     0.000      R3C11A.F1 to     R3C11A.DI1 ram/n2 (to ram/FCLK)
+                  --------
+                    0.381   (61.4% logic, 38.6% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path ram/fclk_OSCH to ram/SLICE_32:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C10D.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path ram/fclk_OSCH to ram/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        27     1.040        OSC.OSC to     R3C11A.CLK ram/FCLK
+                  --------
+                    1.040   (0.0% logic, 100.0% route), 0 logic levels.
+
+<A name="ptwr_hold_rs"></A><B><U><big>Report Summary</big></U></B>
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ram/FCLK" 26.600000 MHz  |             |             |
+;                                       |     0.000 ns|     0.309 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+<A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: ram/FCLK   Source: ram/fclk_OSCH.OSC   Loads: 27
+   Covered under: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PHI2_c   Source: PHI2.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 10
+   No transfer within this clock domain is found
+
+
+<A name="ptwr_hold_ts"></A><B><U><big>Timing summary (Hold):</big></U></B>
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+
+
+<A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

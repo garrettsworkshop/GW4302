@@ -1,0 +1,262 @@
+
+Loading design for application trce from file georam_impl1_map.ncd.
+Design name: geoRAM
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 09:02:45 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o geoRAM_impl1.tw1 -gui geoRAM_impl1_map.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1_map.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+            95 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 27.980ns
+         The internal maximum frequency of the following component is 104.015 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    IOLOGIC    CLK            RCLK_MGIOL
+
+   Delay:               9.614ns -- based on Minimum Pulse Width
+
+
+Passed: The following path meets requirements by 14.100ns (weighted slack = 28.200ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/S__i2  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/RDD_i0_i4  (to ram/FCLK -)
+                   FF                        ram/RDD_i0_i5
+
+   Delay:               4.390ns  (32.8% logic, 67.2% route), 3 logic levels.
+
+ Constraint Details:
+
+      4.390ns physical path delay ram/SLICE_33 to ram/SLICE_48 meets
+     18.797ns delay constraint less
+      0.307ns CE_SET requirement (totaling 18.490ns) by 14.100ns
+
+ Physical Path Details:
+
+      Data path ram/SLICE_33 to ram/SLICE_48:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452 */SLICE_33.CLK to *m/SLICE_33.Q1 ram/SLICE_33 (from ram/FCLK)
+ROUTE        15   e 1.234 *m/SLICE_33.Q1 to    SLICE_39.B1 ram/S_2
+CTOF_DEL    ---     0.495    SLICE_39.B1 to    SLICE_39.F1 SLICE_39
+ROUTE         1   e 0.480    SLICE_39.F1 to    SLICE_39.B0 ram/n6
+CTOF_DEL    ---     0.495    SLICE_39.B0 to    SLICE_39.F0 SLICE_39
+ROUTE         4   e 1.234    SLICE_39.F0 to *m/SLICE_48.CE ram/RDD_7__N_84 (to ram/FCLK)
+                  --------
+                    4.390   (32.8% logic, 67.2% route), 3 logic levels.
+
+Report:  104.015MHz is the maximum frequency for this preference.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ram/FCLK" 26.600000 MHz  |             |             |
+;                                       |   26.600 MHz|  104.015 MHz|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: ram/FCLK   Source: ram/fclk_OSCH.OSC   Loads: 27
+   Covered under: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PHI2_c   Source: PHI2.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 10
+   No transfer within this clock domain is found
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
+Thu Apr 28 09:02:45 2022
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o geoRAM_impl1.tw1 -gui geoRAM_impl1_map.ncd geoRAM_impl1.prf 
+Design file:     georam_impl1_map.ncd
+Preference file: georam_impl1.prf
+Device,speed:    LCMXO2-640HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.150 V
+
+VCCIO Voltage:
+                   3.300 V (Bank 0, defined by PAR)
+                   3.300 V (Bank 1, defined by PAR)
+                   3.300 V (Bank 2, defined by PAR)
+                   3.300 V (Bank 3, defined by PAR)
+                   2.500 V (Bank 4)
+                   2.500 V (Bank 5)
+                   2.500 V (Bank 6)
+                   2.500 V (Bank 7)
+
+
+
+================================================================================
+Preference: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+            95 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              ram/nRESETr_3__117  (from ram/FCLK +)
+   Destination:    FF         Data in        ram/nRESETr_4__116  (to ram/FCLK +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_36 to SLICE_36 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_36 to SLICE_36:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133   SLICE_36.CLK to    SLICE_36.Q0 SLICE_36 (from ram/FCLK)
+ROUTE         2   e 0.199    SLICE_36.Q0 to    SLICE_36.M1 ram/nRESETr_3 (to ram/FCLK)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "ram/FCLK" 26.600000 MHz  |             |             |
+;                                       |     0.000 ns|     0.351 ns|   1  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 2 clocks:
+
+Clock Domain: ram/FCLK   Source: ram/fclk_OSCH.OSC   Loads: 27
+   Covered under: FREQUENCY NET "ram/FCLK" 26.600000 MHz ;
+
+   Data transfers from:
+   Clock Domain: PHI2_c   Source: PHI2.PAD
+      Not reported because source and destination domains are unrelated.
+
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 10
+   No transfer within this clock domain is found
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 95 paths, 1 nets, and 189 connections (64.07% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

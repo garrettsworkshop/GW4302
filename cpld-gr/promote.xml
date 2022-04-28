@@ -1,8 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<userSetting name="C:/Users/garre/Repos/GW4302/cpld-gr/promote.xml" version="Diamond (64-bit) 3.12.0.240.2" date="Thu Apr 28 07:04:08 2022" vendor="Lattice Semiconductor Corporation" >
-  <msg mid="35901599" type="Error" />
-  <msg mid="35931002" type="Warning" />
-  <msg mid="35901011" type="Error" />
-  <msg mid="35901209" type="Warning" />
-  <msg mid="35901875" type="Warning" />
+<userSetting name="//Mac/iCloud/Repos/GW4302/cpld-gr/promote.xml" version="Diamond (64-bit) 3.12.1.454" date="Thu Apr 28 09:03:23 2022" vendor="Lattice Semiconductor Corporation" >
 </userSetting>

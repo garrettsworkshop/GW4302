@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "//Mac/iCloud/Repos/GW4302/cpld-gr"  
