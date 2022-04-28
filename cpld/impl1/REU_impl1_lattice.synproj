@@ -2,7 +2,7 @@
 -d LCMXO2-640HC
 -t TQFP100
 -s 4
--sdc "//Mac/iCloud/Repos/GW4302/cpld/REU.ldc"
+-sdc "C:/Users/garre/Repos/GW4302/cpld/REU.ldc"
 -frequency 200
 -optimization_goal Balanced
 -bram_utilization 100
@@ -31,15 +31,15 @@
 
 
 -lpf 1
--p "//Mac/iCloud/Repos/GW4302/cpld"
--ver "//Mac/iCloud/Repos/GW4302/cpld/RAM.v"
-"//Mac/iCloud/Repos/GW4302/cpld/Reg.v"
-"//Mac/iCloud/Repos/GW4302/cpld/DMASeq.v"
-"//Mac/iCloud/Repos/GW4302/cpld/REU.v"
+-p "C:/Users/garre/Repos/GW4302/cpld"
+-ver "C:/Users/garre/Repos/GW4302/cpld/RAM.v"
+"C:/Users/garre/Repos/GW4302/cpld/Reg.v"
+"C:/Users/garre/Repos/GW4302/cpld/DMASeq.v"
+"C:/Users/garre/Repos/GW4302/cpld/REU.v"
 -top REU
 
 
--p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "//Mac/iCloud/Repos/GW4302/cpld/impl1" "//Mac/iCloud/Repos/GW4302/cpld"
+-p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/garre/Repos/GW4302/cpld/impl1" "C:/Users/garre/Repos/GW4302/cpld"
 
 -ngd "REU_impl1.ngd"
 

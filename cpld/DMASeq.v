@@ -97,7 +97,18 @@ end
 // Keep these for reference on subsequent cycle
 reg BAr, DMAr;
 always @(negedge PHI2) BAr <= BA;
-always @(negedge PHI2) DMAr <= DMAr;
+always @(negedge PHI2) DMAr <= DMA;
+
+/* Gated reset to REU registers */
+reg [2:1] nRESETr;
+always @(negedge PHI2) nRESETr[2:1] <= {nRESETr[1], nRESET};
+assign RegReset = 
+	// Only reset registers when not doing DMA.
+	// Reset aborts the current DMA cycle but there is a delay.
+	// If a reset pulse is short and ends before DMA ends,
+	// register reset nevertheless occurs immediately 
+	// after DMA abort even if external reset is no longer active.
+	!DMA && ((!nRESETr[1] && !DMA) || (!nRESETr[2] && DMAr));
 
 /* Transfer end control */
 assign XferEnd = 
@@ -145,16 +156,5 @@ always @(negedge PHI2) begin
 	if (!DMA) SetFault <= 0;
 	else SetFault <= XferVerify && BA && !Equal;
 end
-
-/* Gated reset to REU registers */
-reg [2:1] nRESETr;
-always @(negedge PHI2) nRESETr[2:1] <= {nRESETr[1], nRESET};
-assign RegReset = 
-	// Only reset registers when not doing DMA.
-	// Reset aborts the current DMA cycle but there is a delay.
-	// If a reset pulse is short and ends before DMA ends,
-	// register reset nevertheless occurs immediately 
-	// after DMA abort even if external reset is no longer active.
-	!DMA && ((!nRESETr[1] && !DMA) || (!nRESETr[2] && DMAr));
 		
 endmodule

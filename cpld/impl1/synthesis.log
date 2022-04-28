@@ -1,14 +1,14 @@
-synthesis:  version Diamond (64-bit) 3.12.1.454
+synthesis:  version Diamond (64-bit) 3.12.0.240.2
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 16:42:20 2022
+Thu Apr 28 18:25:26 2022
 
 
-Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset //Mac/iCloud/Repos/GW4302/cpld/promote.xml 
+Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
 
 Synthesis options:
 The -a option is MachXO2.
@@ -61,16 +61,16 @@ ROM style = auto
 RAM style = auto
 The -comp option is FALSE.
 The -syn option is FALSE.
--p //Mac/iCloud/Repos/GW4302/cpld (searchpath added)
+-p C:/Users/garre/Repos/GW4302/cpld (searchpath added)
 -p C:/lscc/diamond/3.12/ispfpga/xo2c00/data (searchpath added)
--p //Mac/iCloud/Repos/GW4302/cpld/impl1 (searchpath added)
--p //Mac/iCloud/Repos/GW4302/cpld (searchpath added)
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/RAM.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/Reg.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/DMASeq.v
-Verilog design file = //Mac/iCloud/Repos/GW4302/cpld/REU.v
+-p C:/Users/garre/Repos/GW4302/cpld/impl1 (searchpath added)
+-p C:/Users/garre/Repos/GW4302/cpld (searchpath added)
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/RAM.v
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/Reg.v
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/DMASeq.v
+Verilog design file = C:/Users/garre/Repos/GW4302/cpld/REU.v
 NGD file = REU_impl1.ngd
--sdc option: SDC file input is //Mac/iCloud/Repos/GW4302/cpld/REU.ldc.
+-sdc option: SDC file input is C:/Users/garre/Repos/GW4302/cpld/REU.ldc.
 -lpf option: Output file option is ON.
 Hardtimer checking is enabled (default). The -dt option is not used.
 The -r option is OFF. [ Remove LOC Properties is OFF. ]
@@ -79,19 +79,17 @@ Technology check ok...
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/ram.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reg.v. VERI-1482
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/dmaseq.v. VERI-1482
-WARNING - synthesis: //mac/icloud/repos/gw4302/cpld/dmaseq.v(105): identifier nRESETr is used before its declaration. VERI-1875
-Analyzing Verilog file //mac/icloud/repos/gw4302/cpld/reu.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/ram.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/reg.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/dmaseq.v. VERI-1482
+Analyzing Verilog file c:/users/garre/repos/gw4302/cpld/reu.v. VERI-1482
 Analyzing Verilog file C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): REU
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/ram.v(1): compiling module RAMctrl. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/reu.v(1): compiling module REU. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/ram.v(1): compiling module RAMctrl. VERI-1018
 INFO - synthesis: C:/lscc/diamond/3.12/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1601): compiling module ODDRXE. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
-INFO - synthesis: //mac/icloud/repos/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
-WARNING - synthesis: //mac/icloud/repos/gw4302/cpld/dmaseq.v(98): net DMAr does not have a driver. VDB-1002
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/reg.v(1): compiling module REUReg. VERI-1018
+INFO - synthesis: c:/users/garre/repos/gw4302/cpld/dmaseq.v(1): compiling module DMASeq. VERI-1018
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library 'C:/lscc/diamond/3.12/ispfpga/or5g00/data/orc5glib.ngl'...
@@ -99,8 +97,7 @@ Loading device for application map from file 'xo2c640.nph' in environment: C:/ls
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
 WARNING - synthesis: I/O Port nIO1 's net has no driver and is unused.
-######## Missing driver on net \dmaseq/DMAr. Patching with GND.
-WARNING - synthesis: Bit 12 of Register \ramctrl/RA is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \ramctrl/RA is stuck at Zero
 
 
 
@@ -118,23 +115,23 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.
 
 ################### Begin Area Report (REU)######################
-Number of register bits => 177 of 877 (20 % )
+Number of register bits => 180 of 877 (20 % )
 BB => 32
 CCU2D => 33
 FD1P3AX => 31
 FD1P3IX => 56
 FD1P3JX => 16
-FD1S3AX => 17
+FD1S3AX => 20
 FD1S3IX => 52
 FD1S3JX => 5
 GSR => 1
 IB => 6
 INV => 2
-L6MUX21 => 3
-LUT4 => 299
+L6MUX21 => 6
+LUT4 => 300
 OB => 31
 ODDRXE => 1
-PFUMX => 22
+PFUMX => 21
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -149,28 +146,28 @@ Number of Clocks: 2
 Clock Enable Nets
 Number of Clock Enables: 21
 Top 10 highest fanout Clock Enables:
-  Net : reureg/PHI2_N_570_enable_74, loads : 9
-  Net : reureg/PHI2_N_570_enable_24, loads : 8
-  Net : reureg/PHI2_N_570_enable_75, loads : 8
-  Net : reureg/PHI2_N_570_enable_86, loads : 8
-  Net : reureg/PHI2_N_570_enable_72, loads : 8
-  Net : reureg/PHI2_N_570_enable_68, loads : 8
+  Net : reureg/PHI2_N_570_enable_73, loads : 9
+  Net : reureg/PHI2_N_570_enable_69, loads : 8
+  Net : reureg/PHI2_N_570_enable_31, loads : 8
+  Net : reureg/PHI2_N_570_enable_74, loads : 8
   Net : ramctrl/RDD_7__N_62, loads : 8
-  Net : reureg/PHI2_N_570_enable_63, loads : 8
-  Net : reureg/PHI2_N_570_enable_62, loads : 8
-  Net : reureg/PHI2_N_570_enable_35, loads : 8
+  Net : reureg/PHI2_N_570_enable_67, loads : 8
+  Net : reureg/PHI2_N_570_enable_86, loads : 8
+  Net : reureg/PHI2_N_570_enable_43, loads : 8
+  Net : reureg/PHI2_N_570_enable_64, loads : 8
+  Net : reureg/PHI2_N_570_enable_75, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_570, loads : 136
-  Net : reureg/n4341, loads : 113
-  Net : A_out_0, loads : 42
-  Net : dmaseq/DMA, loads : 41
-  Net : A_out_1, loads : 31
-  Net : ramctrl/S_0, loads : 27
-  Net : n4112, loads : 27
-  Net : A_out_2, loads : 26
-  Net : dmaseq/n4095, loads : 22
-  Net : A_out_3, loads : 22
+  Net : PHI2_N_570, loads : 139
+  Net : dmaseq/n4045, loads : 49
+  Net : A_out_0, loads : 49
+  Net : dmaseq/n4046, loads : 49
+  Net : A_out_1, loads : 34
+  Net : dmaseq/DMA, loads : 32
+  Net : reureg/n3774, loads : 31
+  Net : ramctrl/S_0, loads : 28
+  Net : A_out_3, loads : 27
+  Net : dmaseq/n3758, loads : 22
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -181,7 +178,7 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   47.714 MHz|    12  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   47.553 MHz|    14  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
@@ -193,8 +190,8 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|   95.997 MHz|     6
 All constraints were met.
 
 
-Peak Memory Usage: 73.164  MB
+Peak Memory Usage: 62.410  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.109  secs
+Elapsed CPU time for LSE flow : 1.688  secs
 --------------------------------------------------------------

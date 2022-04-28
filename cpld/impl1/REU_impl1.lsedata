@@ -97,7 +97,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 740
+        Instances in netlist: 741
     -->
 
     <instance  name = "ramctrl/DQMH_147"  library = "work"  arch = ""  type = "reg">
@@ -12153,7 +12153,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/XferType_1__I_0_138"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/XferType_1__I_0_140"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
@@ -12170,7 +12170,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/XferType_1__I_0_139"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/XferType_1__I_0_141"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[1]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
@@ -12188,7 +12188,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/XferType_1__I_0_137"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/XferType_1__I_0_139"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[0]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
@@ -12235,7 +12235,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/XferSwap_I_0_131"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/XferSwap_I_0_133"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -12489,7 +12489,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/nWEDMA_I_0_128"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/nWEDMA_I_0_130"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -12505,7 +12505,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/RAMRD_I_0_122"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/RAMRD_I_0_124"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -12521,7 +12521,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/RAMWR_I_0_124"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/RAMWR_I_0_126"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -12745,7 +12745,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/nWEDMA_I_0_127"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/nWEDMA_I_0_129"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "c"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -12761,7 +12761,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/RAMRD_I_0_121"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/RAMRD_I_0_123"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "c"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -12777,7 +12777,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/RAMWR_I_0_123"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/RAMWR_I_0_125"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "c"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -12793,7 +12793,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/nWEDMA_115"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dmaseq/nWEDMA_116"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -12810,7 +12810,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/RAMRD_116"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dmaseq/RAMRD_117"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -12827,7 +12827,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/RAMWR_117"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dmaseq/RAMWR_118"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -12844,7 +12844,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/BAr_118"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dmaseq/BAr_119"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -12861,10 +12861,49 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/SetFault_119"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dmaseq/DMAr_120"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dmaseq/gnd"  />
+        <nitem  name = "DMA"  />
+        <nitem  name = "dmaseq/DMAr"  />
+        <nitem  name = "dmaseq/PHI2_N_570"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/nRESETr"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dmaseq/gnd"  />
+        <nitem  name = "nRESET"  />
+        <nitem  name = "dmaseq/nRESETr[2]"  />
+        <nitem  name = "dmaseq/nRESETr[1]"  />
+        <nitem  name = "dmaseq/PHI2_N_570"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/SetFault_122"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
         <pitem  name = "q"  direction = "out"  />
         <pitem  name = "clk"  direction = "in"  />
         <pitem  name = "d"  direction = "in"  />
@@ -12875,6 +12914,86 @@
         <nitem  name = "SetFault"  />
         <nitem  name = "dmaseq/PHI2_N_570"  />
         <nitem  name = "dmaseq/SetFault_N_636"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/DMA_I_0_132"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "DMA"  />
+        <nitem  name = "dmaseq/DMA_N_623"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/nRESETr_1__N_601_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dmaseq/DMA_N_623"  />
+        <nitem  name = "dmaseq/RegReset_N_625"  />
+        <nitem  name = "dmaseq/nRESETr_1__N_601"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/nRESETr_2__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dmaseq/nRESETr[2]"  />
+        <nitem  name = "dmaseq/nRESETr_2__N_628"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/RegReset_I_153"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dmaseq/DMAr"  />
+        <nitem  name = "dmaseq/nRESETr_2__N_628"  />
+        <nitem  name = "dmaseq/RegReset_N_626"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/RegReset_I_152"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "dmaseq/RegReset_N_625"  />
+        <nitem  name = "dmaseq/RegReset_N_626"  />
+        <nitem  name = "dmaseq/RegReset_N_624"  />
+        </nets>
+    </instance>
+
+    <instance  name = "dmaseq/RegReset_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "RegReset"  />
+        <nitem  name = "dmaseq/DMA_N_623"  />
+        <nitem  name = "dmaseq/RegReset_N_624"  />
         </nets>
     </instance>
 
@@ -12932,7 +13051,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/Length1_I_0_133"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/Length1_I_0_135"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -12946,7 +13065,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/BA_I_0_125"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/BA_I_0_127"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -13008,7 +13127,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/XferEnd_I_0_126"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/XferEnd_I_0_128"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -13022,7 +13141,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/DMA_I_0_129"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/DMA_I_0_131"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -13128,7 +13247,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/IncCA_N_630_I_0_134"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/IncCA_N_630_I_0_136"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -13184,7 +13303,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/IncCA_N_630_I_0_136"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/IncCA_N_630_I_0_138"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -13198,7 +13317,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/IncCA_N_630_I_0_135"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/IncCA_N_630_I_0_137"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -13358,7 +13477,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/SetFault_I_0_132"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "dmaseq/SetFault_I_0_134"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "c"  direction = "in"  />
@@ -13374,109 +13493,7 @@
         </nets>
     </instance>
 
-    <instance  name = "dmaseq/nRESETr"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "dmaseq/gnd"  />
-        <nitem  name = "nRESET"  />
-        <nitem  name = "dmaseq/nRESETr[2]"  />
-        <nitem  name = "dmaseq/nRESETr[1]"  />
-        <nitem  name = "dmaseq/PHI2_N_570"  />
-        </nets>
-    </instance>
-
-    <instance  name = "dmaseq/DMA_I_0_130"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "DMA"  />
-        <nitem  name = "dmaseq/DMA_N_623"  />
-        </nets>
-    </instance>
-
-    <instance  name = "dmaseq/nRESETr_1__N_601_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "dmaseq/nRESETr_1__N_601"  />
-        <nitem  name = "dmaseq/DMA_N_623"  />
-        <nitem  name = "dmaseq/RegReset_N_625"  />
-        </nets>
-    </instance>
-
-    <instance  name = "dmaseq/nRESETr_2__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "dmaseq/nRESETr[2]"  />
-        <nitem  name = "dmaseq/nRESETr_2__N_628"  />
-        </nets>
-    </instance>
-
-    <instance  name = "dmaseq/RegReset_I_153"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "dmaseq/DMAr"  />
-        <nitem  name = "dmaseq/nRESETr_2__N_628"  />
-        <nitem  name = "dmaseq/RegReset_N_626"  />
-        </nets>
-    </instance>
-
-    <instance  name = "dmaseq/RegReset_I_152"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "dmaseq/RegReset_N_625"  />
-        <nitem  name = "dmaseq/RegReset_N_626"  />
-        <nitem  name = "dmaseq/RegReset_N_624"  />
-        </nets>
-    </instance>
-
-    <instance  name = "dmaseq/RegReset_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "RegReset"  />
-        <nitem  name = "dmaseq/DMA_N_623"  />
-        <nitem  name = "dmaseq/RegReset_N_624"  />
-        </nets>
-    </instance>
-
-    <instance  name = "dmaseq/DMA_114"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "dmaseq/DMA_115"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
@@ -13497,7 +13514,7 @@
     <instance  name = "ramctrl"  />
     <instance  name = "reureg"  />
     <!--
-        REG instances in netlist: 145
+        REG instances in netlist: 146
     -->
 
     <regs>
@@ -13639,13 +13656,14 @@
         <reg  name = "reureg/FaultMask_695"  />
         <reg  name = "reureg/IncMode"  />
         <reg  name = "reureg/EndBlock_578"  />
-        <reg  name = "dmaseq/nWEDMA_115"  />
-        <reg  name = "dmaseq/RAMRD_116"  />
-        <reg  name = "dmaseq/RAMWR_117"  />
-        <reg  name = "dmaseq/BAr_118"  />
-        <reg  name = "dmaseq/SetFault_119"  />
+        <reg  name = "dmaseq/nWEDMA_116"  />
+        <reg  name = "dmaseq/RAMRD_117"  />
+        <reg  name = "dmaseq/RAMWR_118"  />
+        <reg  name = "dmaseq/BAr_119"  />
+        <reg  name = "dmaseq/DMAr_120"  />
         <reg  name = "dmaseq/nRESETr"  />
-        <reg  name = "dmaseq/DMA_114"  />
+        <reg  name = "dmaseq/SetFault_122"  />
+        <reg  name = "dmaseq/DMA_115"  />
     </regs>
 
     <!--

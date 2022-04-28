@@ -159,6 +159,51 @@ pgr_project close
 
 
 
+<A name="pn220428164302"></A><B><U><big>pn220428164302</big></U></B>
+#Start recording tcl command: 4/28/2022 11:55:13
+#Project Location: //Mac/iCloud/Repos/GW4302/cpld; Project name: REU
+prj_project open "//Mac/iCloud/Repos/GW4302/cpld/REU.ldf"
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+pgr_project open "//Mac/iCloud/Repos/GW4302/cpld/impl1/impl1.xcf"
+pgr_project close
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1 -task IOTiming
+prj_run PAR -impl impl1 -task IOTiming
+prj_run Export -impl impl1 -task Jedecgen -forceAll
+prj_run PAR -impl impl1
+prj_run PAR -impl impl1 -task IOTiming -forceOne
+prj_run PAR -impl impl1 -task IOTiming
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1
+prj_src remove "//Mac/iCloud/Repos/GW4302/cpld/Glue.v"
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1 -task IBIS
+prj_run Export -impl impl1
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1 -forceAll
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+prj_run Export -impl impl1 -forceAll
+#Stop recording: 4/28/2022 16:43:02
+
+
+
 <BR>
 <BR>
 <BR>

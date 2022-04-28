@@ -1,23 +1,23 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Thu Apr 28 16:42:49 2022 *
+NOTE DATE CREATED: Thu Apr 28 18:25:52 2022 *
 NOTE DESIGN NAME: REU *
 NOTE DEVICE NAME: LCMXO2-640HC-4TQFP100 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS A[10] : 39 : inout *
 NOTE PINS A[11] : 37 : inout *
 NOTE PINS A[12] : 36 : inout *
 NOTE PINS A[13] : 42 : inout *
 NOTE PINS A[14] : 40 : inout *
 NOTE PINS A[15] : 35 : inout *
 NOTE PINS D[0] : 4 : inout *
+NOTE PINS D[7] : 13 : inout *
 NOTE PINS D[1] : 7 : inout *
 NOTE PINS D[2] : 8 : inout *
 NOTE PINS D[3] : 10 : inout *
 NOTE PINS D[4] : 9 : inout *
 NOTE PINS D[5] : 12 : inout *
 NOTE PINS D[6] : 14 : inout *
-NOTE PINS D[7] : 13 : inout *
+NOTE PINS A[10] : 39 : inout *
 NOTE PINS A[9] : 41 : inout *
 NOTE PINS A[8] : 43 : inout *
 NOTE PINS A[7] : 48 : inout *
