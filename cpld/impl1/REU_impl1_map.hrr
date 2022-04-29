@@ -3,38 +3,38 @@ Report for cell REU
    Instance path: REU
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     191.00        100.0
-                                  LUT4	     304.00        100.0
+                                  SLIC	     192.00        100.0
+                                  LUT4	     306.00        100.0
                                  IOBUF	         69        100.0
                                 PFUREG	        180        100.0
                                 RIPPLE	         33        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                                REUReg	          1        69.2
-                               RAMctrl	          1        15.1
-                                DMASeq	          1         8.7
----------------------------------------------------
-Report for cell DMASeq
-   Instance path: REU/dmaseq
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      16.58         8.7
-                                  LUT4	      32.00        10.5
-                                PFUREG	          9         5.0
+                                REUReg	          1        69.6
+                               RAMctrl	          1        14.6
+                                DMASeq	          1         7.0
 ---------------------------------------------------
 Report for cell REUReg
    Instance path: REU/reureg
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     132.08        69.2
-                                  LUT4	     201.00        66.1
+                                  SLIC	     133.67        69.6
+                                  LUT4	     203.00        66.3
                                 PFUREG	        122        67.8
                                 RIPPLE	         30        90.9
+---------------------------------------------------
+Report for cell DMASeq
+   Instance path: REU/dmaseq
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      13.42         7.0
+                                  LUT4	      27.00         8.8
+                                PFUREG	          9         5.0
 ---------------------------------------------------
 Report for cell RAMctrl
    Instance path: REU/ramctrl
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      28.83        15.1
-                                  LUT4	      45.00        14.8
+                                  SLIC	      28.00        14.6
+                                  LUT4	      45.00        14.7
                                 PFUREG	         49        27.2

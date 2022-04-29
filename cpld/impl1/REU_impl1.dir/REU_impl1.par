@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 18:25:30 2022
+Thu Apr 28 21:21:01 2022
 
 C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f REU_impl1.p2t REU_impl1_map.ncd
 REU_impl1.dir REU_impl1.prf -gui -msgset
@@ -16,7 +16,7 @@ Preference file: REU_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            114.202      0            0.306        0            14           Completed
+5_1   *      0            114.482      0            0.306        0            13           Completed
 
 * : Design saved.
 

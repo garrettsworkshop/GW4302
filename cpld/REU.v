@@ -86,18 +86,18 @@ module REU(
 		RegReset, IncCA, DecLen, IncREUA, XferEnd, SetEndBlock, SetFault);
 		
 	/* Address bus control */
-	// Output address during DMA when bus available
-	wire AOE = PHI2 && DMA && BA; 
-	assign ADIR = !AOE; // Address buffer direction
-	assign nRWOE = !AOE; // R/W buffer direction
-	assign nAOE = 0; // Address buffer always enabled
+	assign AOE = DMA; // Output address from FPGA during DMA
+	assign ADIR = !DMA; // Address buffer direction -- out during DMA, in otherwise
+	// Address buffer output enable -- enabled during PHI2 except except during 
+	assign nAOE = !(PHI2 && (!DMA || BA));
+	// DMA R/W signal output enable
+	assign nRWOE = !(PHI2 && DMA && BA);
 	assign A[15:0] = AOE ? CA[15:0] : 16'bZ;
 
 	/* Data bus control */
-	// Output data during reg. read and during DMA when writing
-	wire DOE = (PHI2 && RegRD) || (AOE && !nWEDMA);
-	assign DDIR = !DOE;
-	assign nDOE = 0; // Address buffer always enabled
+	assign DOE = DMA ? !nWEDMA : (RegRD);
+	assign DDIR = DMA ? nWEDMA : !nWE;
+	assign nDOE = !(PHI2 && (DMA ? BA : RegCS));
 	wire [7:0] Dout = DMA ? RAMRDD[7:0] : RegRDD[7:0];
 	assign D[7:0] = DOE ? Dout[7:0] : 8'bZ;
 

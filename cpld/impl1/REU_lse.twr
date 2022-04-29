@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Thu Apr 28 18:25:28 2022
+Thu Apr 28 21:20:59 2022
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,267 +23,261 @@ Constraint: create_clock -period 976.000000 -waveform { 0.000000 488.000000 } -n
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 954.971ns
+Passed:  The following path meets requirements by 954.773ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1S3AX    CK             \dmaseq/DMA_115  (from PHI2 +)
-   Destination:    FD1S3IX    D              \reureg/REUA[14]_635  (to PHI2 -)
+   Destination:    FD1S3IX    D              \reureg/REUA[18]_655  (to PHI2 -)
 
-   Delay:                  20.869ns  (29.6% logic, 70.4% route), 14 logic levels.
+   Delay:                  21.067ns  (29.0% logic, 71.0% route), 13 logic levels.
 
  Constraint Details:
 
-     20.869ns data_path \dmaseq/DMA_115 to \reureg/REUA[14]_635 meets
+     21.067ns data_path \dmaseq/DMA_115 to \reureg/REUA[18]_655 meets
     976.000ns delay constraint less
-      0.160ns L_S requirement (totaling 975.840ns) by 954.971ns
+      0.160ns L_S requirement (totaling 975.840ns) by 954.773ns
 
- Path Details: \dmaseq/DMA_115 to \reureg/REUA[14]_635
+ Path Details: \dmaseq/DMA_115 to \reureg/REUA[18]_655
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \dmaseq/DMA_115 (from PHI2)
-Route        33   e 2.099                                  DMA
-LUT4        ---     0.493              A to Z              i2084_2_lut_rep_91
-Route         3   e 1.258                                  n3787
-LUT4        ---     0.493              A to Z              i1_2_lut_rep_75_3_lut_4_lut
-Route        19   e 1.825                                  n3771
+Route        36   e 2.104                                  DMA
+LUT4        ---     0.493              A to Z              i2045_2_lut_rep_84
+Route         2   e 1.141                                  n3661
+LUT4        ---     0.493              A to Z              i2110_2_lut_rep_74_3_lut_4_lut
+Route        19   e 1.825                                  n3651
 LUT4        ---     0.493              B to Z              \reureg/XferType_1__I_0_i1_3_lut_4_lut
 Route        11   e 1.632                                  XferType[0]
-LUT4        ---     0.493              D to Z              \reureg/i2_2_lut_4_lut
-Route         4   e 1.340                                  n3759
-MOFX0       ---     0.378             C0 to Z              \dmaseq/XferEnd_I_142
-Route         1   e 0.941                                  \dmaseq/XferEnd_N_603
-LUT4        ---     0.493              C to Z              \dmaseq/XferEnd_I_0_128_4_lut
-Route        14   e 1.807                                  XferEnd_N_599
-LUT4        ---     0.493              B to Z              \dmaseq/AutoloadEN_I_0_2_lut_rep_62_3_lut
-Route        23   e 1.836                                  n3758
-A1_TO_FCO   ---     0.827           A[2] to COUT           \reureg/REUAOut_15__I_0_1
-Route         1   e 0.020                                  \reureg/n3023
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/REUAOut_15__I_0_3
-Route         1   e 0.020                                  \reureg/n3024
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/REUAOut_15__I_0_5
-Route         1   e 0.020                                  \reureg/n3025
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/REUAOut_15__I_0_7
-Route         1   e 0.020                                  \reureg/n3026
-FCI_TO_F    ---     0.598            CIN to S[2]           \reureg/REUAOut_15__I_0_9
-Route         1   e 0.941                                  \reureg/REUAOut_15__N_145[6]
-LUT4        ---     0.493              D to Z              \reureg/mux_168_i7_3_lut_4_lut
-Route         1   e 0.941                                  \reureg/REUAOut_14__N_154
+LUT4        ---     0.493              B to Z              \dmaseq/i1058_4_lut_4_lut
+Route         1   e 0.020                                  \dmaseq/n1276
+MUXL5       ---     0.233           ALUT to Z              \dmaseq/mux_224_Mux_0_i3
+Route         2   e 1.141                                  IncREUA
+LUT4        ---     0.493              B to Z              \reureg/i1_2_lut_adj_167
+Route         1   e 0.941                                  \reureg/n11
+LUT4        ---     0.493              C to Z              \reureg/i9_4_lut
+Route         2   e 1.141                                  \reureg/REUAOut_15__N_147
+LUT4        ---     0.493              B to Z              \reureg/i1_2_lut_adj_166
+Route         1   e 0.941                                  \reureg/n10
+LUT4        ---     0.493              D to Z              \reureg/i8_4_lut
+Route         3   e 1.258                                  \reureg/REUAOut_18__N_130
+LUT4        ---     0.493              B to Z              \reureg/i789_2_lut_3_lut
+Route         1   e 0.941                                  \reureg/n961
+LUT4        ---     0.493              D to Z              \reureg/mux_173_i3_4_lut
+Route         1   e 0.941                                  \reureg/REUAOut_18__N_127
+LUT4        ---     0.493              D to Z              \reureg/mux_182_i3_3_lut_4_lut
+Route         1   e 0.941                                  \reureg/REUAOut_18__N_126
                   --------
-                   20.869  (29.6% logic, 70.4% route), 14 logic levels.
+                   21.067  (29.0% logic, 71.0% route), 13 logic levels.
 
 
-Passed:  The following path meets requirements by 954.971ns
+Passed:  The following path meets requirements by 954.773ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1S3AX    CK             \dmaseq/DMA_115  (from PHI2 +)
-   Destination:    FD1S3IX    D              \reureg/CA[7]_586  (to PHI2 -)
+   Destination:    FD1S3IX    D              \reureg/REUA[18]_655  (to PHI2 -)
 
-   Delay:                  20.869ns  (29.6% logic, 70.4% route), 14 logic levels.
+   Delay:                  21.067ns  (29.0% logic, 71.0% route), 13 logic levels.
 
  Constraint Details:
 
-     20.869ns data_path \dmaseq/DMA_115 to \reureg/CA[7]_586 meets
+     21.067ns data_path \dmaseq/DMA_115 to \reureg/REUA[18]_655 meets
     976.000ns delay constraint less
-      0.160ns L_S requirement (totaling 975.840ns) by 954.971ns
+      0.160ns L_S requirement (totaling 975.840ns) by 954.773ns
 
- Path Details: \dmaseq/DMA_115 to \reureg/CA[7]_586
+ Path Details: \dmaseq/DMA_115 to \reureg/REUA[18]_655
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \dmaseq/DMA_115 (from PHI2)
-Route        33   e 2.099                                  DMA
-LUT4        ---     0.493              A to Z              i2084_2_lut_rep_91
-Route         3   e 1.258                                  n3787
-LUT4        ---     0.493              A to Z              i1_2_lut_rep_75_3_lut_4_lut
-Route        19   e 1.825                                  n3771
+Route        36   e 2.104                                  DMA
+LUT4        ---     0.493              A to Z              i2045_2_lut_rep_84
+Route         2   e 1.141                                  n3661
+LUT4        ---     0.493              A to Z              i2110_2_lut_rep_74_3_lut_4_lut
+Route        19   e 1.825                                  n3651
 LUT4        ---     0.493              B to Z              \reureg/XferType_1__I_0_i1_3_lut_4_lut
 Route        11   e 1.632                                  XferType[0]
-LUT4        ---     0.493              D to Z              \reureg/i2_2_lut_4_lut
-Route         4   e 1.340                                  n3759
-MOFX0       ---     0.378             C0 to Z              \dmaseq/XferEnd_I_142
-Route         1   e 0.941                                  \dmaseq/XferEnd_N_603
-LUT4        ---     0.493              C to Z              \dmaseq/XferEnd_I_0_128_4_lut
-Route        14   e 1.807                                  XferEnd_N_599
-LUT4        ---     0.493              B to Z              \dmaseq/AutoloadEN_I_0_2_lut_rep_62_3_lut
-Route        23   e 1.836                                  n3758
-A1_TO_FCO   ---     0.827           A[2] to COUT           \reureg/CAOut_7__I_0_1
-Route         1   e 0.020                                  \reureg/n2999
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_7__I_0_3
-Route         1   e 0.020                                  \reureg/n3000
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_7__I_0_5
-Route         1   e 0.020                                  \reureg/n3001
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_7__I_0_7
-Route         1   e 0.020                                  \reureg/n3002
-FCI_TO_F    ---     0.598            CIN to S[2]           \reureg/CAOut_7__I_0_9
-Route         1   e 0.941                                  \reureg/CAOut_7__N_280[7]
-LUT4        ---     0.493              D to Z              \reureg/mux_171_i8_3_lut_4_lut
-Route         1   e 0.941                                  \reureg/CAOut_7__N_277
+LUT4        ---     0.493              C to Z              \dmaseq/mux_224_Mux_0_i1_4_lut
+Route         1   e 0.020                                  \dmaseq/n1
+MUXL5       ---     0.233           BLUT to Z              \dmaseq/mux_224_Mux_0_i3
+Route         2   e 1.141                                  IncREUA
+LUT4        ---     0.493              B to Z              \reureg/i1_2_lut_adj_167
+Route         1   e 0.941                                  \reureg/n11
+LUT4        ---     0.493              C to Z              \reureg/i9_4_lut
+Route         2   e 1.141                                  \reureg/REUAOut_15__N_147
+LUT4        ---     0.493              B to Z              \reureg/i1_2_lut_adj_166
+Route         1   e 0.941                                  \reureg/n10
+LUT4        ---     0.493              D to Z              \reureg/i8_4_lut
+Route         3   e 1.258                                  \reureg/REUAOut_18__N_130
+LUT4        ---     0.493              B to Z              \reureg/i789_2_lut_3_lut
+Route         1   e 0.941                                  \reureg/n961
+LUT4        ---     0.493              D to Z              \reureg/mux_173_i3_4_lut
+Route         1   e 0.941                                  \reureg/REUAOut_18__N_127
+LUT4        ---     0.493              D to Z              \reureg/mux_182_i3_3_lut_4_lut
+Route         1   e 0.941                                  \reureg/REUAOut_18__N_126
                   --------
-                   20.869  (29.6% logic, 70.4% route), 14 logic levels.
+                   21.067  (29.0% logic, 71.0% route), 13 logic levels.
 
 
-Passed:  The following path meets requirements by 954.971ns
+Passed:  The following path meets requirements by 954.773ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1S3AX    CK             \dmaseq/DMA_115  (from PHI2 +)
-   Destination:    FD1S3IX    D              \reureg/CA[6]_587  (to PHI2 -)
+   Destination:    FD1S3IX    D              \reureg/REUA[17]_656  (to PHI2 -)
 
-   Delay:                  20.869ns  (29.6% logic, 70.4% route), 14 logic levels.
+   Delay:                  21.067ns  (29.0% logic, 71.0% route), 13 logic levels.
 
  Constraint Details:
 
-     20.869ns data_path \dmaseq/DMA_115 to \reureg/CA[6]_587 meets
+     21.067ns data_path \dmaseq/DMA_115 to \reureg/REUA[17]_656 meets
     976.000ns delay constraint less
-      0.160ns L_S requirement (totaling 975.840ns) by 954.971ns
+      0.160ns L_S requirement (totaling 975.840ns) by 954.773ns
 
- Path Details: \dmaseq/DMA_115 to \reureg/CA[6]_587
+ Path Details: \dmaseq/DMA_115 to \reureg/REUA[17]_656
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \dmaseq/DMA_115 (from PHI2)
-Route        33   e 2.099                                  DMA
-LUT4        ---     0.493              A to Z              i2084_2_lut_rep_91
-Route         3   e 1.258                                  n3787
-LUT4        ---     0.493              A to Z              i1_2_lut_rep_75_3_lut_4_lut
-Route        19   e 1.825                                  n3771
+Route        36   e 2.104                                  DMA
+LUT4        ---     0.493              A to Z              i2045_2_lut_rep_84
+Route         2   e 1.141                                  n3661
+LUT4        ---     0.493              A to Z              i2110_2_lut_rep_74_3_lut_4_lut
+Route        19   e 1.825                                  n3651
 LUT4        ---     0.493              B to Z              \reureg/XferType_1__I_0_i1_3_lut_4_lut
 Route        11   e 1.632                                  XferType[0]
-LUT4        ---     0.493              D to Z              \reureg/i2_2_lut_4_lut
-Route         4   e 1.340                                  n3759
-MOFX0       ---     0.378             C0 to Z              \dmaseq/XferEnd_I_142
-Route         1   e 0.941                                  \dmaseq/XferEnd_N_603
-LUT4        ---     0.493              C to Z              \dmaseq/XferEnd_I_0_128_4_lut
-Route        14   e 1.807                                  XferEnd_N_599
-LUT4        ---     0.493              B to Z              \dmaseq/AutoloadEN_I_0_2_lut_rep_62_3_lut
-Route        23   e 1.836                                  n3758
-A1_TO_FCO   ---     0.827           A[2] to COUT           \reureg/CAOut_7__I_0_1
-Route         1   e 0.020                                  \reureg/n2999
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_7__I_0_3
-Route         1   e 0.020                                  \reureg/n3000
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_7__I_0_5
-Route         1   e 0.020                                  \reureg/n3001
-FCI_TO_FCO  ---     0.157            CIN to COUT           \reureg/CAOut_7__I_0_7
-Route         1   e 0.020                                  \reureg/n3002
-FCI_TO_F    ---     0.598            CIN to S[2]           \reureg/CAOut_7__I_0_9
-Route         1   e 0.941                                  \reureg/CAOut_7__N_280[6]
-LUT4        ---     0.493              D to Z              \reureg/mux_171_i7_3_lut_4_lut
-Route         1   e 0.941                                  \reureg/CAOut_6__N_283
+LUT4        ---     0.493              C to Z              \dmaseq/mux_224_Mux_0_i1_4_lut
+Route         1   e 0.020                                  \dmaseq/n1
+MUXL5       ---     0.233           BLUT to Z              \dmaseq/mux_224_Mux_0_i3
+Route         2   e 1.141                                  IncREUA
+LUT4        ---     0.493              B to Z              \reureg/i1_2_lut_adj_167
+Route         1   e 0.941                                  \reureg/n11
+LUT4        ---     0.493              C to Z              \reureg/i9_4_lut
+Route         2   e 1.141                                  \reureg/REUAOut_15__N_147
+LUT4        ---     0.493              B to Z              \reureg/i1_2_lut_adj_166
+Route         1   e 0.941                                  \reureg/n10
+LUT4        ---     0.493              D to Z              \reureg/i8_4_lut
+Route         3   e 1.258                                  \reureg/REUAOut_18__N_130
+LUT4        ---     0.493              B to Z              \reureg/i781_2_lut_rep_58
+Route         1   e 0.941                                  \reureg/n3635
+LUT4        ---     0.493              D to Z              \reureg/mux_173_i2_4_lut
+Route         1   e 0.941                                  \reureg/REUAOut_17__N_134
+LUT4        ---     0.493              D to Z              \reureg/mux_182_i2_3_lut_4_lut
+Route         1   e 0.941                                  \reureg/REUAOut_17__N_133
                   --------
-                   20.869  (29.6% logic, 70.4% route), 14 logic levels.
+                   21.067  (29.0% logic, 71.0% route), 13 logic levels.
 
-Report: 21.029 ns is the maximum delay for this constraint.
+Report: 21.227 ns is the maximum delay for this constraint.
 
 
 
 ================================================================================
 Constraint: create_clock -period 122.000000 -waveform { 0.000000 61.000000 } -name C8M [ get_ports { C8M } ]
-            205 items scored, 0 timing errors detected.
+            207 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed:  The following path meets requirements by 111.583ns
+Passed:  The following path meets requirements by 111.596ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3AX    CK             \ramctrl/InitDone_138  (from C8M +)
    Destination:    FD1S3AX    D              \ramctrl/nCS_140  (to C8M +)
 
-   Delay:                  10.257ns  (28.4% logic, 71.6% route), 6 logic levels.
+   Delay:                  10.244ns  (28.4% logic, 71.6% route), 6 logic levels.
 
  Constraint Details:
 
-     10.257ns data_path \ramctrl/InitDone_138 to \ramctrl/nCS_140 meets
+     10.244ns data_path \ramctrl/InitDone_138 to \ramctrl/nCS_140 meets
     122.000ns delay constraint less
-      0.160ns L_S requirement (totaling 121.840ns) by 111.583ns
+      0.160ns L_S requirement (totaling 121.840ns) by 111.596ns
 
  Path Details: \ramctrl/InitDone_138 to \ramctrl/nCS_140
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \ramctrl/InitDone_138 (from C8M)
-Route        10   e 1.662                                  \ramctrl/InitDone
-LUT4        ---     0.493              B to Z              \ramctrl/i2098_3_lut_rep_99
-Route         5   e 1.405                                  \ramctrl/n3795
-LUT4        ---     0.493              B to Z              \ramctrl/i2_3_lut_rep_86
-Route         3   e 1.258                                  \ramctrl/n3782
-LUT4        ---     0.493              D to Z              \ramctrl/i2206_2_lut_3_lut_4_lut
-Route         2   e 1.141                                  \ramctrl/n2416
+Route        12   e 1.714                                  \ramctrl/InitDone
+LUT4        ---     0.493              B to Z              \ramctrl/i2061_3_lut_rep_97
+Route         4   e 1.340                                  \ramctrl/n3674
+LUT4        ---     0.493              B to Z              \ramctrl/i2_3_lut_rep_82
+Route         3   e 1.258                                  \ramctrl/n3659
+LUT4        ---     0.493              D to Z              \ramctrl/i2169_2_lut_3_lut_4_lut
+Route         2   e 1.141                                  \ramctrl/n2379
 LUT4        ---     0.493              B to Z              \ramctrl/S_2__I_0_174_i3_4_lut
-Route         1   e 0.941                                  \ramctrl/n2460
+Route         1   e 0.941                                  \ramctrl/n2419
 LUT4        ---     0.493              D to Z              \ramctrl/S_2__I_0_174_i7_3_lut_4_lut
-Route         1   e 0.941                                  \ramctrl/nCS_N_64
+Route         1   e 0.941                                  \ramctrl/nCS_N_65
                   --------
-                   10.257  (28.4% logic, 71.6% route), 6 logic levels.
+                   10.244  (28.4% logic, 71.6% route), 6 logic levels.
 
 
-Passed:  The following path meets requirements by 111.583ns
+Passed:  The following path meets requirements by 111.596ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
    Source:         FD1P3AX    CK             \ramctrl/InitDone_138  (from C8M +)
    Destination:    FD1S3AX    D              \ramctrl/nRAS_141  (to C8M +)
 
-   Delay:                  10.257ns  (28.4% logic, 71.6% route), 6 logic levels.
+   Delay:                  10.244ns  (28.4% logic, 71.6% route), 6 logic levels.
 
  Constraint Details:
 
-     10.257ns data_path \ramctrl/InitDone_138 to \ramctrl/nRAS_141 meets
+     10.244ns data_path \ramctrl/InitDone_138 to \ramctrl/nRAS_141 meets
     122.000ns delay constraint less
-      0.160ns L_S requirement (totaling 121.840ns) by 111.583ns
+      0.160ns L_S requirement (totaling 121.840ns) by 111.596ns
 
  Path Details: \ramctrl/InitDone_138 to \ramctrl/nRAS_141
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              \ramctrl/InitDone_138 (from C8M)
-Route        10   e 1.662                                  \ramctrl/InitDone
-LUT4        ---     0.493              B to Z              \ramctrl/i2098_3_lut_rep_99
-Route         5   e 1.405                                  \ramctrl/n3795
-LUT4        ---     0.493              B to Z              \ramctrl/i2_3_lut_rep_86
-Route         3   e 1.258                                  \ramctrl/n3782
-LUT4        ---     0.493              D to Z              \ramctrl/i2206_2_lut_3_lut_4_lut
-Route         2   e 1.141                                  \ramctrl/n2416
+Route        12   e 1.714                                  \ramctrl/InitDone
+LUT4        ---     0.493              B to Z              \ramctrl/i2061_3_lut_rep_97
+Route         4   e 1.340                                  \ramctrl/n3674
+LUT4        ---     0.493              B to Z              \ramctrl/i2_3_lut_rep_82
+Route         3   e 1.258                                  \ramctrl/n3659
+LUT4        ---     0.493              D to Z              \ramctrl/i2169_2_lut_3_lut_4_lut
+Route         2   e 1.141                                  \ramctrl/n2379
 LUT4        ---     0.493              B to Z              \ramctrl/S_2__I_0_175_i3_4_lut
 Route         1   e 0.941                                  \ramctrl/n3
 LUT4        ---     0.493              D to Z              \ramctrl/S_2__I_0_175_i7_3_lut_4_lut
-Route         1   e 0.941                                  \ramctrl/nRAS_N_84
+Route         1   e 0.941                                  \ramctrl/nRAS_N_85
                   --------
-                   10.257  (28.4% logic, 71.6% route), 6 logic levels.
+                   10.244  (28.4% logic, 71.6% route), 6 logic levels.
 
 
-Passed:  The following path meets requirements by 111.783ns
+Passed:  The following path meets requirements by 111.795ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             \ramctrl/RefCnt_248__i0  (from C8M +)
+   Source:         FD1P3IX    CK             \ramctrl/RefCnt_254__i0  (from C8M +)
    Destination:    FD1S3AX    D              \ramctrl/nCS_140  (to C8M +)
 
-   Delay:                  10.057ns  (28.9% logic, 71.1% route), 6 logic levels.
+   Delay:                  10.045ns  (29.0% logic, 71.0% route), 6 logic levels.
 
  Constraint Details:
 
-     10.057ns data_path \ramctrl/RefCnt_248__i0 to \ramctrl/nCS_140 meets
+     10.045ns data_path \ramctrl/RefCnt_254__i0 to \ramctrl/nCS_140 meets
     122.000ns delay constraint less
-      0.160ns L_S requirement (totaling 121.840ns) by 111.783ns
+      0.160ns L_S requirement (totaling 121.840ns) by 111.795ns
 
- Path Details: \ramctrl/RefCnt_248__i0 to \ramctrl/nCS_140
+ Path Details: \ramctrl/RefCnt_254__i0 to \ramctrl/nCS_140
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.444             CK to Q              \ramctrl/RefCnt_248__i0 (from C8M)
-Route         5   e 1.462                                  \ramctrl/RefCnt[0]
-LUT4        ---     0.493              A to Z              \ramctrl/i2098_3_lut_rep_99
-Route         5   e 1.405                                  \ramctrl/n3795
-LUT4        ---     0.493              B to Z              \ramctrl/i2_3_lut_rep_86
-Route         3   e 1.258                                  \ramctrl/n3782
-LUT4        ---     0.493              D to Z              \ramctrl/i2206_2_lut_3_lut_4_lut
-Route         2   e 1.141                                  \ramctrl/n2416
+L_CO        ---     0.444             CK to Q              \ramctrl/RefCnt_254__i0 (from C8M)
+Route         6   e 1.515                                  \ramctrl/RefCnt[0]
+LUT4        ---     0.493              A to Z              \ramctrl/i2061_3_lut_rep_97
+Route         4   e 1.340                                  \ramctrl/n3674
+LUT4        ---     0.493              B to Z              \ramctrl/i2_3_lut_rep_82
+Route         3   e 1.258                                  \ramctrl/n3659
+LUT4        ---     0.493              D to Z              \ramctrl/i2169_2_lut_3_lut_4_lut
+Route         2   e 1.141                                  \ramctrl/n2379
 LUT4        ---     0.493              B to Z              \ramctrl/S_2__I_0_174_i3_4_lut
-Route         1   e 0.941                                  \ramctrl/n2460
+Route         1   e 0.941                                  \ramctrl/n2419
 LUT4        ---     0.493              D to Z              \ramctrl/S_2__I_0_174_i7_3_lut_4_lut
-Route         1   e 0.941                                  \ramctrl/nCS_N_64
+Route         1   e 0.941                                  \ramctrl/nCS_N_65
                   --------
-                   10.057  (28.9% logic, 71.1% route), 6 logic levels.
+                   10.045  (29.0% logic, 71.0% route), 6 logic levels.
 
-Report: 10.417 ns is the maximum delay for this constraint.
+Report: 10.404 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -294,11 +288,11 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |   976.000 ns|    21.029 ns|    14  
+PHI2 [ get_ports { PHI2 } ]             |   976.000 ns|    21.227 ns|    13  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
-C8M [ get_ports { C8M } ]               |   122.000 ns|    10.417 ns|     6  
+C8M [ get_ports { C8M } ]               |   122.000 ns|    10.404 ns|     6  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -312,8 +306,8 @@ Timing summary:
 
 Timing errors: 0  Score: 0
 
-Constraints cover  17664 paths, 435 nets, and 1231 connections (62.8% coverage)
+Constraints cover  17666 paths, 434 nets, and 1234 connections (62.6% coverage)
 
 
-Peak memory: 65269760 bytes, TRCE: 6688768 bytes, DLYMAN: 0 bytes
+Peak memory: 65654784 bytes, TRCE: 6418432 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

@@ -11,7 +11,7 @@ WARNING - synthesis: input pad net 'nIO1' has no legal load.
 WARNING - synthesis: DRC complete with 2 warnings.
 
 Design Results:
-    616 blocks expanded
+    620 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file REU_impl1.ngd.

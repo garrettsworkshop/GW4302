@@ -16,26 +16,15 @@ I/O cells:      69
                                  IB         6          100.0
                                 INV         2          100.0
                             L6MUX21         6          100.0
-                               LUT4       300          100.0
+                               LUT4       303          100.0
                                  OB        31          100.0
                              ODDRXE         1          100.0
-                              PFUMX        21          100.0
+                              PFUMX        22          100.0
 SUB MODULES
                              DMASeq         1
                             RAMctrl         1
                              REUReg         1
-                              TOTAL       616
-----------------------------------------------------------------------
-Report for cell DMASeq.v1
-Instance Path : dmaseq
-                                  Cell usage:
-                               cell     count   Res Usage(%)
-                            FD1P3AX         3            9.7
-                            FD1S3AX         5           25.0
-                            FD1S3IX         1            1.9
-                               LUT4        32           10.7
-                              PFUMX         4           19.0
-                              TOTAL        45
+                              TOTAL       620
 ----------------------------------------------------------------------
 Report for cell REUReg.v1
 Instance Path : reureg
@@ -47,9 +36,20 @@ Instance Path : reureg
                             FD1P3JX        16          100.0
                             FD1S3IX        37           71.2
                             L6MUX21         6          100.0
-                               LUT4       199           66.3
-                              PFUMX        15           71.4
-                              TOTAL       372
+                               LUT4       201           66.3
+                              PFUMX        15           68.2
+                              TOTAL       374
+----------------------------------------------------------------------
+Report for cell DMASeq.v1
+Instance Path : dmaseq
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX         3            9.7
+                            FD1S3AX         5           25.0
+                            FD1S3IX         1            1.9
+                               LUT4        27            8.9
+                              PFUMX         4           18.2
+                              TOTAL        40
 ----------------------------------------------------------------------
 Report for cell RAMctrl.v1
 Instance Path : ramctrl
@@ -60,7 +60,7 @@ Instance Path : ramctrl
                             FD1S3AX        15           75.0
                             FD1S3IX        14           26.9
                             FD1S3JX         5          100.0
-                               LUT4        47           15.7
+                               LUT4        47           15.5
                              ODDRXE         1          100.0
-                              PFUMX         2            9.5
-                              TOTAL        99
+                              PFUMX         3           13.6
+                              TOTAL       100

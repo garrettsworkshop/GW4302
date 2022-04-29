@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 18:25:26 2022
+Thu Apr 28 21:20:57 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
@@ -137,10 +137,10 @@ GSR => 1
 IB => 6
 INV => 2
 L6MUX21 => 6
-LUT4 => 300
+LUT4 => 303
 OB => 31
 ODDRXE => 1
-PFUMX => 21
+PFUMX => 22
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -151,32 +151,32 @@ TSALL => 1
 Clock Nets
 Number of Clocks: 2
   Net : C8M_c, loads : 42
-  Net : PHI2_c, loads : 4
+  Net : PHI2_c, loads : 5
 Clock Enable Nets
 Number of Clock Enables: 21
 Top 10 highest fanout Clock Enables:
-  Net : reureg/PHI2_N_570_enable_73, loads : 9
-  Net : reureg/PHI2_N_570_enable_69, loads : 8
-  Net : reureg/PHI2_N_570_enable_31, loads : 8
-  Net : reureg/PHI2_N_570_enable_74, loads : 8
-  Net : ramctrl/RDD_7__N_62, loads : 8
-  Net : reureg/PHI2_N_570_enable_67, loads : 8
-  Net : reureg/PHI2_N_570_enable_86, loads : 8
-  Net : reureg/PHI2_N_570_enable_43, loads : 8
-  Net : reureg/PHI2_N_570_enable_64, loads : 8
-  Net : reureg/PHI2_N_570_enable_75, loads : 8
+  Net : ramctrl/S_2, loads : 16
+  Net : reureg/PHI2_N_571_enable_73, loads : 9
+  Net : reureg/PHI2_N_571_enable_69, loads : 8
+  Net : reureg/PHI2_N_571_enable_31, loads : 8
+  Net : reureg/PHI2_N_571_enable_74, loads : 8
+  Net : reureg/PHI2_N_571_enable_43, loads : 8
+  Net : reureg/PHI2_N_571_enable_75, loads : 8
+  Net : reureg/PHI2_N_571_enable_67, loads : 8
+  Net : reureg/PHI2_N_571_enable_86, loads : 8
+  Net : reureg/PHI2_N_571_enable_64, loads : 8
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : PHI2_N_570, loads : 139
-  Net : dmaseq/n4045, loads : 49
-  Net : A_out_0, loads : 49
-  Net : dmaseq/n4046, loads : 49
-  Net : A_out_1, loads : 34
-  Net : dmaseq/DMA, loads : 32
-  Net : reureg/n3774, loads : 31
-  Net : ramctrl/S_0, loads : 28
-  Net : A_out_3, loads : 27
-  Net : dmaseq/n3758, loads : 22
+  Net : PHI2_N_571, loads : 139
+  Net : A_out_0, loads : 52
+  Net : n3925, loads : 50
+  Net : n3926, loads : 50
+  Net : A_out_1, loads : 37
+  Net : dmaseq/DMA, loads : 35
+  Net : reureg/n2264, loads : 34
+  Net : ramctrl/S_0, loads : 29
+  Net : A_out_3, loads : 26
+  Net : dmaseq/n3636, loads : 22
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -187,11 +187,11 @@ Constraint                              |   Constraint|       Actual|Levels
                                         |             |             |
 create_clock -period 976.000000         |             |             |
 -waveform { 0.000000 488.000000 } -name |             |             |
-PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   47.553 MHz|    14  
+PHI2 [ get_ports { PHI2 } ]             |    1.024 MHz|   47.110 MHz|    13  
                                         |             |             |
 create_clock -period 122.000000         |             |             |
 -waveform { 0.000000 61.000000 } -name  |             |             |
-C8M [ get_ports { C8M } ]               |    8.196 MHz|   95.997 MHz|     6  
+C8M [ get_ports { C8M } ]               |    8.196 MHz|   96.117 MHz|     6  
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -199,10 +199,10 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|   95.997 MHz|     6
 All constraints were met.
 
 
-Peak Memory Usage: 62.410  MB
+Peak Memory Usage: 62.652  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.688  secs
+Elapsed CPU time for LSE flow : 1.750  secs
 --------------------------------------------------------------
 
 
