@@ -20,17 +20,18 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/Users/garre/Repos/GW4302/cpld/impl1/REU_impl1.jed</File>
-			<FileTime>04/28/22 21:21:20</FileTime>
+			<FileTime>09/02/22 04:48:41</FileTime>
 			<JedecChecksum>0x8D83</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
-				<IOState>Leave Alone</IOState>
+				<IOState>HighZ</IOState>
 				<PreloadLength>152</PreloadLength>
 				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
-				<SVFProcessor>SVF Processor</SVFProcessor>
+				<OverideUES value="TRUE"/>
+				<TCKFrequency>1.000000 MHz</TCKFrequency>
+				<SVFProcessor>ispVM</SVFProcessor>
 				<Usercode>0x00000000</Usercode>
-				<AccessMode>FLASH</AccessMode>
 			</Option>
 		</Device>
 	</Chain>
@@ -46,6 +47,6 @@
 	<CableOptions>
 		<CableName>USB</CableName>
 		<PortAdd>EzUSB-0</PortAdd>
-		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#6&amp;amp;ab8e23f&amp;amp;0&amp;amp;4#</USBID>
+		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#6&amp;amp;21488235&amp;amp;0&amp;amp;1#</USBID>
 	</CableOptions>
 </ispXCF>

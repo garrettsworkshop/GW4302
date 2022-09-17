@@ -13,8 +13,8 @@ Command line:   map -a MachXO2 -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial
 Target Vendor:  LATTICE
 Target Device:  LCMXO2-640HCTQFP100
 Target Performance:   4
-Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  04/28/22  21:20:59
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
+Mapped on:  09/02/22  04:48:19
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  REU                                           Date:  04/28/22  21:20:59
+Design:  REU                                           Date:  09/02/22  04:48:19
 
 Design Summary (cont)
 ---------------------
@@ -99,31 +99,31 @@ Design Summary (cont)
      Net ramctrl/RDD_7__N_63: 4 loads, 4 LSLICEs
    Number of LSRs:  14
      Net DMA: 1 loads, 1 LSLICEs
-     Net n3925: 32 loads, 32 LSLICEs
-     Net n3926: 32 loads, 32 LSLICEs
-     Net reureg/n1171: 2 loads, 2 LSLICEs
+     Net n3913: 32 loads, 32 LSLICEs
+     Net n3914: 32 loads, 32 LSLICEs
+     Net reureg/n1159: 2 loads, 2 LSLICEs
      Net RegReset: 2 loads, 2 LSLICEs
-     Net ramctrl/n1531: 1 loads, 1 LSLICEs
+     Net ramctrl/n1519: 1 loads, 1 LSLICEs
      Net ramctrl/S_1: 1 loads, 1 LSLICEs
      Net ramctrl/S_2: 1 loads, 1 LSLICEs
-     Net ramctrl/n1320: 1 loads, 1 LSLICEs
-     Net ramctrl/n3671: 6 loads, 6 LSLICEs
+     Net ramctrl/n1308: 1 loads, 1 LSLICEs
+     Net ramctrl/n3659: 6 loads, 6 LSLICEs
      Net ramctrl/PORDone: 1 loads, 1 LSLICEs
-     Net ramctrl/n1278: 1 loads, 1 LSLICEs
-     Net ramctrl/n3226: 1 loads, 1 LSLICEs
-     Net ramctrl/n1534: 2 loads, 2 LSLICEs
+     Net ramctrl/n1266: 1 loads, 1 LSLICEs
+     Net ramctrl/n3214: 1 loads, 1 LSLICEs
+     Net ramctrl/n1522: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
      Net DMA: 53 loads
      Net A_out_0: 52 loads
      Net A_out_1: 39 loads
-     Net reureg/n2264: 34 loads
-     Net n3925: 32 loads
-     Net n3926: 32 loads
+     Net reureg/n2252: 34 loads
+     Net n3913: 32 loads
+     Net n3914: 32 loads
      Net ramctrl/S_0: 29 loads
      Net A_out_3: 28 loads
-     Net n3636: 23 loads
-     Net n3924: 22 loads
+     Net n3624: 23 loads
+     Net n3912: 22 loads
 
 
 
@@ -132,7 +132,7 @@ Design Summary (cont)
 
 
 
-Design:  REU                                           Date:  04/28/22  21:20:59
+Design:  REU                                           Date:  09/02/22  04:48:19
 
 
 
@@ -198,7 +198,7 @@ IO (PIO) Attributes
 
 
 
-Design:  REU                                           Date:  04/28/22  21:20:59
+Design:  REU                                           Date:  09/02/22  04:48:19
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -264,7 +264,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  REU                                           Date:  04/28/22  21:20:59
+Design:  REU                                           Date:  09/02/22  04:48:19
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -321,8 +321,8 @@ Block GSR_INST undriven or does not drive anything - clipped.
 Signal PHI2_N_571 was merged into signal PHI2_c
 Signal C8M_N_46 was merged into signal C8M_c
 Signal n1103 was merged into signal ramctrl/RDOE
-Signal ramctrl/n3677 was merged into signal ramctrl/PORDone
-Signal dmaseq/n3679 was merged into signal XferEnd_N_600
+Signal ramctrl/n3665 was merged into signal ramctrl/PORDone
+Signal dmaseq/n3667 was merged into signal XferEnd_N_600
 Signal RAMRDD_7__I_0_7/S1 undriven or does not drive anything - clipped.
 
                                     Page 5
@@ -330,7 +330,7 @@ Signal RAMRDD_7__I_0_7/S1 undriven or does not drive anything - clipped.
 
 
 
-Design:  REU                                           Date:  04/28/22  21:20:59
+Design:  REU                                           Date:  09/02/22  04:48:19
 
 Removed logic (cont)
 --------------------
@@ -396,14 +396,14 @@ Block dmaseq/i1_4_lut_then_1_lut was optimized away.
 
 
 
-Design:  REU                                           Date:  04/28/22  21:20:59
+Design:  REU                                           Date:  09/02/22  04:48:19
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
-   Total REAL Time: 0 secs  
-   Peak Memory Usage: 38 MB
+   Total REAL Time: 2 secs  
+   Peak Memory Usage: 39 MB
         
 
 

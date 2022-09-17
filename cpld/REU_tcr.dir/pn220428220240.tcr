@@ -1,0 +1,4 @@
+#Start recording tcl command: 4/28/2022 22:02:35
+#Project Location: C:/Users/garre/Repos/GW4302/cpld; Project name: REU
+prj_project open "C:/Users/garre/Repos/GW4302/cpld/REU.ldf"
+#Stop recording: 4/28/2022 22:02:40
