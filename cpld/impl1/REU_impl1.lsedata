@@ -1,8 +1,8 @@
 <top name = "REU"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "C8M"  type = "port" />
     <clockitem name = "PHI2"  type = "port" />
+    <clockitem name = "C8M"  type = "port" />
 </clocks>
 
 <!--

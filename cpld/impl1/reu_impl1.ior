@@ -28,8 +28,8 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Design: REU
 // Package: TQFP100
 // ncd File: reu_impl1.ncd
-// Version: Diamond (64-bit) 3.12.0.240.2
-// Written on Thu Apr 28 21:21:17 2022
+// Version: Diamond (64-bit) 3.12.1.454
+// Written on Fri Sep 02 04:48:38 2022
 // M: Minimum Performance Grade
 // iotiming REU_impl1.ncd REU_impl1.prf -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml
 

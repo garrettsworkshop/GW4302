@@ -70,7 +70,7 @@
         <Message>
             <ID>35001747</ID>
             <Severity>Warning</Severity>
-            <Dynamic>0</Dynamic>
+            <Dynamic>12</Dynamic>
             <Dynamic>\ramctrl/RA</Dynamic>
         </Message>
         <Message>

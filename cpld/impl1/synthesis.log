@@ -1,11 +1,11 @@
-synthesis:  version Diamond (64-bit) 3.12.0.240.2
+synthesis:  version Diamond (64-bit) 3.12.1.454
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Apr 28 21:20:57 2022
+Fri Sep 02 04:48:17 2022
 
 
 Command Line:  synthesis -f REU_impl1_lattice.synproj -gui -msgset C:/Users/garre/Repos/GW4302/cpld/promote.xml 
@@ -97,7 +97,7 @@ Loading device for application map from file 'xo2c640.nph' in environment: C:/ls
 Package Status:                     Final          Version 1.39.
 Top-level module name = REU.
 WARNING - synthesis: I/O Port nIO1 's net has no driver and is unused.
-WARNING - synthesis: Bit 0 of Register \ramctrl/RA is stuck at Zero
+WARNING - synthesis: Bit 12 of Register \ramctrl/RA is stuck at Zero
 
 
 
@@ -160,14 +160,14 @@ Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
   Net : PHI2_N_571, loads : 139
   Net : A_out_0, loads : 52
-  Net : n3925, loads : 50
-  Net : n3926, loads : 50
+  Net : n3913, loads : 50
+  Net : n3914, loads : 50
   Net : A_out_1, loads : 37
   Net : dmaseq/DMA, loads : 35
-  Net : reureg/n2264, loads : 34
+  Net : reureg/n2252, loads : 34
   Net : ramctrl/S_0, loads : 29
   Net : A_out_3, loads : 26
-  Net : dmaseq/n3636, loads : 22
+  Net : dmaseq/n3624, loads : 22
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -190,8 +190,8 @@ C8M [ get_ports { C8M } ]               |    8.196 MHz|   96.117 MHz|     6
 All constraints were met.
 
 
-Peak Memory Usage: 62.652  MB
+Peak Memory Usage: 63.219  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 1.750  secs
+Elapsed CPU time for LSE flow : 1.703  secs
 --------------------------------------------------------------
