@@ -18,7 +18,7 @@ module REUReg(
 	input SetFault,		// Set fault/verify err. signal from DMA sequencer
 	/* Register outputs */
 	output IRQ,					// IRQ output to 6510
-	output [1:0] XferTypeOut,	// REU transfer type register output (bypassed) to DMA sequencer
+	output [1:0] XferTypeOut,	// REU xfer type register output (bypassed) to DMA sequencer
 	output [23:0] REUAOut,		// REU address register output to SDRAM ctrl.
 	output [15:0] CAOut,		// C64 address register output to C64 bus
 	output Length1,				// Transfer length == 1 indication to DMA sequencer
@@ -65,7 +65,8 @@ wire Autoload = AutoloadEN && XferEnd; // Autoload
 /* Data Output Mux */
 assign RDD[7:0] = 
 	A[4:0]==4'h0 ? { IRQ, EndBlock, Fault, 1'b1, 4'b0000 } :
-	A[4:0]==4'h1 ? { ExecuteEN, DF01Reserved6, AutoloadEN, ~FF00DecodeEN, DF01Reserved32[3:2], XferType[1:0] } :
+	A[4:0]==4'h1 ? { ExecuteEN, DF01Reserved6, AutoloadEN, 
+					~FF00DecodeEN, DF01Reserved32[3:2], XferType[1:0] } :
 	A[4:0]==4'h2 ? CA[7:0] :
 	A[4:0]==4'h3 ? CA[15:8] :
 	A[4:0]==4'h4 ? REUA[7:0] :
