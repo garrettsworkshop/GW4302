@@ -4,9 +4,9 @@ LAYERS = F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts
 F_PCB = $@/../GW4302.kicad_pcb
 F_SCH = $@/../GW4302.kicad_sch
 F_POS = $@/GW4302-top-pos.csv
-F_ZIP = $@/GW4302B-gerber.zip
-F_SCHPDF = $@/GW4302B-Schematic.pdf
-F_PCBPDF = $@/GW4302B-Placement.pdf
+F_ZIP = $@/GW4302A-gerber.zip
+F_SCHPDF = $@/GW4302A-Schematic.pdf
+F_PCBPDF = $@/GW4302A-Placement.pdf
 
 
 OPT_GERBER = -l $(LAYERS) --subtract-soldermask --no-netlist --no-x2
@@ -25,8 +25,8 @@ CMD_PCBPDF = pcb export pdf --black-and-white -l F.Fab,Edge.Cuts -o $(F_PCBPDF) 
 all: gerber Documentation
 clean:
 	rm -fr gerber/
-	rm -f  Documentation/GW4302B-Schematic.pdf
-	rm -f  Documentation/GW4302B-Placement.pdf
+	rm -f  Documentation/GW4302A-Schematic.pdf
+	rm -f  Documentation/GW4302A-Placement.pdf
 
 gerber:
 	mkdir -p $@
